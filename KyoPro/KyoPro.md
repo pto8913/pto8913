@@ -2,7 +2,7 @@
 
 > ## 動的計画法
 
-* [累積和]({{ site.KyoProurl }}/KyoPro/Cumulative-Sum)
+* [累積和]({{ site.KyoProurl }}/Cumulative-Sum)
 
 > ## 数学
 
