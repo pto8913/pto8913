@@ -1,4 +1,4 @@
-[TOP]({{ site.baseurl }}) > PyQt5 SQLiteViewer
+[TOP]({{ site.baseurl }}pto8913) > PyQt5 SQLiteViewer
 
 ![SQLiteViewer]({{ site.baseurl }}/image/DBViewerQuery.png)
 
@@ -100,4 +100,4 @@ Deleteをする際にリストから消すかPC上から消すか聞かれます
 
 
 
-[トップページに戻る]({{ site.baseurl }})
+[トップページに戻る]({{ site.baseurl }}/pto8913)
