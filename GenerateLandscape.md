@@ -1,8 +1,10 @@
-[TOP]({{ site.reseturl }}) > PyQt5 TerrainViewer
+[TOP]({{ site.reseturl }}) > UE4 GenerateLandscape
 
 ![sample]({{ site.reseturl }}/image/gen_land.gif)
 
 [ソースコード](https://github.com/pto8913/UE4_memo/tree/master/GenerateLandscapeFromCpp)
+
+本文中にもソースコードは出てきます。<br>
 
 # 注意
 
@@ -50,7 +52,7 @@
 
 `BPFL_GenerateLandscape.h`
 
-```C++
+```cpp
 #pragma once
 
 #include "CoreMinimal.h"
@@ -71,7 +73,7 @@ public:
 
 `BPFL_GenerateLandscape.cpp`
 
-```C++
+```cpp
 #include "BPFL_GenerateLandscape.h"
 
 #include "EngineUtils.h"
