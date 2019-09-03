@@ -1,4 +1,4 @@
-[TOP]({{ site.baseurl }}../) > PyQt5 SQLiteViewer
+[TOP]({{ site.url }}) > PyQt5 SQLiteViewer
 
 ![SQLiteViewer]({{ site.baseurl }}/image/DBViewerQuery.png)
 
