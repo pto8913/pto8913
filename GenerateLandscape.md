@@ -1,6 +1,6 @@
 [TOP]({{ site.reseturl }}) > PyQt5 TerrainViewer
 
-![sample](https://github.com/pto8913/UE4_memo/blob/images/generate/gen_land.gif)
+![sample]({{ site.reseturl }}/image/gen_land.gif)
 
 [ソースコード](https://github.com/pto8913/UE4_memo/tree/master/GenerateLandscapeFromCpp)
 
@@ -36,7 +36,9 @@
 
 ファイルの生成が終わったらそれぞれxxx.h xxx.cppに追加
 
-```C++: BPFL_GenerateLandscape.h
+`BPFL_GenerateLandscape.h`
+
+```C++
 
 #pragma once
 
@@ -56,7 +58,9 @@ public:
 };
 ```
 
-```C++: BPFL_GenerateLandscape.cpp
+`BPFL_GenerateLandscape.cpp`
+
+```C++
 #include "BPFL_GenerateLandscape.h"
 
 #include "EngineUtils.h"
