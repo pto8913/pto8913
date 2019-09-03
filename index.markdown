@@ -4,10 +4,6 @@ layout: home
 
 ---
 
-{{ site.baseurl }}
-{{ site.url }}
-
-
 メモだよ
 
 自由に使ってください
@@ -24,7 +20,7 @@ __PyQt5__
 
 ---
 
-* [SQLiteViewer]({{ site.baseurl }}/SQLiteViewer)
+* [SQLiteViewer]({{ site.url }}/pto8913/SQLiteViewer)
 * [TerrainViewer]({{ site.url }}/TerrrainViewer)
 
 __PyQt5 Templates__
