@@ -83,7 +83,7 @@ def main():
 main()
 ```
 
-> ### C++
+### C++
 
 [前のに戻る]({{ site.KyoProurl }}/KyoPro)<br>
 
