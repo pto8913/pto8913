@@ -32,13 +32,13 @@ layout: home
 
 ---
 
-* [QThread]({{ site.url }}/pto8913/_PyQt5/Thread)
-* [keyPressEvent(Multi)]({{ site.url }}/pto8913/_PyQt5/keyPressMulti)
-* [DivideUI]({{ site.url }}/pto8913/_PyQt5/DivideUI)
+* [QThread]({{ site.PyQturl }}/Thread)
+* [keyPressEvent(Multi)]({{ site.PyQturl }/keyPressMulti)
+* [DivideUI]({{ site.PyQturl }}/DivideUI)
 
 > ## Unreal Engine4.19 memo
 
 ---
 
-* [C++からLandscapeを生成する]({{ site.url }}/pto8913/_UE4/GenerateLandscape)
-* [C++から木を生やす]({{ site.url }}/pto8913/_UE4/GenerateFoliage)
+* [C++からLandscapeを生成する]({{ site.UEurl }}/GenerateLandscape)
+* [C++から木を生やす]({{ site.UEurl }}/GenerateFoliage)

@@ -30,7 +30,9 @@ twitter_username: pitodesu
 github_username:  pto8913
 
 reseturl: "https://pto8913.github.io/pto8913/"
-kyoProurl: "https://pto8913.github.io/pto8913/_KyoPro/KyoPro"
+kyoProurl: "https://pto8913.github.io/pto8913/KyoPro/KyoPro"
+PyQturl: "https://pto8913.github.io/pto8913/PyQt5"
+UEurl: "https://pto8913.github.io/pto8913/UE4"
 
 github: [metadata]
 repository: pto8913.github.io/pto8913
