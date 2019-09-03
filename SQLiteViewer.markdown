@@ -1,6 +1,6 @@
-[TOP]({{ site.url }}) > PyQt5 SQLiteViewer
+[TOP]({{ site.reseturl }}) > PyQt5 SQLiteViewer
 
-![SQLiteViewer]({{ site.baseurl }}/image/DBViewerQuery.png)
+![SQLiteViewer]({{ site.reseturl }}/image/DBViewerQuery.png)
 
 [ソースコード](https://github.com/pto8913/PyQt5-s-tools/tree/master/DBViewer)
 
@@ -100,4 +100,4 @@ Deleteをする際にリストから消すかPC上から消すか聞かれます
 
 
 
-[トップページに戻る]({{ site.baseurl }})
+[トップページに戻る]({{ site.reseturl }})
