@@ -1,4 +1,4 @@
-[前のページに戻る]({{ site.kyoProurl }}) > 競プロ用ライブラリ KyoPro 累積和<br>
+[前のページに戻る]({{ site.KyoProurl }}) > 競プロ用ライブラリ KyoPro 累積和<br>
 [トップページに戻る]({{ site.reseturl }})<br>
 
 > ## 説明
@@ -78,6 +78,6 @@ def main():
 main()
 ```
 
-[前のに戻る]({{ site.kyoProurl }})<br>
+[前のに戻る]({{ site.KyoProurl }})<br>
 
 [トップページに戻る]({{ site.reseturl }})<br>
