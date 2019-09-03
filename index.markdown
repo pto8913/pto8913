@@ -20,8 +20,8 @@ __PyQt5__
 
 ---
 
-* [SQLiteViewer]({{ site.url }}/pto8913/SQLiteViewer)
-* [TerrainViewer]({{ site.url }}/TerrrainViewer)
+* [SQLiteViewer]({{ site.baseurl }}/SQLiteViewer)
+* [TerrainViewer]({{ site.baseurl }}/TerrrainViewer)
 
 __PyQt5 Templates__
 
