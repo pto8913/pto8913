@@ -19,14 +19,14 @@ layout: home
 * Unreal Engine4.19.2
 * Visual Studio Community 2017
 
-> ## [競プロ用ライブラリ(リンク)]({{ site.url }}/pto8913/_KyoPro/KyoPro)
+> ## [競プロ用ライブラリ(リンク)]({{ site.kyoProurl }})
 
 > ## PyQt5
 
 ---
 
-* [SQLiteViewer]({{ site.url }}/pto8913/_PyQt5/SQLiteViewer)
-* [TerrainViewer]({{ site.url }}/pto8913/_PyQt5/TerrainViewer)
+* [SQLiteViewer]({{ site.PyQturl }}/SQLiteViewer)
+* [TerrainViewer]({{ site.PyQturl }}/TerrainViewer)
 
 > ## PyQt5 Templates
 
