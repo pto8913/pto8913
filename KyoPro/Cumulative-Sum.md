@@ -14,8 +14,8 @@
 
 > ## 実装例
 
-[C++](###C++)
-[python](###python)
+[C++](#C++) <br>
+[python](#python) <br>
 
 ### python
 
