@@ -10,7 +10,7 @@ layout: home
 
 自由に使ってください
 
-__環境__
+> ## 環境
 
 ---
 
@@ -19,14 +19,16 @@ __環境__
 * Unreal Engine4.19.2
 * Visual Studio Community 2017
 
-__PyQt5__
+> ## [競プロ用ライブラリ(リンク)]({{ site.url }}/pto8913/KyoPro)
+
+> ## PyQt5
 
 ---
 
 * [SQLiteViewer]({{ site.url }}/pto8913/SQLiteViewer)
-* [TerrainViewer]({{ site.url }}/pto8913/TerrrainViewer)
+* [TerrainViewer]({{ site.url }}/pto8913/TerrainViewer)
 
-__PyQt5 Templates__
+> ## PyQt5 Templates
 
 ---
 
@@ -34,7 +36,7 @@ __PyQt5 Templates__
 * [keyPressEvent(Multi)]({{ site.url }}/pto8913/keyPressMulti)
 * [DivideUI]({{ site.url }}/pto8913/DivideUI)
 
-__Unreal Engine4.19 memo__
+> ## Unreal Engine4.19 memo
 
 ---
 
