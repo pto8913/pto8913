@@ -10,6 +10,22 @@
 
 * SQLite3
 
+# ディレクトリ構成
+
+---
+
+```
+├── DB_dir
+│   ├── database_file
+│
+└── DBViewer_dir
+    ├── DBViewer.py
+    └── DBViewer_dir
+        ├── DBViewerUI.py
+        ├── DBViewerUIFunc.py
+        └── DBViewerDirSetting.py
+```
+
 # 使い方
 
 ---
