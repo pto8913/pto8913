@@ -1,4 +1,4 @@
-[前のページに戻る]({{ site.KyoProurl }}) > 競プロ用ライブラリ KyoPro 累積和<br>
+[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 累積和<br>
 [トップページに戻る]({{ site.reseturl }})<br>
 
 > ## 説明
@@ -13,6 +13,11 @@
 * クエリ(区間の和) O(1)
 
 > ## 実装例
+
+[C++](###C++)
+[python](###python)
+
+### python
 
 ```python
 class CumulativeSum:
@@ -78,6 +83,8 @@ def main():
 main()
 ```
 
-[前のに戻る]({{ site.KyoProurl }})<br>
+> ### C++
+
+[前のに戻る]({{ site.KyoProurl }}/KyoPro)<br>
 
 [トップページに戻る]({{ site.reseturl }})<br>

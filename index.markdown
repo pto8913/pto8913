@@ -19,7 +19,7 @@ layout: home
 * Unreal Engine4.19.2
 * Visual Studio Community 2017
 
-> ## [競プロ用ライブラリ(リンク)]({{ site.KyoProurl }})
+> ## [競プロ用ライブラリ(リンク)]({{ site.KyoProurl }}/KyoPro)
 
 > ## PyQt5
 
