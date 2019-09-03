@@ -14,7 +14,7 @@
 
 ---
 
-```
+```PlainText
 ├── DB_dir
 │   ├── database_file
 │
