@@ -6,40 +6,51 @@
 
 # 注意
 
-生成はできましたが削除ができません。
-(新しくマップを開くと削除できます)
+---
+
+**生成はできましたが削除ができません。** <br>
+**(新しくマップを開くと削除できます)**
 
 # 導入
+
+---
+
 ![sample]({{ site.reseturl }}/image/GenTerNewPro.png)
 
-うまく作成できなかった場合はディレクトリ名やファイル名の日本語を英語表記にするとできるはずです。
+うまく作成できなかった場合は<br>
+ディレクトリ名やファイル名の日本語を英語表記にするとできるはずです。<br>
 
 ### 新規C++クラスの作成
+
+---
+
 ![sample]({{ site.reseturl }}/image/GenTerNewCpp.png)
 
-今回は`BluePrintFunctionLibrary`を使用
+**今回は`BluePrintFunctionLibrary`を使用** <br>
 
 ![sample]({{ site.reseturl }}/image/GenTerBPFL.png)
 
-ここで付けた名前が`Class`名になります
+**ここで付けた名前が`Class`名になります**<br>
 
 ![sample]({{ site.reseturl }}/image/GenTerBPFL2.png)
 
 ### Visual Studioに移動してコードを書いていきます
-`xxx.Build.cs`に移動して`Landscape` `LandscapeEditor`を追加
+
+---
+
+**`xxx.Build.cs`に移動して`Landscape` `LandscapeEditor`を追加**<br>
 
 ![sample]({{ site.reseturl }}/image/GenTerBuild.png)
 
-追加したらファイルの生成
+**追加したらファイルの生成**<br>
 
 ![sample]({{ site.reseturl }}/image/GenTerGenFile.png)
 
-ファイルの生成が終わったらそれぞれxxx.h xxx.cppに追加
+**ファイルの生成が終わったらそれぞれxxx.h xxx.cppに追加**<br>
 
 `BPFL_GenerateLandscape.h`
 
 ```C++
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -113,21 +124,23 @@ bool UBPFL_GenerateLandscape::GenerateLandscape(const UObject* worldContextObjec
 }
 ```
 
-`heightmap`の部分をいじると`Landscape`の形状を変えられます。
+**`heightmap`の部分をいじると`Landscape`の形状を変えられます。** <br>
 
-`section_size`や`component_size`については公式のドキュメントを見てください。
+**`section_size`や`component_size`については公式のドキュメントを見てください。**<br>
 
-(配列の大きさに合わせて`Landscape`を作るのなら`section_size`と`section_per_component`以外いらないです)
+**(配列の大きさに合わせて`Landscape`を作るのなら`section_size`と`section_per_component`以外いらないです)**<br>
 
-[ランドスケープの作成](https://docs.unrealengine.com/ja/Engine/Landscape/Creation/index.html)
-[ランドスケープのテクニカルガイド](https://docs.unrealengine.com/ja/Engine/Landscape/TechnicalGuide/index.html)
+[ランドスケープの作成](https://docs.unrealengine.com/ja/Engine/Landscape/Creation/index.html)<br>
+[ランドスケープのテクニカルガイド](https://docs.unrealengine.com/ja/Engine/Landscape/TechnicalGuide/index.html)<br>
 
 ### UE4に戻ります
 
-戻ったらコンパイルを押します
+---
+
+**戻ったらコンパイルを押します**<br>
 ![sample]({{ site.reseturl }}/image/GenTerComp.png)
 
-コンパイルが終わったらブループリントアクターを作成
+**コンパイルが終わったらブループリントアクターを作成**<br>
 ![sample]({{ site.reseturl }}/image/GenTerBPActor.png)
 
 ![sample]({{ site.reseturl }}/image/GenTerBPActor2.png)
@@ -147,6 +160,9 @@ bool UBPFL_GenerateLandscape::GenerateLandscape(const UObject* worldContextObjec
 ![sample]({{ site.reseturl }}/image/GenTerBPActor9.png)
 
 # 参考
+
+---
+
 [UnrealEnginePython Landscape_API](https://github.com/20tab/UnrealEnginePython/blob/master/docs/Landscape_API.md)<br>
 [UEPyActor.cpp](https://github.com/20tab/UnrealEnginePython/blob/master/Source/UnrealEnginePython/Private/UObject/UEPyActor.cpp#L855) Line 855~<br>
 [UEPyEditor.cpp](https://github.com/20tab/UnrealEnginePython/blob/master/Source/UnrealEnginePython/Private/UEPyEditor.cpp#L2354) Line 2354~<br>
