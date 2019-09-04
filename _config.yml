@@ -41,6 +41,7 @@ repository: pto8913.github.io/pto8913
 
 # Build settings
 theme: minima
+highlighter: rouge
 #theme: jekyll-theme-architect
 plugins:
   - jekyll-feed
