@@ -20,7 +20,7 @@
 [C++](#C++) <br>
 
 <details>
-<summary>python実装例
+<summary> python実装例
 </summary>
 
 ### python 
