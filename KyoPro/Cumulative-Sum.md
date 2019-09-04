@@ -17,7 +17,7 @@
 > ## 実装例
 
 [python](#python実装例 ) <br>
-[C++](#Cpp実装例) <br>
+[C++](#C++実装例) <br>
 
 ### python実装例 
 
@@ -40,8 +40,8 @@ class CumulativeSum:
     return self.data[min(kukan, self.size - 1)]
 
 ```
-
-### Cpp実装例
+---
+### C++実装例
 
 ```cpp
 template<class T>
@@ -68,15 +68,15 @@ struct CumulativeSum {
   }
 };
 ```
-
+---
 > ## 使用例
 
 ### 例題
 * [AOJ0516 JOI2006 本選A 最大の和](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516) <br>
 
 
- [python](#python使用例) <br>
- [C++](#Cpp使用例) <br>
+[python](#python使用例) <br>
+[C++](#C++使用例) <br>
 
 ### python使用例
 
@@ -108,8 +108,8 @@ def main():
 
 main()
 ```
-
-### Cpp使用例
+---
+### C++使用例
 
 ```cpp
 #include <iostream>
