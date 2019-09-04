@@ -2,7 +2,7 @@
 [トップページに戻る]({{ site.reseturl }})<br>
 
 # 累積和(Cumulative-Sum)
-2019/09/04/17:33
+2019/09/04/17:39
 
 > ## 説明
 
@@ -21,7 +21,6 @@
 
 <details>
 <summary> python実装例 </summary>
-
 <p>
 
 ### python
