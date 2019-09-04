@@ -22,8 +22,9 @@
 <details>
 <summary> python実装例 </summary>
 
-### python
 <p>
+
+### python
 
 ```python
 class CumulativeSum:
