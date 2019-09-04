@@ -17,8 +17,7 @@
 > ## 実装例
 
 * [python](#python実装例 ) <br>
-
-* [C++](#C++実装例) <br>
+* [C++](#c++実装例) <br>
 
 ### python実装例 
 
@@ -42,7 +41,7 @@ class CumulativeSum:
 
 ```
 ---
-### C++実装例
+### c++実装例
 
 ```cpp
 template<class T>
@@ -77,8 +76,8 @@ struct CumulativeSum {
 
 ### python使用例
 
-+ [python](#python使用例) <br>
-+ [C++](#C++使用例) <br>
+* [python](#python使用例) <br>
+* [C++](#c++使用例) <br>
 
 ```python
 class CumulativeSum:
@@ -109,7 +108,7 @@ def main():
 main()
 ```
 ---
-### C++使用例
+### c++使用例
 
 ```cpp
 #include <iostream>
