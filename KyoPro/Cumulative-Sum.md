@@ -21,9 +21,11 @@
 ### python
 
 <details>
-<summary> python実装例 </summary>
+  <summary> 
+    python実装例 
+  </summary>
 
-<div>
+  <div>
 
 ```python
 class CumulativeSum:
@@ -44,7 +46,7 @@ class CumulativeSum:
     return self.data[min(kukan, self.size - 1)]
 ```
 
-</div>
+  </div>
 </details>
 
 ### C++
