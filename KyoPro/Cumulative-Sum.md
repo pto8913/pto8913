@@ -20,15 +20,13 @@
 [C++](#C++) <br>
 
 <details>
-<summary> python実装例 </summary>
+<summary>python実装例</summary>
 
-<br>
 <p>
 
-### python <br><br>
+### python 
 
-``` python <br>
-
+``` python 
 class CumulativeSum:
   def __init__(self, size):
     self.data = [0] * size
