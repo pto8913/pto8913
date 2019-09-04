@@ -1,6 +1,18 @@
 [前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 累積和(Cumulative-Sum)<br>
 [トップページに戻る]({{ site.reseturl }})<br>
 
+<details><summary>クリックすると展開されます</summary>
+```
+const puppeteer = require('puppeteer');
+puppeteer.launch().then(async browser => {
+  const page = await browser.newPage();
+  await page.setViewport({ width: 1280, height: 800 })
+  await page.goto('https://www.aymen-loukil.com');
+  await browser.close();
+});
+```
+</details>
+
 # 累積和(Cumulative-Sum)
 
 > ## 説明
