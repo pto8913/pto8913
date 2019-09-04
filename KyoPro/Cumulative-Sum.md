@@ -2,7 +2,7 @@
 [トップページに戻る]({{ site.reseturl }})<br>
 
 # 累積和(Cumulative-Sum)
-2019/09/04/17:44
+2019/09/04/17:53
 
 > ## 説明
 
@@ -20,13 +20,12 @@
 [C++](#C++) <br>
 
 <details>
-<summary>python実装例</summary>
-
-<p>
+<summary>python実装例
+</summary>
 
 ### python 
 
-``` python 
+```python 
 class CumulativeSum:
   def __init__(self, size):
     self.data = [0] * size
@@ -46,7 +45,6 @@ class CumulativeSum:
 
 ```
 
-</p>
 </details>
 
 <details>
