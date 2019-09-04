@@ -27,7 +27,7 @@
 
 ### python <br><br>
 
-```python
+```python <br>
 
 class CumulativeSum:
   def __init__(self, size):
