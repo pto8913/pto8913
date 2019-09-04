@@ -212,13 +212,13 @@ table td { border: 1px solid #e8e8e8; }
 @media screen and (max-width: 800px) { .post-content h4 { font-size: 18px; } }
 
 /** Syntax highlighting styles */
-.highlight { background: #fff; }
+/* .highlight { background: #fff; } */
 
 .highlighter-rouge .highlight { background: #eef; }
 
 .highlight .c { color: #998; font-style: italic; }
 
-.highlight .err { color: #a61717; background-color: #e3d2d2; }
+.highlight .err { color: #a61717;}
 
 .highlight .k { font-weight: bold; }
 
@@ -232,9 +232,9 @@ table td { border: 1px solid #e8e8e8; }
 
 .highlight .cs { color: #999; font-weight: bold; font-style: italic; }
 
-.highlight .gd { color: #000; background-color: #fdd; }
+.highlight .gd { color: #000;}
 
-.highlight .gd .x { color: #000; background-color: #faa; }
+.highlight .gd .x { color: #000;}
 
 .highlight .ge { font-style: italic; }
 
