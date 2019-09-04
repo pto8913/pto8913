@@ -22,7 +22,6 @@
 
 <details>
 <summary> python実装例 </summary>
-
 <p>
 
 ```python
@@ -43,6 +42,7 @@ class CumulativeSum:
       return 0
     return self.data[min(kukan, self.size - 1)]
 ```
+
 </p>
 </details>
 
