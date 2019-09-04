@@ -19,6 +19,7 @@
 [python](#python) <br>
 
 ### python
+
 <details>
   <summary> python実装例 </summary>
 
@@ -41,13 +42,11 @@ class CumulativeSum:
       return 0
     return self.data[min(kukan, self.size - 1)]
 ```
-
 </details>
 
 ### C++
 
 <details>
-
   <summary> C++実装例 </summary>
 
 ```cpp
@@ -77,13 +76,11 @@ struct CumulativeSum {
 };
 
 ```
-
 </details>
 
 > ## 使用例
 
 <details>
-
   <summary> 例題 </summary>
 
   * [AOJ0516 JOI2006 本選A 最大の和](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516) <br>
