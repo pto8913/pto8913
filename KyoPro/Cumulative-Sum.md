@@ -22,9 +22,10 @@
 <details>
 <summary> python実装例 </summary>
 
+<br>
 <p>
 
-### python
+### python <br>
 
 ```python
 
