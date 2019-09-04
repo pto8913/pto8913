@@ -18,6 +18,9 @@
 [python](#python) <br>
 
 ### python
+<details>
+  <summary> python実装例 </summary>
+  <div>
 
 ```python
 class CumulativeSum:
@@ -25,20 +28,68 @@ class CumulativeSum:
     self.data = [0] * size
     self.size = size
 
-  def build(self):
-    for i in range(1, self.size):
-      self.data[i] += data[i - 1]
-
   def add(self, key, value):
     self.data[key] += value
+
+  def build(self):
+    for i in range(1, self.size):
+      self.data[i] += self.data[i - 1]
   
   def query(self, kukan):
-    if k < 0:
+    if kukan < 0:
       return 0
-    return self.data[min(kukan, self.size - 1))]
+    return self.data[min(kukan, self.size - 1)]
+```
+  </div>
+</details>
+
+### C++
+
+<details>
+  <summary> C++実装例 </summary>
+  <div>
+
+```cpp
+template<class T>
+struct CumulativeSum {
+  vector< T > data;
+
+  CumulativeSum(int size) : data(size, 0) {};
+
+  void add(int key, T value) {
+    data[key] += value;
+  }
+
+  void build(){
+    rep(i, 1, data.size()) {
+      data[i] += data[i - 1];
+    }
+  }
+
+  T query(int kukan) {
+    if (kukan < 0) {
+      return 0;
+    }
+    return data[min(kukan, (int)data.size() - 1)];
+  }
+};
+
 ```
 
+  </div>
+</details>
+
+**例題 [AOJ0516 JOI2006 本選A 最大の和](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516)**<br>
+
 > ## 使用例
+
+[C++](#C++例) <br>
+[python](#python例)
+
+### python例
+<details>
+  <summary> python使用例 </summary>
+  <div>
 
 ```python
 class CumulativeSum:
@@ -82,8 +133,71 @@ def main():
 
 main()
 ```
+  </div>
+</details>
 
-### C++
+### C++例
+<details>
+  <summary> C++使用例 </summary>
+  <div>
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+#define rep(i, a, n) for(int i = a; i < (n); ++i)
+#define ll long long
+#define INF 1000000007
+
+template<class T>
+struct CumulativeSum {
+  vector< T > data;
+
+  CumulativeSum(int size) : data(size, 0) {};
+
+  void add(int key, T value) {
+    data[key] += value;
+  }
+
+  void build(){
+    rep(i, 1, data.size()) {
+      data[i] += data[i - 1];
+    }
+  }
+
+  T query(int kukan) {
+    if (kukan < 0) {
+      return 0;
+    }
+    return data[min(kukan, (int)data.size() - 1)];
+  }
+};
+
+int main() {
+  int n, k;
+  cin >> n >> k;
+
+  CumulativeSum<int> CS(n);
+  rep(i, 0, n) {
+    int a;
+    cin >> a;
+    CS.add(i, a);
+  }
+
+  CS.build();
+
+  int ans = -INF;
+  rep(i, 0, n - k + 1) {
+    ans = max(ans, CS.query(k + i - 1) - CS.query(i - 1));
+  }
+
+  cout << ans << endl;
+}
+```
+  </div>
+</details>
 
 [前のに戻る]({{ site.KyoProurl }}/KyoPro)<br>
 
