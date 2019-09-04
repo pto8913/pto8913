@@ -16,8 +16,8 @@
 
 > ## 実装例
 
-* [python](#python実装例 ) <br>
-* [C++](#c++実装例) <br>
+[python](#python実装例 ) <br>
+[C++](#C++) <br>
 
 ### python実装例 
 
@@ -40,8 +40,11 @@ class CumulativeSum:
     return self.data[min(kukan, self.size - 1)]
 
 ```
----
-### c++実装例
+
+<details>
+<summary> C++実装例 </summary>
+
+### C++ 
 
 ```cpp
 template<class T>
@@ -68,18 +71,28 @@ struct CumulativeSum {
   }
 };
 ```
----
+
+</details>
+
 > ## 使用例
 
-### 例題
+<details>
+<summary> 例題 </summary>
+
 * [AOJ0516 JOI2006 本選A 最大の和](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516) <br>
 
-### python使用例
+</details>
 
-* [python](#python使用例) <br>
-* [C++](#c++使用例) <br>
+[C++](#C++例) <br>
+[python](#python例)
+
+### python例
+
+<details>
+<summary> python使用例 </summary>
 
 ```python
+
 class CumulativeSum:
   # 省略
 
@@ -106,11 +119,18 @@ def main():
   print(ans)
 
 main()
+
 ```
----
-### c++使用例
+
+</details>
+
+### C++例
+
+<details>
+<summary> C++使用例 </summary>
 
 ```cpp
+
 #include <iostream>
 #include <vector>
 
@@ -144,7 +164,10 @@ int main() {
 
   cout << ans << endl;
 }
+
 ```
+
+</details>
 
 [前に戻る]({{ site.KyoProurl }}/KyoPro)<br>
 
