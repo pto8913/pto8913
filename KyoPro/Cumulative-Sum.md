@@ -23,7 +23,7 @@
 <details>
 <summary> python実装例 </summary>
 
-```python
+```
 
 class CumulativeSum:
   def __init__(self, size):
@@ -51,7 +51,7 @@ class CumulativeSum:
 <details>
 <summary> C++実装例 </summary>
 
-```cpp
+```
 
 template<class T>
 struct CumulativeSum {
@@ -84,9 +84,9 @@ struct CumulativeSum {
 > ## 使用例
 
 <details>
-  <summary> 例題 </summary>
+<summary> 例題 </summary>
 
-  * [AOJ0516 JOI2006 本選A 最大の和](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516) <br>
+* [AOJ0516 JOI2006 本選A 最大の和](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516) <br>
 
 </details>
 
@@ -94,6 +94,7 @@ struct CumulativeSum {
 [python](#python例)
 
 ### python例
+
 <details>
 <summary> python使用例 </summary>
 
@@ -131,9 +132,9 @@ main()
 </details>
 
 ### C++例
-<details>
 
-  <summary> C++使用例 </summary>
+<details>
+<summary> C++使用例 </summary>
 
 ```cpp
 
@@ -175,6 +176,6 @@ int main() {
 
 </details>
 
-[前のに戻る]({{ site.KyoProurl }}/KyoPro)<br>
+[前に戻る]({{ site.KyoProurl }}/KyoPro)<br>
 
 [トップページに戻る]({{ site.reseturl }})<br>
