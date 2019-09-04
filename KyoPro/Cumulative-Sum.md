@@ -42,11 +42,11 @@ class CumulativeSum:
 ```
 
 <details>
-<summary> C++実装例 </summary><br><br>
+<summary> C++実装例 </summary>
 
-### C++ <br><br>
+### C++ 
 
-```cpp <br><br>
+[cpp
 template<class T>
 struct CumulativeSum {
   vector< T > data;
@@ -70,8 +70,7 @@ struct CumulativeSum {
     return data[min(kukan, (int)data.size() - 1)];
   }
 };
-
-```
+]
 
 </details>
 
