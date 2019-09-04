@@ -16,13 +16,10 @@
 
 > ## 実装例
 
-[python](#python) <br>
+[python](#python実装例 ) <br>
 [C++](#C++) <br>
 
-<details>
-<summary> python実装例  <br></summary>
-
-### python 
+### python実装例 
 
 ```python 
 
@@ -44,10 +41,6 @@ class CumulativeSum:
     return self.data[min(kukan, self.size - 1)]
 
 ```
-
-</details>
-
-<br>
 
 <details>
 <summary> C++実装例 </summary>
