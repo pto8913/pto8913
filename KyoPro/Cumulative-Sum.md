@@ -24,7 +24,6 @@
 <summary> python実装例 </summary>
 
 ```
-
 class CumulativeSum:
   def __init__(self, size):
     self.data = [0] * size
@@ -41,18 +40,14 @@ class CumulativeSum:
     if kukan < 0:
       return 0
     return self.data[min(kukan, self.size - 1)]
-
 ```
-
 </details>
 
 ### C++
 
-<details>
-<summary> C++実装例 </summary>
+<details><summary> C++実装例 </summary>
 
 ```
-
 template<class T>
 struct CumulativeSum {
   vector< T > data;
@@ -76,9 +71,7 @@ struct CumulativeSum {
     return data[min(kukan, (int)data.size() - 1)];
   }
 };
-
 ```
-
 </details>
 
 > ## 使用例
