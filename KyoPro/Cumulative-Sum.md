@@ -21,26 +21,12 @@
 ### python
 
 <details>
-<summary> python実装例 </summary>
+<summary>これは中身が整形される</summary>
 
-```python
-class CumulativeSum:
-  def __init__(self, size):
-    self.data = [0] * size
-    self.size = size
-
-  def add(self, key, value):
-    self.data[key] += value
-
-  def build(self):
-    for i in range(1, self.size):
-      self.data[i] += self.data[i - 1]
-  
-  def query(self, kukan):
-    if kukan < 0:
-      return 0
-    return self.data[min(kukan, self.size - 1)]
-```
+1. 野菜**A**の皮を剥く。
+2. 乱切りにする。
+3. 調味料**B**と合わせて炒める。
+    - `火傷`に注意。
 </details>
 
 ### C++
