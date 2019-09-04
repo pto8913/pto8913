@@ -16,10 +16,13 @@
 
 > ## 実装例
 
-[python](#python実装例 ) <br>
+[python](#python) <br>
 [C++](#C++) <br>
 
 ### python実装例 
+
+<details>
+<summary> python実装例 </summary>
 
 ```python
 class CumulativeSum:
@@ -38,13 +41,14 @@ class CumulativeSum:
     if kukan < 0:
       return 0
     return self.data[min(kukan, self.size - 1)]
-
 ```
+
+</details>
+
+### C++ 
 
 <details>
 <summary> C++実装例 </summary>
-
-### C++ 
 
 ```cpp
 template<class T>
@@ -83,8 +87,8 @@ struct CumulativeSum {
 
 </details>
 
+[python](#python例) <br>
 [C++](#C++例) <br>
-[python](#python例)
 
 ### python例
 
@@ -119,7 +123,6 @@ def main():
   print(ans)
 
 main()
-
 ```
 
 </details>
@@ -130,7 +133,6 @@ main()
 <summary> C++使用例 </summary>
 
 ```cpp
-
 #include <iostream>
 #include <vector>
 
@@ -161,10 +163,8 @@ int main() {
   rep(i, 0, n - k + 1) {
     ans = max(ans, CS.query(k + i - 1) - CS.query(i - 1));
   }
-
   cout << ans << endl;
 }
-
 ```
 
 </details>
