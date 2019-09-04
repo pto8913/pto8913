@@ -22,6 +22,7 @@
 
 <details>
 <summary> python実装例 </summary>
+
 <p>
 
 ```python
