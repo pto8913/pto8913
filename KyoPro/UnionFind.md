@@ -5,7 +5,7 @@
 
 2019/09/04/18:55 pto8913
 
-> ## 説明
+## 説明
 
 * 集合を併合する操作(unite) <br>
 * ある要素がどの集合に属しているか(find) <br>
@@ -14,18 +14,18 @@
 
 [わかりやすいスライド](https://slideshare.net/chokudai/union-find-49066733)
 
-> ## 計算量
+## 計算量
 
 * O(α(n)) <br>
 α(n)は[アッカーマン関数](https://mathtrain.jp/ackermann) A(n,n)の逆関数 <br>
 めちゃくちゃ小さい計算量になる
 
-> ## 種類
+## 種類
 
 [通常UnionFind](#通常UnionFind) <br>
 [重み付きUnionFind](#重み付きUnionFind) <br>
 
-> # UnionFind実装例
+## UnionFind実装例
 
 <!---------------------- UnionFind実装例 --------------------->
 
@@ -96,7 +96,7 @@
 </details>
 
 <!---------------------- UnionFind使用例 --------------------->
-> ## 使用例
+## 使用例
 
 <details>
   <summary> 例題 </summary>
@@ -181,7 +181,7 @@
   ```
 </details>
 
-> # 重み付きUnionFind
+## 重み付きUnionFind
 
 <!---------------------- 重み付きUnionFind実装例 --------------------->
 
@@ -289,7 +289,7 @@
 
 <!---------------------- 重み付きUnionFind使用例 --------------------->
 
-> ## 使用例
+## 使用例
 
 <details>
   <summary> 例題 </summary>
