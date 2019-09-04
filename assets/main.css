@@ -1,63 +1,11 @@
-body {
-  line-height: 140%;
-}
-
-pre, code {
-  font-family: source-code-pro;
-  background-color: #FAFAFA;
-}
-
-h2 {
-  padding: 0.3em 0.3em 0.3em 0.5em;
-  border-top: 1px;
-  border-bottom: 1px;
-  border-left: 6px;
-  border-right: 1px;
-  border-color: #666666;
-  border-style: solid;
-  margin-top: 1em;
-}
-
-.footer-heading {
-  margin: 0;
-  border: 0;
-  padding: 0;
-}
-
-.div-sample-copy {
-  position: relative;
-  display: block;
-}
-.btn-sample-copy
-{
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-  padding: 0.25em 1em;
-  font-size: 12px;
-  color: #767676;
-  cursor: pointer;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 0 4px 0 4px;
-}
-
-a:link {
-  text-decoration: underline;
-}
-a:hover {
-  background: #DDDDDD;
-}
-
 /** Reset some basic elements */
-body, h1, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
 /** Basic styling */
 body { font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; color: #111; background-color: #fdfdfd; -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal; display: flex; min-height: 100vh; flex-direction: column; }
 
 /** Set `margin-bottom` to maintain vertical rhythm */
-h1, h3, h4, h5, h6, p, blockquote, ul, ol, dl, figure, .highlight { margin-bottom: 15px; }
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { margin-bottom: 15px; }
 
 /** `main` element */
 main { display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */ }
@@ -95,7 +43,7 @@ blockquote { color: #828282; border-left: 4px solid #e8e8e8; padding-left: 15px;
 blockquote > :last-child { margin-bottom: 0; }
 
 /** Code formatting */
-pre, code { font-size: 15px; border: 1px solid #FAFAFA; border-radius: 3px; }
+pre, code { font-size: 15px; border: 1px solid #e8e8e8; border-radius: 3px; background-color: #eef; }
 
 code { padding: 1px 5px; }
 
@@ -242,9 +190,9 @@ table td { border: 1px solid #e8e8e8; }
 
 .highlight .gh { color: #999; }
 
-.highlight .gi { color: #000; }
+.highlight .gi { color: #000; background-color: #dfd; }
 
-.highlight .gi .x { color: #000; }
+.highlight .gi .x { color: #000; background-color: #afa; }
 
 .highlight .go { color: #888; }
 
