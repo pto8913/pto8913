@@ -21,11 +21,9 @@
 ### python
 
 <details>
-  <summary> python実装例 </summary>
-
+<summary> python実装例 </summary>
 
 ```python
-
 class CumulativeSum:
   def __init__(self, size):
     self.data = [0] * size
@@ -48,8 +46,7 @@ class CumulativeSum:
 ### C++
 
 <details>
-  <summary> C++実装例 </summary>
-
+<summary> C++実装例 </summary>
 
 ```cpp
 
