@@ -2,7 +2,7 @@
 [トップページに戻る]({{ site.reseturl }})<br>
 
 # 累積和(Cumulative-Sum)
-2019/09/04/17:39
+2019/09/04/17:44
 
 > ## 説明
 
@@ -27,6 +27,7 @@
 ### python
 
 ```python
+
 class CumulativeSum:
   def __init__(self, size):
     self.data = [0] * size
@@ -43,6 +44,7 @@ class CumulativeSum:
     if kukan < 0:
       return 0
     return self.data[min(kukan, self.size - 1)]
+
 ```
 
 </p>
