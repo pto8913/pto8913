@@ -16,8 +16,9 @@
 
 > ## 実装例
 
-[python](#python実装例 ) <br>
-[C++](#C++実装例) <br>
+* [python](#python実装例 ) <br>
+
+* [C++](#C++実装例) <br>
 
 ### python実装例 
 
@@ -74,11 +75,10 @@ struct CumulativeSum {
 ### 例題
 * [AOJ0516 JOI2006 本選A 最大の和](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516) <br>
 
-
-[python](#python使用例) <br>
-[C++](#C++使用例) <br>
-
 ### python使用例
+
++ [python](#python使用例) <br>
++ [C++](#C++使用例) <br>
 
 ```python
 class CumulativeSum:
