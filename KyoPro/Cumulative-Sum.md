@@ -43,6 +43,7 @@ class CumulativeSum:
     return self.data[min(kukan, self.size - 1)]
 ```
 </details>
+<br>
 
 ### C++
 
@@ -74,7 +75,6 @@ struct CumulativeSum {
     return data[min(kukan, (int)data.size() - 1)];
   }
 };
-
 ```
 </details>
 
