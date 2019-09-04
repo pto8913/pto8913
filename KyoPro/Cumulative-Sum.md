@@ -23,6 +23,7 @@
   <summary> python実装例 </summary>
 
   ```python
+  
   class CumulativeSum:
     def __init__(self, size):
       self.data = [0] * size
@@ -50,6 +51,7 @@
   <summary> C++実装例 </summary>
 
   ```cpp
+
   template<class T>
   struct CumulativeSum {
     vector< T > data;
@@ -97,6 +99,7 @@
   <summary> python使用例 </summary>
 
   ```python
+
   class CumulativeSum:
     # 省略
 
@@ -133,6 +136,7 @@
   <summary> C++使用例 </summary>
 
   ```cpp
+
   #include <iostream>
   #include <vector>
 
@@ -167,7 +171,7 @@
     cout << ans << endl;
   }
   ```
-  
+
 </details>
 
 [前のに戻る]({{ site.KyoProurl }}/KyoPro)<br>
