@@ -11,7 +11,6 @@
 > ## 計算量
 
 * 前計算(構築) O(n)
-
 * クエリ(区間の和) O(1)
 
 > ## 実装例
@@ -41,11 +40,13 @@
         return 0
       return self.data[min(kukan, self.size - 1)]
   ```
+
 </details>
 
 ### C++
 
 <details>
+
   <summary> C++実装例 </summary>
 
   ```cpp
@@ -74,14 +75,17 @@
   };
 
   ```
+
 </details>
 
 > ## 使用例
 
 <details>
+
   <summary> 例題 </summary>
 
   * [AOJ0516 JOI2006 本選A 最大の和](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516) <br>
+
 </details>
 
 [C++](#C++例) <br>
@@ -89,6 +93,7 @@
 
 ### python例
 <details>
+
   <summary> python使用例 </summary>
 
   ```python
@@ -119,10 +124,12 @@
 
   main()
   ```
+
 </details>
 
 ### C++例
 <details>
+
   <summary> C++使用例 </summary>
 
   ```cpp
@@ -160,6 +167,7 @@
     cout << ans << endl;
   }
   ```
+  
 </details>
 
 [前のに戻る]({{ site.KyoProurl }}/KyoPro)<br>

@@ -4,6 +4,7 @@
 # 素集合データ構造(Union-Find)
 
 > ## 説明
+
 * 集合を併合する操作(unite) <br>
 * ある要素がどの集合に属しているか(find) <br>
 * 同じ集合に属するか(same) <br>
@@ -12,6 +13,7 @@
 [わかりやすいスライド](slideshare.net/chokudai/union-find-49066733)
 
 > ## 計算量
+
 * O(α(n)) <br>
 α(n)は[アッカーマン関数](https://mathtrain.jp/ackermann) A(n,n)の逆関数 <br>
 めちゃくちゃ小さい計算量になる
@@ -91,6 +93,7 @@
 
 <!---------------------- UnionFind使用例 --------------------->
 > ## 使用例
+
 <details>
   <summary> 例題 </summary>
 
