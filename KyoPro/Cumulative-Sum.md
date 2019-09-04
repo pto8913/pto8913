@@ -86,6 +86,7 @@ struct CumulativeSum {
 <details>
   <summary> 例題 </summary>
   <div>
+  
   * [AOJ0516 JOI2006 本選A 最大の和](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516) <br>
   </div>
 </details>
