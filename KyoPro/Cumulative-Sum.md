@@ -1,6 +1,20 @@
 [前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 累積和(Cumulative-Sum)<br>
 [トップページに戻る]({{ site.reseturl }})<br>
 
+## collapsible markdown?
+
+<details><summary>CLICK ME</summary>
+<p>
+
+#### yes, even hidden code blocks!
+
+```python
+print("hello world!")
+```
+
+</p>
+</details>
+
 # 累積和(Cumulative-Sum)
 2019/09/04/17:39
 
