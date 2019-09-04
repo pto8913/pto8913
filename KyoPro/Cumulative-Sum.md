@@ -17,7 +17,7 @@
 > ## 実装例
 
 [python](#python実装例 ) <br>
-[C++](#C++実装例) <br>
+[C++](#Cpp実装例) <br>
 
 ### python実装例 
 
@@ -41,7 +41,7 @@ class CumulativeSum:
 
 ```
 
-### C++実装例
+### Cpp実装例
 
 ```cpp
 template<class T>
@@ -76,12 +76,11 @@ struct CumulativeSum {
 
 
  [python](#python使用例) <br>
- [C++](#C++使用例) <br>
+ [C++](#Cpp使用例) <br>
 
 ### python使用例
 
 ```python
-
 class CumulativeSum:
   # 省略
 
@@ -108,13 +107,11 @@ def main():
   print(ans)
 
 main()
-
 ```
 
-### C++使用例
+### Cpp使用例
 
 ```cpp
-
 #include <iostream>
 #include <vector>
 
@@ -148,9 +145,7 @@ int main() {
 
   cout << ans << endl;
 }
-
 ```
-
 
 [前に戻る]({{ site.KyoProurl }}/KyoPro)<br>
 
