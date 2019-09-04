@@ -21,8 +21,7 @@
 
 ### python実装例 
 
-```python 
-
+```python
 class CumulativeSum:
   def __init__(self, size):
     self.data = [0] * size
@@ -47,7 +46,7 @@ class CumulativeSum:
 
 ### C++
 
-```
+```cpp
 template<class T>
 struct CumulativeSum {
   vector< T > data;
@@ -71,7 +70,9 @@ struct CumulativeSum {
     return data[min(kukan, (int)data.size() - 1)];
   }
 };
+
 ```
+
 </details>
 
 > ## 使用例
