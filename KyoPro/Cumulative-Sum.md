@@ -24,6 +24,7 @@
   <summary> python実装例 </summary>
 
 ```python
+
 class CumulativeSum:
   def __init__(self, size):
     self.data = [0] * size
@@ -40,6 +41,7 @@ class CumulativeSum:
     if kukan < 0:
       return 0
     return self.data[min(kukan, self.size - 1)]
+    
 ```
 
 </details>
