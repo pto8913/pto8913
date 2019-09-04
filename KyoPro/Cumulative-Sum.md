@@ -46,7 +46,7 @@ class CumulativeSum:
 
 ### C++ <br><br>
 
-```cpp
+```cpp <br><br>
 template<class T>
 struct CumulativeSum {
   vector< T > data;
