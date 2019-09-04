@@ -3,6 +3,8 @@
 
 # 素集合データ構造(Union-Find)
 
+2019/09/04/18:55 pto8913
+
 > ## 説明
 
 * 集合を併合する操作(unite) <br>
@@ -24,12 +26,14 @@
 [重み付きUnionFind](#重み付きUnionFind) <br>
 
 > # UnionFind実装例
+
 <!---------------------- UnionFind実装例 --------------------->
 
 [python](#python)<br>
 [C++](#C++)<br>
 
 ### python
+
 <details>
   <summary> python実装例 </summary>
 
@@ -108,6 +112,7 @@
 [C++](#C++例) <br>
 
 ### python例
+
 <details>
   <summary> python使用例 </summary>
 
@@ -140,6 +145,7 @@
 </details>
 
 ### C++例
+
 <details>
   <summary> C++使用例 </summary>
 
@@ -183,6 +189,7 @@
 [C++](#C++重み実装例) <br>
 
 ### python重み実装例
+
 <details>
   <summary> python実装例 </summary>
 
@@ -230,6 +237,7 @@
 </details>
 
 ### C++重み実装例
+
 <details>
   <summary> C++実装例 </summary>
 
@@ -298,6 +306,7 @@
 [C++](#C++重み使用例) <br>
 
 ### python重み使用例
+
 <details>
   <summary> python使用例 </summary>
 
@@ -332,6 +341,7 @@
 </details>
 
 ### C++重み使用例
+
 <details>
   <summary> C++使用例 </summary>
 

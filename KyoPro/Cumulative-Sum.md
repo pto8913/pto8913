@@ -2,6 +2,7 @@
 [トップページに戻る]({{ site.reseturl }})<br>
 
 # 累積和(Cumulative-Sum)
+
 2019/09/04/17:53
 
 > ## 説明
