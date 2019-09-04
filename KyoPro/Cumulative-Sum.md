@@ -21,7 +21,7 @@
 ### python
 
 <details>
-  <summary> python実装例 </summary>
+<summary> python実装例 </summary>
 
 ```python
 
@@ -41,7 +41,7 @@ class CumulativeSum:
     if kukan < 0:
       return 0
     return self.data[min(kukan, self.size - 1)]
-    
+
 ```
 
 </details>
@@ -76,7 +76,9 @@ struct CumulativeSum {
     return data[min(kukan, (int)data.size() - 1)];
   }
 };
+
 ```
+
 </details>
 
 > ## 使用例
@@ -93,8 +95,7 @@ struct CumulativeSum {
 
 ### python例
 <details>
-
-  <summary> python使用例 </summary>
+<summary> python使用例 </summary>
 
 ```python
 
@@ -124,6 +125,7 @@ def main():
   print(ans)
 
 main()
+
 ```
 
 </details>
@@ -168,6 +170,7 @@ int main() {
 
   cout << ans << endl;
 }
+
 ```
 
 </details>
