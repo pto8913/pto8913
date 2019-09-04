@@ -42,7 +42,7 @@ class CumulativeSum:
 ```
 
 <details>
-<summary> C++実装例 </summary>
+<summary> C++実装例 </summary><br>
 
 ### C++
 
