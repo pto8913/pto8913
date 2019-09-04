@@ -29,7 +29,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: pitodesu
 github_username:  pto8913
 
-#markdown: CommonMarkGhPages
+markdown: CommonMarkGhPages
 
 reseturl: "https://pto8913.github.io/pto8913"
 KyoProurl: "https://pto8913.github.io/pto8913/KyoPro"
