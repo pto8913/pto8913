@@ -12,7 +12,7 @@
 * 同じ集合に属するか(same) <br>
 を問い合わせる操作を行うことができる。<br>
 
-[わかりやすいスライド](slideshare.net/chokudai/union-find-49066733)
+[わかりやすいスライド](https://slideshare.net/chokudai/union-find-49066733)
 
 > ## 計算量
 
