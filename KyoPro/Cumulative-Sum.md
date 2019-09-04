@@ -16,8 +16,8 @@
 
 > ## 実装例
 
-[python](#python) <br>
-[C++](#C++) <br>
+[python](#python実装例) <br>
+[C++](#C++実装例) <br>
 
 ### python実装例 
 
@@ -45,7 +45,7 @@ class CumulativeSum:
 
 </details>
 
-### C++ 
+### C++実装例
 
 <details>
 <summary> C++実装例 </summary>
