@@ -20,7 +20,7 @@
 
 ## 実装例
 
-[python](#pythonグラフ例)
+[python](#pythonグラフ例)<br>
 [C++](#C++グラフ例)
 
 ## グラフ上の探索
@@ -72,7 +72,7 @@ output
 8 : 2
 ```
 
-</details>
+</details><br>
 
 ### C++グラフ例
 
@@ -130,7 +130,7 @@ output
 8 : 2
 ```
 
-</details>
+</details><br>
 
 ## グリッド上の探索例
 
@@ -141,7 +141,7 @@ output
 
 </details>
 
-[python](#pythonグリッド例)
+[python](#pythonグリッド例) <br>
 [C++](#C++グリッド例)
 
 探索開始地点から目的地までの距離を求められる
@@ -187,7 +187,7 @@ def bfs():
 print(bfs())
 ```
 
-</details>
+</details><br>
 
 ### C++グリッド例
 
@@ -244,7 +244,7 @@ int main(){
 }
 ```
 
-</details>
+</details><br>
 
 [前のページに戻る]({{ site.KyoProurl }}/KyoPro)<br>
 
