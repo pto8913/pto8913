@@ -22,7 +22,6 @@
 
 ### python実装例 
 
-{ % include copybutton.js % }
 <details>
 <summary> python実装例 </summary>
 

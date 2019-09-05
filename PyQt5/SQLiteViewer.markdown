@@ -1,18 +1,19 @@
 [TOP]({{ site.reseturl }}) > PyQt5 SQLiteViewer
 
+# SQLiteViewer
+2019/09/05/12:45 pto8913
+
+[コードの詳細な説明]({{ site.PyQturl }}/SQLiteViewerDetails)
+
 ![SQLiteViewer]({{ site.reseturl }}/image/DBViewerQuery.png)
 
 [ソースコード](https://github.com/pto8913/PyQt5-s-tools/tree/master/DBViewer)
 
-# 対応
-
----
+## 対応
 
 * SQLite3
 
-# ディレクトリ構成
-
----
+## ディレクトリ構成
 
 ```PlainText
 ├── DB_dir
@@ -22,13 +23,13 @@
     ├── DBViewer.py
     └── DBViewer_dir
         ├── DBViewerUI.py
+        ├── __init__.py
+        ├── myfunc.py
         ├── DBViewerUIFunc.py
         └── DBViewerDirSetting.py
 ```
 
-# 使い方
-
----
+## 使い方
 
 データベースファイル(画像一番左)をダブルクリックすると
 そのデータベースのテーブルが(画像真ん中に)表示されます。
@@ -41,14 +42,13 @@
 クエリを選択せずに実行すると一番下のクエリが実行されます。
 <br>
 
-
-
 # クエリの種類
 
----
-
-SQLite3でできることはほぼすべてできるはずです
+SQLite3でできることはほぼすべてできるはずです<br>
 追加で`create database name`でデータベースファイルを作れます。
+
+<details>
+<summary> クエリ例 </summary>
 
 例
 ```SQL
@@ -70,13 +70,9 @@ delete from user where id = 2;
 
 drop table user;
 ```
-<br>
+</details>
 
-
-
-# データベースファイルの追加
-
----
+## データベースファイルの追加
 
 画像一番左の部分に
 * ドラッグアンドドロップ
@@ -84,11 +80,7 @@ drop table user;
 * `Ctrl + O`で行えます。
 <br>
 
-
-
-# データベースファイルの削除
-
----
+## データベースファイルの削除
 
 すべて消したい場合は
 * `Clear`ボタンか
@@ -104,16 +96,11 @@ Deleteをする際にリストから消すかPC上から消すか聞かれます
 * `Cancel`を押すと**Deleteを取り消します**
 <br>
 
-
-
-# 終了
-
----
+## 終了
 
 * `Exit`ボタンか
 * `Escape`で行えます。
 <br>
-
 
 
 [トップページに戻る]({{ site.reseturl }})

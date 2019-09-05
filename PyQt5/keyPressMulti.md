@@ -1,11 +1,19 @@
 [TOP]({{ site.reseturl }}) > PyQt5 KeyPressEvent(Multi)
 
-# 簡単な例
+# PyQtGuiにおけるキーの同時入力の受け取り方
 
----
+2019/09/05/11:41 pto8913 <br>
+
+* PyQt5.12.1 <br>
+* Python3.7.1 <br>
+
+# 簡単な例
 
 `modifier`で`Control`キーを修飾子として`Ctrl + xxx`を受け取ることができる<br>
 `Shift`キーでもできる
+
+<details>
+<summary> 実装例 </summary>
 
 ```python
 from PyQt5.QtWidgets import (
@@ -57,5 +65,6 @@ def main():
 if __name__ == '__main__':
   main()
 ```
+</details>
 
 [トップページに戻る]({{ site.reseturl }})

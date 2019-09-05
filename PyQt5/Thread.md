@@ -1,12 +1,16 @@
 [TOP]({{ site.reseturl }}) > PyQt5 QThread
 
-# 簡単な例
+# QThread template
+2019/09/05/12:44 pto8913 <br>
 
----
+## 簡単な例
 
 `__onClicked`関数内の<br>
 `self.notifier.notify.connect(self.__sub, type = Qt.DirectConnection)`<br>
 `self.__sub`の部分を別の関数に変えてやれば簡単にマルチスレッドにできます<br>
+
+<details>
+<summary> コード </summary>
 
 ```python
 import os
@@ -86,12 +90,14 @@ def main():
 if __name__ == '__main__':
   main()
 ```
+</details>
 
-# もう一つの例
-
----
+## もう一つの例
 
 `run`関数の中で処理を走らせることができます
+
+<details>
+<summary> コード </summary>
 
 ```python
 class Worker(QThread):
@@ -111,6 +117,6 @@ class Worker(QThread):
     # ここに処理を追加
     self.stop()
 ```
-
+</details>
 
 [トップページに戻る]({{ site.reseturl }})
