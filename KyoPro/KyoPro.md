@@ -13,9 +13,9 @@
 
 ## 探索
 
-* [深さ優先探索(DFS)]({{ site.kyoProurl }}/DFS)
+* [深さ優先探索(DFS)]({{ site.KyoProurl }}/DFS)
 * [幅優先探索(BFS)]({{
-  site.kyoProurl
+  site.KyoProurl
 }}/BFS)
 
 ## 数学
