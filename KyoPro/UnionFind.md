@@ -22,15 +22,13 @@
 
 ## 種類
 
-[通常UnionFind](#通常UnionFind) <br>
-[重み付きUnionFind](#重み付きUnionFind) <br>
+* 通常UnionFind
+* 重み付きUnionFind <br>
+ほかにもあるけど
 
 ## UnionFind実装例
 
 <!---------------------- UnionFind実装例 --------------------->
-
-[python](#python)<br>
-[C++](#C++)<br>
 
 ### python
 
@@ -108,9 +106,6 @@
   * [JOI 2011 本選 E-JOI国お祭り事情](https://atcoder.jp/contests/joi2012ho/tasks/joi2012ho5)<br>
 </details>
 
-[python](#python例) <br>
-[C++](#C++例) <br>
-
 ### python例
 
 <details>
@@ -184,9 +179,6 @@
 ## 重み付きUnionFind
 
 <!---------------------- 重み付きUnionFind実装例 --------------------->
-
-[python](#python重み実装例) <br>
-[C++](#C++重み実装例) <br>
 
 ### python重み実装例
 
@@ -302,9 +294,6 @@
 
 </details>
 
-[python](#python重み使用例) <br>
-[C++](#C++重み使用例) <br>
-
 ### python重み使用例
 
 <details>
@@ -380,8 +369,6 @@
   }
   ```
 </details>
-
-[上部に戻る](#Union-Find)
 
 [前のに戻る]({{ site.KyoProurl }}/KyoPro)<br>
 

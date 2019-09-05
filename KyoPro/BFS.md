@@ -24,9 +24,6 @@
 
 頂点0から各頂点への距離を求めることができる
 
-[python](#pythonグラフ例) <br>
-[C++](#C++グラフ例) <br>
-
 ### pythonグラフ例
 
 <details>
@@ -140,9 +137,6 @@ output
 * [ABC007 C-幅優先探索](https://atcoder.jp/contests/abc007/tasks/abc007_3)
 
 </details>
-
-[python](#pythonグリッド例) <br>
-[C++](#C++グリッド例)
 
 探索開始地点から目的地までの距離を求められる
 

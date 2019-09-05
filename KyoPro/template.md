@@ -6,8 +6,6 @@
 
 ## 高速化
 
-[python](#python)
-
 ## python
 
 ### 入力受け取り

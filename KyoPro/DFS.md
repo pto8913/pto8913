@@ -12,9 +12,6 @@
 
 ## 実装例
 
-[python](#python実装例) <br>
-[C++](#C++実装例)
-
 ### python実装例
 
 ```python
