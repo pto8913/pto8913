@@ -3,7 +3,7 @@
 
 # 累積和(Cumulative-Sum)
 
-2019/09/04/17:53
+2019/09/05/11:03
 
 > ## 説明
 
@@ -22,6 +22,7 @@
 
 ### python実装例 
 
+{ % include copybutton.js % }
 <details>
 <summary> python実装例 </summary>
 
