@@ -29,10 +29,7 @@ const long long INF = 1LL<<60;
 #define mkp(a, b) make_pair(a, b)
 
 struct Graph {
-  Graph(int size) {
-    this-> n = size;
-    adj = vector<vector<Pid>>(size, vector<Pid>());
-  }
+  Graph(int size) : adj(size, vector<Pid>()) { this-> n = size; }
 
   void addEdge(int a, int b, double w) {
     adj[a].push_back(mkp(b, w));
@@ -135,7 +132,7 @@ int main(){
 }
 ```
 
-</details>
+</details><br><br>
 
 [前のページに戻る]({{ site.KyoProurl }}/KyoPro)<br>
 

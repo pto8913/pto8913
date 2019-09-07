@@ -18,6 +18,10 @@
   site.KyoProurl
 }}/BFS)
 
+### 最短経路
+* [ダイクストラ法]({{ site.KyoProurl }}/Dijkstra)
+* [ベルマンフォード法]({{ site.KyoProurl }}/BellmanFord)
+
 ## 数学
 
 [トップページに戻る]({{ site.reseturl }})

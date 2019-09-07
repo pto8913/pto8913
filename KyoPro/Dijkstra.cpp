@@ -14,10 +14,7 @@ const long long INF = 1LL<<60;
 #define rep(i, a, n) for(int i = a; i < (n); ++i)
 
 struct Graph {
-  Graph(int size) {
-    this-> n = size;
-    adj = vector<vector<Pid>>(size, vector<Pid>());
-  }
+  Graph(int size) : adj(size, vector<Pid>()) { this-> n = size; }
 
   void addEdge(int a, int b, double w) {
     adj[a].push_back(mkp(b, w));
