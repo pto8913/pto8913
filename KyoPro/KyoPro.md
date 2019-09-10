@@ -10,6 +10,7 @@
 ## データ構造
 
 * [素集合データ構造(Union-Find)]({{ site.KyoProurl }}/UnionFind)
+* [BinaryIndexedTree(BIT)]({{ site.KyoProurl }}/BIT)
 
 ## 探索
 
