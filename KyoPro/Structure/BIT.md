@@ -15,6 +15,8 @@
 
 ## 実装例
 
+### python
+
 <details>
 <summary> コード </summary>
 
@@ -40,6 +42,8 @@ class BIT:
 
 </details>
 <br>
+
+### C++
 
 <details>
 <summary> コード </summary>
@@ -84,6 +88,8 @@ struct BIT {
 * [AOJ DSL 2 B Range Sum Query](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B&lang=jp)
 <br>
 
+### python
+
 <details>
 <summary> コード </summary>
 
@@ -112,6 +118,8 @@ main()
 ```
 </details>
 <br>
+
+### C++
 
 <details>
 <summary> コード </summary>
