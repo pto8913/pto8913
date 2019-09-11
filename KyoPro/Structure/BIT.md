@@ -155,7 +155,7 @@ int main(){
 ```
 
 </details>
-
+<br>
 
 [前のページに戻る]({{ site.KyoProurl }}/KyoPro)<br>
 
