@@ -11,6 +11,7 @@
 * python3.4以降なら、`pathlib`を使え。とても便利だから。<br>
 なお、pathlibを知る前に書いたコードが多いので制作物の中にはたくさん`os`が出てきます。<br>
 ### pathlibチートシート
+
 |   os   | pathlib |
 |:-:|:-:|
 | os.path.abspath() | Path.resolve() |
