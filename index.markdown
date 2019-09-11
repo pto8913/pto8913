@@ -17,6 +17,10 @@ layout: home
 * Unreal Engine4.19.2
 * Visual Studio Community 2017
 
+## memo
+* [pythonのメモ]({{ site.reseturl }}/memo/python_memo)
+* [謎のメモ]({{ site.reseturl }}/memo/memo)
+
 ## [競プロ用ライブラリ(リンク)]({{ site.KyoProurl }}/KyoPro)
 
 ## PyQt5
