@@ -5,6 +5,17 @@
 ## 目次
 * [path](#path)
 
+## たまにつかうやつ
+
+```python
+x = iter(list(range(1, 10)))
+for i in x:
+  if i == 1:
+    next(x)
+  if i == 8:
+    next(x)
+  print(i, 1)
+```
 
 ## path
 
@@ -51,6 +62,9 @@ current_dir.parents[0]
 # -> c:/study
 current_dir.parents[1]
 # -> c:/
+
+# ------ 拡張子の確認 ------
+current_dir.suffix
 ```
 
 [トップページに戻る]({{ site.reseturl }})
