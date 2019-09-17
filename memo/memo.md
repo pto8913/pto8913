@@ -2,6 +2,8 @@
 
 # メモ
 
+* [SplayTree](https://www.cs.usfca.edu/~galles/visualization/SplayTree.html)
+
 ```PlainText
 任意の a <= b <= cについて
 a + b + gcd(a, b) <= a + b + (b - a) = b + b <= b + c < b + c + gcd(b, c)
