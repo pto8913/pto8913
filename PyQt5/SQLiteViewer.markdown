@@ -23,10 +23,8 @@
     ├── DBViewer.py
     └── DBViewer_dir
         ├── DBViewerUI.py
-        ├── __init__.py
         ├── myfunc.py
-        ├── DBViewerUIFunc.py
-        └── DBViewerDirSetting.py
+        └── DBViewerThread.py
 ```
 
 ## 使い方
