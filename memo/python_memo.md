@@ -51,6 +51,7 @@ os.walk() -> Path().glob(pattern)
 # ------ 実行ファイルのディレクトリ取得 ------
 current_dir = Path(__file__).parent.resolve()
 # 動かなかったら"__file__"
+# vscode などのエディタ上で走らせるときは__file__部分はいらない 確認: win10 vscode
 
 # ------ よく使うos.walk ------
 for f in list(map(str, current_dir.glob("**/*.extension"))):
