@@ -67,4 +67,13 @@ current_dir.parents[1]
 current_dir.suffix
 ```
 
+## opencv
+
+```
+# ------ 画像のリサイズ ------
+cv2.resize(img, dsize = (x, y), interpolation = cv2.INTER_LINEAR)
+# cv2.INTER_CUBIC, LANCZOS4, AREA, NEAREST
+
+```
+
 [トップページに戻る]({{ site.reseturl }})
