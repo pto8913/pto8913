@@ -3,6 +3,8 @@
 # メモ
 
 * [SplayTree](https://www.cs.usfca.edu/~galles/visualization/SplayTree.html)
+* [yosupo online judge](https://judge.yosupo.jp/) <br>
+  > ライブラリチェックするようのオンラインジャッジ。すごい。
 
 ```PlainText
 任意の a <= b <= cについて
