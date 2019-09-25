@@ -1,4 +1,4 @@
-[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 約数列挙
+[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 約数列挙 <br>
 [トップページに戻る]({{ site.reseturl }})
 
 # 約数列挙
