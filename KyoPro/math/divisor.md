@@ -1,7 +1,7 @@
-[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 約数列挙(divisor)
+[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 約数列挙
 [トップページに戻る]({{ site.reseturl }})
 
-# 約数列挙(divisor)
+# 約数列挙
 2019/09/25 13:02
 
 ## 説明
