@@ -24,5 +24,8 @@
 * [ベルマンフォード法]({{ site.KyoProurl }}/Search/BellmanFord)
 
 ## 数学
+* [約数列挙]({{site.KyoProurl}}/math/divisor)
+
+<br>
 
 [トップページに戻る]({{ site.reseturl }})
