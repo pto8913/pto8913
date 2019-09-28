@@ -22,6 +22,7 @@ def divi(n):
         res.append(n // i)
   return res
 ```
+<br>
 
 [前に戻る]({{ site.KyoProurl }}/KyoPro)
 
