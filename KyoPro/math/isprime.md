@@ -11,6 +11,9 @@
 O(√n)
 
 ## 実装例
+
+### python
+
 ```python
 def isprime(n):
   if n == 1:
@@ -19,6 +22,18 @@ def isprime(n):
     if (n % i == 0):
       return False
   return True
+```
+
+### C++
+```cpp
+template<typename T>
+bool isprime(T n) {
+  if (n == 1) return false;
+  for (int i = 2;  i * i <= n; ++i) {
+    if (n % i == 0) return false;
+  }
+  return true;
+}
 ```
 <br>
 

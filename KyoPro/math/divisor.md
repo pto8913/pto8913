@@ -12,6 +12,7 @@ O(√n)
 
 ## 実装
 
+### python
 ```python
 def divi(n):
   res = []
@@ -21,6 +22,21 @@ def divi(n):
       if i != n // i:
         res.append(n // i)
   return res
+```
+### C++
+```cpp
+template<typename T>
+vector<T> divi(T n) {
+  vector<T> res;
+  for (T i = 1; i * i <= n; ++i) {
+    if (n % i == 0) {
+      res.push_back(i);
+      if (i * i != n) ret.push_back(n / i);
+    }
+  }
+  sort(begin(res), end(res));
+  return res;
+}
 ```
 <br>
 
