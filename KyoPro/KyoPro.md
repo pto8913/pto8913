@@ -25,6 +25,7 @@
 
 ## 数学
 * [約数列挙]({{ site.KyoProurl }}/math/divisor)
+* [素数判定]({{ site.KyoProurl }}/math/isprime)
 
 <br>
 
