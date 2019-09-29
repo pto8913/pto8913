@@ -1,7 +1,7 @@
 [TOP]({{ site.reseturl }}) > 競プロ用ライブラリ KyoPro
 
 ### memo
-* [AtCoder](https://atcoder.jp/?lang=ja)において`python3`はだいたい O(10**7) あたりで`TLE`になるので`PyPy3`などほかの言語で提出もしくは高速化が必要
+* [AtCoder](https://atcoder.jp/?lang=ja)において`python3`はだいたい __計算量O (10**7)__ あたりで`TLE`になるので`PyPy3`などほかの言語で提出もしくは高速化が必要
 
 ## 動的計画法
 
@@ -20,12 +20,13 @@
 }}/Search/BFS)
 
 ### 最短経路
-* [ダイクストラ法]({{ site.KyoProurl }}/Search/Dijkstra)
-* [ベルマンフォード法]({{ site.KyoProurl }}/Search/BellmanFord)
+* [ダイクストラ法(Dijkstra)]({{ site.KyoProurl }}/Search/Dijkstra)<br>
+~~ * [ベルマンフォード法]({{ site.KyoProurl }}/Search/BellmanFord) ~~
 
 ## 数学
-* [約数列挙]({{ site.KyoProurl }}/math/divisor)
-* [素数判定]({{ site.KyoProurl }}/math/isprime)
+* [約数列挙(Divisor)]({{ site.KyoProurl }}/math/divisor)
+* [素数判定(isprime)]({{ site.KyoProurl }}/math/isprime)
+* [最大公約数(gcd)最小公倍数(lcm)]({{ site.KyoProurl }}/math/gcdlcm)
 
 <br>
 

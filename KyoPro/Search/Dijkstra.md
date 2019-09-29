@@ -1,4 +1,4 @@
-[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro ダイクストラ法(Dijkstra))<br>
+[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro ダイクストラ法(Dijkstra)<br>
 [トップページに戻る]({{ site.reseturl }})<br>
 
 # ダイクストラ法(Dijkstra)

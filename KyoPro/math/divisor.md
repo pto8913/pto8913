@@ -1,4 +1,4 @@
-[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 約数列挙 <br>
+[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 約数列挙(divisor) <br>
 [トップページに戻る]({{ site.reseturl }})
 
 # 約数列挙
@@ -38,6 +38,9 @@ vector<T> divi(T n) {
   return res;
 }
 ```
+
+## 使用例
+* [ABC142_D-Disjoint_Set_of_Common_Divisors](https://atcoder.jp/contests/abc142/tasks/abc142_d)<br>
 <br>
 
 [前に戻る]({{ site.KyoProurl }}/KyoPro)

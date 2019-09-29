@@ -1,4 +1,4 @@
-[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 素数判定 <br>
+[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 素数判定(isprime) <br>
 [トップページに戻る]({{ site.reseturl }})
 
 # 素数判定
@@ -35,6 +35,8 @@ bool isprime(T n) {
   return true;
 }
 ```
+## 使用例
+* [ABC142_D-Disjoint_Set_of_Common_Divisors](https://atcoder.jp/contests/abc142/tasks/abc142_d)<br>
 <br>
 
 [前に戻る]({{ site.KyoProurl }}/KyoPro)
