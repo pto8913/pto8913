@@ -13,12 +13,12 @@
 <summary> コード </summary>
 
 ```python
-import os
 import sys
-from PyQt5.QtWidgets import QApplication, QPushButton, idget,
-  QVBoxLayout
+from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QVBoxLayout
 from PyQt5.QtCore import Qt, QObject, QThread, pyqtSignal
 from PyQt5.QtGui import QFont
+
+import time
 
 class Notifier(QObject):
   notify = pyqtSignal()
@@ -33,13 +33,12 @@ class Thread(QThread):
   def run(self):
     print('start thread :' + self.name)
     self.notifier.notify.emit()
-    self.finished.emit()
+    time.sleep(0.1)
 
 class Main(QWidget):
   def __init__(self):
     super(Main, self).__init__()
     
-    self.isRunning = False
     self.__initUI()
     
   def __initUI(self):
@@ -54,18 +53,7 @@ class Main(QWidget):
     layout.addWidget(finishButton)
 
     self.setLayout(layout)
-
-  def __onClicked(self):
-    self.notifier = Notifier()
-    self.thread = Thread(self.notifier, 'test')
-    self.notifier.moveToThread(self.thread)
-    self.notifier.notify.connect(self.__sub, type = Qt.DirectConnection)
-    self.thread.start()
-    self.thread.finished.connect(self.__finish)
-
-  def __finish(self):
-    print("finish")
-
+  
   def __sub(self):
     self.isRunning = True
     while self.isRunning:
@@ -74,8 +62,16 @@ class Main(QWidget):
         break
       print("now running")
 
+  def __onClicked(self):
+    self.notifier = Notifier()
+    self.thread = Thread(self.notifier, 'test')
+    self.notifier.moveToThread(self.thread)
+    self.notifier.notify.connect(self.__sub, type = Qt.DirectConnection)
+    self.thread.start()
+
   def __finishClicked(self):
-    self.isRunning = False
+    self.thread.terminate()
+    print("finished")
 
 def main():
   app = QApplication(sys.argv)
