@@ -34,6 +34,7 @@ layout: home
 * [QThread]({{ site.PyQturl }}/Thread)
 * [keyPressEvent(Multi)]({{ site.PyQturl }}/keyPressMulti)
 * [DivideUI]({{ site.PyQturl }}/DivideUI)
+* [Clipboard]({{ site.PyQturl }}/Clipboard)
 
 ## Unreal Engine4.19 memo
 
