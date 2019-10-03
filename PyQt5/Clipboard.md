@@ -15,8 +15,8 @@ import sys
 
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QListWidget, 
-    QPushButton, QLineEdit,
-    QVBoxLayout,
+    QPushButton, QLineEdit, QTextEdit,
+    QVBoxLayout, QHBoxLayout
 )
 
 from PyQt5.QtCore import Qt
@@ -34,10 +34,16 @@ class Main(QWidget):
         addItemButton = QPushButton("add")
         addItemButton.clicked.connect(self.add)
 
-        layout = QVBoxLayout()
-        layout.addWidget(self.Log)
-        layout.addWidget(addItemButton)
-        layout.addWidget(self.inputEdit)
+        Inputlayout = QVBoxLayout()
+        Inputlayout.addWidget(self.Log)
+        Inputlayout.addWidget(addItemButton)
+        Inputlayout.addWidget(self.inputEdit)
+
+        pasteEdit = QTextEdit()
+
+        layout = QHBoxLayout()
+        layout.addLayout(Inputlayout)
+        layout.addWidget(pasteEdit)
 
         self.setLayout(layout)
 
