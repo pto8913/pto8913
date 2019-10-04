@@ -6,13 +6,6 @@
 
 本文中にもソースコードは出てきます。<br>
 
-> # 注意
-
----
-
-**生成はできましたが削除ができません。** <br>
-**(新しくマップを開くと削除できます)**
-
 > # 導入
 
 ---
@@ -160,6 +153,58 @@ bool UBPFL_GenerateLandscape::GenerateLandscape(const UObject* worldContextObjec
 ![sample]({{ site.reseturl }}/image/GenTerBPActor8.png)
 
 ![sample]({{ site.reseturl }}/image/GenTerBPActor9.png)
+
+ここまでだと削除ができないので、新しく
+`DestroyLandscape`クラスを作って以下のコードをコピペしてください。
+
+```DestroyLandscape.cpp
+// write by pto8913
+
+#include "DestroyLandscape.h"
+
+#include "EngineUtils.h"
+#include "Landscape.h"
+#include "LandscapeInfo.h"
+#include "LandscapeEditorUtils.h"
+#include "Kismet/GameplayStatics.h"
+
+bool UDestroyLandscape::DestroyLandscape(const UObject* worldContextObject_) {
+	UWorld* world = worldContextObject_->GetWorld();
+
+	TArray<AActor*> FoundActors;
+	UGameplayStatics::GetAllActorsOfClass(world, ALandscape::StaticClass(), FoundActors);
+
+	for (auto actor : FoundActors) {
+		world->DestroyActor(actor);
+		return true;
+	}
+	return false;
+}
+```
+```DestroyLandscape.h
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
+#include "DestroyLandscape.generated.h"
+
+UCLASS()
+class MYPROJECT2_API UDestroyLandscape : public UBlueprintFunctionLibrary
+{
+	GENERATED_BODY()
+	
+public:
+	UFUNCTION(BlueprintCallable, Category = FoliageTest, meta = (HidePin = "worldContextObject_", DefaultToSelf = "worldContextObject_"))
+		static bool DestroyLandscape(const UObject* worldContextObject_);
+	
+};
+```
+`GenerateLandscape`クラスと同じ流れで作ってください。<br>
+__古いものから順番に削除されるので気を付けて下さい__ <br>
+指定したものを削除したいならタグをつけてやる方法がいいかも？ <br>
+僕ではできなかったのでできた方いましたら教えてください。
+
+<br>
 
 > # 参考
 
