@@ -7,6 +7,7 @@
 
 ![SQLiteViewer]({{ site.reseturl }}/image/DBViewerQuery.png)
 
+[ダウンロード(GoogleDriveに飛びます)](https://drive.google.com/open?id=1X_UPObRyp5KzBHq8z3nXidQAvBf2NNzB)
 [ソースコード](https://github.com/pto8913/PyQt5-s-tools/tree/master/DBViewer)
 
 ## 対応
