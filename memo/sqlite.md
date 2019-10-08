@@ -1,4 +1,4 @@
-[TOP]({{ site.reseturl }}) > sqlite
+[TOP]({{ site.reseturl }}) > SQLite
 
 # SQLiteの知見
 2019/10/08/23:47 pto8913
@@ -46,7 +46,7 @@ cur.executemany("insert into user(name) values(?);", dataset)
 conn.commit()
 ```
 
-![2]({{ site.reseturl }}/image/sqlite3/execmany.png)
+![2]({{ site.reseturl }}/image/sqlite3/execmany.png)<br>
 
 めんどくさい・・・<br>
 
@@ -76,14 +76,17 @@ for item in zip(*a):
 ## ドロップテーブルをしてもファイルのサイズが変わらない
 
 ドロップテーブル前<br>
-![3]({{ site.reseturl }}/image/sqlite3/before.png)
+
+![3]({{ site.reseturl }}/image/sqlite3/before.png)<br>
 
 ```python
 cur.execute("drop table user;")
 ```
 
 実行後<br>
+
 ![4]]({{ site.reseturl }}/image/sqlite3/after.png)<br>
+
 ![5]({{ site.reseturl }}/image/sqlite3/play.png)<br>
 
 ### 解決
