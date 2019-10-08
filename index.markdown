@@ -21,6 +21,7 @@ layout: home
 * [pythonのメモ]({{ site.reseturl }}/memo/python_memo)
 * [謎のメモ]({{ site.reseturl }}/memo/memo)
 * [URLmemo]({{ site.reseturl }}/memo/URLmemo)
+* [SQLite]({{ site.reseturl }}/memo/sqlite)
 
 ## [競プロ用ライブラリ(リンク)]({{ site.KyoProurl }}/KyoPro)
 
