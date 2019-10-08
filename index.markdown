@@ -29,6 +29,8 @@ layout: home
 
 * [SQLiteViewer]({{ site.PyQturl }}/SQLiteViewer)
 * [TerrainViewer]({{ site.PyQturl }}/TerrainViewer)
+* [Calculator]({{ site.PyQturl }}/Calclator)
+* [DirectoryViewer]({{ site.PyQturl }}/DirViewer)
 
 ## PyQt5 Templates
 
