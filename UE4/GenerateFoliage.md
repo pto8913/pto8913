@@ -1,6 +1,6 @@
 [TOP]({{ site.reseturl }}) > UE4 GenerateFoliage
 
-![sample]({{ site.reseturl }}/image/gen_foli.gif)
+![sample]({{ site.reseturl }}/image/genfol/gen_foli.gif)
 
 [ソースコード](https://github.com/pto8913/UE4_memo/tree/master/GenerateFoliage)
 
@@ -10,7 +10,7 @@
 
 ---
 
-![sample]({{ site.reseturl }}/image/GenTerNewPro.png)
+![sample]({{ site.reseturl }}/image/genfol/GenTerNewPro.png)
 
 **うまく作成できなかった場合は**<br>
 **ディレクトリ名やファイル名の日本語を英語表記にするとできるはずです。**<br>
@@ -19,15 +19,15 @@
 
 ---
 
-![sample]({{ site.reseturl }}/image/GenTerNewCpp.png)
+![sample]({{ site.reseturl }}/image/genfol/GenTerNewCpp.png)
 
 **今回はActorを使います**
 
-![sample]({{ site.reseturl }}/image/GenFolAc.png)
+![sample]({{ site.reseturl }}/image/genfol/GenFolAc.png)
 
 **ここで付けた名前がClass名になります**<br>
 
-![sample]({{ site.reseturl }}/image/GenFolAc2.png)
+![sample]({{ site.reseturl }}/image/genfol/GenFolAc2.png)
 
 > ### Visual Studioに移動してコードを書いていきます
 
@@ -35,11 +35,11 @@
 
 **`xxx.Build.cs`に移動して`Foliage`を追加**<br>
 
-![sample]({{ site.reseturl }}/image/GenFolBuild.png)
+![sample]({{ site.reseturl }}/image/genfol/GenFolBuild.png)
 
 **追加したらファイルの生成**<br>
 
-![sample]({{ site.reseturl }}/image/GenTerGenFile.png)
+![sample]({{ site.reseturl }}/image/genfol/GenTerGenFile.png)
 
 **ファイルの生成が終わったらそれぞれxxx.h xxx.cppに追加**<br>
 
@@ -128,11 +128,11 @@ void AGenerateFoliageActor::BeginPlay() {
 ---
 
 **戻ったらコンパイルを押します**<br>
-![sample]({{ site.reseturl }}/image/GenTerComp.png)
+![sample]({{ site.reseturl }}/image/genfol/GenTerComp.png)
 
 **コンパイルが終ったら`Actor`を画面内に入れる**<br>
 
-![sample]({{ site.reseturl }}/image/GenFolAc3.png)
+![sample]({{ site.reseturl }}/image/genfol/GenFolAc3.png)
 
 **プレイを押すと木が生えます**<br>
 **草でもできるはず**<br>

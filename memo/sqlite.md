@@ -87,7 +87,7 @@ cur.execute("drop table user;")
 
 ![4]({{ site.reseturl }}/image/sqlite3/after.png)<br>
 
-![5]({{ site.reseturl }}/image/sqlite3/play.png)<br>
+![5]({{ site.reseturl }}/image/sqlite3/pray.png)<br>
 
 ### 解決
 

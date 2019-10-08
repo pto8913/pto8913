@@ -5,7 +5,7 @@
 
 [コードの詳細な説明]({{ site.PyQturl }}/SQLiteViewerDetails)
 
-![SQLiteViewer]({{ site.reseturl }}/image/DBViewerQuery.png)
+![SQLiteViewer]({{ site.reseturl }}/image/dbview/DBViewerQuery.png)
 
 [ダウンロード(GoogleDriveに飛びます)](https://drive.google.com/open?id=1X_UPObRyp5KzBHq8z3nXidQAvBf2NNzB)
 [ソースコード](https://github.com/pto8913/PyQt5-s-tools/tree/master/DBViewer)

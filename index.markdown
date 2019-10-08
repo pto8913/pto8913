@@ -27,17 +27,18 @@ layout: home
 
 ## PyQt5
 
-* [SQLiteViewer]({{ site.PyQturl }}/SQLiteViewer)
-* [TerrainViewer]({{ site.PyQturl }}/TerrainViewer)
-* [Calculator]({{ site.PyQturl }}/Calclator)
-* [DirectoryViewer]({{ site.PyQturl }}/DirViewer)
+* [SQLiteViewer]({{ site.PyQturl }}/seika/SQLiteViewer)
+* [TerrainViewer]({{ site.PyQturl }}/seika/TerrainViewer)
+* [Calculator]({{ site.PyQturl }}/seika/Calclator)
+* [DirectoryViewer]({{ site.PyQturl }}/seika/DirViewer)
 
 ## PyQt5 Templates
 
-* [QThread]({{ site.PyQturl }}/Thread)
-* [keyPressEvent(Multi)]({{ site.PyQturl }}/keyPressMulti)
-* [DivideUI]({{ site.PyQturl }}/DivideUI)
-* [Clipboard]({{ site.PyQturl }}/Clipboard)
+* [QThread]({{ site.PyQturl }}/tiken/Thread)
+* [keyPressEvent(Multi)]({{ site.PyQturl }}/tiken/keyPressMulti)
+* [DivideUI]({{ site.PyQturl }}/tiken/DivideUI)
+* [Clipboard]({{ site.PyQturl }}/tiken/Clipboard)
+* [Drag and Drop]({{ site.PyQturl }}/tiken/dnd)
 
 ## Unreal Engine4.19 memo
 

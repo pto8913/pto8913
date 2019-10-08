@@ -1,6 +1,6 @@
 [TOP]({{ site.reseturl }}) > UE4 GenerateLandscape
 
-![sample]({{ site.reseturl }}/image/gen_land.gif)
+![sample]({{ site.reseturl }}/image/genter/gen_land.gif)
 
 [ソースコード](https://github.com/pto8913/UE4_memo/tree/master/GenerateLandscapeFromCpp)
 
@@ -10,7 +10,7 @@
 
 ---
 
-![sample]({{ site.reseturl }}/image/GenTerNewPro.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerNewPro.png)
 
 うまく作成できなかった場合は<br>
 ディレクトリ名やファイル名の日本語を英語表記にするとできるはずです。<br>
@@ -19,7 +19,7 @@
 
 ---
 
-![sample]({{ site.reseturl }}/image/GenTerNewCpp.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerNewCpp.png)
 
 **今回は`BluePrintFunctionLibrary`を使用** <br>
 
@@ -27,7 +27,7 @@
 
 **ここで付けた名前が`Class`名になります**<br>
 
-![sample]({{ site.reseturl }}/image/GenTerBPFL2.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerBPFL2.png)
 
 > ### Visual Studioに移動してコードを書いていきます
 
@@ -35,11 +35,11 @@
 
 **`xxx.Build.cs`に移動して`Landscape` `LandscapeEditor`を追加**<br>
 
-![sample]({{ site.reseturl }}/image/GenTerBuild.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerBuild.png)
 
 **追加したらファイルの生成**<br>
 
-![sample]({{ site.reseturl }}/image/GenTerGenFile.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerGenFile.png)
 
 **ファイルの生成が終わったらそれぞれxxx.h xxx.cppに追加**<br>
 
@@ -133,26 +133,26 @@ bool UBPFL_GenerateLandscape::GenerateLandscape(const UObject* worldContextObjec
 ---
 
 **戻ったらコンパイルを押します**<br>
-![sample]({{ site.reseturl }}/image/GenTerComp.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerComp.png)
 
 **コンパイルが終わったらブループリントアクターを作成**<br>
-![sample]({{ site.reseturl }}/image/GenTerBPActor.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerBPActor.png)
 
-![sample]({{ site.reseturl }}/image/GenTerBPActor2.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerBPActor2.png)
 
-![sample]({{ site.reseturl }}/image/GenTerBPActor3.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerBPActor3.png)
 
-![sample]({{ site.reseturl }}/image/GenTerBPActor4.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerBPActor4.png)
 
-![sample]({{ site.reseturl }}/image/GenTerBPActor5.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerBPActor5.png)
 
-![sample]({{ site.reseturl }}/image/GenTerBPActor6.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerBPActor6.png)
 
-![sample]({{ site.reseturl }}/image/GenTerBPActor7.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerBPActor7.png)
 
-![sample]({{ site.reseturl }}/image/GenTerBPActor8.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerBPActor8.png)
 
-![sample]({{ site.reseturl }}/image/GenTerBPActor9.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerBPActor9.png)
 
 ここまでだと削除ができないので、新しく
 `DestroyLandscape`クラスを作って以下のコードをコピペしてください。
