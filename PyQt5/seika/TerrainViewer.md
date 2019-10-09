@@ -1,12 +1,15 @@
 [TOP]({{ site.reseturl }}) > PyQt5 TerrainViewer
 
 # TerrainViewer(編集中)
-2019/09/30/14:13 pto8913
+最終更新: 2019/10/09/16:58 pto8913
 
 ## 説明
 [国土地理院](https://www.gsi.go.jp/)の[基盤地図情報](https://www.gsi.go.jp/kiban/index.html)から3D地図を作成し、その地図を誰でも使えるようにしたものです。<br>
 
 別に3D地図じゃなくてもいいよという人もとりあえず見ていってください<br>
+
+__今は研究に使用しているためソースコードは載せられませんが、大学を卒業次第載せます__<br>
+どうしても見たい人は、ツイッターのDMでもメールでも送ってください。用途を聞いて問題なければ見せるかもしれません。
 
 ## 対応
 * GUI(PyQt5.13.1)版　配布中です (バグの修正、機能の追加中)
@@ -103,8 +106,6 @@ DBViewerはなくても大丈夫です。<br>
 処理が終わると`Log`かウィンドウの下に`finished convert`の文字が表示されます<br>
 処理が終わるまでコーヒーでも飲んでおいてください<br>
 
-__UE4版は完成し次第載せます__
-
 ## GUIアプリ上で3D地図を見たい人はこちら
 
 `xmlToDB`と同じフォルダに[Terrain Viewer](https://drive.google.com/drive/folders/1EPOMkTa7HIAl18NlbDvFNC0UmdzbCIhz?usp=sharing)があるはずです。
@@ -122,13 +123,13 @@ __UE4版は完成し次第載せます__
 `Log`に表示されたものは`Ctrl+C`でコピーすることができるので使ってください。<br>
 
 ## UE4 上で3D地図を見たい人
-
+__UE4版は完成し次第載せます__
 
 ## 出発地点のバージョン
+
 
 [ソースコード](https://github.com/pto8913/PyQt5-s-tools/tree/master/Topographic%20map)
 
 これは古い試作のソースコードです。
-一部、研究に使用しているので変更後のコードは後々載せます。
 
 [トップページに戻る]({{ site.reseturl }})
