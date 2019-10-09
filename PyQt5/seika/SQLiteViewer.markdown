@@ -1,14 +1,14 @@
 [TOP]({{ site.reseturl }}) > PyQt5 SQLiteViewer
 
-# SQLiteViewer
+# SQLiteViewer(編集中)
 2019/09/05/12:45 pto8913
 
-[コードの詳細な説明]({{ site.PyQturl }}/SQLiteViewerDetails)
+![SQLiteViewer]({{ site.reseturl }}/image/dbview/DBViewerQuery.png)<br>
 
-![SQLiteViewer]({{ site.reseturl }}/image/dbview/DBViewerQuery.png)
+[ダウンロード(GoogleDriveに飛びます)](https://drive.google.com/open?id=1X_UPObRyp5KzBHq8z3nXidQAvBf2NNzB)<br>
 
-[ダウンロード(GoogleDriveに飛びます)](https://drive.google.com/open?id=1X_UPObRyp5KzBHq8z3nXidQAvBf2NNzB)
-[ソースコード](https://github.com/pto8913/PyQt5-s-tools/tree/master/DBViewer)
+[ソースコード](https://github.com/pto8913/PyQt5-s-tools/tree/master/DBViewer)<br>
+[コードの詳細な説明]({{ site.PyQturl }}/SQLiteViewerDetails)<br>
 
 ## 対応
 
@@ -18,13 +18,12 @@
 
 ```PlainText
 ├── DB_dir
-│   ├── database_file
+│   └── database_file
 │
 └── DBViewer_dir
     ├── DBViewer.py
     └── DBViewer_dir
         ├── DBViewerUI.py
-        ├── myfunc.py
         └── DBViewerThread.py
 ```
 
