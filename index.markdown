@@ -32,6 +32,8 @@ layout: home
 * [Calculator]({{ site.PyQturl }}/seika/Calclator)
 * [DirectoryViewer]({{ site.PyQturl }}/seika/DirViewer)
 * [img2pdf]({{ site.PyQturl }}/seika/img2pdf)
+* [Timer]({{ site.PyQturl }}/seika/Timer)
+* [ScreenCapture]({{ site.PyQturl }}/seika/ScreenCapture)
 
 ## PyQt5 Templates
 

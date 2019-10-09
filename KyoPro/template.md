@@ -57,11 +57,10 @@ it = iter(list(range(1, 11)))
 for i in it:
   if i == 3:
     next(it)
-    continue
   print(i)
 
 """
-1 2 4 5 6 7 8 9 10
+1 2 4 3 5 6 7 8 9 10
 """
 ```
 
