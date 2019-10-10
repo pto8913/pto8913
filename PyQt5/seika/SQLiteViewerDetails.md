@@ -129,7 +129,7 @@ def execQuery(self):
 
 ## クエリの実行2
 
-### VACUUM
+## VACUUM
 
 SQLiteで`DROP TABLE`を実行した際、ファイルの大きさが変わらないため、`VACUUM`を実行してやる必要がある。
 
@@ -151,7 +151,7 @@ Logを表示しないせいで、今処理中なのか・・・？ってなる�
 (多分、おそらく、きっと)<br>
 `VacuumThread`はもう少し下に行ったところにあるのでそこを見てください。
 
-### Create DB
+## Create DB
 これはSQLiteには必要のない機能。`sqlite3 〇〇.db`(pythonならconnect)をするだけでDBが作成されるため。<br>
 しかし、それはコンソール(エディタ)上での話。<br>
 この`SQLiteViewer`を使っているときに、あれ作りたい！ってなっていちいち移動するのはめんどくさい！<br>
@@ -222,7 +222,7 @@ def updateQuery(self):
 
 クエリが選択されていればその部分を返し、そうでなければ一番後ろのクエリを返す。
 
-### deleteSeparate
+## deleteSeparate
 
 ```python
 def deleteSpa(self, items):
@@ -294,7 +294,7 @@ def getTable(self):
 
 # DBViewerUI.py部分
 
-### DnD
+## DnD
 
 ```python
 def dragEnterEvent(self, event) -> None:
@@ -328,7 +328,7 @@ def addDir(self, item: str) -> None:
 
 * ドラッグアンドドロップでDBファイルを追加するときに動く
 
-### keyPressEvent
+## keyPressEvent
 
 ```python
 def keyPressEvent(self, event):
@@ -337,7 +337,7 @@ def keyPressEvent(self, event):
 ```
 * クエリの実行の際に`Ctrl + Enter`を押すと実行できる！
 
-### selectTableItem
+## selectTableItem
 
 ```python
 def selectTableItem(self):
@@ -356,7 +356,7 @@ def selectTableItem(self):
 
 # DBViewerThread.py部分
 
-### MyTreeクラス
+## MyTreeクラス
 
 モデルを入れるための箱。実際ユーザの前に表示されているのはこのクラス
 
@@ -386,7 +386,7 @@ class MyTree(QTreeView):
         model.setItem(cnt, index, item)
 ```
 
-### DBListerクラス
+## DBListerクラス
 
 実際にクエリを実行し、データを受け取り`MyTree`クラスに返す部分<br>
 受け取ったデータの型によって、処理を変えているが、全部`str`型に変えて返せば問題ないのではという気がしている。<br>
@@ -446,7 +446,7 @@ class DBLister(QThread):
     self.stop()
 ```
 
-### VacuumThreadクラス
+## VacuumThreadクラス
 
 このページの上のほうで書いた`VACUUM`の処理をしてくれるスレッド。<br>
 
@@ -487,9 +487,6 @@ class VacuumThread(QThread):
 メインスレッドからこのスレッドに移動したことで、このスレッド上では`python`と`SQLite`が接続されていない。という部分を見落としていたこと。<br>
 (関係を考えずに書くからこうなる。)<br>
 
-
-
-[上部に戻る](#SQLiteViewerの詳細です)
 
 [前に戻る]({{ site.PyQturl }}/seika/SQLiteViewer)
 

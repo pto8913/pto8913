@@ -8,14 +8,14 @@
 
 # 導入
 
-![sample]({{ site.reseturl }}/image/genfol/GenTerNewPro.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerNewPro.png)
 
 **うまく作成できなかった場合は**<br>
 **ディレクトリ名やファイル名の日本語を英語表記にするとできるはずです。**<br>
 
 ### 新規C++クラスの作成
 
-![sample]({{ site.reseturl }}/image/genfol/GenTerNewCpp.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerNewCpp.png)
 
 **今回はActorを使います**
 
@@ -33,7 +33,7 @@
 
 **追加したらファイルの生成**<br>
 
-![sample]({{ site.reseturl }}/image/genfol/GenTerGenFile.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerGenFile.png)
 
 **ファイルの生成が終わったらそれぞれxxx.h xxx.cppに追加**<br>
 
@@ -120,7 +120,7 @@ void AGenerateFoliageActor::BeginPlay() {
 ### UE4に戻ります
 
 **戻ったらコンパイルを押します**<br>
-![sample]({{ site.reseturl }}/image/genfol/GenTerComp.png)
+![sample]({{ site.reseturl }}/image/genter/GenTerComp.png)
 
 **コンパイルが終ったら`Actor`を画面内に入れる**<br>
 
