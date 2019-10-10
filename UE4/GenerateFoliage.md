@@ -6,18 +6,14 @@
 
 本文中にもソースコードは出てきます。<br>
 
-> # 導入
-
----
+# 導入
 
 ![sample]({{ site.reseturl }}/image/genfol/GenTerNewPro.png)
 
 **うまく作成できなかった場合は**<br>
 **ディレクトリ名やファイル名の日本語を英語表記にするとできるはずです。**<br>
 
-> ### 新規C++クラスの作成
-
----
+### 新規C++クラスの作成
 
 ![sample]({{ site.reseturl }}/image/genfol/GenTerNewCpp.png)
 
@@ -29,9 +25,7 @@
 
 ![sample]({{ site.reseturl }}/image/genfol/GenFolAc2.png)
 
-> ### Visual Studioに移動してコードを書いていきます
-
----
+### Visual Studioに移動してコードを書いていきます
 
 **`xxx.Build.cs`に移動して`Foliage`を追加**<br>
 
@@ -123,9 +117,7 @@ void AGenerateFoliageActor::BeginPlay() {
 
 **オブジェクト(アセット？)のパスはオブジェクトを右クリックするとリファレンスのコピーしそれを使う**<br>
 
-> ### UE4に戻ります
-
----
+### UE4に戻ります
 
 **戻ったらコンパイルを押します**<br>
 ![sample]({{ site.reseturl }}/image/genfol/GenTerComp.png)
@@ -137,7 +129,7 @@ void AGenerateFoliageActor::BeginPlay() {
 **プレイを押すと木が生えます**<br>
 **草でもできるはず**<br>
 
-> # `GenerateLandscape`の時のようにエディタでボタンを押して生成したい場合
+## `GenerateLandscape`の時のようにエディタでボタンを押して生成したい場合
 
 [GenerateLandscape]({{ site.reseturl }}/GenerateLandscape)<br>ここを見ながら[ソースコード](https://github.com/pto8913/UE4_memo/tree/master/GenerateFoliage)の`BPFL_~`を追加してください。<br>
 **`BPFL`版を使う際にはワールド上に一つ以上**<br>
