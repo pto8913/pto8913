@@ -129,7 +129,7 @@ void AGenerateFoliageActor::BeginPlay() {
 **プレイを押すと木が生えます**<br>
 **草でもできるはず**<br>
 
-## `GenerateLandscape`の時のようにエディタでボタンを押して生成したい場合
+## GenerateLandscapeの時のようにエディタでボタンを押して生成したい場合
 
 [GenerateLandscape]({{ site.reseturl }}/GenerateLandscape)<br>ここを見ながら[ソースコード](https://github.com/pto8913/UE4_memo/tree/master/GenerateFoliage)の`BPFL_~`を追加してください。<br>
 **`BPFL`版を使う際にはワールド上に一つ以上**<br>
