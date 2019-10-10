@@ -29,7 +29,7 @@ layout: home
 
 * [SQLiteViewer]({{ site.PyQturl }}/seika/SQLiteViewer)
 * [TerrainViewer]({{ site.PyQturl }}/seika/TerrainViewer)
-* [Calculator]({{ site.PyQturl }}/seika/Calclator)
+* [Calculator]({{ site.PyQturl }}/seika/Calculator)
 * [DirectoryViewer]({{ site.PyQturl }}/seika/DirViewer)
 * [img2pdf]({{ site.PyQturl }}/seika/img2pdf)
 * [Timer]({{ site.PyQturl }}/seika/Timer)
