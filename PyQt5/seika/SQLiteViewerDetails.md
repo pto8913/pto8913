@@ -1,6 +1,6 @@
 [TOP]({{ site.reseturl }}) > PyQt5 SQLiteViewer SQLiteViewerDetails
 
-[前に戻る]({{ site.PyQturl }}/SQLiteViewer)
+[前に戻る]({{ site.PyQturl }}/seika/SQLiteViewer)
 
 # SQLiteViewerの詳細です(編集中)
 
@@ -491,6 +491,6 @@ class VacuumThread(QThread):
 
 [上部に戻る](#SQLiteViewerの詳細です)
 
-[前に戻る]({{ site.PyQturl }}/SQLiteViewer)
+[前に戻る]({{ site.PyQturl }}/seika/SQLiteViewer)
 
 [トップページに戻る]({{ site.reseturl }})
