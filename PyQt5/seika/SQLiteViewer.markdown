@@ -8,7 +8,7 @@
 [ダウンロード(GoogleDriveに飛びます)](https://drive.google.com/open?id=1X_UPObRyp5KzBHq8z3nXidQAvBf2NNzB)<br>
 
 [ソースコード](https://github.com/pto8913/PyQt5-s-tools/tree/master/DBViewer)<br>
-[コードの詳細な説明]({{ site.PyQturl }}/SQLiteViewerDetails)<br>
+[コードの詳細な説明]({{ site.PyQturl }}/seika/SQLiteViewerDetails)<br>
 
 ## 対応
 
