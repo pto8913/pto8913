@@ -1,4 +1,4 @@
-[TOP]({{ site.reseturl }}) > UE4 GenerateFoliage
+[TOP]({{ site.reseturl }}) > seika > UE4 GenerateFoliage
 
 ![sample]({{ site.reseturl }}/image/genfol/gen_foli.gif)
 

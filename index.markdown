@@ -25,6 +25,11 @@ layout: home
 
 ## [競プロ用ライブラリ(リンク)]({{ site.KyoProurl }}/KyoPro)
 
+## 作ったゲーム
+
+### UE4 
+* [全方向シューティングゲーム]({{ site.UEurl }}/AllDirectionShooting)
+
 ## PyQt5
 
 * [SQLiteViewer]({{ site.PyQturl }}/seika/SQLiteViewer)
@@ -46,5 +51,5 @@ layout: home
 
 ## Unreal Engine4.19 memo
 
-* [C++からLandscapeを生成する]({{ site.UEurl }}/GenerateLandscape)
-* [C++から木を生やす]({{ site.UEurl }}/GenerateFoliage)
+* [C++からLandscapeを生成する]({{ site.UEurl }}/seika/GenerateLandscape)
+* [C++から木を生やす]({{ site.UEurl }}/seika/GenerateFoliage)

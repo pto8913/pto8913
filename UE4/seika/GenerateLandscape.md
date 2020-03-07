@@ -1,4 +1,4 @@
-[TOP]({{ site.reseturl }}) > UE4 GenerateLandscape
+[TOP]({{ site.reseturl }}) > seika > UE4 GenerateLandscape
 
 ![sample]({{ site.reseturl }}/image/genter/gen_land.gif)
 

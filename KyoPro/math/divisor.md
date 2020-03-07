@@ -31,7 +31,7 @@ vector<T> divi(T n) {
   for (T i = 1; i * i <= n; ++i) {
     if (n % i == 0) {
       res.push_back(i);
-      if (i * i != n) ret.push_back(n / i);
+      if (i * i != n) res.push_back(n / i);
     }
   }
   sort(begin(res), end(res));
