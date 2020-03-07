@@ -8,7 +8,7 @@
 [ダウンロード(GoogleDriveに飛びます)](https://drive.google.com/open?id=1X_UPObRyp5KzBHq8z3nXidQAvBf2NNzB)<br>
 
 [ソースコード](https://github.com/pto8913/PyQt5-s-tools/tree/master/DBViewer)<br>
-[コードの詳細な説明]({{ site.PyQturl }}/SQLiteViewerDetails)<br>
+[コードの詳細な説明]({{ site.PyQturl }}/seika/SQLiteViewerDetails)<br>
 
 ## 対応
 
@@ -99,6 +99,12 @@ Deleteをする際にリストから消すかPC上から消すか聞かれます
 * `Exit`ボタンか
 * `Escape`で行えます。
 <br>
+
+## 今後の構想
+* 実行したクエリや、エラーを表示する`Log`の追加。
+* DBの場所を確認できるようにする(同じファイル名があると困るため)
+* 主キーなどが設定されているときの表示の変更
+* バグとか全部修正出来たら`SQLite`だけじゃなく`MySQL`とかにも対応したい。(公式のものを使えばいいのに・・・)<br>
 
 
 [トップページに戻る]({{ site.reseturl }})

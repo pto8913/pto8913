@@ -157,7 +157,7 @@ bool UBPFL_GenerateLandscape::GenerateLandscape(const UObject* worldContextObjec
 ここまでだと削除ができないので、新しく
 `DestroyLandscape`クラスを作って以下のコードをコピペしてください。
 
-```DestroyLandscape.cpp
+```cpp
 // write by pto8913
 
 #include "DestroyLandscape.h"
@@ -181,7 +181,8 @@ bool UDestroyLandscape::DestroyLandscape(const UObject* worldContextObject_) {
 	return false;
 }
 ```
-```DestroyLandscape.h
+
+```cpp
 #pragma once
 
 #include "CoreMinimal.h"
