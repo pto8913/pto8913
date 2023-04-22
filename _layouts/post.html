@@ -4,16 +4,16 @@ layout: default
 
 <article>
   {% include meta.html post=page %}
-  <a href="site.reseturl">トップページに戻る</a>
+  <a href="https://pto8913.github.io/pto8913">トップページに戻る</a>
 
   <body>
     <p>目次</p>
-    <script type="text/javascript" src="javascript/create_table_of_contents.js"></script>
+    <script type="text/javascript" src="/javascript/create_table_of_contents.js"></script>
   </body>
 
   {{ content }}
 
-  <a href="site.reseturl">トップページに戻る</a>
+  <a href="https://pto8913.github.io/pto8913">トップページに戻る</a>
   {% if page.comments != false and site.comments.isso or site.comments.disqus %}
     <hr>
     {% if site.comments.isso_domain %}<div id="isso-thread"></div>{% endif %}
