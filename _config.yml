@@ -21,6 +21,7 @@
 #encoding: utf-8
 
 title: pto8913
+author: pto8913
 #email: your-email@example.com
 description: #>- # this means to ignore newlines until "baseurl:"
   制作物や知見を置いていく場所
@@ -41,8 +42,6 @@ markdown: CommonMarkGhPages
 show_excerpts: true        # show article excerpts on the home page
 show_frame: true           # adds a gray frame to the site
 show_sidebar: false        # show a sidebar instead of the usual header
-minimal: false             # use a dark header
-
 
 # Menu
 
