@@ -50,6 +50,7 @@ try {
         oldRank = rank;
     });
     if (layer.length) appendToc(tocInsertElement, findParentElement(layer, 0, 1));
+    console.log("create_table_of_contents.js is success")
 } catch (e) {
-    //error 
+    console.log("create_table_of_contents.js is failed")
 }
