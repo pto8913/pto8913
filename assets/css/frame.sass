@@ -3,16 +3,19 @@
 
 @import index, font, basic, layout, classes
 
-html
+html {
   background: lighten($dark, 70%)
   padding: 0 calc(38% - 22em)
+}
 
-body
+body {
   box-shadow: 0 0 .3em lighten($dark, 65%)
+}
 
-body > header, body > footer
+body > header, body > footer {
   background: lighten($dark, 5%)
   color: $light
+}
 
 @media (min-width: 32em)
   body > header, body > article, body > footer
@@ -24,6 +27,7 @@ body > header, body > footer
   html, body > header, body > footer
     background: $dark
 
-h2
+h2 {
   background: lighten($dark, 50%)
-  
+  color: $light
+}
