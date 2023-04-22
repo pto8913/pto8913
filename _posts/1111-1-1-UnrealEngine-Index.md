@@ -4,16 +4,16 @@ layout: post
 categories: UnrealEngine
 ---
 
-<body>
+<code>
     <h2 id=toc>作ったゲーム</h2>
-</body>
+</code>
 
 ## 作ったゲーム
 * [全方向シューティングゲーム]({{ site.UEurl }}/AllDirectionShooting)
 
-<body>
+<code>
     <h2 id=toc>Unreal Engine4.19</h2>
-</body>
+</code>
 
 ## Unreal Engine4.19
 * [C++からLandscapeを生成する]({{ site.UEurl }}/seika/GenerateLandscape)
