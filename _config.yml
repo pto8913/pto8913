@@ -29,7 +29,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: pitodesu
 github_username:  pto8913
 
-author: "pto8913"
 permalink: /:title/
 lang: "jp"
 excerpt_separator: "\n\n\n"
