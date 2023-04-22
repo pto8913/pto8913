@@ -1,6 +1,6 @@
 ---
-
-layout: home
+layout: default
+title: home
 
 ---
 
@@ -9,6 +9,13 @@ layout: home
 メモだよ
 
 自由に使ってください
+
+
+{% if site.show_excerpts %}
+  {% include home.html %}
+{% else %}
+  {% include archive.html title="Posts" %}
+{% endif %}
 
 ## 環境
 
