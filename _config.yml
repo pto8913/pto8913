@@ -64,7 +64,7 @@ repository: pto8913.github.io/pto8913
 
 
 # Build settings
-remote_theme: niklasbuschmann/contrast@v2.11
+remote_theme: https://github.com/niklasbuschmann/contrast
 # theme: minima
 highlighter: rouge
 #theme: jekyll-theme-architect
