@@ -56,11 +56,11 @@ external:                  # shows a footer with social links - for available ic
   - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
 
-reseturl: "https://pto8913.github.io/pto8913"
-KyoProurl: {reseturl}"/KyoPro"
-PyQturl: "https://pto8913.github.io/pto8913/PyQt5"
-UEurl: "https://pto8913.github.io/pto8913/UE4"
-HoshimoriURL: "https://pto8913.github.io/pto8913/UE4"
+resetURL: "https://pto8913.github.io/pto8913"
+KyoProURL: {resetURL}"/KyoPro"
+PyQtURL: {resetURL}"/PyQt5"
+UEURL: {resetURL}"/UE4"
+HoshimoriURL: {resetURL}"/Hoshimori"
 
 github: [metadata]
 repository: pto8913.github.io/pto8913
