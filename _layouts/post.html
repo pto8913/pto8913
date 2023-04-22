@@ -5,9 +5,11 @@ layout: default
 <article>
   {% include meta.html post=page %}
   <a href="https://pto8913.github.io/pto8913">トップページに戻る</a>
-
+<!-- 
   <h2>目次</h2>>
-  <div id="toc"></div>
+  <div id="toc"></div> -->
+
+  {% include toc.html html=content %}
   {{ content }}
 
   <a href="https://pto8913.github.io/pto8913">トップページに戻る</a>
@@ -18,5 +20,5 @@ layout: default
     <noscript>Please enable JavaScript to view comments.</noscript>
   {% endif %}
 
-  <script type="text/javascript" src="/pto8913/assets/js/create_table_of_contents.js"></script>
+  <!-- <script type="text/javascript" src="/pto8913/assets/js/create_table_of_contents.js"></script> -->
 </article>
