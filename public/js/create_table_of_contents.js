@@ -74,8 +74,10 @@ try {
     });
     tocHighlight();
     window.addEventListener("scroll", tocHighlight);
+    console.log("create_table_of_contents.js is success");
+
 } catch (e) {
     //error 
-    document.write("create_table_of_contents.js is failled");
-    document.write(e);
+    console.log("create_table_of_contents.js is failled");
+    // document.write(e);
 }
