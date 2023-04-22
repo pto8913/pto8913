@@ -65,13 +65,13 @@ repository: pto8913.github.io/pto8913
 
 
 # Build settings
-remote_theme: niklasbuschmann/contrast
-# theme: minima
+# remote_theme: niklasbuschmann/contrast
+theme: minima
 highlighter: rouge
 #theme: jekyll-theme-architect
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
+  # - jekyll-remote-theme
   #- jekyll-github-metadata
   
 # Exclude from processing.
