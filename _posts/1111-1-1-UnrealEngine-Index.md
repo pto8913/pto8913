@@ -1,6 +1,5 @@
 ---
 title:  UnrealEngine-Index
-mathjax: true
 layout: post
 categories: UnrealEngine
 ---
