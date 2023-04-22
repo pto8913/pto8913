@@ -69,6 +69,7 @@ repository: pto8913.github.io/pto8913
 theme: minima
 highlighter: rouge
 #theme: jekyll-theme-architect
+paginate: 5
 plugins:
   - jekyll-feed
   # - jekyll-remote-theme
