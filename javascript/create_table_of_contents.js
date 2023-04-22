@@ -76,4 +76,6 @@ try {
     window.addEventListener("scroll", tocHighlight);
 } catch (e) {
     //error 
+    document.write("create_table_of_contents.js is failled");
+    document.write(e);
 }
