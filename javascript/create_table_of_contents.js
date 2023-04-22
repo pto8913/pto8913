@@ -1,5 +1,4 @@
-<script>
-{
+function CreateTableOfContents() {
     // 設定
     const TOC_INSERT_SELECTOR = '#toc';              // [セレクター指定] 目次を挿入する要素 querySelector用
     const HEADING_SELECTOR    = 'h1,h2,h3,h4,h5,h6'; // [セレクター指定] 収集する見出し要素 querySelectorAll用
@@ -48,4 +47,3 @@
         //error 
     }
 }
-</script>
