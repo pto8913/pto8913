@@ -69,7 +69,10 @@ repository: pto8913.github.io/pto8913
 theme: minima
 highlighter: rouge
 #theme: jekyll-theme-architect
+
 paginate: 5
+paginate_path: "/pto8913/page:nunm/"
+
 plugins:
   - jekyll-feed
   # - jekyll-remote-theme
