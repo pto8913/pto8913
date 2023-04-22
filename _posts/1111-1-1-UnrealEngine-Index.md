@@ -4,15 +4,9 @@ layout: post
 categories: UnrealEngine
 ---
 
-<!-- omit in toc -->
-## 目次
-- [作ったゲーム](#作ったゲーム)
-- [Unreal Engine4.19 memo](#unreal-engine419-memo)
-
-## 作ったゲーム
+<h2 id=toc>作ったゲーム</hs>
 * [全方向シューティングゲーム]({{ site.UEurl }}/AllDirectionShooting)
 
-## Unreal Engine4.19 memo
-
+<h2 id=toc>Unreal Engine4.19</hs>
 * [C++からLandscapeを生成する]({{ site.UEurl }}/seika/GenerateLandscape)
 * [C++から木を生やす]({{ site.UEurl }}/seika/GenerateFoliage)
