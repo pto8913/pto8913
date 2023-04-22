@@ -4,7 +4,7 @@ layout: post
 categories: UnrealEngine
 ---
 
-[トップページに戻る]({{ site.reseturl }})
+
 
 ## 目次
 * [作ったゲーム](#作ったゲーム)
@@ -17,5 +17,3 @@ categories: UnrealEngine
 
 * [C++からLandscapeを生成する]({{ site.UEurl }}/seika/GenerateLandscape)
 * [C++から木を生やす]({{ site.UEurl }}/seika/GenerateFoliage)
-
-[トップページに戻る]({{ site.reseturl }})
