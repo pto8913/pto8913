@@ -1,5 +1,12 @@
-function CreateTableOfContents() {
-    // 設定
+/**
+    Table of Contents
+
+    Copyright (c) 2020 Kamochan https://cookbook88.com/
+
+    This software is released under the MIT License.
+    http://opensource.org/licenses/mit-license.php
+*/
+{
     const TOC_INSERT_SELECTOR = '#toc';              // [セレクター指定] 目次を挿入する要素 querySelector用
     const HEADING_SELECTOR    = 'h1,h2,h3,h4,h5,h6'; // [セレクター指定] 収集する見出し要素 querySelectorAll用
     const LINK_CLASS_NAME     = 'tocLink';           // [クラス名] 目次用aタグに追加するクラス名     .無し
@@ -9,6 +16,7 @@ function CreateTableOfContents() {
     const layer = [];
     let id = 0;
     const uid   = () =>`${ID_NAME}${id++}`;
+    let links = null;
     let oldRank = -1;
     try {
         const createLink = (el) => {
@@ -31,6 +39,19 @@ function CreateTableOfContents() {
         const appendToc = (el, toc) => {
             el.appendChild(toc.cloneNode(true));
         };
+        const tocHighlight = (e) => {
+            const sy = window.pageYOffset;
+            const ey = sy + document.documentElement.clientHeight;
+            let tocHighlightEl = null;
+            links.forEach( (el) => {
+                const targetEl = document.querySelector(el.hash);
+                const y = sy + targetEl.getBoundingClientRect().top ;
+                el.classList.remove("active") ;
+                if(sy < y &&  y < ey)tocHighlightEl = el;
+                if(sy > y) tocHighlightEl = el;
+            });
+            if(tocHighlightEl)tocHighlightEl.classList.add("active");
+        };
         headingElements.forEach( (el) => {
             let rank   = Number(el.tagName.substring(1));
             let parent = findParentElement(layer, rank, -1);
@@ -43,6 +64,17 @@ function CreateTableOfContents() {
             oldRank = rank;
         });
         if (layer.length) appendToc(tocInsertElement, findParentElement(layer, 0, 1));
+        links = document.querySelectorAll(`.${LINK_CLASS_NAME}`);
+        links.forEach((el) => {
+            el.addEventListener("click",(e)=>{
+                const targetEl = document.querySelector(el.hash);
+                scrollTo(0, window.pageYOffset + targetEl.getBoundingClientRect().top - 100);
+                e.preventDefault();
+                e.stopPropagation();
+            });
+        });
+        tocHighlight();
+        window.addEventListener("scroll", tocHighlight);
     } catch (e) {
         //error 
     }
