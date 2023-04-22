@@ -6,6 +6,7 @@
     This software is released under the MIT License.
     http://opensource.org/licenses/mit-license.php
 */
+function CreateTableOfContents(){
 const TOC_INSERT_SELECTOR = '#toc';              // [セレクター指定] 目次を挿入する要素 querySelector用
 const HEADING_SELECTOR    = 'h1,h2,h3,h4,h5,h6'; // [セレクター指定] 収集する見出し要素 querySelectorAll用
 const LINK_CLASS_NAME     = 'tocLink';           // [クラス名] 目次用aタグに追加するクラス名     .無し
@@ -80,4 +81,5 @@ try {
     //error 
     console.log("create_table_of_contents.js is failled");
     // document.write(e);
+}
 }
