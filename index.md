@@ -11,11 +11,11 @@ title: home
 自由に使ってください
 
 
-{% if site.show_excerpts %}
+<!-- {% if site.show_excerpts %}
   {% include home.html %}
 {% else %}
   {% include archive.html title="Posts" %}
-{% endif %}
+{% endif %} -->
 
 ## 環境
 
