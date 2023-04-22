@@ -1,56 +1,60 @@
-/**
-    Table of Contents
+function CreateTableOfContents(window, document) {
+  const selector = document.querySelector('.post-body');
+  if (!selector) {
+    return
+  }
 
-    Copyright (c) 2020 Kamochan https://cookbook88.com/
+  const toc = document.createElement('details');
+  const sum = document.createElement('summary');
+  const list = document.createElement('ul');
+  toc.id = 'toc';
+  toc.open = true;
+  sum.className = 'toc-title';
+  sum.textContent = '目次';
+  list.className = 'toc-container';
+  toc.appendChild(sum);
+  toc.appendChild(list);
 
-    This software is released under the MIT License.
-    http://opensource.org/licenses/mit-license.php
-*/
-// 設定
-const TOC_INSERT_SELECTOR = '#toc';              // [セレクター指定] 目次を挿入する要素 querySelector用
-const HEADING_SELECTOR    = 'h1,h2,h3,h4,h5,h6'; // [セレクター指定] 収集する見出し要素 querySelectorAll用
-const LINK_CLASS_NAME     = 'tocLink';           // [クラス名] 目次用aタグに追加するクラス名     .無し
-const ID_NAME             = 'heading';           // [ID名]    目次に追加するID名のプレフィックス #無し
-const tocInsertElement    = document.querySelector(TOC_INSERT_SELECTOR);
-const headingElements     = document.querySelectorAll(HEADING_SELECTOR);
-const layer = [];
-let id = 0;
-const uid   = () =>`${ID_NAME}${id++}`;
-let oldRank = -1;
-try {
-    const createLink = (el) => {
-        let li = document.createElement('li');
-        let a  = document.createElement('a');
-        el.id  = el.id || uid();
-        a.href = `#${el.id}`;
-        a.innerText = el.innerText;
-        a.className = LINK_CLASS_NAME;
-        li.appendChild(a);
-        return li;
-    };
-    const findParentElement = (layer, rank, diff) => {
-        do {
-            rank += diff;
-            if (layer[rank]) return layer[rank];
-        } while (0 < rank && rank < 7);
-        return false;
-    };
-    const appendToc = (el, toc) => {
-        el.appendChild(toc.cloneNode(true));
-    };
-    headingElements.forEach( (el) => {
-        let rank   = Number(el.tagName.substring(1));
-        let parent = findParentElement(layer, rank, -1);
-        if (oldRank > rank) layer.length = rank + 1;
-        if (!layer[rank]) {
-            layer[rank] = document.createElement('ol');
-            if (parent.lastChild) parent.lastChild.appendChild(layer[rank]);
-        }
-        layer[rank].appendChild(createLink(el));
-        oldRank = rank;
-    });
-    if (layer.length) appendToc(tocInsertElement, findParentElement(layer, 0, 1));
-    console.log("create_table_of_contents.js is success")
-} catch (e) {
-    console.log("create_table_of_contents.js is failed")
-}
+  const headings = selector.querySelectorAll('h2, h3, h4');
+  if (headings.length == 0) {
+    return
+  }
+  headings[0].parentNode.insertBefore(toc, headings[0]);
+  const order = [];
+  const stack = [{level: 1, element: list}];
+
+  // 事前処理
+  headings.forEach((heading) => {
+    const level = parseInt(heading.tagName.substring(1))
+    order.push(level);
+  });
+
+  headings.forEach((heading, i) => {
+    const level = parseInt(heading.tagName.substring(1));
+    const next = order[i + 1];
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    const id = 'toc-' + (i + 1);
+    const ul = document.createElement('ul');
+
+    // 目次要素の生成
+    a.textContent = heading.textContent;
+    a.href = `#${id}`;
+    li.appendChild(a);
+    if (level < next) {
+      li.appendChild(ul);
+    }
+
+    // リンク先の生成
+    heading.id = id;
+
+    // 階層構造の生成
+    let parent;
+    do {
+      parent = stack.pop();
+    } while (parent.level >= level);
+    parent.element.appendChild(li);
+    stack.push(parent);
+    stack.push({level: level, element: ul});
+  });
+}(window, document);
