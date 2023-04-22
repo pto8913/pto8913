@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var div = document.createElement('div'); // 作成する目次のコンテナ要素
 
     // .entry-content配下のh2、h3要素を全て取得する
-    var matches = document.querySelectorAll('.entry-content h2, .entry-content h3');
+    var matches = document.querySelectorAll('.content h2, .content h3');
 
     // 取得した見出しタグ要素の数だけ以下の操作を繰り返す
     matches.forEach(function (value, i) {
