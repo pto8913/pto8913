@@ -29,7 +29,31 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: pitodesu
 github_username:  pto8913
 
+author: "pto8913"
+permalink: /:title/
+lang: "jp"
+excerpt_separator: "\n\n\n"
+date_format: "%B %d, %Y"
+
 markdown: CommonMarkGhPages
+
+# Layout
+
+show_excerpts: true        # show article excerpts on the home page
+show_frame: true           # adds a gray frame to the site
+show_sidebar: false        # show a sidebar instead of the usual header
+
+
+# Menu
+
+navigation:                # accepts {file, title, url, icon, sidebaricon}
+  - {file: "index.html"}
+  - {file: "README.md"}
+
+external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
+  - {title: Mail, icon: envelope, url: "pto8913project@gmail.com"}
+  - {title: Github, icon: github, url: "https://github.com/pto8913"}
+  - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
 reseturl: "https://pto8913.github.io/pto8913"
 KyoProurl: "https://pto8913.github.io/pto8913/KyoPro"
@@ -69,3 +93,4 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
