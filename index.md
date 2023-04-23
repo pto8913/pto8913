@@ -19,10 +19,10 @@ categories: Index
 * Visual Studio Community 2017
 
 ## memo
-* [pythonのメモ]({{ site.resetURL }}/memo/python_memo)
-* [謎のメモ]({{ site.resetURL }}/memo/memo)
-* [URLmemo]({{ site.resetURL }}/memo/URLmemo)
-* [SQLite]({{ site.resetURL }}/memo/sqlite)
+* [pythonのメモ]({{ site.baseURL }}/memo/python_memo)
+* [謎のメモ]({{ site.baseURL }}/memo/memo)
+* [URLmemo]({{ site.baseURL }}/memo/URLmemo)
+* [SQLite]({{ site.baseURL }}/memo/sqlite)
 
 ## [競プロ用ライブラリ(リンク)]({{ site.KyoProURL }}/KyoPro)
 
