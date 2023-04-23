@@ -4,10 +4,8 @@ layout: post
 categories: Index
 ---
 
-<code>
-    <link rel="stylesheet" type="text/css" href="/pto8913/Hoshimoti/css/Hoshimori.css"></link>
-    <div class="bg_Home"></div>
-</code>
+<link rel="stylesheet" type="text/css" href="/pto8913/Hoshimoti/css/Hoshimori.css">
+<div class="bg_Home"></div>
 
 ## 作ったゲーム
 * [全方向シューティングゲーム]({{ site.UEurl }}/AllDirectionShooting)
