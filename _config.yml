@@ -72,6 +72,8 @@ theme: minima
 highlighter: rouge
 #theme: jekyll-theme-architect
 
+future: true
+
 paginate: 2
 # paginate_path: "/_posts/"
 
