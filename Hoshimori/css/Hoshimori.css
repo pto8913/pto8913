@@ -54,5 +54,6 @@ div.container-in {
 }
 
 p.black {
+    text-align: center;
     color: #00000000
 }
