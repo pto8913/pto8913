@@ -25,8 +25,6 @@ author: pto8913
 #email: your-email@example.com
 #>- # this means to ignore newlines until "baseurl:"
 description: 制作物や知見を置いていく場所
-baseurl: "pto8913" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: pitodesu
 github_username: pto8913
 
@@ -57,11 +55,11 @@ external:                  # shows a footer with social links - for available ic
   - {title: Github, icon: github, url: "https://github.com/pto8913"}
   - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
-reseturl: "https://pto8913.github.io/pto8913"
-KyoProurl: "https://pto8913.github.io/pto8913/KyoPro"
-PyQturl: "https://pto8913.github.io/pto8913/PyQt5"
-UEurl: "https://pto8913.github.io/pto8913/UE4"
-HoshimoriURL: "https://pto8913.github.io/pto8913/Hoshimori"
+baseURL: "https://pto8913.github.io/pto8913/"
+KyoProURL: {baseURL}"KyoPro"
+PyQtURL: {baseURL}"PyQt5"
+UEURL: {baseURL}"UE4"
+HoshimoriURL: {baseURL}"Hoshimori"
 
 github: [metadata]
 repository: pto8913.github.io/pto8913
