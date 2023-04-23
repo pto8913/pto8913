@@ -19,30 +19,30 @@ categories: Index
 * Visual Studio Community 2017
 
 ## memo
-* [pythonのメモ]({{ site.reseturl }}/memo/python_memo)
-* [謎のメモ]({{ site.reseturl }}/memo/memo)
-* [URLmemo]({{ site.reseturl }}/memo/URLmemo)
-* [SQLite]({{ site.reseturl }}/memo/sqlite)
+* [pythonのメモ]({{ site.resetURL }}/memo/python_memo)
+* [謎のメモ]({{ site.resetURL }}/memo/memo)
+* [URLmemo]({{ site.resetURL }}/memo/URLmemo)
+* [SQLite]({{ site.resetURL }}/memo/sqlite)
 
-## [競プロ用ライブラリ(リンク)]({{ site.KyoProurl }}/KyoPro)
+## [競プロ用ライブラリ(リンク)]({{ site.KyoProURL }}/KyoPro)
 
 ## PyQt5
 
-* [SQLiteViewer]({{ site.PyQturl }}/seika/SQLiteViewer)
-* [TerrainViewer]({{ site.PyQturl }}/seika/TerrainViewer)
-* [Calculator]({{ site.PyQturl }}/seika/Calculator)
-* [DirectoryViewer]({{ site.PyQturl }}/seika/DirViewer)
-* [img2pdf]({{ site.PyQturl }}/seika/img2pdf)
-* [Timer]({{ site.PyQturl }}/seika/Timer)
-* [ScreenCapture]({{ site.PyQturl }}/seika/ScreenCapture)
+* [SQLiteViewer]({{ site.PyQtURL }}/seika/SQLiteViewer)
+* [TerrainViewer]({{ site.PyQtURL }}/seika/TerrainViewer)
+* [Calculator]({{ site.PyQtURL }}/seika/Calculator)
+* [DirectoryViewer]({{ site.PyQtURL }}/seika/DirViewer)
+* [img2pdf]({{ site.PyQtURL }}/seika/img2pdf)
+* [Timer]({{ site.PyQtURL }}/seika/Timer)
+* [ScreenCapture]({{ site.PyQtURL }}/seika/ScreenCapture)
 
 ## PyQt5 Templates
 
-* [QThread]({{ site.PyQturl }}/tiken/Thread)
-* [keyPressEvent(Multi)]({{ site.PyQturl }}/tiken/keyPressMulti)
-* [DivideUI]({{ site.PyQturl }}/tiken/DivideUI)
-* [Clipboard]({{ site.PyQturl }}/tiken/Clipboard)
-* [Drag and Drop]({{ site.PyQturl }}/tiken/dnd)
+* [QThread]({{ site.PyQtURL }}/tiken/Thread)
+* [keyPressEvent(Multi)]({{ site.PyQtURL }}/tiken/keyPressMulti)
+* [DivideUI]({{ site.PyQtURL }}/tiken/DivideUI)
+* [Clipboard]({{ site.PyQtURL }}/tiken/Clipboard)
+* [Drag and Drop]({{ site.PyQtURL }}/tiken/dnd)
 
 ## Posts
 <div></div>
