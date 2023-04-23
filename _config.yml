@@ -24,18 +24,18 @@ title: "pto8913"
 author: "pto8913"
 #email: your-email@example.com
 #>- # this means to ignore newlines until "baseurl:"
-description: 制作物や知見を置いていく場所
+description: "制作物や知見を置いていく場所"
 baseurl: "pto8913" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: "pitodesu"
-github_username: pto8913
+github_username: "pto8913"
 
 permalink: /:title/
 lang: "jp"
 excerpt_separator: "\n\n\n"
 date_format: "%B %d, %Y"
 
-markdown: CommonMarkGhPages
+markdown: "CommonMarkGhPages"
 
 # Layout
 
@@ -47,14 +47,13 @@ minimal: false            # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.md"}
-  - {file: "README.md"}
+ - {file: "index.md"}
+ - {file: "README.md"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:pto8913project@gmail.com"}
-  - {title: Github, icon: github, url: "https://github.com/pto8913"}
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
-
+ - {title: Mail, icon: envelope, url: "mailto:pto8913project@gmail.com"}
+ - {title: Github, icon: github, url: "https://github.com/pto8913"}
+ - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
 resetURL: "https://pto8913.github.io/pto8913"
 KyoProURL: {resetURL}"/KyoPro"
@@ -63,12 +62,12 @@ UEURL: {resetURL}"/UE4"
 HoshimoriURL: {resetURL}"/Hoshimori"
 
 github: [metadata]
-repository: pto8913.github.io/pto8913
+repository: "pto8913.github.io/pto8913"
 
 # Build settings
 # remote_theme: niklasbuschmann/contrast
-theme: minima
-highlighter: rouge
+theme: "minima"
+highlighter: "rouge"
 #theme: jekyll-theme-architect
 
 future: true
@@ -78,8 +77,8 @@ paginate: 2
 # paginate_path: "/_posts/"
 
 plugins:
-  - jekyll-feed
-  - jekyll-paginate
+ - jekyll-feed
+ - jekyll-paginate
 #- jekyll-remote-theme
 #- jekyll-github-metadata
   
