@@ -1,7 +1,7 @@
 ---
-
+title: Home
 layout: home
-
+categories: Index
 ---
 
 編集中

@@ -1,11 +1,11 @@
 ---
-title: UnrealEngine-Index
+title: UnrealEngine
 layout: post
-categories: UnrealEngine
+categories: Index
 ---
 
 <code>
-    <link rel="stylesheet" type="text/css" href="css/Hoshimori.css"></link>
+    <link rel="stylesheet" type="text/css" href="/pto8913/Hoshimoti/css/Hoshimori.css"></link>
     <div class="bg_Home"></div>
 </code>
 
