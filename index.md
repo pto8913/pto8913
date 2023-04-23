@@ -44,10 +44,10 @@ categories: Index
 * [Clipboard]({{ site.PyQturl }}/tiken/Clipboard)
 * [Drag and Drop]({{ site.PyQturl }}/tiken/dnd)
 
-<code>
-  {% if site.show_excerpts %}
-    {% include home.html %}
-  {% else %}
-    {% include archive.html title="Posts" %}
-  {% endif %}
-</code>
+<div></div>
+
+{% if site.show_excerpts %}
+  {% include home.html %}
+{% else %}
+  {% include archive.html title="Posts" %}
+{% endif %}
