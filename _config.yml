@@ -1,18 +1,39 @@
-title: "pto8913"
-author: "pto8913"
-description: "制作物や知見を置いていく場所"
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+#encoding: utf-8
+
+title: pto8913
+author: pto8913
+#email: your-email@example.com
+#>- # this means to ignore newlines until "baseurl:"
+description: 制作物や知見を置いていく場所
+baseurl: "pto8913" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: pitodesu
+github_username: pto8913
+
 permalink: /:title/
 lang: "jp"
 excerpt_separator: "\n\n\n"
 date_format: "%B %d, %Y"
-
-twitter_username: "pitodesu"
-github_username: "pto8913"
-resetURL: "https://pto8913.github.io/pto8913"
-KyoProURL: "https://pto8913.github.io/pto8913/KyoPro"
-PyQtURL: "https://pto8913.github.io/pto8913/PyQt5"
-UEURL: "https://pto8913.github.io/pto8913/UE4"
-HoshimoriURL: "https://pto8913.github.io/pto8913/Hoshimori"
 
 markdown: kramdown
 
@@ -28,15 +49,53 @@ published: true
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
- - {file: "index.md"}
- - {file: "README.md"}
+  - {file: "index.md"}
+  - {file: "README.md"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
- - {title: Mail, icon: envelope, url: "mailto:pto8913project@gmail.com"}
- - {title: Github, icon: github, url: "https://github.com/pto8913"}
- - {title: Subscribe, icon: rss, url: "/feed.xml"}
+  - {title: Mail, icon: envelope, url: "mailto:pto8913project@gmail.com"}
+  - {title: Github, icon: github, url: "https://github.com/pto8913"}
+  - {title: Subscribe, icon: rss, url: "/feed.xml"}
+
+reseturl: "https://pto8913.github.io/pto8913"
+KyoProurl: "https://pto8913.github.io/pto8913/KyoPro"
+PyQturl: "https://pto8913.github.io/pto8913/PyQt5"
+UEurl: "https://pto8913.github.io/pto8913/UE4"
+HoshimoriURL: "https://pto8913.github.io/pto8913/Hoshimori"
+
+github: [metadata]
+repository: pto8913.github.io/pto8913
 
 # Build settings
+# remote_theme: niklasbuschmann/contrast
+theme: minima
+highlighter: rouge
+#theme: jekyll-theme-architect
+
+paginate: 5
+paginate_path: "/pto8913/page:nunm/"
 
 plugins:
- - jekyll-feed
+  - jekyll-feed
+  # - jekyll-remote-theme
+  #- jekyll-github-metadata
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
