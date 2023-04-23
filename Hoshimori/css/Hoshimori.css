@@ -44,6 +44,7 @@ div.container {
     width: 320px;
     height: 240px;
     background-color: transparent;
+    color: #00000000;
 }
 
 div.container-in {
@@ -51,9 +52,4 @@ div.container-in {
     width: 160px;
     height: 120px;
     text-align: center;
-}
-
-p.black {
-    text-align: center;
-    color: #00000000
 }
