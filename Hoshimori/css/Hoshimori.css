@@ -1,5 +1,16 @@
 .bg_Home {
     background-image: url("../Images/T_Title.png");
     width: 100%;
-    
+
+}
+
+#Home{
+    background: url("../Images/T_Title.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.inner {
+    min-height: 600px;
+    position: relative;
 }
