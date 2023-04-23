@@ -77,6 +77,7 @@ paginate_path: "/pto8913/page:nunm/"
 
 plugins:
   - jekyll-feed
+  - jekyll-paginate
   # - jekyll-remote-theme
   #- jekyll-github-metadata
   
