@@ -20,15 +20,15 @@
 
 #encoding: utf-8
 
-title: pto8913
-author: pto8913
+title: "pto8913"
+author: "pto8913"
 #email: your-email@example.com
-description: #>- # this means to ignore newlines until "baseurl:"
-  制作物や知見を置いていく場所
+#>- # this means to ignore newlines until "baseurl:"
+description: 制作物や知見を置いていく場所
 baseurl: "pto8913" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: pitodesu
-github_username:  pto8913
+twitter_username: "pitodesu"
+github_username: pto8913
 
 permalink: /:title/
 lang: "jp"
@@ -80,8 +80,8 @@ paginate: 2
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  # - jekyll-remote-theme
-  #- jekyll-github-metadata
+#- jekyll-remote-theme
+#- jekyll-github-metadata
   
 # Exclude from processing.
 # The following items will not be processed, by default.
