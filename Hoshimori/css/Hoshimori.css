@@ -1,3 +1,7 @@
+:root {
+    --text_font_size: 15px;
+}
+
 .bg_Home {
     background-image: url("../Images/T_Title.png");
     width: 100%;
@@ -28,7 +32,7 @@
     border: solid 0.1px;
     display: inline-block;
     padding: 0px 0px;
-    background-color: rgba(0,0,0,0);
+    background-color: #00000000;
     position: absolute;
     offset-position: 400px 150px;
 }
@@ -47,4 +51,8 @@ div.container-in {
     width: 160px;
     height: 120px;
     text-align: center;
+}
+
+p.black {
+    color: #00000000
 }
