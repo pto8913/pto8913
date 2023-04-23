@@ -14,7 +14,7 @@ PyQtURL: "https://pto8913.github.io/pto8913/PyQt5"
 UEURL: "https://pto8913.github.io/pto8913/UE4"
 HoshimoriURL: "https://pto8913.github.io/pto8913/Hoshimori"
 
-markdown: CommonMarkGhPages
+markdown: kramdown
 
 # Layout
 
