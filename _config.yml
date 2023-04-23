@@ -72,8 +72,8 @@ theme: minima
 highlighter: rouge
 #theme: jekyll-theme-architect
 
-paginate: 5
-paginate_path: "/pto8913/page:nunm/"
+paginate: 2
+# paginate_path: "/_posts/"
 
 plugins:
   - jekyll-feed
