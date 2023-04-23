@@ -12,5 +12,5 @@
 
 .inner {
     min-height: 600px;
-    position: relative;
+    position: absolute;
 }
