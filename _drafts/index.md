@@ -43,5 +43,3 @@ categories: Index
 * [DivideUI]({{ site.PyQturl }}/tiken/DivideUI)
 * [Clipboard]({{ site.PyQturl }}/tiken/Clipboard)
 * [Drag and Drop]({{ site.PyQturl }}/tiken/dnd)
-
-
