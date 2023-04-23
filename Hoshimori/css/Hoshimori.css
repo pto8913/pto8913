@@ -7,10 +7,19 @@
 #Home{
     background: url("../Images/T_Title.png");
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
 .inner {
     min-height: 600px;
-    position: absolute;
+    position: relative;
+}
+
+.copy{
+    position:absolute; 
+    top:50%; 
+    height:10em; 
+    margin-top:-5em; 
+    width:100%;
 }
