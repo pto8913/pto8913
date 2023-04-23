@@ -1,5 +1,5 @@
 ---
-title:  Products
+title: Products
 layout: post
 categories: Products
 ---

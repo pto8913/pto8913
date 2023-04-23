@@ -65,7 +65,6 @@ HoshimoriURL: {resetURL}"/Hoshimori"
 github: [metadata]
 repository: pto8913.github.io/pto8913
 
-
 # Build settings
 # remote_theme: niklasbuschmann/contrast
 theme: minima
@@ -73,6 +72,7 @@ highlighter: rouge
 #theme: jekyll-theme-architect
 
 future: true
+published: true
 
 paginate: 2
 # paginate_path: "/_posts/"
