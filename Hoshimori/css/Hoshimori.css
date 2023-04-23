@@ -45,6 +45,8 @@ div.container {
     height: 240px;
     background-color: transparent;
     color: #000000;
+    bottom: 0;
+    right: 0;
 }
 
 div.container-in {
