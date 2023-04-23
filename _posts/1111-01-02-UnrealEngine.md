@@ -4,7 +4,7 @@ layout: post
 categories: Index
 ---
 
-<link rel="stylesheet" type="text/css" href="/pto8913/Hoshimoti/css/Hoshimori.css">
+<link rel="stylesheet" type="text/css" href="/pto8913/Hoshimori/css/Hoshimori.css">
 <div class="bg_Home"></div>
 
 ## 作ったゲーム
