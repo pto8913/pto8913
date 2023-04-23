@@ -38,8 +38,5 @@ external:                  # shows a footer with social links - for available ic
 
 # Build settings
 
-theme: "minima"
-highlighter: "rouge"
-
 plugins:
  - jekyll-feed
