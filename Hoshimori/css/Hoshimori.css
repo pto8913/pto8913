@@ -23,3 +23,10 @@
     margin-top:-5em; 
     width:100%;
 }
+
+.bg_Home-text {
+    border: solid 0.1px;
+    display: inline-block;
+    padding: 0px 0px;
+    background-color: rgba(0,0,0,0);
+}
