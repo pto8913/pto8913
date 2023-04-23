@@ -1,7 +1,8 @@
 ---
-title: Home
+
 layout: default
 categories: Index
+
 ---
 
 編集中
