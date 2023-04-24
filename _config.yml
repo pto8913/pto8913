@@ -92,6 +92,11 @@ nav-header-Hoshimori:
   登場人物: "Hoshimori/characters.html"
   ゲーム紹介: "/Hoshimori/description.html"
 
+# Images
+
+
+img-hoshimori-character:
+  
 
 # Exclude from processing.
 # The following items will not be processed, by default.
