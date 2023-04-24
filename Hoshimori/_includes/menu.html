@@ -9,7 +9,7 @@
   </a>
 {%- endfor -%}
 </nav> -->
-
+<!-- 
 {% comment %} Create a navigation pane {% endcomment %}
 {%- if page_paths -%}
   <nav>
@@ -24,4 +24,15 @@
       {%- endfor -%}
         </ul>
   </nav>
-{%- endif -%}
+{%- endif -%} -->
+
+<ul>
+  {% assign sitepages = site.pages | sort: 'order' %}
+  {% for sitepage in sitepages %}
+    {% if sitepage.url contains 'Hoshimori' %}
+      <li {% if page.url == sitepage.url %} class="active"{% endif %}>
+        <a href="{{ sitepage.url }}">{{ sitepage.title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
