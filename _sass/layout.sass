@@ -27,8 +27,7 @@ nav
 nav a
   margin: .5em 1.2em
 
-.g-header 
-{
+.g-header
     position: fixed
     top: 0
     left: 0
@@ -39,7 +38,7 @@ nav a
     background-color: transparent
     transition: all .6s
     z-index: 1000
-    .g-logo {
+    .g-logo 
         float: left
         margin-left: 2%
         // width: 70px
@@ -50,37 +49,33 @@ nav a
         // background-size: 100% 100%
         // opacity: .8
         transition: all .2s
-        &:hover {
+        &:hover 
             opacity: 1
-        }
-        a {
+        a 
             display: block
             width: 100%
             height: 100%
-        }
-    }
-    #mode-toggle{
+    
+    #mode-toggle
         width: 40px
         height: 40px
         position: absolute
         top: 35px
         right: 57px
         display: none
-        .icon-day, .icon-night{
+        .icon-day, .icon-night
             width: 30px
             height: 30px
             padding: 5px
             display: none
-            &.active{
+            &.active
                 display: block
-            }
-            &:hover{
+            
+            &:hover
                 background-color: #81bbff
                 border-radius: 50%
-            }
-        }
-    }
-    .icon-menu {
+    
+    .icon-menu 
         display: none
         position: absolute
         top: 32px
@@ -90,15 +85,13 @@ nav a
         color: #fff
         opacity: .8
         border-radius: 3px
-        &:active {
+        &:active 
             background-color: rgba(255, 255, 255, .2)
-        }
-    }
 
-    .g-nav {
+    .g-nav 
         float: right
         margin-right: 2%
-        &>ul>li{
+        &>ul>li
             float: left
             // height: $g-header-h
             // line-height: $g-header-h
@@ -106,10 +99,10 @@ nav a
             line-height: 50px
             text-transform: uppercase
             margin-right: 18px
-            &:last-child {
+            &:last-child 
                 margin-right: 0
-            }
-            &>a {
+            
+            &>a 
                 display: inline-block
                 font-size: 16px
                 font-weight: bold
@@ -118,34 +111,30 @@ nav a
                 padding: 0 12px
                 // opacity: .7
                 opacity: 1
-                &:hover {
+                &:hover 
                     // opacity: 1
                     opacity: .7
-                }
-            }
-            &.mode{
+            
+            &.mode
                 width: 40px
                 height: 40px
                 margin: 5px 0
                 cursor: pointer
-                .icon{
+                .icon
                     width: 30px
                     height: 30px
                     padding: 5px
                     display: none
-                    &.active{
+                    &.active
                         display: block
-                    }
-                }
-                &::hover{
+                
+                &::hover
                     background-color: #81bbff
                     border-radius: 50%
-                }
-            }
-        }
-        .dropdown-toggle{
+                
+        .dropdown-toggle
             white-space: nowrap
-            &::after {
+            &::after 
                 content: ""
                 display: inline-block
                 vertical-align: 0.306em
@@ -156,14 +145,12 @@ nav a
                 margin-right: 0.1em
                 margin-left: 0.4em
                 transform: rotate(-45deg)
-            }
-            &.show::after {
+            
+            &.show::after 
                 vertical-align: 0.1em
                 transform: rotate(+135deg)
-            }
-        }
-        
-        ul.dropdown-menu {
+            
+        ul.dropdown-menu 
             background-color: #fff
             box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%)
             border-radius: 3px
@@ -173,37 +160,28 @@ nav a
             min-width: 140px
             padding: 5px 0
             margin-left: 12px
-            &.show {
+            &.show 
                 display: block
-            }
-            li{
+
+            li
                 padding: 0rem 0.75rem
                 line-height: 2.5rem
-                &:hover {
+                &:hover 
                     background-color: rgba(98, 105, 118, 0.04)
-                    
-                }
-                a {
+                a 
                     color: #4e4e4e!important
                     display: block
                     text-align: center
-                }
-            }
-        }
-    }
-
-    .nav-default {
-        a:hover {
+                
+    .nav-default 
+        a:hover 
             color: $color-theme-default !important
-        }
-        .mode {
+        .mode 
             background-color: #1B7EFF
             border-radius: 50%
-        }
-    }
-    .nav-pink {
-        a:hover {
+        
+    .nav-pink 
+        a:hover 
             color: $color-theme-pink !important
-        }
-    }
-}
+        
+    
