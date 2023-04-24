@@ -55,7 +55,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
 permalink: /:categories/:title.html
 permalink_pattern: /:dir/:categories/:title.html
 
-include: ['Hoshimori']
+include: ['_pages/Hoshimori']
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:pto8913project@gmail.com"}
