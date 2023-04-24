@@ -28,12 +28,12 @@
   <ul>
     {% for nav in site.navigation %}
       {% if nav[1].first %}
-        <li class = "dropdown">
-          <a class="dropdown-toggle">{{ nav[0] }}</a>
-          <ul>
+        <li class="g-nav-li">
+          <a class="g-nav-a">{{ nav[0] }}</a>
+          <ul class="g-nav-ul">
             {% for sub_page in nav[i] %}
-            <li>
-              <a href="{{ sub_page[1] | relative_url }}" aria-label="{{ sub_page[0] }}">
+            <li class="g-nav-li">
+              <a class="g-nav-a" href="{{ sub_page[1] | relative_url }}" aria-label="{{ sub_page[0] }}">
                 {{ sub_page[0] }}
               </a>
             </li>
@@ -41,8 +41,8 @@
           </ul>
         </li>
       {% else %}
-        <li>
-          <a href="{{ nav[1] | relative_url }}" aria-label="{{ nav[0] }}">
+        <li class="g-nav-li">
+          <a class="g-nav-a" href="{{ nav[1] | relative_url }}" aria-label="{{ nav[0] }}">
             {{ nav[0] }}
           </a>
         </li>
