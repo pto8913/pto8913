@@ -28,7 +28,6 @@ description: 制作物や知見を置いていく場所
 twitter_username: pitodesu
 github_username: pto8913
 
-permalink: /:categories/:title.html
 
 lang: "jp"
 excerpt_separator: "\n\n\n"
@@ -52,7 +51,10 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   about: "/about.html"
   portfolio: "/portfolio.html"
   archives: "/archives.html"
-  
+
+permalink: /:categories/:title.html
+permalink_pattern: /:dir/:categories/:title.html
+
 include: ['Hoshimori']
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
