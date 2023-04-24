@@ -66,7 +66,7 @@ baseURL: "https://pto8913.github.io/pto8913/"
 KyoProURL: "https://pto8913.github.io/pto8913/KyoPro"
 PyQtURL: "https://pto8913.github.io/pto8913/PyQt5"
 UEURL: "https://pto8913.github.io/pto8913/UE4"
-HoshimoriURL: "https://pto8913.github.io/pto8913/Hoshimori"
+HoshimoriURL: "https://pto8913.github.io/pto8913/_pages/Hoshimori"
 
 github: [metadata]
 repository: pto8913.github.io/pto8913
