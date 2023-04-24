@@ -5,3 +5,8 @@ defaults:
     type: "pages"
   values:
     layout: "default"
+
+collections:
+  Hoshimori:
+    output: true
+    permalink: /Hoshimori/:path
