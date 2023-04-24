@@ -36,6 +36,11 @@ date_format: "%B %d, %Y"
 
 markdown: kramdown
 
+collections:
+  Hoshimori:
+    output: true
+    permalink: /Hoshimori/:path/
+
 # Layout
 
 show_excerpts: true        # show article excerpts on the home page
