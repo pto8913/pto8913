@@ -29,7 +29,7 @@ twitter_username: pitodesu
 github_username: pto8913
 
 permalink: /:title/
-permalink: /Hoshimori/Hoshimori-Story
+
 lang: "jp"
 excerpt_separator: "\n\n\n"
 date_format: "%B %d, %Y"
