@@ -27,7 +27,7 @@
   {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
 {% endif %}
 
-{% include header.html navigation=pages %}
+{% include header.html page-title=星の守り人 navigation=pages %}
 
 {{ content }}
 
