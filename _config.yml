@@ -44,29 +44,15 @@ minimal: false             # use a dark header
 future: true
 published: true
 
-# Menu
-
-navigation:                # accepts {file, title, url, icon, sidebaricon}
-  home: "/"
-  about: "/about.html"
-  portfolio: "/portfolio.html"
-  archives: "/archives.html"
-
 permalink: /:categories/:title.html
 permalink_pattern: /:dir/:categories/:title.html
 
-include: ['_pages/Hoshimori']
-
-external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:pto8913project@gmail.com"}
-  - {title: Github, icon: github, url: "https://github.com/pto8913"}
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
 baseURL: "https://pto8913.github.io/pto8913/"
 KyoProURL: "https://pto8913.github.io/pto8913/KyoPro"
 PyQtURL: "https://pto8913.github.io/pto8913/PyQt5"
 UEURL: "https://pto8913.github.io/pto8913/UE4"
-HoshimoriURL: "https://pto8913.github.io/pto8913/_pages/Hoshimori"
+HoshimoriURL: "https://pto8913.github.io/pto8913/Hoshimori"
 
 github: [metadata]
 repository: pto8913.github.io/pto8913
@@ -85,6 +71,27 @@ plugins:
   - jekyll-feed
   # - jekyll-remote-theme
   #- jekyll-github-metadata
+
+# Menu
+
+# Navigations
+nav-header:                # accepts {file, title, url, icon, sidebaricon}
+  ホーム: "/"
+  about: "/about.html"
+  portfolio: "/portfolio.html"
+  archives: "/archives.html"
+
+nav-footer:                  # shows a footer with social links - for available icons see fontawesome.com/icons
+  - {title: Mail, icon: envelope, url: "mailto:pto8913project@gmail.com"}
+  - {title: Github, icon: github, url: "https://github.com/pto8913"}
+  - {title: Subscribe, icon: rss, url: "/feed.xml"}
+
+nav-header-Hoshimori:
+  ホーム: "/Hoshimori/index.html"
+  物語: "/Hoshimori/story.html"
+  登場人物: "Hoshimori/characters.html"
+  ゲーム紹介: "/Hoshimori/description.html"
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
