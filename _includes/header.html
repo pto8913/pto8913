@@ -1,0 +1,8 @@
+<header>
+    {% if include.page-title %}
+        <a href="{{ include.page-title | relative_url }}" class="title">{{ include.page-title | escape }}</a>
+    {% else %}
+        <a href="{{ '/' | relative_url }}" class="title">{{ site.title | escape }}</a>
+    {% endif %}
+    {% include navigation.html navigation=include.navigation %}
+</header>
