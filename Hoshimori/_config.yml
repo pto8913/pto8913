@@ -1,12 +1,5 @@
-defaults:
- -
-  scope:
-    path: "Hoshimori"
-    type: "pages"
-  values:
-    layout: "default"
-
-collections:
-  Hoshimori:
-    output: true
-    permalink: /Hoshimori/:path
+navigation:
+  home: "/"
+  story: "/story.html"
+  portfolio: "/portfolio.html"
+  archives: "/archives.html"
