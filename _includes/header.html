@@ -4,5 +4,28 @@
     {% else %}
         <a href="{{ '/' | relative_url }}" class="title">{{ site.title | escape }}</a>
     {% endif %}
-    {% include navigation.html navigation=include.navigation %}
+    <ul class="g-nav-ul">
+        {% for nav in include.navigation %}
+          {% if nav[1].first %}
+            <li class="g-nav-li">
+              <a class="g-nav-a">{{ nav[0] }}</a>
+              <ul>
+                {% for sub_page in nav[i] %}
+                <li class="g-nav-li">
+                  <a class="g-nav-a" href="{{ sub_page[1] | relative_url }}" aria-label="{{ sub_page[0] }}">
+                    {{ sub_page[0] }}
+                  </a>
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+            <li class="g-nav-li">
+              <a class="g-nav-a" href="{{ nav[1] | relative_url }}" aria-label="{{ nav[0] }}">
+                {{ nav[0] }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
 </header>
