@@ -4,7 +4,12 @@ title: "星の守り人 | 登場人物"
 current: アルファ
 ---
 
-<section class="bg" background="{{ site.img-hoshimori-character-bg[page.current] | relative_url }}">
+<section class="bg">
+  <style>
+    body {
+      background-image: url("{{ site.img-hoshimori-character-bg[page.current] | relative_url }}");
+    }
+  </style>
   <div class="inner">
     登場人物<br>
     {{ page.current }}
