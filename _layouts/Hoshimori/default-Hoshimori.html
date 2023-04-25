@@ -2,19 +2,6 @@
 background: 
 ---
 
-<head>
-  <style>
-      section {
-          background-image: url('{{ site.img-hoshimori-character-bg[page.background] | relative_url }}');
-          width: 100%;
-          /* height: 100%; */
-          background-repeat: no-repeat;
-          /* background-size: cover; */
-          background-position: center
-      }
-  </style>
-</head>
-
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
 <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
@@ -46,7 +33,9 @@ background:
 
 {% include header.html page-title=page.title navigation=pages %}
 
-{{ content }}
+<body id="Hoshimori">
+  {{ content }}
+</body>
 
 {% if site.nav-footer %}
 <footer>
