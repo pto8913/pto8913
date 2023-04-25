@@ -89,7 +89,7 @@ nav-footer:                  # shows a footer with social links - for available 
 nav-header-Hoshimori:
   ホーム: "/Hoshimori/index.html"
   物語: "/Hoshimori/story.html"
-  登場人物: "Hoshimori/characters.html"
+  登場人物: "Hoshimori/Characters/Tolemy.html"
   ゲーム紹介: "/Hoshimori/description.html"
 
 # Images
@@ -109,6 +109,7 @@ hoshimori-character:
   ケス : "/Hoshimori/Characters/Ces"
   ステラ : "/Hoshimori/Characters/Stella"
 img-hoshimori-character-bg:
+  ホーム : "/Hoshimori/Images/T_Title.png"
   ベータ : "/Hoshimori/Characters/Background_Beta.png"
   トレミー : "/Hoshimori/Characters/Background_Tolemy.png"
   アルファ : "/Hoshimori/Characters/Background_Alpha.png"

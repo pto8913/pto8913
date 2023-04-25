@@ -1,22 +1,10 @@
 ---
 layout: Hoshimori/default-Hoshimori
-current: Home
+background: Home
 ---
 
-<head>
-  <style>
-    section {
-      background-image: url('{{ site.img-hoshimori-character-bg[page.current] | relative_url }}');
-      width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  </style>
-</head>
-
 <article>
-  {{ content }}
-</article>
+	{{ content }}
 
-{% include carousel.html links=site.hoshimori-character current=page.current %}
+	{% include carousel.html links=site.hoshimori-character current=page.current %}
+</article>
