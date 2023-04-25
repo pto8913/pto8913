@@ -3,17 +3,15 @@ layout: Hoshimori/default-Hoshimori
 background: Home
 ---
 
-<article id="Hoshimori">
-	<section id="Hoshimori" class="bg_sec">
-		<div id="Hoshimori-Chara" class="div-h">
-			<img src="{{ site.hoshimori-character[page.background] | relative_url }}.png" alt="">
-			<div id="Hoshimori-Chara" class="div-v">
-				<h2>{{ page.background }}</h2>
-				<p>
-					{{ content }}
-				</p>
-			</div>
+<section id="Hoshimori" class="bg_sec">
+	<div id="Hoshimori-Chara" class="div-h">
+		<img src="{{ site.hoshimori-character[page.background] | relative_url }}.png" alt="">
+		<div id="Hoshimori-Chara" class="div-v">
+			<h2>{{ page.background }}</h2>
+			<p>
+				{{ content }}
+			</p>
 		</div>
-	</section>
-</article>
+	</div>
+</section>
 {% include carousel.html links=site.hoshimori-character current=page.current %}
