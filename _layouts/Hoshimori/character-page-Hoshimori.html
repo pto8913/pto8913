@@ -1,9 +1,9 @@
 ---
 layout: Hoshimori/default-Hoshimori
-name: Home
+current: Home
 ---
 <article>
   {{ content }}
 </article>
 
-{% include carousel.html links=site.hoshimori-character current=page.name %}
+{% include carousel.html links=site.hoshimori-character current=page.current %}
