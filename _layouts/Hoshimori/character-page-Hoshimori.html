@@ -1,7 +1,9 @@
 ---
 layout: Hoshimori/default-Hoshimori
+name: Home
 ---
 <article>
-  <header><h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1></header>
   {{ content }}
 </article>
+
+{% include carousel.html links=site.hoshimori-character current=page.name %}
