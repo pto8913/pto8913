@@ -1,18 +1,18 @@
-<header class="g-header">
+<header class="nav_header">
     {% if include.page-title %}
         <a href="{{ include.page-title | relative_url }}" class="title">{{ page.title | escape }}</a>
     {% else %}
         <a href="{{ '/' | relative_url }}" class="title">{{ site.title | escape }}</a>
     {% endif %}
-    <ul class="g-nav-ul">
+    <ul class="nav_ul">
         {% for nav in include.navigation %}
           {% if nav[1].first %}
-            <li class="g-nav-li">
-              <a class="g-nav-a">{{ nav[0] }}</a>
+            <li class="nav_li">
+              <a class="nav_a">{{ nav[0] }}</a>
               <ul>
                 {% for sub_page in nav[i] %}
-                <li class="g-nav-li">
-                  <a class="g-nav-a" href="{{ sub_page[1] | relative_url }}" aria-label="{{ sub_page[0] }}">
+                <li class="nav_li">
+                  <a class="nav_a" href="{{ sub_page[1] | relative_url }}" aria-label="{{ sub_page[0] }}">
                     {{ sub_page[0] }}
                   </a>
                 </li>
@@ -20,8 +20,8 @@
               </ul>
             </li>
           {% else %}
-            <li class="g-nav-li">
-              <a class="g-nav-a" href="{{ nav[1] | relative_url }}" aria-label="{{ nav[0] }}">
+            <li class="nav_li">
+              <a class="nav_a" href="{{ nav[1] | relative_url }}" aria-label="{{ nav[0] }}">
                 {{ nav[0] }}
               </a>
             </li>
