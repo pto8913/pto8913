@@ -1,36 +1,12 @@
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
 
-        <!-- <link rel="stylesheet" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css"> -->
-        <link rel="stylesheet" href="{{ '/assets/css/carousel.css' | relative_url }}">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-   
-    </head>
-    <body>
-        <ul class="slider">
-            {% for link in include.links %}
-                {% if include.current %}
-                    {% if link[0] != include.current %}
-                        <li>
-                            <a href="{{ link[1] | relative_url }}.html">
-                                <div class="car-div">
-                                    <img src="{{ link[1] | relative_url }}.png" alt="">
-                                    <p class="p-name">{{ link[0] }}</p>
-                                </div>
-                            </a>
-                        </li>
-                    {% else %}
-                        <li>
-                            <a href="{{ link[1] | relative_url }}.html">
-                                <div class="select">
-                                    <img src="{{ link[1] | relative_url }}.png" alt="">
-                                    <p class="p-name">{{ link[0] }}</p>
-                                </div>
-                            </a>
-                        </li>
-                    {% endif %}
-                {% else %}
+<!-- <link rel="stylesheet" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css"> -->
+
+<section>
+    <ul class="slider">
+        {% for link in include.links %}
+            {% if include.current %}
+                {% if link[0] != include.current %}
                     <li>
                         <a href="{{ link[1] | relative_url }}.html">
                             <div class="car-div">
@@ -39,13 +15,34 @@
                             </div>
                         </a>
                     </li>
+                {% else %}
+                    <li>
+                        <a href="{{ link[1] | relative_url }}.html">
+                            <div class="select">
+                                <img src="{{ link[1] | relative_url }}.png" alt="">
+                                <p class="p-name">{{ link[0] }}</p>
+                            </div>
+                        </a>
+                    </li>
                 {% endif %}
-            {% endfor %}
-        </ul>
-        <!-- <p>使用したライブラリ：<a href="https://kenwheeler.github.io/slick/" target="_blank">https://kenwheeler.github.io/slick/</a></p> -->
+            {% else %}
+                <li>
+                    <a href="{{ link[1] | relative_url }}.html">
+                        <div class="car-div">
+                            <img src="{{ link[1] | relative_url }}.png" alt="">
+                            <p class="p-name">{{ link[0] }}</p>
+                        </div>
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <!-- <p>使用したライブラリ：<a href="https://kenwheeler.github.io/slick/" target="_blank">https://kenwheeler.github.io/slick/</a></p> -->
 
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="{{ '/assets/js/carousel.js' | relative_url }}"></script>
-    </body>
-</html>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="{{ '/assets/js/carousel.js' | relative_url }}"></script>    
+</section>
+
+<link rel="stylesheet" href="{{ '/assets/css/carousel.css' | relative_url }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
