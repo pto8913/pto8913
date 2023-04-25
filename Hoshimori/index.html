@@ -2,7 +2,21 @@
 layout: Hoshimori/default-Hoshimori
 title: "星の守り人 | ホーム"
 ---
-<section id="Home" class="bg" style="background-image: url('{{ /Hoshimori/Images/T_Title.png | relative_url }}');">
+
+<head>
+    <style>
+      section {
+        background-image: url("{{ '/Hoshimori/Images/T_Title.png' | relative_url }}");
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    </style>
+</head>
+
+<section id="Home" class="bg">
   <div class="inner">
       <div class="container">
           <div style="margin: 5px">
