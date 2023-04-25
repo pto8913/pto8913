@@ -1,10 +1,19 @@
 ---
 layout: Hoshimori/default-Hoshimori
 background: Home
+description: Description this character
 ---
 
 <article>
-	{{ content }}
+	<div class="c-div">
+		<img src="{{ site.hoshimori-character[page.background] | relative_url }}.png" alt="">
+		<div class="c-div-v">
+			<h2>{{ page.background }}</h2>
+			<p>
+				{{ page.description }}
+			</p>
+		</div>
+	</div>
 
 	{% include carousel.html links=site.hoshimori-character current=page.current %}
 </article>
