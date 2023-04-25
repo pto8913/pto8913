@@ -9,9 +9,9 @@
                 {% if link[0] != include.current %}
                     <li id="carousel">
                         <a id="carousel" href="{{ link[1] | relative_url }}.html">
-                            <div id="carousel" class="car-div">
+                            <div id="carousel">
                                 <img src="{{ link[1] | relative_url }}.png" alt="">
-                                <p class="p-name">{{ link[0] }}</p>
+                                <p>{{ link[0] }}</p>
                             </div>
                         </a>
                     </li>
@@ -20,7 +20,7 @@
                         <a id="carousel" href="{{ link[1] | relative_url }}.html">
                             <div id="carousel" class="select">
                                 <img src="{{ link[1] | relative_url }}.png" alt="">
-                                <p class="p-name">{{ link[0] }}</p>
+                                <p>{{ link[0] }}</p>
                             </div>
                         </a>
                     </li>
@@ -28,9 +28,9 @@
             {% else %}
                 <li id="carousel">
                     <a id="carousel" href="{{ link[1] | relative_url }}.html">
-                        <div id="carousel" class="car-div">
+                        <div id="carousel">
                             <img src="{{ link[1] | relative_url }}.png" alt="">
-                            <p class="p-name">{{ link[0] }}</p>
+                            <p>{{ link[0] }}</p>
                         </div>
                     </a>
                 </li>
