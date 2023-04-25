@@ -3,22 +3,22 @@
 <!-- <link rel="stylesheet" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css"> -->
 
 <section id="carousel">
-    <ul class="slider">
+    <ul id="carousel" class="slider">
         {% for link in include.links %}
             {% if include.current %}
                 {% if link[0] != include.current %}
-                    <li>
-                        <a href="{{ link[1] | relative_url }}.html">
-                            <div class="car-div">
+                    <li id="carousel">
+                        <a id="carousel" href="{{ link[1] | relative_url }}.html">
+                            <div id="carousel" class="car-div">
                                 <img src="{{ link[1] | relative_url }}.png" alt="">
                                 <p class="p-name">{{ link[0] }}</p>
                             </div>
                         </a>
                     </li>
                 {% else %}
-                    <li>
-                        <a href="{{ link[1] | relative_url }}.html">
-                            <div class="select">
+                    <li id="carousel">
+                        <a id="carousel" href="{{ link[1] | relative_url }}.html">
+                            <div id="carousel" class="select">
                                 <img src="{{ link[1] | relative_url }}.png" alt="">
                                 <p class="p-name">{{ link[0] }}</p>
                             </div>
@@ -26,9 +26,9 @@
                     </li>
                 {% endif %}
             {% else %}
-                <li>
-                    <a href="{{ link[1] | relative_url }}.html">
-                        <div class="car-div">
+                <li id="carousel">
+                    <a id="carousel" href="{{ link[1] | relative_url }}.html">
+                        <div id="carousel" class="car-div">
                             <img src="{{ link[1] | relative_url }}.png" alt="">
                             <p class="p-name">{{ link[0] }}</p>
                         </div>
