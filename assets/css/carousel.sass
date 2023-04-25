@@ -54,6 +54,16 @@
 body
   background: #eee
 
+div
+  &:hover
+    background-color: #eee
+    border-radius: 20px
+
+  .p-name
+    background-color: #252525
+    text-align: center
+    padding: 20px
+
 h2,p
   text-align: center
   padding: 20px
@@ -65,7 +75,6 @@ ul
 
 a
   color: #333
-
-a:hover,
-a:active
-  text-decoration: none
+  &:hover,
+  &:active
+    text-decoration: none

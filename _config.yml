@@ -95,19 +95,19 @@ nav-header-Hoshimori:
 # Images
 
 img-hoshimori-character:
-  Beta : "/Hoshimori/assets/Images/Beta.png"
-  Tolemy : "/Hoshimori/assets/Images/Tolemy.png"
-  Alpha : "/Hoshimori/assets/Images/Alpha.png"
-  Arie : "/Hoshimori/assets/Images/Arie.png"
-  Libra : "/Hoshimori/assets/Images/Libra.png"
-  Elda : "/Hoshimori/assets/Images/Elda.png"
-  Taurus : "/Hoshimori/assets/Images/Taurus.png"
-  Virgo : "/Hoshimori/assets/Images/Virgo.png"
-  Leo : "/Hoshimori/assets/Images/Leo.png"
-  Pis : "/Hoshimori/assets/Images/Pis.png"
-  Aqua : "/Hoshimori/assets/Images/Aqua.png"
-  Ces : "/Hoshimori/assets/Images/Ces.png"
-  Stella : "/Hoshimori/assets/Images/Stella.png"
+  ベータ : "/Hoshimori/assets/Images/Beta.png"
+  トレミー : "/Hoshimori/assets/Images/Tolemy.png"
+  アルファ : "/Hoshimori/assets/Images/Alpha.png"
+  アリエ : "/Hoshimori/assets/Images/Arie.png"
+  リブラ : "/Hoshimori/assets/Images/Libra.png"
+  エルダ : "/Hoshimori/assets/Images/Elda.png"
+  タウロス : "/Hoshimori/assets/Images/Taurus.png"
+  ヴァルゴ : "/Hoshimori/assets/Images/Virgo.png"
+  レオ : "/Hoshimori/assets/Images/Leo.png"
+  ピス : "/Hoshimori/assets/Images/Pis.png"
+  アクア : "/Hoshimori/assets/Images/Aqua.png"
+  ケス : "/Hoshimori/assets/Images/Ces.png"
+  ステラ : "/Hoshimori/assets/Images/Stella.png"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
