@@ -3,14 +3,14 @@ layout: Hoshimori/default-Hoshimori
 background: Home
 ---
 
-<section class="bg_sec">
-	<div id="Hoshimori-Chara" class="div-h">
-		<div id="Hoshimori-Chara" class="div-v">
-			<img id="Hoshimori-Chara" src="{{ site.hoshimori-character[page.background] | relative_url }}.png" alt="">
+<section class="Hoshimori-bg-sec">
+	<div class="Hoshimori-character-div-h">
+		<div class="Hoshimori-character-div-v">
+			<img src="{{ site.hoshimori-character[page.background] | relative_url }}.png" alt="">
 		</div>
-		<div id="Hoshimori-Chara" class="div-v">
-			<h2 id="Hoshimori-Chara">{{ page.background }}</h2>
-			<p id="Hoshimori-Chara">
+		<div class="Hoshimori-character-div-v">
+			<h2 class="Hoshimori-character-h2">{{ page.background }}</h2>
+			<p class="Hoshimori-character-p">
 				{{ content }}
 			</p>
 		</div>
