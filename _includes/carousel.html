@@ -10,19 +10,30 @@
     <body>
         <ul class="slider">
             {% for link in include.links %}
-                {% if link[0] != include.current %}
-                    <li>
-                        <a href="{{ link[1] | relative_url }}.html">
-                            <div>
-                                <img src="{{ link[1] | relative_url }}.png" alt="">
-                                <p class="p-name">{{ link[0] }}</p>
-                            </div>
-                        </a>
-                    </li>
+                {% if include.current %}
+                    {% if link[0] != include.current %}
+                        <li>
+                            <a href="{{ link[1] | relative_url }}.html">
+                                <div class="c-div">
+                                    <img src="{{ link[1] | relative_url }}.png" alt="">
+                                    <p class="p-name">{{ link[0] }}</p>
+                                </div>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{{ link[1] | relative_url }}.html">
+                                <div class="select">
+                                    <img src="{{ link[1] | relative_url }}.png" alt="">
+                                    <p class="p-name">{{ link[0] }}</p>
+                                </div>
+                            </a>
+                        </li>
+                    {% endif %}
                 {% else %}
                     <li>
                         <a href="{{ link[1] | relative_url }}.html">
-                            <div class="select">
+                            <div class="c-div">
                                 <img src="{{ link[1] | relative_url }}.png" alt="">
                                 <p class="p-name">{{ link[0] }}</p>
                             </div>
