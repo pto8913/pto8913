@@ -1,31 +1,7 @@
-<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
-
-<!-- <link rel="stylesheet" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css"> -->
-
-<section id="carousel">
-    <ul id="carousel" class="slider">
-        {% for link in include.links %}
-            {% if include.current %}
-                {% if link[0] != include.current %}
-                    <li id="carousel">
-                        <a id="carousel" href="{{ link[1] | relative_url }}.html">
-                            <div id="carousel" class="div-selectable">
-                                <img src="{{ link[1] | relative_url }}.png" alt="">
-                                <p id="carousel">{{ link[0] }}</p>
-                            </div>
-                        </a>
-                    </li>
-                {% else %}
-                    <li id="carousel">
-                        <a id="carousel" href="{{ link[1] | relative_url }}.html">
-                            <div id="carousel" class="div-select">
-                                <img src="{{ link[1] | relative_url }}.png" alt="">
-                                <p id="carousel">{{ link[0] }}</p>
-                            </div>
-                        </a>
-                    </li>
-                {% endif %}
-            {% else %}
+<ul id="carousel" class="slider">
+    {% for link in include.links %}
+        {% if include.current %}
+            {% if link[0] != include.current %}
                 <li id="carousel">
                     <a id="carousel" href="{{ link[1] | relative_url }}.html">
                         <div id="carousel" class="div-selectable">
@@ -34,15 +10,33 @@
                         </div>
                     </a>
                 </li>
+            {% else %}
+                <li id="carousel">
+                    <a id="carousel" href="{{ link[1] | relative_url }}.html">
+                        <div id="carousel" class="div-select">
+                            <img src="{{ link[1] | relative_url }}.png" alt="">
+                            <p id="carousel">{{ link[0] }}</p>
+                        </div>
+                    </a>
+                </li>
             {% endif %}
-        {% endfor %}
-    </ul>
-    <!-- <p id="carousel">使用したライブラリ：<a href="https://kenwheeler.github.io/slick/" target="_blank">https://kenwheeler.github.io/slick/</a></p> -->
+        {% else %}
+            <li id="carousel">
+                <a id="carousel" href="{{ link[1] | relative_url }}.html">
+                    <div id="carousel" class="div-selectable">
+                        <img src="{{ link[1] | relative_url }}.png" alt="">
+                        <p id="carousel">{{ link[0] }}</p>
+                    </div>
+                </a>
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+<!-- <p id="carousel">使用したライブラリ：<a href="https://kenwheeler.github.io/slick/" target="_blank">https://kenwheeler.github.io/slick/</a></p> -->
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="{{ '/assets/js/carousel.js' | relative_url }}"></script>    
-</section>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="{{ '/assets/js/carousel.js' | relative_url }}"></script>    
 
 <link rel="stylesheet" href="{{ '/assets/css/carousel.css' | relative_url }}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
