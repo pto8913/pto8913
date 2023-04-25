@@ -3,32 +3,22 @@
 
 @import index
 
-.g_header
-  background-color: rgb(0, 0, 0)
-  position: fixed
-  display: flex
+#navigation
+  .nav
+    box-sizing: border-box
+    position: fixed
+    vertical-align: baseline
 
-.g_div
-  background-color: rgb(0, 0, 0)
-  position: fixed
-  display: flex
+  .nav ul
+    display: flex
 
-.g-nav
-  box-sizing: border-box
-  position: fixed
-  vertical-align: baseline
+  .nav li
+    list-style: none
 
-.g-nav-ul
-  display: flex
-
-.g-nav-li
-  list-style: none
-
-.g-nav-a 
-  display: block
-  text-decoration: none
-  color: white
-  margin-right: 20px
-  &:hover
-    color: rgb(252, 245, 228)
-
+  .nav a 
+    display: block
+    text-decoration: none
+    color: white
+    margin-right: 20px
+    &:hover
+      color: rgb(252, 245, 228)

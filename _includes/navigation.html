@@ -1,13 +1,13 @@
-<nav class="g-nav">
-  <ul class="g-nav-ul">
+<nav id="navigation" class="nav">
+  <ul>
     {% for nav in include.navigation %}
       {% if nav[1].first %}
-        <li class="g-nav-li">
-          <a class="g-nav-a">{{ nav[0] }}</a>
+        <li>
+          <a>{{ nav[0] }}</a>
           <ul>
             {% for sub_page in nav[i] %}
-            <li class="g-nav-li">
-              <a class="g-nav-a" href="{{ sub_page[1] | relative_url }}" aria-label="{{ sub_page[0] }}">
+            <li>
+              <a href="{{ sub_page[1] | relative_url }}" aria-label="{{ sub_page[0] }}">
                 {{ sub_page[0] }}
               </a>
             </li>
@@ -15,8 +15,8 @@
           </ul>
         </li>
       {% else %}
-        <li class="g-nav-li">
-          <a class="g-nav-a" href="{{ nav[1] | relative_url }}" aria-label="{{ nav[0] }}">
+        <li>
+          <a href="{{ nav[1] | relative_url }}" aria-label="{{ nav[0] }}">
             {{ nav[0] }}
           </a>
         </li>
