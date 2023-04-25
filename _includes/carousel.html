@@ -8,8 +8,8 @@
             {% if include.current %}
                 {% if link[0] != include.current %}
                     <li>
-                        <a id="carousel" href="{{ link[1] | relative_url }}.html">
-                            <div id="carousel">
+                        <a href="{{ link[1] | relative_url }}.html">
+                            <div>
                                 <img src="{{ link[1] | relative_url }}.png" alt="">
                                 <p>{{ link[0] }}</p>
                             </div>
@@ -17,8 +17,8 @@
                     </li>
                 {% else %}
                     <li>
-                        <a id="carousel" href="{{ link[1] | relative_url }}.html">
-                            <div id="carousel" class="select">
+                        <a href="{{ link[1] | relative_url }}.html">
+                            <div class="select">
                                 <img src="{{ link[1] | relative_url }}.png" alt="">
                                 <p>{{ link[0] }}</p>
                             </div>
@@ -27,8 +27,8 @@
                 {% endif %}
             {% else %}
                 <li>
-                    <a id="carousel" href="{{ link[1] | relative_url }}.html">
-                        <div id="carousel">
+                    <a href="{{ link[1] | relative_url }}.html">
+                        <div>
                             <img src="{{ link[1] | relative_url }}.png" alt="">
                             <p>{{ link[0] }}</p>
                         </div>
