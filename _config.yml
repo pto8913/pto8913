@@ -95,19 +95,19 @@ nav-header-Hoshimori:
 # Images
 
 img-hoshimori-character:
-  Beta : "Hoshimori/Images/Beta.png"
-  Tolemy : "Hoshimori/Images/Tolemy.png"
-  Alpha : "Hoshimori/Images/Alpha.png"
-  Arie : "Hoshimori/Images/Arie.png"
-  Libra : "Hoshimori/Images/Libra.png"
-  Elda : "Hoshimori/Images/Elda.png"
-  Taurus : "Hoshimori/Images/Taurus.png"
-  Virgo : "Hoshimori/Images/Virgo.png"
-  Leo : "Hoshimori/Images/Leo.png"
-  Pis : "Hoshimori/Images/Pis.png"
-  Aqua : "Hoshimori/Images/Aqua.png"
-  Ces : "Hoshimori/Images/Ces.png"
-  Stella : "Hoshimori/Images/Stella.png"
+  Beta : "/Hoshimori/assets/Images/Beta.png"
+  Tolemy : "/Hoshimori/assets/Images/Tolemy.png"
+  Alpha : "/Hoshimori/assets/Images/Alpha.png"
+  Arie : "/Hoshimori/assets/Images/Arie.png"
+  Libra : "/Hoshimori/assets/Images/Libra.png"
+  Elda : "/Hoshimori/assets/Images/Elda.png"
+  Taurus : "/Hoshimori/assets/Images/Taurus.png"
+  Virgo : "/Hoshimori/assets/Images/Virgo.png"
+  Leo : "/Hoshimori/assets/Images/Leo.png"
+  Pis : "/Hoshimori/assets/Images/Pis.png"
+  Aqua : "/Hoshimori/assets/Images/Aqua.png"
+  Ces : "/Hoshimori/assets/Images/Ces.png"
+  Stella : "/Hoshimori/assets/Images/Stella.png"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
