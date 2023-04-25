@@ -20,7 +20,16 @@
 //矢印の設定
 
 //戻る、次へ矢印の位置
-.slick-prev 
+.slick-prev
+  position: absolute //絶対配置にする
+  top: 42%
+  cursor: pointer //マウスカーソルを指マークに
+  outline: none //クリックをしたら出てくる枠線を消す
+  border-top: 2px solid #666 //矢印の色
+  border-right: 2px solid #666 //矢印の色
+  height: 15px
+  width: 15px
+
 .slick-next
   position: absolute //絶対配置にする
   top: 42%
@@ -31,11 +40,11 @@
   height: 15px
   width: 15px
 
-.slick-prev  //戻る矢印の位置と形状
+.slick-prev //戻る矢印の位置と形状
   left: -1.5%
   transform: rotate(-135deg)
 
-.slick-next  //次へ矢印の位置と形状
+.slick-next //次へ矢印の位置と形状
   right: -1.5%
   transform: rotate(45deg)
 
@@ -78,6 +87,8 @@ ul
 a
   color: #333
 
-a:hover,
+a:hover
+  text-decoration: none
+
 a:active
   text-decoration: none
