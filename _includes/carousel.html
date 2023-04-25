@@ -12,22 +12,22 @@
             {% for link in include.links %}
                 {% if link[0] != include.current %}
                     <li>
-                        <a href="{{ link[1].html | relative_url }}">
+                        <a href="{{ link[1] | relative_url }}.html">
                             <div>
-                                <img src="{{ link[1].png | relative_url }}" alt="">
+                                <img src="{{ link[1] | relative_url }}.png" alt="">
                                 <p class="p-name">{{ link[0] }}</p>
                             </div>
                         </a>
                     </li>
                 {% else %}
-                <li>
-                    <a href="{{ link[1].html | relative_url }}">
-                        <div class="select">
-                            <img src="{{ link[1].png | relative_url }}" alt="">
-                            <p class="p-name">{{ link[0] }}</p>
-                        </div>
-                    </a>
-                </li>
+                    <li>
+                        <a href="{{ link[1] | relative_url }}.html">
+                            <div class="select">
+                                <img src="{{ link[1] | relative_url }}.png" alt="">
+                                <p class="p-name">{{ link[0] }}</p>
+                            </div>
+                        </a>
+                    </li>
                 {% endif %}
             {% endfor %}
         </ul>
