@@ -10,12 +10,30 @@
     <body>
         <ul class="slider">
             {% for link in include.links %}
-                <div>
-                    <li>
-                        <img src="{{ link[1] | relative_url }}" alt="">
-                    </li>
-                    <p class="p-name">link[0]</p>
-                </div>
+                {% if include.current %}
+                    {% if link[0] != include.current %}
+                        <div class="select">
+                            <li>
+                                <img src="{{ link[1] | relative_url }}" alt="">
+                            </li>
+                            <p class="p-name">{{ link[0] }}</p>
+                        </div>
+                    {% else %}
+                        <div>
+                            <li>
+                                <img src="{{ link[1] | relative_url }}" alt="">
+                            </li>
+                            <p class="p-name">{{ link[0] }}</p>
+                        </div>
+                    {% endif %}
+                {% else %}
+                    <div>
+                        <li>
+                            <img src="{{ link[1] | relative_url }}" alt="">
+                        </li>
+                        <p class="p-name">{{ link[0] }}</p>
+                    </div>
+                {% endif %}
             {% endfor %}
         </ul>
         <!-- <p>使用したライブラリ：<a href="https://kenwheeler.github.io/slick/" target="_blank">https://kenwheeler.github.io/slick/</a></p> -->
