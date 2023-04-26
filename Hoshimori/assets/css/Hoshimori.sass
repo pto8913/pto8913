@@ -7,31 +7,35 @@
   display: flex
 
 .Hoshimori_home_platform_description
-  color: #000
   background-color: #00000000
   background-position: center
   position: absolute
   right: 200px
   bottom: 50px
-  
-  .inner 
-    min-height: 500px
-    position: relative
+  padding: 20px
+  text-align: center
 
-  .copy
-    position:absolute 
-    top: 50% 
-    height: 10em 
-    margin-top: -5em 
-    width: 100%
+.Hoshimori_home_text
+  color: #000000ff
 
-  .bg_Home-text 
-    border: solid 0.1px
-    display: inline-block
-    padding: 0px 0px
-    background-color: #00000000
-    position: absolute
-    offset-position: 400px 150px
+.inner 
+  min-height: 500px
+  position: relative
+
+.copy
+  position:absolute 
+  top: 50% 
+  height: 10em 
+  margin-top: -5em 
+  width: 100%
+
+.bg_Home-text 
+  border: solid 0.1px
+  display: inline-block
+  padding: 0px 0px
+  background-color: #00000000
+  position: absolute
+  offset-position: 400px 150px
 
   // div.container 
   //   display: table-cell
@@ -53,7 +57,7 @@
 
 // -------------------- hoshimori character --------------------
 
-.Hoshimori_character_div_h
+.Hoshimori_character_card_container
   max-width: 800px
   height: 400px
   display: flex
@@ -61,14 +65,14 @@
   align-items: center
   justify-content: center
   
-.Hoshimori_character_div_img
+.Hoshimori_character_card_container img
   margin: 5px
   display: block
   width: 100%
   height: 100%
   vertical-align: bottom
 
-.Hoshimori_character_div_v
+.Hoshimori_character_description_container
   margin: 5px
   padding: 20px
   width: 750px
@@ -76,19 +80,11 @@
   mix-blend-mode: overlay
   background-color: #00000072
 
-.Hoshimori_character_name, 
+.Hoshimori_character_description_container h2 
   padding: 5px
-  color: #eee
+  color: #eeeeeeff
 
-// .Hoshimori_character_div_v p
-//   background-color: #00000072
-//   color: #eee
-//   width: auto
-//   height: auto
-//   display: block
-//   padding: 20px
-//   border-radius: 20px
-.Hoshimori_character_description_div
+.Hoshimori_character_description_container div
   justify-content: center
   align-items: center
   width: 100%
@@ -97,6 +93,6 @@
   scroll-behavior: auto
   padding: 5px
 
-.Hoshimori_character_description
-  color: #eee
+.Hoshimori_character_description_container p
+  color: #eeeeeeff
   scroll-behavior: auto
