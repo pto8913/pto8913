@@ -5,7 +5,7 @@
     {% for link in include.links %}
       {% if include.current %}
         {% if link[0] != include.current %}
-          <li class="carousel-ul">
+          <li class="carousel-li">
             <a class="carousel-a" href="{{ link[1] | relative_url }}.html">
               <div class="carousel-div-selectable">
                 <img src="{{ link[1] | relative_url }}.png" alt="">
@@ -14,7 +14,7 @@
             </a>
           </li>
         {% else %}
-          <li class="carousel-ul">
+          <li class="carousel-li">
             <a class="carousel-a" href="{{ link[1] | relative_url }}.html">
               <div class="carousel-div-select">
                 <img src="{{ link[1] | relative_url }}.png" alt="">
@@ -24,7 +24,7 @@
           </li>
         {% endif %}
       {% else %}
-        <li class="carousel-ul">
+        <li class="carousel-li">
           <a class="carousel-a" href="{{ link[1] | relative_url }}.html">
             <div class="carousel-div-selectable">
               <img src="{{ link[1] | relative_url }}.png" alt="">
