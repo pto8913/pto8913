@@ -1,6 +1,6 @@
 <header class="header">
   {% if include.page-title %}
-    <a href="{{ include.page-title | relative_url }}" class="title">{{ page.title | escape }}</a>
+    <a href="{{ page.home | relative_url }}" class="title">{{ page.title | escape }}</a>
   {% else %}
     <a href="{{ '/' | relative_url }}" class="title">{{ site.title | escape }}</a>
   {% endif %}
