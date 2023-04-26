@@ -2,8 +2,6 @@
 
 <head>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="{{ '/assets/js/carousel.js' | relative_url }}"></script>    
   <script type="text/javascript">
     // $(".carousel-li").removeAttr("width");
   </script>
@@ -45,6 +43,9 @@
     {% endfor %}
   </ul>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="{{ '/assets/js/carousel.js' | relative_url }}"></script> 
 
 <link rel="stylesheet" href="{{ '/assets/css/carousel.css' | relative_url }}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
