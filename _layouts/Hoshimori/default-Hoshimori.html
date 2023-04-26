@@ -1,6 +1,6 @@
 ---
 background: 
-home: /Hoshimori/index.html
+home: '/Hoshimori/index.html'
 ---
 
 <head>
@@ -48,7 +48,7 @@ home: /Hoshimori/index.html
   {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
 {% endif %}
 
-{% include header.html page-title=page.title navigation=pages %}
+{% include header.html navigation=pages %}
 
 <body>
   {{ content }}
