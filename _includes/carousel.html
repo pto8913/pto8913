@@ -1,7 +1,29 @@
-<ul id="carousel" class="slider">
-  {% for link in include.links %}
-    {% if include.current %}
-      {% if link[0] != include.current %}
+<!-- <p id="carousel">使用したライブラリ：<a href="https://kenwheeler.github.io/slick/" target="_blank">https://kenwheeler.github.io/slick/</a></p> -->
+
+<div id="carousel" class="carousel-div">
+  <ul id="carousel" class="slider">
+    {% for link in include.links %}
+      {% if include.current %}
+        {% if link[0] != include.current %}
+          <li>
+            <a href="{{ link[1] | relative_url }}.html">
+              <div class="div-selectable">
+                <img src="{{ link[1] | relative_url }}.png" alt="">
+                <p>{{ link[0] }}</p>
+              </div>
+            </a>
+          </li>
+        {% else %}
+          <li>
+            <a href="{{ link[1] | relative_url }}.html">
+              <div class="div-select">
+                <img src="{{ link[1] | relative_url }}.png" alt="">
+                <p>{{ link[0] }}</p>
+              </div>
+            </a>
+          </li>
+        {% endif %}
+      {% else %}
         <li>
           <a href="{{ link[1] | relative_url }}.html">
             <div class="div-selectable">
@@ -10,30 +32,10 @@
             </div>
           </a>
         </li>
-      {% else %}
-        <li>
-          <a href="{{ link[1] | relative_url }}.html">
-            <div class="div-select">
-              <img src="{{ link[1] | relative_url }}.png" alt="">
-              <p>{{ link[0] }}</p>
-            </div>
-          </a>
-        </li>
       {% endif %}
-    {% else %}
-      <li>
-        <a href="{{ link[1] | relative_url }}.html">
-          <div class="div-selectable">
-            <img src="{{ link[1] | relative_url }}.png" alt="">
-            <p>{{ link[0] }}</p>
-          </div>
-        </a>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
-<!-- <p id="carousel">使用したライブラリ：<a href="https://kenwheeler.github.io/slick/" target="_blank">https://kenwheeler.github.io/slick/</a></p> -->
-
+    {% endfor %}
+  </ul>
+</div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="{{ '/assets/js/carousel.js' | relative_url }}"></script>    
