@@ -1,6 +1,19 @@
 ---
 ---
 
+// -------------------- hoshimori --------------------
+
+.Hoshimori_fixed_bg
+  position: relative
+  height: 780px
+  width: 100%
+  background-color: rgba(172, 172, 172, 1)
+  background-size: cover
+  background-attachment: fixed
+  background-repeat: no-repeat
+  background-position: center center
+  z-index: 2
+
 // -------------------- hoshimori home --------------------
 
 .Hoshimori_home_platform_div_h
@@ -21,32 +34,21 @@
 
 // -------------------- hoshimori story --------------------
 
-.Hoshimori_story_bg
-  position: relative
-  height: 780px
-  width: 100%
-  background-color: rgba(172, 172, 172, 1)
-  background-size: cover
-  background-attachment: fixed
-  background-repeat: no-repeat
-  background-position: center center
-  z-index: 2
-
 .Hoshimori_story_title_container
   position: absolute
   top: 50px
   left: 50px
   padding: 20px
   width: 200px
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.5) 100%)
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%)
 
 .Hoshimori_story_text_container
   color: rgba(0,0,0,1)
-  // background-color: rgba(255, 255, 255, 0.5)
+  // background-color: rgba(255, 255, 255, 0)
   padding: 20px
   position: absolute
   // background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.5) 100%)
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%)
 
 // -------------------- hoshimori character --------------------
 
@@ -89,3 +91,16 @@
 .Hoshimori_character_card_description_text
   color: rgba(238,238,238,1)
   scroll-behavior: auto
+
+// -------------------- hoshimori description --------------------
+
+.Hoshimori_description_subject_container
+  background-color: rgba(75, 75, 75, 1)
+
+.Hoshimori_description_subject_text
+  color: rgba(255, 255, 255, 1)
+
+.Hoshimori_description_movie_container
+  display: grid
+  grid-template-columns: repeat(4 1fr)
+  gap: 10px

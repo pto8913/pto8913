@@ -2,10 +2,27 @@
 layout: Hoshimori/default-Hoshimori
 title: "星の守り人 | ゲーム紹介"
 ---
+<head>
+  <style>
+    .Hoshimori_fixed_bg.movie {
+      background-image: url("{{ '/Hoshimori/Description/Images/Background_4.png' | relative_url }}");
+    }
+  </style>  
+</head>
 
-<section id="Home" class="bg_Home">
-  <div class="inner">
-    ゲーム紹介<br>
+<div>
+  <div class="Hoshimori_description_subject_container">
+    <p class="Hoshimori_description_subject_text">
+      ゲーム動画
+    </p>
   </div>
-</section>
+  <div class="Hoshimori_fixed_bg movie">
+    <div>
+      <div class="Hoshimori_description_movie_container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/j7OsDylA6Ak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
 <link rel="stylesheet" href=" {{ '/Hoshimori/assets/css/Hoshimori.css' | relative_url }}">
