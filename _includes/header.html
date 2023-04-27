@@ -8,7 +8,7 @@
 </head>
 <header class="header">
   <a href="{{ '/' | relative_url }}" class="title">
-    <img class="pto_logo" src="/assets/images/pto8913.png" />
+    <img class="pto_logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" />
   </a>
   {% if include.home %}
     <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a>
