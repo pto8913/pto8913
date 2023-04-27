@@ -6,8 +6,12 @@ home: '/Hoshimori/index.html'
 
 <head>
   <style>
-    .Hoshimori_fixed_bg.movie {
+    .Hoshimori_fixed_bg.background {
       background-image: url("{{ '/Hoshimori/Description/Images/Background_4.png' | relative_url }}");
+    }
+
+    .Hoshimori_character_card_container.inner {
+      margin: 20px
     }
   </style>  
 </head>
@@ -18,11 +22,25 @@ home: '/Hoshimori/index.html'
       ゲーム動画
     </p>
   </div>
-  <div class="Hoshimori_fixed_bg movie">
+  <div class="Hoshimori_fixed_bg background">
     <div>
       <div class="Hoshimori_description_movie_container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/j7OsDylA6Ak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="Hoshimori_description_movie" src="https://www.youtube.com/embed/j7OsDylA6Ak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
+    </div>
+  </div>
+  <div class="Hoshimori_description_subject_container">
+    <p class="Hoshimori_description_subject_text">
+      ゲームの特徴
+    </p>
+  </div>
+  <div class="Hoshimori_fixed_bg background">
+    <div class="Hoshimori_character_card_container inner">
+      {% 
+        include Hoshimori/card.html 
+        name="冒険の旅" 
+        description=<p>失われた守護者の力を受け継ぐため、<br>旅に出る。</p>
+      %}
     </div>
   </div>
 </div>
