@@ -86,11 +86,18 @@ nav-footer:                  # shows a footer with social links - for available 
   - {title: Github, icon: github, url: "https://github.com/pto8913"}
   - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
+# ------------------------------ Hoshimori ------------------------------
+# Navigations
+
 nav-header-Hoshimori:
   ホーム: "/Hoshimori/index.html"
   物語: "/Hoshimori/story.html"
   登場人物: "Hoshimori/Characters/Tolemy.html"
   ゲーム紹介: "/Hoshimori/description.html"
+
+nav-footer-Hoshimori:
+  - {title: Youtube, icon: youtube, url: "https://www.youtube.com/@Hosinomoribito_JP"}
+  - {title: Discord, icon: discord, url: "https://discord.gg/mXntvZdCFf"}
 
 # Images
 

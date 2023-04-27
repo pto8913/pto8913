@@ -1,0 +1,32 @@
+<head>
+  <link rel="stylesheet" href="{{ '/assets/css/navigation.css' | relative_url }}">
+</head>
+<footer class="footer">
+  <div>
+    <ul class="nav_ul">
+      {% for nav in include.navigation %}
+        {% if nav.icon %}
+          <li class="nav_li">
+            <a class="nav_a">
+              <img class="logo" src="{{ /assets/images/nav.icon | relative_url }}.png" alt="" />
+            </a>
+          </li>
+        {% else %}
+          {% if nav.url %}
+            <li class="nav_li">
+              <a class="nav_a" href="{{ url | relative_url }}" aria-label="{{ nav.title }}">
+                {{ nav.title }}
+              </a>
+            </li>
+          {% else %}
+            {{ nav.title }}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <p>
+      <a href="mailto:hoshinomoribito.jp@gmail.com">お問い合わせ</a><br>
+      Copyright © 2020-2023 pto8913. All Right Reserved.<br>
+    </p>
+  </div>
+</footer>

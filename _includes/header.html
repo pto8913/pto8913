@@ -1,16 +1,6 @@
-<head>
-  <style>
-    .pto_logo {
-      width: 32px;
-      height: 32px;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-</head>
 <header class="header">
   <a href="{{ '/' | relative_url }}" class="title">
-    <img class="pto_logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" />
+    <img class="logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
   </a>
   {% if include.home %}
     <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a>

@@ -4,13 +4,11 @@ background: Home
 home: '/Hoshimori/index.html'
 ---
 
-<div>
-  <section class="Hoshimori_bg_sec">
-    {% 
-      include Hoshimori/card.html 
-      name=page.background 
-      description=content 
-    %}
-    {% include carousel.html links=site.hoshimori-character current=page.background %}
-  </section>
+<div class="Hoshimori_bg_sec">
+  {% 
+    include Hoshimori/card.html 
+    name=page.background 
+    description=content 
+  %}
+  {% include carousel.html links=site.hoshimori-character current=page.background %}
 </div>
