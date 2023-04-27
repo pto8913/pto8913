@@ -13,14 +13,14 @@
       {% for nav in include.navigation %}
         {% if nav.icon %}
           <li class="nav_li">
-            <a class="nav_a" href="nav.url" aria-label="{{ nav.title }}">
+            <a class="nav_a" href="{{ nav.url }}" aria-label="{{ nav.title }}">
               <img class="logo" src="{{ nav.icon | relative_url}}" alt="" />
             </a>
           </li>
         {% else %}
           {% if nav.url %}
             <li class="nav_li">
-              <a class="nav_a" href="nav.url" aria-label="{{ nav.title }}">
+              <a class="nav_a" href="{{ nav.url }}" aria-label="{{ nav.title }}">
                 {{ nav.title }}
               </a>
             </li>
