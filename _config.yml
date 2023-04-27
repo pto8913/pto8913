@@ -109,7 +109,7 @@ hoshimori-character:
   ケス : "/Hoshimori/Characters/Ces"
   ステラ : "/Hoshimori/Characters/Stella"
 img-hoshimori-character-bg:
-  ホーム : "/Hoshimori/Images/T_Title.png"
+  ホーム : "/Hoshimori/assets/images/T_Title.png"
   ベータ : "/Hoshimori/Characters/Background_Beta.png"
   トレミー : "/Hoshimori/Characters/Background_Tolemy.png"
   アルファ : "/Hoshimori/Characters/Background_Alpha.png"
