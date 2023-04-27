@@ -2,7 +2,7 @@
   {{ include.img-collection }}<br>
   {{ include.img-index }}<br>
   {% if include.img-collection %}
-    <img class="Hoshimori_character_card_img" src="{{ include.img-collection[include.img-index] | relative_url }}.{{ include.img-extension }}" alt="" />
+    <img class="Hoshimori_character_card_img" src="{{ include.img-collection[include.img-index][1] | relative_url }}.{{ include.img-extension }}" alt="" />
   {% else %}
     <img class="Hoshimori_character_card_img" src="{{ include.img-index | relative_url }}.{{ include.img-extension }}" alt="" />
   {% endif %}
