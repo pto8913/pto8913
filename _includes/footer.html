@@ -7,7 +7,7 @@
       {% for nav in include.navigation %}
         {% if nav.icon %}
           <li class="nav_li">
-            <a class="nav_a">
+            <a class="nav_a" href="{{ nav.url | relative_url }}" aria-label="{{ nav.title }}">
               <img class="logo" src="{{ nav.icon | relative_url}}" alt="" />
             </a>
           </li>
