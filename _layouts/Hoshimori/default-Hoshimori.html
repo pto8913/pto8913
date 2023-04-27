@@ -23,12 +23,7 @@ home: '/Hoshimori/index.html'
 
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
-  <title>
-    {% if page.title %}
-      {{ page.title | escape }} | 
-    {% endif %}
-    {{ site.title | escape }}
-  </title>
+  <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
   <meta charset="{{ site.encoding }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="{{ page.author | default: site.author | escape }}">
@@ -37,7 +32,7 @@ home: '/Hoshimori/index.html'
   {% if site.show_frame %}
     <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
   {% else %}
-    <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
   {% endif %}
 
   {% if site.nav-header-Hoshimori %}
