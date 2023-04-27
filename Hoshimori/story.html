@@ -6,29 +6,45 @@ home: '/Hoshimori/index.html'
 
 <head>
   <style>
+    .Hoshimori_fixed_bg.story_star {
+      background-image: url("{{ '/Hoshimori/Story/Images/Background_Star.png' | relative_url }}");
+      height: 200px;
+    }
+    .Hoshimori_story_text_container.story_star {
+      left: 15px;
+      top: 10px;
+    }
+
     .Hoshimori_fixed_bg.story_0 {
       background-image: url("{{ '/Hoshimori/Story/Images/EncientBattle.png' | relative_url }}");
+      height: 400px;
     }
     .Hoshimori_story_text_container.story_0 {
-      left: 100px;
-      bottom: 50px;
+      left: 15px;
+      bottom: 10px;
     }
+
     .Hoshimori_fixed_bg.story_1 {
       background-image: url("{{ '/Hoshimori/Story/Images/Snake_Giant.png' | relative_url }}");
+      height: 400px;
     }
     .Hoshimori_story_text_container.story_1 {
       left: 100px;
       bottom: 50px;
     }
+
     .Hoshimori_fixed_bg.story_2 {
       background-image: url("{{ '/Hoshimori/Story/Images/DevilStar_Omen.png' | relative_url }}");
+      height: 200px;
     }
     .Hoshimori_story_text_container.story_2 {
       top: 50px;
       right: 50px;
     }
+
     .Hoshimori_fixed_bg.story_3 {
       background-image: url("{{ '/Hoshimori/Story/Images/Departure.png' | relative_url }}");
+      height: 300px;
     }
     .Hoshimori_story_text_container.story_3 {
       top: 50px;
@@ -38,14 +54,19 @@ home: '/Hoshimori/index.html'
 </head>
 
 <div>
-  <div class="Hoshimori_fixed_bg story_0">
-    <div class="Hoshimori_story_title_container">
-      <h2 class="Hoshimori_story_title">
-        物語
-      </h2>
+  <div class="Hoshimori_fixed_bg story_star">
+    <div class="Hoshimori_story_text_container story_star">
+      <p>
+        大昔、この星の近くを通過した魔物の星から<br>
+        魔王が侵攻してきた。
+      </p>
     </div>
+  </div>
+  <div class="Hoshimori_fixed_bg story_0">
     <div class="Hoshimori_story_text_container story_0">
-      <p>魔物の星からの侵攻を退けた星の守護者たち。</p>
+      <p>
+        しかし、星の守護者たちの活躍により何とか撃退に成功する。
+      </p>
     </div>
   </div>
   <div class="Hoshimori_fixed_bg story_1">
