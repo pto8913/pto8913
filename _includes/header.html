@@ -1,8 +1,19 @@
+<head>
+  <style>
+    .pto_logo {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
 <header class="header">
   {% if include.home %}
     <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a>
   {% else %}
-    <a href="{{ '/' | relative_url }}" class="title">{{ site.title | escape }}</a>
+    <a href="{{ '/' | relative_url }}" class="title">
+      <img class="pto_logo" src="/assets/images/pto8913.png">
+    </a>
+    <!-- <a href="{{ '/' | relative_url }}" class="title">{{ site.title | escape }}</a> -->
   {% endif %}
   <ul class="nav_ul">
     {% for nav in include.navigation %}
