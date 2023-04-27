@@ -96,8 +96,8 @@ nav-header-Hoshimori:
   ゲーム紹介: "/Hoshimori/description.html"
 
 nav-footer-Hoshimori:
-  - {title: Youtube, icon: youtube, url: "https://www.youtube.com/@Hosinomoribito_JP"}
-  - {title: Discord, icon: discord, url: "https://discord.gg/mXntvZdCFf"}
+  - {title: Youtube, icon: '/assets/images/youtube.png', url: "https://www.youtube.com/@Hosinomoribito_JP"}
+  - {title: Discord, icon: '/assets/images/discord.png', url: "https://discord.gg/mXntvZdCFf"}
 
 # Images
 
