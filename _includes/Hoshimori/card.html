@@ -1,8 +1,13 @@
 <div class="Hoshimori_character_card_container">
-  {% if include.img-collection %}
-    <img class="Hoshimori_character_card_img" src="{{ include.img-collection[include.img-index][1] | relative_url }}.{{ include.img-extension }}" alt="" />
+  {% if include.img-extension %}
+    {% assign extension = include.img-extension %}
   {% else %}
-    <img class="Hoshimori_character_card_img" src="{{ include.img-index | relative_url }}.{{ include.img-extension }}" alt="" />
+    {% assign extension = "png" %}
+  {% endif %}
+  {% if include.img-collection %}
+    <img class="Hoshimori_character_card_img" src="{{ include.img-collection[include.img-index][1] | relative_url }}.extension" alt="" />
+  {% else %}
+    <img class="Hoshimori_character_card_img" src="{{ include.img-index | relative_url }}.extension" alt="" />
   {% endif %}
   <div class="Hoshimori_character_card_detail_container">
     <h2 class="Hoshimori_character_card_name">{{ include.name }}</h2>
