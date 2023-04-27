@@ -38,8 +38,25 @@ home: '/Hoshimori/index.html'
     <div class="Hoshimori_character_card_container inner">
       {% 
         include Hoshimori/card.html 
+        src="{{ '/Hoshimori/Description/Images/Background_1.png' | relative_url }}"
         name="冒険の旅" 
         description="失われた守護者の力を受け継ぐため、旅に出る。"
+      %}
+    </div>
+    <div class="Hoshimori_character_card_container inner">
+      {% 
+        include Hoshimori/card.html 
+        src="{{ '/Hoshimori/Description/Images/Background_2.png' | relative_url }}" 
+        name="守護者の力を受け継ぐ" 
+        description="守護者に自分の力を認めさせて、力を受け継ごう。"
+      %}
+    </div>
+    <div class="Hoshimori_character_card_container inner">
+      {% 
+        include Hoshimori/card.html 
+        src="{{ '/Hoshimori/Description/Images/Background_3.png' | relative_url }}" 
+        name="守護者の力を使う" 
+        description="守護者の力で謎を解き、魔王を倒す。"
       %}
     </div>
   </div>

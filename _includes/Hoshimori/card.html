@@ -1,12 +1,14 @@
 <div class="Hoshimori_character_card_container">
-  <img class="Hoshimori_character_card_img" src="{{ site.hoshimori-character[page.background] | relative_url }}.png" alt="" />
-  <div class="Hoshimori_character_card_detail_container">
-    <h2 class="Hoshimori_character_card_name">{{ include.name }}</h2>
-    <p class="Hoshimori_character_card_description_text">────────────────────────</p>
-    <div class="Hoshimori_character_card_description_text_container">
-      <p class="Hoshimori_character_card_description_text">
-        {{ include.description }}
-      </p>
+  <img class="Hoshimori_character_card_img" src=include.src alt="" />
+  <div class="Hoshimori_character_card_overlay">
+    <div class="Hoshimori_character_card_detail_container">
+      <h2 class="Hoshimori_character_card_name">{{ include.name }}</h2>
+      <p class="Hoshimori_character_card_description_text">────────────────────────</p>
+      <div class="Hoshimori_character_card_description_text_container">
+        <p class="Hoshimori_character_card_description_text">
+          {{ include.description }}
+        </p>
+      </div>
     </div>
   </div>
 </div>
