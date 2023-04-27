@@ -5,11 +5,16 @@
       text-align: center;
       align-items: center;
     }
+
+    .nav_ul.center {
+      text-align: center;
+      align-items: center;
+    }
   </style>
 </head>
 <footer class="footer">
   <div class="center">
-    <ul class="nav_ul">
+    <ul class="nav_ul center">
       {% for nav in include.navigation %}
         {% if nav.icon %}
           <li class="nav_li">
@@ -30,7 +35,7 @@
         {% endif %}
       {% endfor %}
     </ul>
-    <p>
+    <p class="center">
       <a href="mailto:hoshinomoribito.jp@gmail.com">お問い合わせ</a><br>
       Copyright © 2020-2023 pto8913. All Right Reserved.<br>
     </p>
