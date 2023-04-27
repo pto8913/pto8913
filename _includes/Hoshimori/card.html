@@ -1,8 +1,8 @@
 <div class="Hoshimori_character_card_container">
   {% if include.img-collection %}
-    <img class="Hoshimori_character_card_img" src="{{ include.img-collection[include.img-index] | relative_url }}.png" alt="" />
+    <img class="Hoshimori_character_card_img" src="{{ include.img-collection[include.img-index] | relative_url }}.{{ include.img-extension }}" alt="" />
   {% else %}
-    <img class="Hoshimori_character_card_img" src="{{ include.img-index | relative_url }}.png" alt="" />
+    <img class="Hoshimori_character_card_img" src="{{ include.img-index | relative_url }}.{{ include.img-extension }}" alt="" />
   {% endif %}
   <div class="Hoshimori_character_card_detail_container">
     <h2 class="Hoshimori_character_card_name">{{ include.name }}</h2>
