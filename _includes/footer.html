@@ -8,7 +8,7 @@
         {% if nav.icon %}
           <li class="nav_li">
             <a class="nav_a">
-              <img class="logo" src="{{ /assets/images/nav.icon | relative_url }}.png" alt="" />
+              <img class="logo" src="{{ '/assets/images/'{{nav.icon}}'.png' | relative_url }}" alt="" />
             </a>
           </li>
         {% else %}
