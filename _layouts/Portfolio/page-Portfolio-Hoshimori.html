@@ -5,6 +5,8 @@ home: '/Portfolio/Hoshimori/index.html'
 custom-header: true
 ---
 
-{% include header.html home=page.home navigation=site.nav-header-Portfolio-Hoshimori %}
+{% if page.custom-header %}
+  {% include header.html home=page.home navigation=site.nav-header-Portfolio-Hoshimori %}
+{% endif %}
 
 {{ content }}
