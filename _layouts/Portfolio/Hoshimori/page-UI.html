@@ -6,7 +6,10 @@ home: '/Portfolio/Hoshimori/index.html'
 # images: # list
 #  title : url
 # or
-# {title: title, url: "url"(relative), description:""}
+# - title: title
+#   url: "url"(relative)
+#   description:[]
+#   type: default "p" others "li"
 ---
 
 <head>
@@ -42,11 +45,18 @@ home: '/Portfolio/Hoshimori/index.html'
               {{ row.title }}
             </p>
           </div>
-          <p>
-            {{ row.description }}
-          </p>
+          {% for description in row.description %}
+            {% if row.type == "li" %}
+              <li>
+                {{ description }}
+              </li>
+            {% else %}
+              <p>
+                {{ description }}
+              </p>
+            {% endif %}
+          {% endfor %}
         </div>
-
       {% else %}
         <div class="Portfolio_Hoshimori_img_card">
           <img class="Portfolio_Hoshimori_img" src="{{ row[1] | relative_url }}" alt="" />
