@@ -82,9 +82,9 @@ nav-header:                # accepts {file, title, url, icon, sidebaricon}
   archives: "/archives.html"
 
 nav-footer:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:pto8913project@gmail.com"}
-  - {title: Github, icon: github, url: "https://github.com/pto8913"}
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
+  - {title: Gmail, icon: '/assets/images/gmail.png', url: "mailto:pto8913project@gmail.com"}
+  - {title: Github, icon: '/assets/images/github.png', url: "https://github.com/pto8913"}
+  - {title: Blog, icon: }
 
 # ------------------------------ Portfolio ------------------------------
 # Navigations
