@@ -45,7 +45,8 @@ home: '/Portfolio/Hoshimori/index.html'
               {{ row.title }}
             </p>
           </div>
-          {% for description in row.description %}
+          <div>
+            {% for description in row.description %}
             {% if row.type == "li" %}
               <li>
                 {{ description }}
@@ -56,6 +57,7 @@ home: '/Portfolio/Hoshimori/index.html'
               </p>
             {% endif %}
           {% endfor %}
+          </div>
         </div>
       {% else %}
         <div class="Portfolio_Hoshimori_img_card">
