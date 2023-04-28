@@ -4,8 +4,6 @@ title: "ポートフォリオ | 星の守り人 | UI"
 subject: "タイトルUI"
 home: '/Portfolio/Hoshimori/index.html'
 # images: # list
-#  title : url
-# or
 # - title: title
 #   url: "url"(relative)
 #   description:[]
@@ -61,9 +59,9 @@ home: '/Portfolio/Hoshimori/index.html'
         </div>
       {% else %}
         <div class="Portfolio_Hoshimori_img_card">
-          <img class="Portfolio_Hoshimori_img" src="{{ row[1] | relative_url }}" alt="" />
+          <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
           <p class="Portfolio_Hoshimori_img_card_name">
-            {{ row[0] }}
+            {{ row.title }}
           </p>
         </div>
       {% endif %}
