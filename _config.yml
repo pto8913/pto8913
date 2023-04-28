@@ -94,9 +94,9 @@ nav-header-Portfolio:
 
 nav-header-Portfolio-Hoshimori:
   ホーム: "/Portfolio/Hoshimori/index.html"
-  UI:
+  UI: "/Portfolio/Hoshimori/index.html"
     タイトルUI: "/Portfolio/Hoshimori/ui/title.html"
-    
+
 
 # ------------------------------ Hoshimori ------------------------------
 # Navigations
