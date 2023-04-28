@@ -26,3 +26,32 @@
   margin-right: 20px
   &:hover
     color: rgb(252, 245, 228)
+
+.nav_dropdown_list_container
+  display: none
+  width: 100%
+  position: absolute
+  top: 60%
+  left: 0
+
+.nav_dropdown_list:hover .nav_dropdown_list_container
+  display: block
+
+.nav_dropdown_list
+  background-color: rgb(0, 0, 0)
+  height: 60px
+  transition: all .3s
+  position: relative
+
+.nav_dropdown_list:not(:first-child)::before
+  content: ""
+  width: 100%
+  height: 1px
+  background-color: rgb(0, 0, 0)
+  position: absolute
+  top: 0
+  left: 0
+
+.nav_dropdown_list:hover
+  background-color: rgb(30, 30, 30)
+
