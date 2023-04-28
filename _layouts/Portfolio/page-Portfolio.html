@@ -1,0 +1,14 @@
+---
+layout: Portfolio/default-Portfolio
+background: Home
+home: '/Portfolio/index.html'
+---
+
+<div class="Hoshimori_bg_sec">
+  {% 
+    include Hoshimori/card.html 
+    name=page.background 
+    description=content 
+  %}
+  {% include carousel.html links=site.hoshimori-character current=page.background %}
+</div>
