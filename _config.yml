@@ -84,7 +84,7 @@ nav-header:                # accepts {file, title, url, icon, sidebaricon}
 nav-footer:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Gmail, icon: '/assets/images/gmail.png', url: "mailto:pto8913project@gmail.com"}
   - {title: Github, icon: '/assets/images/github.png', url: "https://github.com/pto8913"}
-  - {title: Blog, icon: }
+  - {title: HatenaBlog, icon: '/assets/images/hatenablog.png', url: "https://pto8913.hatenablog.com/"}
 
 # ------------------------------ Portfolio ------------------------------
 # Navigations
