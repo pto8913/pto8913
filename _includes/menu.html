@@ -4,7 +4,7 @@
       <li class="nav_li nav_dropdown_list">
         <a class="nav_a">{{ nav[0] }}</a>
         <ul class="nav_dropdown_list_container">
-          {% for sub_page in nav[i] %}
+          {% for sub_page in nav[1] %}
             <li class="nav_li nav_dropdown_list">
               <a class="nav_a" href="{{ sub_page[1] | relative_url }}" aria-label="{{ sub_page[0] }}">
                 {{ sub_page[0] }}
