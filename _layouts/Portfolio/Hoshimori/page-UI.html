@@ -5,6 +5,8 @@ subject: "タイトルUI"
 home: '/Portfolio/Hoshimori/index.html'
 # images: # list
 #  title : url
+# or
+# {title: title, url: "url"(relative), description:""}
 ---
 
 <head>
@@ -32,12 +34,21 @@ home: '/Portfolio/Hoshimori/index.html'
   </div>
   <div class="Portfolio_Hoshimori_img_card_container">
     {% for row in page.images %}
-      <div class="Portfolio_Hoshimori_img_card">
-        <img class="Portfolio_Hoshimori_img" src="{{ row[1] | relative_url }}" alt="" />
-        <p class="Portfolio_Hoshimori_img_card_name">
-          {{ row[0] }}
-        </p>
-      </div>
+      {% if row.description %}
+        <div class="Portfolio_Hoshimori_img_card">
+          <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
+          <p class="Portfolio_Hoshimori_img_card_name">
+            {{ row.title }}
+          </p>
+        </div>
+      {% else %}
+        <div class="Portfolio_Hoshimori_img_card">
+          <img class="Portfolio_Hoshimori_img" src="{{ row[1] | relative_url }}" alt="" />
+          <p class="Portfolio_Hoshimori_img_card_name">
+            {{ row[0] }}
+          </p>
+        </div>
+      {% endif %}
     {% endfor %}
   </div>
 </div>
