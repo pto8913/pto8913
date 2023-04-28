@@ -1,0 +1,41 @@
+---
+layout: Portfolio/Hoshimori/page
+title: "ポートフォリオ | 星の守り人 | UI"
+subject: "タイトルUI"
+home: '/Portfolio/Hoshimori/index.html'
+# images: # list
+#  title : url
+---
+
+<head>
+  <style>
+    .Portfolio_fixed_bg.home {
+      background-image: url("{{ '/Hoshimori/Story/Images/Background_Star.png' | relative_url }}"), linear-gradient(rgba(10, 10, 10, 1), rgba(10, 10, 10, 1));
+      background-attachment: initial;
+      height: auto;
+      background-blend-mode: overlay;
+    }
+    .Portfolio_detail_container {
+      margin: 25px;
+      padding: 0px;
+    }
+    .Portfolio_logo {
+      align-self: flex-end;
+    }
+  </style>
+</head>
+<div class="Portfolio_Hoshimori_main">
+  <div>
+    {{ page.subject }}
+  </div>
+  <div class="Portfolio_Hoshimori_img_card_container">
+    {% for row in page.images %}
+      <div class="Portfolio_Hoshimori_img_card">
+        <img src="{{ row[1] | relative_url }}" alt="" />
+        <p class="Portfolio_Hoshimori_img_card_name">
+          {{ row[0] }}
+        </p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
