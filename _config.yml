@@ -96,7 +96,15 @@ nav-header-Portfolio-Hoshimori:
   ホーム: "/Portfolio/Hoshimori/index.html"
   UI:
     タイトルUI: "/Portfolio/Hoshimori/ui/title.html"
-
+    チュートリアルUI: "/Portfolio/Hoshimori/ui/tutorial.html"
+    HUD: "/Portfolio/Hoshimori/ui/hud.html"
+    かばんUI: "/Portfolio/Hoshimori/ui/belongings.html"
+    戦闘UI: "/Portfolio/Hoshimori/ui/battle.html"
+    NPCとの会話UI: "/Portfolio/Hoshimori/ui/talk.html"
+    カメラUI: "/Portfolio/Hoshimori/ui/camera.html"
+    釣りUI: "/Portfolio/Hoshimori/ui/fishing.html"
+    休むUI: "/Portfolio/Hoshimori/ui/rest.html"
+    ローディングUI: "/Portfolio/Hoshimori/ui/loading.html"
 
 # ------------------------------ Hoshimori ------------------------------
 # Navigations
