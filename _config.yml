@@ -78,13 +78,20 @@ plugins:
 nav-header:                # accepts {file, title, url, icon, sidebaricon}
   ホーム: "/"
   about: "/about.html"
-  portfolio: "/portfolio.html"
+  portfolio: "/Portfolio/index.html"
   archives: "/archives.html"
 
 nav-footer:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:pto8913project@gmail.com"}
   - {title: Github, icon: github, url: "https://github.com/pto8913"}
   - {title: Subscribe, icon: rss, url: "/feed.xml"}
+
+# ------------------------------ Portfolio ------------------------------
+# Navigations
+
+nav-header-Portfolio:
+  ホーム: "/Portfolio/index.html"
+  
 
 # ------------------------------ Hoshimori ------------------------------
 # Navigations

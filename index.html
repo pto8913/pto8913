@@ -8,3 +8,4 @@ title: "Home"
 {% else %}
   {% include archive.html title="Posts" %}
 {% endif %}
+
