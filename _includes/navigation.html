@@ -3,10 +3,10 @@
 </head>
 
 <nav class="nav">
-  <ul class="nav_ul">
+  <ul class="nav_ul nav_dropdown_list_container">
     {% for nav in include.navigation %}
       {% if nav[1].first %}
-        <li class="nav_li">
+        <li class="nav_li nav_dropdown_list">
           <a class="nav_a">{{ nav[0] }}</a>
           <ul class="nav_dropdown_list_container">
             {% for sub_page in nav[i] %}
