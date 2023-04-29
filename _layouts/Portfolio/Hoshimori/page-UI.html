@@ -52,11 +52,13 @@ home: '/Portfolio/Hoshimori/index.html'
           </div>
         </div>
       {% else %}
-        <div class="Portfolio_Hoshimori_img_card">
-          <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
-          <p class="Portfolio_Hoshimori_img_card_name">
-            {{ row.title }}
-          </p>
+        <div class="Portfolio_Hoshimori_img_card_container">
+          <div class="Portfolio_Hoshimori_img_card">
+            <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
+            <p class="Portfolio_Hoshimori_img_card_name">
+              {{ row.title }}
+            </p>
+          </div>
         </div>
       {% endif %}
     {% endfor %}
