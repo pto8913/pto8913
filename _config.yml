@@ -105,6 +105,18 @@ nav-header-Portfolio-Hoshimori:
     釣りUI: "/Portfolio/Hoshimori/ui/fishing.html"
     休むUI: "/Portfolio/Hoshimori/ui/rest.html"
     ローディングUI: "/Portfolio/Hoshimori/ui/loading.html"
+  レベルデザイン:
+    聖域: "/Portfolio/Hoshimori/level/Sanctuary.html"
+    天望島: "/Portfolio/Hoshimori/level/RegionTenbou.html"
+    カトラス島: "/Portfolio/Hoshimori/level/RegionCatlas.html"
+    ルコス地方: "/Portfolio/Hoshimori/level/RegionLkos.html"
+    ラーボ地方: "/Portfolio/Hoshimori/level/RegionLabo.html"
+    シラージェ火山: "/Portfolio/Hoshimori/level/RegionSillarje.html"
+    グラム谷: "/Portfolio/Hoshimori/level/RegionGlam.html"
+    アクア団基地: "/Portfolio/Hoshimori/level/RegionWasser.html"
+  敵キャラクター:
+    マブリン系: "Portfolio/Hoshimori/enemy/Mablin.html"
+
 
 # ------------------------------ Hoshimori ------------------------------
 # Navigations
