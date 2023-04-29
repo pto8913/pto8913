@@ -1,13 +1,28 @@
-<header class="header">
-  <a href="{{ '/' | relative_url }}" class="title">
-    <img class="logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
-  </a>
-  {% if include.home %}
-    <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a>
-  {% else %}
-    <!-- <a href="{{ '/' | relative_url }}" class="title">{{ site.title | escape }}</a> -->
-  {% endif %}
+<haed>
+  <style>
+    .nav_ul {
+      padding: 0;
+      text-align: center;
+    }
+    .nav_li {
+      width: 120px;
+    }
+  </style>
+  <link rel="stylesheet" href="{{ '/assets/css/navigation.css' | relative_url }}">
+</haed>
 
-  {% include menu.html navigation=include.navigation %}
+<header class="header">
+  <div>
+    <div class="header flex">
+      <a href="{{ '/' | relative_url }}" class="title">
+        <img class="logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
+      </a>
+      {% if include.home %}
+        <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a>
+      {% else %}
+        <!-- <a href="{{ '/' | relative_url }}" class="title">{{ site.title | escape }}</a> -->
+      {% endif %}
+    </div>
+    {% include menu.html navigation=include.navigation %}
+  </div>
 </header>
-<link rel="stylesheet" href="{{ '/assets/css/navigation.css' | relative_url }}">
