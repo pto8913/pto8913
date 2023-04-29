@@ -27,10 +27,10 @@ home: '/Portfolio/Hoshimori/index.html'
       {{ page.subject }}
     </h2>
   </div>
-  <div class="Portfolio_Hoshimori_img_card_container">
+  <div class="Portfolio_Hoshimori_img_cards_container">
     {% for row in page.images %}
       {% if row.description %}
-        <div>
+        <div class="Portfolio_Hoshimori_img_card_container">
           <div class="Portfolio_Hoshimori_img_card">
             <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
             <p class="Portfolio_Hoshimori_img_card_name">
