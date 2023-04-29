@@ -116,7 +116,17 @@ nav-header-Portfolio-Hoshimori:
     アクア団基地: "/Portfolio/Hoshimori/level/RegionWasser.html"
   敵キャラクター:
     マブリン系: "Portfolio/Hoshimori/enemy/Mablin.html"
-
+    タロス系: "Portfolio/Hoshimori/enemy/Talos.html"
+    ライオ系: "Portfolio/Hoshimori/enemy/Lio.html"
+    ピスケ系: "Portfolio/Hoshimori/enemy/Pisce.html"
+    リザード系: "Portfolio/Hoshimori/enemy/Lizard.html"
+    魔法使い系: "Portfolio/Hoshimori/enemy/Magician.html"
+    カニ系: "Portfolio/Hoshimori/enemy/Cancer.html"
+    ドラゴン系: "Portfolio/Hoshimori/enemy/Dragon.html"
+    タウロス: "Portfolio/Hoshimori/enemy/Taurus.html"
+    レオ: "Portfolio/Hoshimori/enemy/Leo.html"
+    ヴァルゴ: "Portfolio/Hoshimori/enemy/Virgo.html"
+    魔王: "Portfolio/Hoshimori/enemy/Typhon.html"
 
 # ------------------------------ Hoshimori ------------------------------
 # Navigations
