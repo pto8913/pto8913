@@ -29,18 +29,17 @@ home: '/Portfolio/Hoshimori/index.html'
   </div>
   <div class="Portfolio_Hoshimori_img_cards_container">
     {% for row in page.images %}
-      {% if row.description %}
-        <div class="Portfolio_Hoshimori_img_card_container">
-          <a href="{{ row.url | relative_url }}" target="_blank" rel="noopener noreferrer">
-            <div class="Portfolio_Hoshimori_img_card">
-              <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
-              <p class="Portfolio_Hoshimori_img_card_name">
-                {{ row.title }}
-              </p>
-            </div>
-          </a>
-          <div class="Portfolio_Hoshimori_img_card_description_container">
-            {% for description in row.description %}
+      <div class="Portfolio_Hoshimori_img_card_container">
+        <a href="{{ row.url | relative_url }}" target="_blank" rel="noopener noreferrer">
+          <div class="Portfolio_Hoshimori_img_card">
+            <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
+            <p class="Portfolio_Hoshimori_img_card_name">
+              {{ row.title }}
+            </p>
+          </div>
+        </a>
+        <div class="Portfolio_Hoshimori_img_card_description_container">
+          {% for description in row.description %}
             {% if row.type == "li" %}
               <li>
                 {{ description }}
@@ -51,20 +50,8 @@ home: '/Portfolio/Hoshimori/index.html'
               </p>
             {% endif %}
           {% endfor %}
-          </div>
         </div>
-      {% else %}
-        <a href="{{ row.url | relative_url }}" target="_blank" rel="noopener noreferrer">
-          <div class="Portfolio_Hoshimori_img_card_container">
-            <div class="Portfolio_Hoshimori_img_card">
-              <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
-              <p class="Portfolio_Hoshimori_img_card_name">
-                {{ row.title }}
-              </p>
-            </div>
-          </div>
-        </a>
-      {% endif %}
+      </div>
     {% endfor %}
   </div>
 </div>
