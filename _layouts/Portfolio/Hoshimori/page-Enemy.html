@@ -40,27 +40,36 @@ home: '/Portfolio/Hoshimori/index.html'
   <div class="Portfolio_Hoshimori_img_cards_container">
     {% for row in page.images %}
       <div class="Portfolio_Hoshimori_img_card_container">
-        <a href="{{ row.url | relative_url }}" target="_blank" rel="noopener noreferrer">
+        {% if row.type == "movie" %}
           <div class="Portfolio_Hoshimori_img_card">
-            <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
+            <iframe class="Hoshimori_description_movie" src="{{ row.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <p class="Portfolio_Hoshimori_img_card_name">
               {{ row.title }}
             </p>
           </div>
-        </a>
-        <div class="Portfolio_Hoshimori_img_card_description_container">
-          {% for description in row.description %}
-            {% if row.type == "li" %}
-              <li>
-                {{ description }}
-              </li>
-            {% else %}
-              <p>
-                {{ description }}
+        {% else %}
+          <a href="{{ row.url | relative_url }}" target="_blank" rel="noopener noreferrer">
+            <div class="Portfolio_Hoshimori_img_card">
+              <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
+              <p class="Portfolio_Hoshimori_img_card_name">
+                {{ row.title }}
               </p>
-            {% endif %}
-          {% endfor %}
-        </div>
+            </div>
+          </a>
+          <div class="Portfolio_Hoshimori_img_card_description_container">
+            {% for description in row.description %}
+              {% if row.type == "li" %}
+                <li>
+                  {{ description }}
+                </li>
+              {% else %}
+                <p>
+                  {{ description }}
+                </p>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
     {% endfor %}
   </div>
