@@ -24,7 +24,7 @@ home: '/Portfolio/Hoshimori/index.html'
           <div class="Portfolio_Hoshimori_img_card">
             {% if row.img-type == "image" %}
               <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
-            {% else if row.img-type == "movie" %}
+            {% elsif row.img-type == "movie" %}
               <iframe class="Portfolio_Hoshimori_img" src="{{ row.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
                 {{ row.title }}
               </iframe>
