@@ -4,28 +4,62 @@ title: "ポートフォリオ | 星の守り人 | UI"
 subject: "タイトルUI"
 home: '/Portfolio/Hoshimori/index.html'
 # images: # list
-# - title: title
-#   url: "url"(relative)
-#   description:[]
-#   desc-type: [default: "li", "p"]
-#   img-type: [default: "gd-image", "gd-movie", "image", "movie"]
+# - subject: subject-title
+#   - content:
+#     - title: title
+#       url: "url"(relative)
+#       description:[]
+#       desc-type: [default: "li", "p"]
+#       img-type: subject or none
+# - subject: subject-title
+#   - content:
+#     - title: title
+#         ~~~
+#         ~~~
+#
+#
+######################################################################
+####                                                              ####
+#### if the subject == type contents will be displayed.           ####
+#### else if the type is none, contents will be displayed always. ####
+####                                                              ####
+######################################################################
 ---
 
 <div class="Portfolio_Hoshimori_main">
-  <div class="Portfolio_Hoshimori_subject_container">
-    <h2>
-      {{ page.subject }}
-    </h2>
-  </div>
-  <div class="Portfolio_Hoshimori_img_cards_container">
-    {% for row in page.images %}
-      {% if row.img-type == "image" or row.img-type == "gd-image" %}
-        <div class="Portfolio_Hoshimori_img_card_container">
-          <a href="{{ row.url | relative_url }}" target="_blank" rel="noopener noreferrer">
+  {% for row in page.images %}
+    <div class="Portfolio_Hoshimori_subject_container">
+      <h2>
+        {{ row.subject }}
+      </h2>
+    </div>
+    <div class="Portfolio_Hoshimori_img_cards_container">
+      {% for content in row.subject.content %}
+        {% if content.img-type == "image" or content.img-type == "gd-image" %}
+          <div class="Portfolio_Hoshimori_img_card_container">
+            <a href="{{ row.url | relative_url }}" target="_blank" rel="noopener noreferrer">
+              <div class="Portfolio_Hoshimori_img_card">
+                {% if row.img-type == "image" %}
+                  <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
+                {% elsif row.img-type == "gd-image" %}
+                  <iframe class="Portfolio_Hoshimori_img" allowfullscreen src="{{ row.url }}/preview">
+                    {{ row.title }}
+                  </iframe>
+                {% endif %}
+                <p class="Portfolio_Hoshimori_img_card_name">
+                  {{ row.title }}
+                </p>
+              </div>
+            </a>
+          </div>
+        {% elsif row.img-type == "movie" or row.img-type == "gd-movie" %}
+          <div class="Portfolio_Hoshimori_img_card_container">
             <div class="Portfolio_Hoshimori_img_card">
-              {% if row.img-type == "image" %}
-                <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
-              {% elsif row.img-type == "gd-image" %}
+              {% if row.img-type == "movie" %}
+                <iframe class="Portfolio_Hoshimori_img" src="{{ row.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                  {{ row.title }}
+                </iframe>
+              {% elsif row.img-type == "gd-movie" %}
                 <iframe class="Portfolio_Hoshimori_img" allowfullscreen src="{{ row.url }}/preview">
                   {{ row.title }}
                 </iframe>
@@ -34,65 +68,24 @@ home: '/Portfolio/Hoshimori/index.html'
                 {{ row.title }}
               </p>
             </div>
-          </a>
-          <div class="Portfolio_Hoshimori_img_card_description_container">
-            {% for description in row.description %}
-              {% if row.desc-type == "p" %}
-                <p>
-                  {{ description }}
-                </p>
-              {% else %}
-                <li>
-                  {{ description }}
-                </li>
-              {% endif %}
-            {% endfor %}
           </div>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-  <div class="Portfolio_Hoshimori_subject_container">
-    <h2>
-      {{ page.subject }}動画
-    </h2>
-  </div>
-  <div class="Portfolio_Hoshimori_img_cards_container">
-    {% for row in page.images %}
-      {% if row.img-type == "movie" or row.img-type == "gd-movie" %}
-        <div class="Portfolio_Hoshimori_img_card_container">
-          <div class="Portfolio_Hoshimori_img_card">
-            {% if row.img-type == "movie" %}
-              <iframe class="Portfolio_Hoshimori_img" src="{{ row.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-                {{ row.title }}
-              </iframe>
-            {% elsif row.img-type == "gd-movie" %}
-              <iframe class="Portfolio_Hoshimori_img" allowfullscreen src="{{ row.url }}/preview">
-                {{ row.title }}
-              </iframe>
+        {% endif %}
+        <div class="Portfolio_Hoshimori_img_card_description_container">
+          {% for description in row.description %}
+            {% if row.desc-type == "p" %}
+              <p>
+                {{ description }}
+              </p>
+            {% else %}
+              <li>
+                {{ description }}
+              </li>
             {% endif %}
-            <p class="Portfolio_Hoshimori_img_card_name">
-              {{ row.title }}
-            </p>
-          </div>
-          <div class="Portfolio_Hoshimori_img_card_description_container">
-            {% for description in row.description %}
-              {% if row.desc-type == "p" %}
-                <p>
-                  {{ description }}
-                </p>
-              {% else %}
-                <li>
-                  {{ description }}
-                </li>
-              {% endif %}
-            {% endfor %}
-          </div>
+          {% endfor %}
         </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-  {{ content }}
+      {% endfor %}
+    </div>
+  {% endfor %}
 </div>
 <!-- 
 <img src="https://drive.google.com/uc?export=view&id={{ row.url }} alt="" />
