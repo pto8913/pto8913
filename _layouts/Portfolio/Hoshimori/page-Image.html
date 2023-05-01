@@ -35,8 +35,8 @@ home: '/Portfolio/Hoshimori/index.html'
     </div>
     <div class="Portfolio_Hoshimori_img_cards_container">
       {% for content in row.contents %}
-        {% if content.img-type == "image" or content.img-type == "gd-image" %}
-          <div class="Portfolio_Hoshimori_img_card_container">
+        <div class="Portfolio_Hoshimori_img_card_container">
+          {% if content.img-type == "image" or content.img-type == "gd-image" %}
             <a href="{{ content.url | relative_url }}" target="_blank" rel="noopener noreferrer">
               <div class="Portfolio_Hoshimori_img_card">
                 {% if content.img-type == "image" %}
@@ -51,9 +51,7 @@ home: '/Portfolio/Hoshimori/index.html'
                 </p>
               </div>
             </a>
-          </div>
-        {% elsif content.img-type == "movie" or content.img-type == "gd-movie" %}
-          <div class="Portfolio_Hoshimori_img_card_container">
+          {% elsif content.img-type == "movie" or content.img-type == "gd-movie" %}
             <div class="Portfolio_Hoshimori_img_card">
               {% if content.img-type == "movie" %}
                 <iframe class="Portfolio_Hoshimori_img" src="{{ content.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
@@ -68,20 +66,20 @@ home: '/Portfolio/Hoshimori/index.html'
                 {{ content.title }}
               </p>
             </div>
+          {% endif %}
+          <div class="Portfolio_Hoshimori_img_card_description_container">
+            {% for description in content.description %}
+              {% if content.desc-type == "p" %}
+                <p>
+                  {{ description }}
+                </p>
+              {% else %}
+                <li>
+                  {{ description }}
+                </li>
+              {% endif %}
+            {% endfor %}
           </div>
-        {% endif %}
-        <div class="Portfolio_Hoshimori_img_card_description_container">
-          {% for description in content.description %}
-            {% if content.desc-type == "p" %}
-              <p>
-                {{ description }}
-              </p>
-            {% else %}
-              <li>
-                {{ description }}
-              </li>
-            {% endif %}
-          {% endfor %}
         </div>
       {% endfor %}
     </div>
