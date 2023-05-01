@@ -34,7 +34,7 @@ home: '/Portfolio/Hoshimori/index.html'
       </h2>
     </div>
     <div class="Portfolio_Hoshimori_img_cards_container">
-      {% for content in row.subject.contents %}
+      {% for content in row.contents %}
         {% if content.img-type == "image" or content.img-type == "gd-image" %}
           <div class="Portfolio_Hoshimori_img_card_container">
             <a href="{{ content.url | relative_url }}" target="_blank" rel="noopener noreferrer">
