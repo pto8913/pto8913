@@ -12,6 +12,11 @@ home: '/Portfolio/Hoshimori/index.html'
 #       description:
 #         - text: ""
 #           type: [default:"li", "p", "h3", "h4", "h5"]
+#         or
+#         [
+#           "hogehoge",
+#           "hugahuga"
+#         ]
 # - subject: subject-title
 #   contents:
 #     - title: title
@@ -70,20 +75,19 @@ home: '/Portfolio/Hoshimori/index.html'
           {% endif %}
           <div class="Portfolio_Hoshimori_img_card_description_container">
             {% for description in content-row.description %}
-              <{{ description.type }}>
-                {{ description.text }}
-              </{{ description.type }}>
-              {% if description.type == "p" %}
-                <p>
-                  {{ description.text }}
-                </p>
-              {% elsif description.type == "h3" %}
-                <h3>
-                  {{ description.text }}
-                </h3>
+              {% if description.text %}
+                {% if description.type %}
+                  <{{ description.type }}>
+                    {{ description.text }}
+                  </{{ description.type }}>
+                {% else %}
+                  <li>
+                    {{ description.text }}
+                  </li>
+                {% endif %}
               {% else %}
                 <li>
-                  {{ description.text }}
+                  {{ description }}
                 </li>
               {% endif %}
             {% endfor %}
