@@ -33,48 +33,49 @@ home: '/Portfolio/Hoshimori/index.html'
 ---
 
 <div class="Portfolio_Hoshimori_main">
-  {% for row in page.images %}
+  {% for data in page.images %}
     <div class="Portfolio_Hoshimori_subject_container">
       <h2>
-        {{ row.subject }}
+        {{ data.subject }}
       </h2>
     </div>
     <div class="Portfolio_Hoshimori_img_cards_container">
-      {% for content-row in row.contents %}
+      {% for row in data.contents %}
         <div class="Portfolio_Hoshimori_img_card_container">
-          {% if content-row.img-type == "image" or content-row.img-type == "gd-image" %}
-            <a href="{{ content-row.url | relative_url }}" target="_blank" rel="noopener noreferrer">
+          {% if row.img-type == "image" or row.img-type == "gd-image" %}
+            <a href="{{ row.url | relative_url }}" target="_blank" rel="noopener noreferrer">
               <div class="Portfolio_Hoshimori_img_card">
-                {% if content-row.img-type == "image" %}
-                  <img class="Portfolio_Hoshimori_img" src="{{ content-row.url | relative_url }}" alt="" />
-                {% elsif content-row.img-type == "gd-image" %}
-                  <iframe class="Portfolio_Hoshimori_img" allowfullscreen src="{{ content-row.url }}/preview">
-                    {{ content-row.title }}
+                {% if row.img-type == "image" %}
+                  <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
+                {% elsif row.img-type == "gd-image" %}
+                  <iframe class="Portfolio_Hoshimori_img" allowfullscreen src="{{ row.url }}/preview">
+                    {{ row.title }}
                   </iframe>
                 {% endif %}
                 <p class="Portfolio_Hoshimori_img_card_name">
-                  {{ content-row.title }}
+                  {{ row.title }}
                 </p>
               </div>
             </a>
-          {% elsif content-row.img-type == "movie" or content-row.img-type == "gd-movie" %}
+          {% elsif row.img-type == "movie" or row.img-type == "gd-movie" %}
             <div class="Portfolio_Hoshimori_img_card">
-              {% if content-row.img-type == "movie" %}
-                <iframe class="Portfolio_Hoshimori_img" src="{{ content-row.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-                  {{ content-row.title }}
+              {% if row.img-type == "movie" %}
+                <iframe class="Portfolio_Hoshimori_img" src="{{ row.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                  {{ row.title }}
                 </iframe>
-              {% elsif content-row.img-type == "gd-movie" %}
-                <iframe class="Portfolio_Hoshimori_img" src="{{ content-row.url }}/preview" allowfullscreen>
-                  {{ content-row.title }}
+              {% elsif row.img-type == "gd-movie" %}
+                <iframe class="Portfolio_Hoshimori_img" src="{{ row.url }}/preview" allowfullscreen>
+                  {{ row.title }}
                 </iframe>
               {% endif %}
+              {% if  %}
               <p class="Portfolio_Hoshimori_img_card_name">
-                {{ content-row.title }}
+                {{ row.title }}
               </p>
             </div>
           {% endif %}
           <div class="Portfolio_Hoshimori_img_card_description_container">
-            {% for description in content-row.description %}
+            {% for description in row.description %}
               {% if description.text %}
                 {% if description.type %}
                   <{{ description.type }}>

@@ -127,6 +127,12 @@ nav-header-Portfolio-Hoshimori:
     レオ: "Portfolio/Hoshimori/enemy/Leo.html"
     ヴァルゴ: "Portfolio/Hoshimori/enemy/Virgo.html"
     魔王: "Portfolio/Hoshimori/enemy/Typhon.html"
+  アクション:
+    登る: "Portfolio/Hoshimori/action/Climbing.html"
+    釣り: "Portfolio/Hoshimori/action/Fishing.html"
+    押す: "Portfolio/Hoshimori/action/Push.html"
+    泳ぐ: "Portfolio/Hoshimori/action/Swimming.html"
+    会話: "Portfolio/Hoshimori/action/Talk.html"
 
 # ------------------------------ Hoshimori ------------------------------
 # Navigations
