@@ -1,5 +1,5 @@
 ---
-layout: Portfolio/Hoshimori/page
+layout: Portfolio/Hoshimori/page-Image
 title: "ポートフォリオ | 星の守り人 | UI"
 subject: "タイトルUI"
 home: '/Portfolio/Hoshimori/index.html'
@@ -7,9 +7,8 @@ home: '/Portfolio/Hoshimori/index.html'
 # - title: title
 #   url: "url"(relative)
 #   description:[]
-#   desc-type: ["p", "li"]
-#   mov-type: [empty, "dr-movie"]
-#   img-type: [empty, "dr-image"]
+#   desc-type: [default: "li", "p"]
+#   img-type: [default: "gdrive", "image", "movie"]
 ---
 
 <head>
@@ -23,48 +22,3 @@ home: '/Portfolio/Hoshimori/index.html'
     }
   </style>
 </head>
-<div class="Portfolio_Hoshimori_main">
-  <div class="Portfolio_Hoshimori_subject_container">
-    <h2>
-      {{ page.subject }}
-    </h2>
-  </div>
-  <div class="Portfolio_Hoshimori_img_cards_container">
-    {% for row in page.images %}
-      <div class="Portfolio_Hoshimori_img_card_container">
-        <a href="{{ row.url | relative_url }}" target="_blank" rel="noopener noreferrer">
-          <div class="Portfolio_Hoshimori_img_card">
-            {% if row.img-type == "image" %}
-              <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
-            {% else %}
-              <!-- <img class="Portfolio_Hoshimori_img" src="{{ row.url }}" alt="" /> -->
-              <iframe class="Portfolio_Hoshimori_img" src="{{ row.url }}/preview"></iframe>
-            {% endif %}
-            <p class="Portfolio_Hoshimori_img_card_name">
-              {{ row.title }}
-            </p>
-          </div>
-        </a>
-        <div class="Portfolio_Hoshimori_img_card_description_container">
-          {% for description in row.description %}
-            {% if row.desc-type == "p" %}
-              <p>
-                {{ description }}
-              </p>
-            {% else %}
-              <li>
-                {{ description }}
-              </li>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-  {{ content }}
-</div>
-<!-- 
-<img src="https://drive.google.com/uc?export=view&id={{ row.url }} alt="" />
-
-<iframe src="https://drive.google.com/file/d/{{ row.url }}/preview">
--->
