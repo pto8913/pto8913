@@ -37,8 +37,8 @@ home: '/Portfolio/Hoshimori/index.html'
             {% if row.img-type == "image" %}
               <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
             {% else %}
-              <img class="Portfolio_Hoshimori_img" src="{{ row.url }}" alt="" />
-              <!-- <iframe class="Portfolio_Hoshimori_img" src="{{ row.url }}"></iframe> -->
+              <!-- <img class="Portfolio_Hoshimori_img" src="{{ row.url }}" alt="" /> -->
+              <iframe class="Portfolio_Hoshimori_img" src="{{ row.url }}"></iframe>
             {% endif %}
             <p class="Portfolio_Hoshimori_img_card_name">
               {{ row.title }}
