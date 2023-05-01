@@ -1,18 +1,18 @@
 ---
-layout: Portfolio/Hoshimori/page-Action
+layout: Portfolio/Hoshimori/page-Image
 title: "ポートフォリオ | 星の守り人 | アクション"
 home: '/Portfolio/Hoshimori/index.html'
 custom-header: true
 images:
   - subject: "会話"
     contents:
-      - description: [
-          "テキストデータについて",
-          "テキストデータはGameStateが保持していて、テキストデータに対する処理はすべてGameState上で行う",
-          "テキストデータの遷移は、クエストの進行度もしくはBP_NPCのBP上で行われている",
-          "テキストデータの取得は会話を開始したBP_NPCに設定されたIDでGameStateから取得",
-          "テキストデータにはETalkDisplayTypeがあり、ETalkDisplayTypeに応じてChoiceButtonのOnClickedイベントへのバインドを変更し処理を行う",
-        ]
+      - description: 
+        - text: "テキストデータについて"
+          type: h3
+        - text: テキストデータはGameStateが保持していて、テキストデータに対する処理はすべてGameState上で行う"
+        - text: テキストデータの遷移は、クエストの進行度もしくはBP_NPCのBP上で行われている"
+        - text: テキストデータの取得は会話を開始したBP_NPCに設定されたIDでGameStateから取得"
+        - text: テキストデータにはETalkDisplayTypeがあり、ETalkDisplayTypeに応じてChoiceButtonのOnClickedイベントへのバインドを変更し処理を行う"
       - title: "会話(通常)"
         url: 'https://drive.google.com/file/d/1ir-oNowQm9NVvlE5IwrnkoNtx9QgcgBm'
         description: [
@@ -46,5 +46,4 @@ images:
           "プレイヤーがBP_BuyableActorに対してアクションキーを入力した場合に行える",
           "BP_BuyableActorに設定されたBP_NPCに対してアクション:会話を呼び出し、テキストデータのChoiceResultTypeがHowManyやCheckOutに設定されたものが表示される",
         ]
-
 ---
