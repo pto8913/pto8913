@@ -8,7 +8,7 @@ home: '/Portfolio/Hoshimori/index.html'
 #   url: "url"(relative)
 #   description:[]
 #   desc-type: [default: "li", "p"]
-#   img-type: [default: "gdrive", "image", "movie"]
+#   img-type: [default: "gd-image", "gd-movie", "image", "movie"]
 ---
 
 <div class="Portfolio_Hoshimori_main">
@@ -24,18 +24,54 @@ home: '/Portfolio/Hoshimori/index.html'
           <div class="Portfolio_Hoshimori_img_card">
             {% if row.img-type == "image" %}
               <img class="Portfolio_Hoshimori_img" src="{{ row.url | relative_url }}" alt="" />
-            {% elsif row.img-type == "movie" %}
-              <iframe class="Portfolio_Hoshimori_img" src="{{ row.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            {% elsif row.img-type == "gd-image" %}
+              <iframe class="Portfolio_Hoshimori_img" allowfullscreen src="{{ row.url }}/preview">
                 {{ row.title }}
               </iframe>
-            {% else %}
-              <iframe class="Portfolio_Hoshimori_img" src="{{ row.url }}/preview"></iframe>
             {% endif %}
             <p class="Portfolio_Hoshimori_img_card_name">
               {{ row.title }}
             </p>
           </div>
         </a>
+        <div class="Portfolio_Hoshimori_img_card_description_container">
+          {% for description in row.description %}
+            {% if row.desc-type == "p" %}
+              <p>
+                {{ description }}
+              </p>
+            {% else %}
+              <li>
+                {{ description }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="Portfolio_Hoshimori_subject_container">
+    <h2>
+      {{ page.subject }}動画
+    </h2>
+  </div>
+  <div class="Portfolio_Hoshimori_img_cards_container">
+    {% for row in page.images %}
+      <div class="Portfolio_Hoshimori_img_card_container">
+        <div class="Portfolio_Hoshimori_img_card">
+          {% if row.img-type == "movie" %}
+            <iframe class="Portfolio_Hoshimori_img" src="{{ row.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+              {{ row.title }}
+            </iframe>
+          {% elsif row.img-type == "gd-movie" %}
+            <iframe class="Portfolio_Hoshimori_img" allowfullscreen src="{{ row.url }}/preview">
+              {{ row.title }}
+            </iframe>
+          {% endif %}
+          <p class="Portfolio_Hoshimori_img_card_name">
+            {{ row.title }}
+          </p>
+        </div>
         <div class="Portfolio_Hoshimori_img_card_description_container">
           {% for description in row.description %}
             {% if row.desc-type == "p" %}
