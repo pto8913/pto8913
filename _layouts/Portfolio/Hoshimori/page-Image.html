@@ -70,11 +70,6 @@ home: '/Portfolio/Hoshimori/index.html'
           {% endif %}
           <div class="Portfolio_Hoshimori_img_card_description_container">
             {% for description in content-row.description %}
-              {% if description.type %}
-                <{{ description.type }}>
-                  {{ description.text }}
-                </{{ description.type }}>
-              {% endif %}
               {% if content-row.desc-type == "p" %}
                 <p>
                   {{ description.text }}
