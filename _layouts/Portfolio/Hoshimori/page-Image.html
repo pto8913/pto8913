@@ -74,10 +74,10 @@ home: '/Portfolio/Hoshimori/index.html'
                 <p>
                   {{ description.text }}
                 </p>
-              {% if content-row.desc-type == "p" %}
-                <p>
+              {% elsif content-row.desc-type == "h3" %}
+                <h3>
                   {{ description.text }}
-                </p>
+                </h3>
               {% else %}
                 <li>
                   {{ description.text }}
