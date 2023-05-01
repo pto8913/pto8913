@@ -45,9 +45,9 @@ home: '/Portfolio/Hoshimori/index.html'
         {% if row.mov-type == "movie" or row.mov-type == "dr-movie" %}
           <div class="Portfolio_Hoshimori_img_card">
             {% if row.mov-type == "movie" %}
-              <iframe class="Hoshimori_description_movie" src="{{ row.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe class="Portfolio_Hoshimori_img" src="{{ row.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             {% else if row.mov-type == "dr-movie" %}
-              <iframe class="Hoshimori_description_movie" src="{{ row.url }}/preview" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe class="Portfolio_Hoshimori_img" src="{{ row.url }}/preview" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             {% endif %}
             <p class="Portfolio_Hoshimori_img_card_name">
               {{ row.title }}
