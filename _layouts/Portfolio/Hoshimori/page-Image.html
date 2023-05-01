@@ -68,10 +68,11 @@ home: '/Portfolio/Hoshimori/index.html'
                   {{ row.title }}
                 </iframe>
               {% endif %}
-              {% if  %}
-              <p class="Portfolio_Hoshimori_img_card_name">
-                {{ row.title }}
-              </p>
+              {% if row.title %}
+                <p class="Portfolio_Hoshimori_img_card_name">
+                  {{ row.title }}
+                </p>
+              {% endif %}
             </div>
           {% endif %}
           <div class="Portfolio_Hoshimori_img_card_description_container">
