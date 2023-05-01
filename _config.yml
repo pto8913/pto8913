@@ -130,9 +130,13 @@ nav-header-Portfolio-Hoshimori:
   アクション:
     登る: "Portfolio/Hoshimori/action/Climbing.html"
     釣り: "Portfolio/Hoshimori/action/Fishing.html"
+    アイテムを拾う: "Portfolio/Hoshimori/action/Pickup.html"
+    ボタンを押す: "Portfolio/Hoshimori/action/Press.html"
     押す: "Portfolio/Hoshimori/action/Push.html"
+    休む: "Portfolio/Hoshimori/action/Rest.html"
     泳ぐ: "Portfolio/Hoshimori/action/Swimming.html"
     会話: "Portfolio/Hoshimori/action/Talk.html"
+    乗り物: "Portfolio/Hoshimori/action/Vehicle.html"
 
 # ------------------------------ Hoshimori ------------------------------
 # Navigations
