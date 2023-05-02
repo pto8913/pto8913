@@ -97,9 +97,15 @@ home: '/Portfolio/Hoshimori/index.html'
             {% for description in row.description %}
               {% if description.text %}
                 {% if description.type %}
-                  <{{ description.type }}>
-                    {{ description.text }}
-                  </{{ description.type }}>
+                  {% if description.type == a %}
+                    <a href="{{ description.text }}">
+                      {{ description.title }}
+                    </a>
+                  {% else %}
+                    <{{ description.type }}>
+                      {{ description.text }}
+                    </{{ description.type }}>
+                  {% endif %}
                 {% else %}
                   <li>
                     {{ description.text }}
