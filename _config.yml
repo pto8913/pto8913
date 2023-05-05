@@ -92,6 +92,7 @@ nav-footer:                  # shows a footer with social links - for available 
 nav-header-Portfolio:
   ホーム: "/Portfolio/index.html"
 
+# ---------------- Portfolio Hoshimori ----------------
 nav-header-Portfolio-Hoshimori:
   ホーム: "/Portfolio/Hoshimori/index.html"
   UI:
