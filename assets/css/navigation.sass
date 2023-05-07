@@ -22,7 +22,7 @@
   transition: all .3s
 
 .nav_li:hover
-  background-color: rgba(30,30,30,1)
+  background-color: lighten($frdark, 50%)
 
 .nav_li:not(:first-child)::before
   content: ""
@@ -43,10 +43,10 @@
   color: white
   margin: 0 5
   &:hover
-    color: rgb(252, 245, 228)
+    color: $light
 
 .nav_li:hover .nav_a
-  color: rgb(252, 245, 228)
+  color: $light
 
 .nav_dropdown_list_container
   display: none
