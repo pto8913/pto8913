@@ -55,13 +55,14 @@ title: "Home"
     }
     var htmlstr = "";
     htmlstr += '<div class="auto-map">';
-    htmlstr += '<h2 class="auto-map-subject">' + '最新の記事' + '</h2>';
+    htmlstr += '<h2 class="auto-map-subject">最新の記事</h2>';
     for(var idx=0; idx < num_of_post; ++idx){
       htmlstr += '<div class="auto-map-post">';
       htmlstr += sitemap_time[idx];
       htmlstr += '<p class="auto-map-title">' + sitemap_url[idx] + '</p>';
       htmlstr += "</div>" ;
     }
+    htmlstr += '<a href="https://pto8913.hatenablog.com/archive">もっと見る</h2>';
     htmlstr += "</div>";
     $("#auto-site-map").html( htmlstr ) ;
   });
