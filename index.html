@@ -44,7 +44,7 @@ title: "Home"
           {
             return false;
           }
-          var time = $(val).prop("datetime");
+          var time = $(val).val("datetime");
           sitemap_time.push(time);
         }
       );
@@ -56,7 +56,7 @@ title: "Home"
     var  htmlstr = "" ;
     for(var idx=0; idx < sitemap_url.length; ++idx){
       htmlstr += '<div class="auto-map">' ;
-      htmlstr += '<div class="auto-map-url">' + sitemap_time[idx] + "|" + sitemap_url[idx] + "</div>" ;
+      htmlstr += '<div class="auto-map-url">' + sitemap_time[idx] + " | " + sitemap_url[idx] + "</div>" ;
       htmlstr += "</div>" ;
     }
     $("#auto-site-map").html( htmlstr ) ;
