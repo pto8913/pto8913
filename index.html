@@ -1,12 +1,13 @@
 ---
 layout: default
 title: "Home"
+head-js:
+  - type: text/javascript
+  - src: '/assets/js/hatenablog.js'
 ---
 
 <head>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-  <srcipt type="text/javascript" src="{{ '/assets/js/hatenablog.js' | relative_url}}"></srcipt>
 </head>
 
 <!-- <div id="auto-site-map"></div> -->
@@ -16,5 +17,3 @@ title: "Home"
 {% else %}
   {% include archive.html title="Posts" %}
 {% endif %}
-
-
