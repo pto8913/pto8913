@@ -129,3 +129,11 @@ function getArchive(urlInfo){
   }).responseText;
   return data;
 }
+
+document.addEventListener(
+  "DOMContentLoaded", 
+  function()
+  {
+    HatenaSiteMap();
+  }
+);
