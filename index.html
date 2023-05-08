@@ -29,6 +29,9 @@ title: "Home"
       html.find('.archive-entry .entry-title a').each(
         function( i, val )
         {
+          console.log(i);
+          console.log(val);
+
           if (i >= num_of_post)
           {
             return false;
@@ -40,6 +43,9 @@ title: "Home"
       html.find('time').each(
         function(i, val)
         {
+          console.log(i);
+          console.log(val);
+          
           if (i >= num_of_post)
           {
             return false;
