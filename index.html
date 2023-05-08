@@ -29,13 +29,21 @@ title: "Home"
       html.find('.archive-entry .entry-title a').each(
         function( i, val )
         {
+          if (i >= num_of_post)
+          {
+            return false;
+          }
           var url = $(val).prop("outerHTML");
           sitemap_url.push(url);
         }
       );
-      html.find('.archive-entry time').each(
+      html.find('time').each(
         function(i, val)
         {
+          if (i >= num_of_post)
+          {
+            return false;
+          }
           var time = $(val).prop("datetime");
           sitemap_time.push(time);
         }
