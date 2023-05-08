@@ -1,12 +1,5 @@
 // "use strict";
 
-
-import { axios } from 'axios'
-
-const axios = require("axios");
-const xml2js = require("xml2js");
-const moment = require("moment");
-const fs = require("fs");
 const HatenaItem = require("./HatenaItem");
 
 // APIを叩いてはてなブログのXMLを取得する。
