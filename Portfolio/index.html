@@ -14,9 +14,10 @@ home: '/Portfolio/index.html'
     }
     .Portfolio_grid_3x {
       align-self: center;
-      margin: 5px;
+      margin: 0px;
       padding: 0px;
     }
+
   </style>
 </head>
 <div class="bg">
@@ -26,12 +27,12 @@ home: '/Portfolio/index.html'
     </h2>
     <div class="Portfolio_grid_3x">
       {% for row in data.contents %}
-        <a href="{{ row.url | relative_url }}">
-          <div>
-            <img src="{{ row.img | relative_url }}" alt="" />
+        <div class="img_card_container">
+          <a href="{{ row.url | relative_url }}">
+            <img src="{{ row.img | relative_url }}" class="img_card" alt="" />
             <p>row.title</p>
-          </div>
-        </a>
+          </a>
+        </div>
       {% endfor %}
     </div>
   {% endfor %}
