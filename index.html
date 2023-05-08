@@ -6,12 +6,8 @@ title: "Home"
 <head>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <srcipt type="text/javascript" src="{{ '/assets/js/hatenablogjs' | relative_url}}"></srcipt>
+  <link rel="stylesheet" href="{{ '/assets/css/automap.css' | relative_url }}">
 </head>
-<style>
-  .auto-map-url {
-    display: flex;
-  }
-</style>
 <script>
   $(document).ready(function(){
     if( $('#auto-site-map').length == 0 ){
@@ -53,21 +49,20 @@ title: "Home"
         }
       );
       if( html.find('.pager-next').length == 0 ){
-        break ;
+        break;
       }
-      page++ ;
+      page++;
     }
-    var  htmlstr = "" ;
+    var htmlstr = "";
+    htmlstr += '<div class="auto-map">';
+    htmlstr += '<h2 class="auto-map-subject">' + 最新の記事 + '</h2>';
     for(var idx=0; idx < num_of_post; ++idx){
-      htmlstr += '<div class="auto-map">';
-      htmlstr += '<div>';
+      htmlstr += '<div class="auto-map-post">';
       htmlstr += sitemap_time[idx];
-      htmlstr += '<h2>';
-      htmlstr += sitemap_url[idx];
-      htmlstr += "</h2>" ;
-      htmlstr += "</div>" ;
+      htmlstr += '<h2 class="auto-map-title">' + sitemap_url[idx] + '</h2>';
       htmlstr += "</div>" ;
     }
+    htmlstr += "</div>";
     $("#auto-site-map").html( htmlstr ) ;
   });
 
