@@ -54,7 +54,8 @@ title: "Home"
       htmlstr += "<h2>" + category + "</h2>" ;
       htmlstr += '<div class="auto-map">' ;
       for( var j = 0 ; j < sitemap[category].url.length ; j++ ){
-        htmlstr += '<div class="auto-map-url">' + sitemap[category].time[j] + "|" + sitemap[category].url[j] + "</div>" ;
+        // sitemap[category].time[j] +
+        htmlstr += '<div class="auto-map-url">' +  "|" + sitemap[category].url[j] + "</div>" ;
       }
       htmlstr += "</div>" ;
     }
