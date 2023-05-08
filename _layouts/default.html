@@ -1,14 +1,7 @@
----
-head:
-  - rel: shortcut icon
-    type: image/x-icon
-    href: '/assets/images/pto8913.png'
-# head-js:
----
-<!-- 
 <head>
   <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
-</head> -->
+</head>
+
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
   <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
@@ -40,15 +33,6 @@ head:
     {% include sidebar.html %}
   {% endif %}
 
-  <head>
-    {% for head in page.head %}
-      <link rel="{{ head.rel }}" type="{{ head.type }}" href="{{ head.href | relative_url }}">
-    {% endfor %}
-    {% for head in page.head-js %}
-      <link type="{{ head.type }}" src="{{ head.src | relative_url }}">
-    {% endfor %}
-  </head>
-  
   {% if site.nav-header %}
     {% assign pages = site.nav-header %}
   {% else %}
