@@ -32,16 +32,16 @@ title: "Home"
         url = $( val ).prop( "outerHTML" );
         var category_names = jQuery(html.find( '.archive-entry' ).eq( i ).find( '.categories' )); 
         var cate_len = category_names.children('a').length;
-        // var time = jQuery(html.find('archive-entry').eq(i).find('time'));
+        var time = jQuery(html.find('.archive-entry').eq(i).find('time'));
         for( var cate_cnt = 0 ; cate_cnt < cate_len ; cate_cnt++ ){
           category = category_names.children('a').eq( cate_cnt ).html() ;
           if( sitemap[ category ] == undefined ){
             sitemap[ category ] = new Object() ;
             sitemap[ category ].url = new Array() ;
-            // sitemap[ category ].time = new Array() ;
+            sitemap[ category ].time = new Array() ;
           }
           sitemap[ category ].url.push( url );
-          // sitemap[ category ].time.push( time );
+          sitemap[ category ].time.push( time );
         }
       });
       if( html.find('.pager-next').length == 0 ){
