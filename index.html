@@ -29,10 +29,9 @@ title: "Home"
       html.find('.archive-entry .entry-title a').each(
         function( i, val )
         {
-          console.log(i);
           console.log(val);
 
-          if (i >= num_of_post)
+          if (i >= num_of_post - 1)
           {
             return false;
           }
@@ -43,14 +42,19 @@ title: "Home"
       html.find('time').each(
         function(i, val)
         {
-          console.log(i);
           console.log(val);
-          
-          if (i >= num_of_post)
+
+          if (i >= num_of_post - 1)
           {
             return false;
           }
           var time = $(val).val("datetime");
+          console.log(time);
+          console.log($(val).prop("datetime"));
+          console.log($(val).prop("outerHTML"));
+          console.log($(val).val("datetime"));
+          console.log($(val).val("outerHTML"));
+
           sitemap_time.push(time);
         }
       );
@@ -60,7 +64,7 @@ title: "Home"
       page++ ;
     }
     var  htmlstr = "" ;
-    for(var idx=0; idx < sitemap_url.length; ++idx){
+    for(var idx=0; idx < num_of_post; ++idx){
       htmlstr += '<div class="auto-map">' ;
       htmlstr += '<div class="auto-map-url">' + sitemap_time[idx] + " | " + sitemap_url[idx] + "</div>" ;
       htmlstr += "</div>" ;
