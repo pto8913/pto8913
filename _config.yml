@@ -90,7 +90,6 @@ nav-footer:                  # shows a footer with social links - for available 
 nav-header-Portfolio:
   ホーム: "/Portfolio/index.html"
 # ---------------- Portfolio Index ----------------
----
 idx-Portfolio:
   - subject: "ゲーム"
     contents:
@@ -104,7 +103,6 @@ idx-Portfolio:
     contents:
       - title: "競プロ"
         url: "/Portfolio/KyoPro/KyoPro.html"
----
 
 # ---------------- Portfolio Hoshimori ----------------
 nav-header-Portfolio-Hoshimori:
