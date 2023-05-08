@@ -7,7 +7,11 @@ title: "Home"
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <srcipt type="text/javascript" src="{{ '/assets/js/hatenablogjs' | relative_url}}"></srcipt>
 </head>
-
+<style>
+  .auto-map-url {
+    display: flex;
+  }
+</style>
 <script>
   $(document).ready(function(){
     if( $('#auto-site-map').length == 0 ){
@@ -16,24 +20,29 @@ title: "Home"
     }
     var page = 1 ;
     var myUrl = 'https://pto8913.hatenablog.com'
-    var  url = "" ;
+    var url = "" ;
     var category = "" ;
-    var  sitemap = new Array() ;
-    while( 1 ){
+    var sitemap = new Array() ;
+    const num_of_post = 5;
+    for (var post_idx=0; post_idx < num_of_post; ++post_idx){
       var data = getArchive( myUrl + '/archive?page=' + page);
       var html = jQuery(jQuery.parseHTML(data));
-      html.find('.archive-entry .entry-title a').each( function( i, val )
+      html.find('.archive-entry .entry-title a time').each( function( i, val )
       {
-        url = $( val ).prop( "outerHTML" ) ;
-        var category_names = jQuery(html.find( '.archive-entry' ).eq( i ).find( '.categories' )) ; 
-        var   cate_len = category_names.children('a').length ;
+        url = $( val ).prop( "outerHTML" );
+        var category_names = jQuery(html.find( '.archive-entry' ).eq( i ).find( '.categories' )); 
+        var cate_len = category_names.children('a').length;
+        var category_names = jQuery(html.find( '.archive-entry' ).eq( i ).find( '.categories' )); 
+        var time = jQuery(html.find('archive-entry').eq(i).find('time'));
         for( var cate_cnt = 0 ; cate_cnt < cate_len ; cate_cnt++ ){
           category = category_names.children('a').eq( cate_cnt ).html() ;
           if( sitemap[ category ] == undefined ){
             sitemap[ category ] = new Object() ;
             sitemap[ category ].url = new Array() ;
+            sitemap[ category ].time = new Array() ;
           }
-          sitemap[ category ].url.push( url ) ;
+          sitemap[ category ].url.push( url );
+          sitemap[ category ].time.push( time );
         }
       });
       if( html.find('.pager-next').length == 0 ){
@@ -42,13 +51,13 @@ title: "Home"
       page++ ;
     }
     var  htmlstr = "" ;
-    for( var i in sitemap ){
-      htmlstr += "<h2>" + i + "</h2>" ;
-      htmlstr += '<ul class="auto-map">' ;
-      for( var j = 0 ; j < sitemap[ i ].url.length ; j++ ){
-        htmlstr += '<li class="auto-map-url">' + sitemap[ i ].url[ j ] + "</li>" ;
+    for( var category in sitemap ){
+      htmlstr += "<h2>" + category + "</h2>" ;
+      htmlstr += '<div class="auto-map">' ;
+      for( var j = 0 ; j < sitemap[category].url.length ; j++ ){
+        htmlstr += '<div class="auto-map-url">' + sitemap[category].time[j] + "|" + sitemap[category].url[j] + "</div>" ;
       }
-      htmlstr += "</ul>" ;
+      htmlstr += "</div>" ;
     }
     $("#auto-site-map").html( htmlstr ) ;
   });
