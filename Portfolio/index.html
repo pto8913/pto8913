@@ -30,7 +30,7 @@ home: '/Portfolio/index.html'
         <div class="img_card_container">
           <a href="{{ row.url | relative_url }}">
             <img src="{{ row.img | relative_url }}" class="img_card" alt="" />
-            <p>row.title</p>
+            <p class="img_card_title">{{ row.title }}</p>
           </a>
         </div>
       {% endfor %}
