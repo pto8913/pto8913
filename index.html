@@ -20,42 +20,35 @@ title: "Home"
     }
     var page = 1 ;
     var myUrl = 'https://pto8913.hatenablog.com'
-    var url = "" ;
-    var category = "" ;
-    var sitemap = new Array() ;
+    var sitemap_url = new Array() ;
+    var sitemap_time = new Array() ;
     const num_of_post = 5;
     for (var post_idx=0; post_idx < num_of_post; ++post_idx){
       var data = getArchive( myUrl + '/archive?page=' + page);
       var html = jQuery(jQuery.parseHTML(data));
-      html.find('.archive-entry .entry-title a').each( function( i, val )
-      {
-        url = $( val ).prop( "outerHTML" );
-        var category_names = jQuery(html.find( '.archive-entry' ).eq( i ).find( '.categories' )); 
-        var cate_len = category_names.children('a').length;
-        var time = jQuery(html.find('time'));
-        for( var cate_cnt = 0 ; cate_cnt < cate_len ; cate_cnt++ ){
-          category = category_names.children('a').eq( cate_cnt ).html() ;
-          if( sitemap[ category ] == undefined ){
-            sitemap[ category ] = new Object() ;
-            sitemap[ category ].url = new Array() ;
-            sitemap[ category ].time = new Array() ;
-          }
-          sitemap[ category ].url.push( url );
-          sitemap[ category ].time.push( time );
+      html.find('.archive-entry .entry-title a').each(
+        function( i, val )
+        {
+          var url = $(val).prop("outerHTML");
+          sitemap_url.push(url);
         }
-      });
+      );
+      html.find('.archive-entry time').each(
+        function(i, val)
+        {
+          var time = $(val).prop("datetime");
+          sitemap_time.push(time);
+        }
+      );
       if( html.find('.pager-next').length == 0 ){
         break ;
       }
       page++ ;
     }
     var  htmlstr = "" ;
-    for( var category in sitemap ){
-      htmlstr += "<h2>" + category + "</h2>" ;
+    for(var idx=0; idx < sitemap_url.length; ++idx){
       htmlstr += '<div class="auto-map">' ;
-      for( var j = 0 ; j < sitemap[category].url.length ; j++ ){
-        htmlstr += '<div class="auto-map-url">' + sitemap[category].time[j] + "|" + sitemap[category].url[j] + "</div>" ;
-      }
+      htmlstr += '<div class="auto-map-url">' + sitemap_time[idx] + "|" + sitemap_url[idx] + "</div>" ;
       htmlstr += "</div>" ;
     }
     $("#auto-site-map").html( htmlstr ) ;
