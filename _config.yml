@@ -77,9 +77,7 @@ plugins:
 # Navigations
 nav-header:                # accepts {file, title, url, icon, sidebaricon}
   ホーム: "/"
-  about: "/about.html"
-  portfolio: "/Portfolio/index.html"
-  archives: "/archives.html"
+  ポートフォリオ: "/Portfolio/index.html"
 
 nav-footer:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Gmail, icon: '/assets/images/gmail.png', url: "mailto:pto8913project@gmail.com"}
