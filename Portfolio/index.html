@@ -4,31 +4,4 @@ title: "ポートフォリオ"
 home: '/index.html'
 ---
 
-<head>
-  <style>
-    .bg {
-      height: 600px;
-      width: 100%;
-      align-items: center;
-      text-align: center;
-    }
-
-  </style>
-</head>
-<div class="bg">
-  {% for data in site.idx-Portfolio %}
-    <h2 class="Portfolio_subject">
-      {{ data.subject }}
-    </h2>
-    <div class="Portfolio_grid_3x">
-      {% for row in data.contents %}
-        <div class="img_card_container">
-          <a href="{{ row.url | relative_url }}">
-            <img src="{{ row.img | relative_url }}" class="img_card" alt="" />
-            <p class="img_card_title">{{ row.title }}</p>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-  {% endfor %}
-</div>
+{% include Portfolio/index.html %}
