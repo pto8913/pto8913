@@ -3,6 +3,12 @@ layout: default
 title: "Home"
 ---
 
+<head>
+  <link rel="text/javascript" src="{{ '/assets/js/hatenablog.js' | relative_url}}">
+</head>
+
+<div id="auto-site-map"></div>
+
 {% if site.show_excerpts %}
   {% include home.html %}
 {% else %}
