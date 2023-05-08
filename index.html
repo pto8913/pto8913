@@ -59,8 +59,13 @@ title: "Home"
     }
     var  htmlstr = "" ;
     for(var idx=0; idx < num_of_post; ++idx){
-      htmlstr += '<div class="auto-map">' ;
-      htmlstr += '<div class="auto-map-url">' + sitemap_time[idx] + " | " + sitemap_url[idx] + "</div>" ;
+      htmlstr += '<div class="auto-map">';
+      htmlstr += '<div>';
+      htmlstr += sitemap_time[idx];
+      htmlstr += '<h2>';
+      htmlstr += sitemap_url[idx];
+      htmlstr += "</h2>" ;
+      htmlstr += "</div>" ;
       htmlstr += "</div>" ;
     }
     $("#auto-site-map").html( htmlstr ) ;
