@@ -44,9 +44,6 @@
   {{ content }}
 
   {% if site.nav-footer %}
-    <div>
-      {{ site.description | default: site.title }}
-    </div>
     {% include footer.html navigation=site.nav-footer %}
   {% endif %}
 </html>
