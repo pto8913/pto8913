@@ -1,0 +1,56 @@
+---
+layout: default
+toc:
+  - subject: "競プロのサイト"
+    contents:
+      - title: "AtCoder"
+        url: https://atcoder.jp/?lang=ja
+      - title: "CodeForce"
+  - subject: "動的計画法"
+    contents:
+      - title: "累積和"
+        url: "/KyoPro/DP/CumulativeSum.html"
+  - subject: "データ構造"
+    contents:
+      - title: "素集合データ構造(Union-Find)"
+        url: "/KyoPro/Structure/UnionFind.html"
+      - title: "BinaryIndexedTree(BIT)"
+        url: "/KyoPro/Structure/BIT.html"
+  - subject: "探索"
+    contents:
+      - title: "深さ優先探索(DFS)"
+        url: "/KyoPro/Search/DFS.html"
+      - title: "幅優先探索(BFS)"
+        url: "/KyoPro/Search/BFS.html"
+  - subject: "最短経路探索"
+    contents:
+      - title: "ダイクストラ法(Dijkstra)"
+        url: "/KyoPro/Search/Dijkstra.html"
+      - title: "ベルマンフォード法"
+        url: "/KyoPro/Search/BellmanFord.html"
+  - subject: "最短経路探索"
+    contents:
+      - title: "約数列挙(Divisor)"
+        url: "/KyoPro/Math/divisor.html"
+      - title: "素数判定(isprime)"
+        url: "/KyoPro/Math/isprime.html"
+      - title: "最大公約数(gcd)最小公倍数(lcm)"
+        url: "/KyoPro/Math/gcdlcm.html"
+---
+
+<div>
+  {% for data in page.toc %}
+    <h2 class="KyoPro_subject">
+      {{ data.subject }}
+    </h2>
+    <ul>
+      {% for row in data.contents %}
+        <li>
+          <a href="{{ row.url | relative_url }}">
+            {{ row.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</div>

@@ -96,13 +96,13 @@ idx-Portfolio:
       - title: "星の守り人"
         img: "/Hoshimori/assets/images/T_Title.png"
         url: "/Portfolio/Hoshimori/index.html"
-  - subject: "PyQt5"
-    contents:
-      - title: "あ"
-  - subject: "競プロ"
-    contents:
-      - title: "競プロ"
-        url: "/Portfolio/KyoPro/KyoPro.html"
+  # - subject: "PyQt5"
+  #   contents:
+  #     - title: "あ"
+  # - subject: "競プロ"
+  #   contents:
+  #     - title: "競プロ"
+  #       url: "/Portfolio/KyoPro/index.html"
 
 # ---------------- Portfolio Hoshimori ----------------
 nav-header-Portfolio-Hoshimori:
