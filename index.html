@@ -9,13 +9,16 @@ title: "Home"
 </head>
 
 <script>
-  function HatenaSiteMap()
-  {
+  $(document).ready(function(){
+    if( $('#auto-site-map').length == 0 ){
+      console.log( "no tag end--->" + $('#auto-site-map').length ) ;
+      return ;
+    }
     var page = 1 ;
     var myUrl = 'https://pto8913.hatenablog.com'
-    var url = "" ;
+    var  url = "" ;
     var category = "" ;
-    var sitemap = new Array() ;
+    var  sitemap = new Array() ;
     while( 1 ){
       var data = getArchive( myUrl + '/archive?page=' + page);
       var html = jQuery(jQuery.parseHTML(data));
@@ -30,7 +33,7 @@ title: "Home"
             sitemap[ category ] = new Object() ;
             sitemap[ category ].url = new Array() ;
           }
-          sitemap[ category ].url.push( url );
+          sitemap[ category ].url.push( url ) ;
         }
       });
       if( html.find('.pager-next').length == 0 ){
@@ -47,8 +50,8 @@ title: "Home"
       }
       htmlstr += "</ul>" ;
     }
-  };
-
+    $("#auto-site-map").html( htmlstr ) ;
+  });
   function getArchive(urlInfo){
     var data= $.ajax({
       type: 'GET',
@@ -58,21 +61,14 @@ title: "Home"
       success: function( data ){
       },
       error:function() {
-        //取得失敗時に実行する処理
         console.log("何らかの理由で失敗しました");
       }
     }).responseText;
     return data;
   }
-
-  document.addEventListener(
-    "DOMContentLoaded", 
-    function()
-    {
-      HatenaSiteMap();
-    }
-  );
 </script>
+
+<div id="auto-site-map"></div>
 
 {% if site.show_excerpts %}
   {% include home.html %}
