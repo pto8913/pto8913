@@ -74,17 +74,13 @@
 
 // main();
 
-
-$(document).ready(function(){
-  if( $('#auto-site-map').length == 0 ){
-    console.log( "no tag end--->" + $('#auto-site-map').length ) ;
-    return ;
-  }
+function HatenaSiteMap()
+{
   var page = 1 ;
   var myUrl = 'https://pto8913.hatenablog.com/'
-  var  url = "" ;
+  var url = "" ;
   var category = "" ;
-  var  sitemap = new Array() ;
+  var sitemap = new Array() ;
   while( 1 ){
     var data = getArchive( myUrl + '/archive?page=' + page);
     var html = jQuery(jQuery.parseHTML(data));
@@ -116,8 +112,8 @@ $(document).ready(function(){
     }
     htmlstr += "</ul>" ;
   }
-  $("#auto-site-map").html( htmlstr ) ;
-});
+};
+
 function getArchive(urlInfo){
   var data= $.ajax({
     type: 'GET',
