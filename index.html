@@ -12,7 +12,7 @@ title: "Home"
   function HatenaSiteMap()
   {
     var page = 1 ;
-    var myUrl = 'https://pto8913.hatenablog.com/'
+    var myUrl = 'https://pto8913.hatenablog.com'
     var url = "" ;
     var category = "" ;
     var sitemap = new Array() ;
@@ -30,7 +30,7 @@ title: "Home"
             sitemap[ category ] = new Object() ;
             sitemap[ category ].url = new Array() ;
           }
-          sitemap[ category ].url.push( url ) ;
+          sitemap[ category ].url.push( url );
         }
       });
       if( html.find('.pager-next').length == 0 ){
@@ -73,7 +73,6 @@ title: "Home"
     }
   );
 </script>
-<!-- <div id="auto-site-map"></div> -->
 
 {% if site.show_excerpts %}
   {% include home.html %}
