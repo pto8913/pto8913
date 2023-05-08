@@ -24,11 +24,12 @@
             </a>
           </div>
         {% else %}
-          <ul>
-            <li>
-              
-            </li>
-          </ul>
+          <li>
+            <a href="{{ row.url | relative_url }}">
+              <img src="{{ row.img | relative_url }}" class="img_card" alt="" />
+              <p class="img_card_title">{{ row.title }}</p>
+            </a>
+          </li>
         {% endif %}
       {% endfor %}
     </div>
