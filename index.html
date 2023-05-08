@@ -48,13 +48,7 @@ title: "Home"
           {
             return false;
           }
-          var time = $(val).val("datetime");
-          console.log(time);
-          console.log($(val).prop("datetime"));
-          console.log($(val).prop("outerHTML"));
-          console.log($(val).val("datetime"));
-          console.log($(val).val("outerHTML"));
-
+          var time = $(val).prop("outerHTML");
           sitemap_time.push(time);
         }
       );
