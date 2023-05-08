@@ -89,6 +89,22 @@ nav-footer:                  # shows a footer with social links - for available 
 
 nav-header-Portfolio:
   ホーム: "/Portfolio/index.html"
+# ---------------- Portfolio Index ----------------
+---
+idx-Portfolio:
+  - subject: "ゲーム"
+    contents:
+      - title: "星の守り人"
+        img: "/Hoshimori/assets/images/T_Title.png"
+        url: "/Portfolio/Hoshimori/index.html"
+  - subject: "PyQt5"
+    contents:
+      - title: "あ"
+  - subject: "競プロ"
+    contents:
+      - title: "競プロ"
+        url: "/Portfolio/KyoPro/KyoPro.html"
+---
 
 # ---------------- Portfolio Hoshimori ----------------
 nav-header-Portfolio-Hoshimori:
