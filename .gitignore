@@ -6,3 +6,5 @@ vendor
 .vscode
 
 service_account.json
+
+*__pycache__/
