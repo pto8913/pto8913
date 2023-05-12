@@ -24,11 +24,11 @@ title: Thread
     `self.work`の部分を別の関数に変えてやれば簡単にマルチスレッドにできます<br>   
   </p>
   
-  <a href="{{ 'PyQt5/Templates/Thread/Thread.py' | relative_url }}">ソースコード</a>
+  <a href="{{ '/Portfolio/PyQt5/Templates/Thread/Thread.py' | relative_url }}">ソースコード</a>
 
   <h2>QThreadを使用する際の注意点</h2>
   <h3>以下はよくない例です</h3>
-  <a href="{{ 'PyQt5/Templates/Thread/Thread_Bad.py' | relative_url }}">ソースコード</a>
+  <a href="{{ '/Portfolio/PyQt5/Templates/Thread/Thread_Bad.py' | relative_url }}">ソースコード</a>
   <p>
     これを走らせるとわかる通り、`QMessageBox`を表示した瞬間エラーを吐く。<br>
     理由は、`QThread`に`sub`関数を渡したことで`sub`関数の親が変わっているから。<br>
@@ -39,7 +39,7 @@ title: Thread
   <p>
     こんな感じ。<br>
   </p>
-  <a href="{{ 'PyQt5/Templates/Thread/Thread_Good.py' | relative_url }}">ソースコード</a>
+  <a href="{{ '/Portfolio/PyQt5/Templates/Thread/Thread_Good.py' | relative_url }}">ソースコード</a>
 
   <p>
     `pyqtSignal`を`pyqtSignal(str)`とすることで例外を受け取ってそれを表示、なんてこともできる。
