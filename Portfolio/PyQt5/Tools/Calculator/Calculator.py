@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import (
 
 from PyQt5.QtGui import QFont
 
-from CalculatorUI import MainUI
+from Portfolio.PyQt5.Tools.Calculator.CalculatorUI import MainUI
 
 class Main(MainUI):
   def __init__(self):

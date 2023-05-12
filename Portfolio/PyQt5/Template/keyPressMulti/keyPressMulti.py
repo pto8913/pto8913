@@ -21,13 +21,13 @@ class Main(QWidget):
 
   def keyPressEvent(self, event):
     # modifier (修飾子)
-    print(event.key())
-    print(event.modifiers())
     self.label.setText(str(event.key()))
-    if event.modifiers() & Qt.ControlModifier and event.key() == Qt.Key_Return:
+    if event.modifiers() & Qt.ControlModifier and event.key() == Qt.Key_Q:
       self.label.setText("keyPressMulti!")
     elif event.key() == Qt.Key_Escape:
       exit()
+    else:
+      self.label.setText("keyPress")
 
   def keyReleaseEvent(self, event):
     self.label.setText("")
@@ -37,7 +37,7 @@ def main():
   font = QFont("Meiryo")
   app.setFont(font)
   w = Main()
-  w.setWindowTitle("title")
+  w.setWindowTitle("keyPressMulti")
   w.show()
   w.raise_()
   app.exec_()

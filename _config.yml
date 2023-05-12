@@ -104,6 +104,9 @@ idx-Portfolio:
       - title: "時計"
         img: "/Portfolio/PyQt5/Tools/Timer/icon.png"
         url: "/Portfolio/PyQt5/Tools/Timer/Timer.html"
+      - title: "電卓"
+        img: "/Portfolio/PyQt5/Tools/Calculator/icon.png"
+        url: "/Portfolio/PyQt5/Tools/Calculator/Calculator.html"
   - subject: "PyQt5のテンプレート？"
     contents:
       - title: "コピー"

@@ -1,7 +1,8 @@
 ---
-layout: Portfolio/default
+layout: Portfolio/PyQt5/page
+title: "ポートフォリオ | PyQt5 | ディレクトリツリー"
 home: "/Portfolio/PyQt5/index.html"
-title: DirViewer
+custom-header: true
 ---
 <!-- 
 <	&lt;
@@ -15,10 +16,17 @@ title: DirViewer
   <h2>PyQt5におけるディレクトリツリー機能の実装テンプレート</h2>
   <h4>2019/10/10</h4>
 
+  <a href="{{ '/Portfolio/PyQt5/Templates/DirViewer/icon.png' | relative_url}}">
+    <img src="{{ '/Portfolio/PyQt5/Templates/DirViewer/icon.png' | relative_url}}" alt=""/>
+  </a>
+  
   <h3>概要</h3>
   <p>
-    ディレクトリを見る！
+    ディレクトリを見る！<br>
+
+    self.fileModel.setRootPath('')<br>
+    の部分にRootのPathを設定すると特定のディレクトリだけ見られるようになる<br>
   </p>
   
-  <a href="https://github.com/pto8913/pto8913/blob/master/Portfolio/PyQt5/Tools/DirViewer/DirViewer.py">ソースコード</a>
+  <a href="https://github.com/pto8913/pto8913/blob/master/Portfolio/PyQt5/Templates/DirViewer/DirViewer.py">ソースコード</a>
 </div>
