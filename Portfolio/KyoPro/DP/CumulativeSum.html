@@ -1,169 +1,164 @@
-[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 累積和(Cumulative-Sum)<br>
-[トップページに戻る]({{ site.reseturl }})<br>
+---
+layout: Portfolio/default
+home: "/Portfolio/KyoPro/index.html"
+title: 累積和(Cumulative-Sum)
+---
+<!-- 
+<	&lt;
+>	&gt;
+'	&#39;
+"	&quot;
+&	&amp;
+ -->
 
-# 累積和(Cumulative-Sum)
+<div>
+  <h2>累積和(Cumulative-Sum)</h2>
+  <h4>2019/09/05</h4>
 
-2019/09/05/11:03
+  <h3>概要</h3>
+  <p>
+    単純な累積和<br>
+    前計算として事前に累積和を取ることで、区間の和をO(1)で求めることができる<br>
+  </p>
 
-## 説明
+  <h3>計算量</h3>
+  <p>
+    * 前計算(構築) O(n)<br>
+    * クエリ(区間の和) O(1)<br>
+  </p>
 
-単純な累積和<br>
-前計算として事前に累積和を取ることで、区間の和をO(1)で求めることができる<br>
+  <h3>実装例</h3>
+  <details>
+    <summary> python </summary>
+    <pre>
+      <code class="prettyprint">
+        class CumulativeSum:
+          def __init__(self, size):
+            self.data = [0] * size
+            self.size = size
+        
+          def add(self, key, value):
+            self.data[key] += value
+        
+          def build(self):
+            for i in range(1, self.size):
+              self.data[i] += self.data[i - 1]
+          
+          def query(self, kukan):
+            if kukan &lt; 0:
+              return 0
+            return self.data[min(kukan, self.size - 1)]
+      </code>
+    </pre>
+  </details>
 
-> ## 計算量
+  <details>
+    <summary> C++ </summary>
+    <pre>
+      <code class="prettyprint">
+        template&lt;class T&gt;
+        struct CumulativeSum {
+          vector&lt; T &gt; data;
+        
+          CumulativeSum(int size) : data(size, 0) {};
+        
+          void add(int key, T value) {
+            data[key] += value;
+          }
+        
+          void build(){
+            rep(i, 1, data.size()) {
+              data[i] += data[i - 1];
+            }
+          }
+        
+          T query(int kukan) {
+            if (kukan &lt; 0) {
+              return 0;
+            }
+            return data[min(kukan, (int)data.size() - 1)];
+          }
+        };
+      </code>
+    </pre>
+  </details>
 
-* 前計算(構築) O(n)
-* クエリ(区間の和) O(1)
+  <h3>使用例</h3>
+  <p>
+    例題<br>
+    [AOJ0516 JOI2006 本選A 最大の和](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516) <br>
+  </p>
+  <details>
+    <summary> python </summary>
+    <pre>
+      <code class="prettyprint">
+        class CumulativeSum:
+        # 省略
+      
+        import sys
+        
+        stdin = sys.stdin
+        na = lambda: map(int, stdin.readline().split())
+        ns = lambda: stdin.readline().rstrip()
+        ni = lambda: int(ns())
+        
+        def main():
+          n, k = na()
+        
+          CS = CumulativeSum(n)
+          for i in range(n):
+            a = ni()
+            CS.add(i, a)
+        
+          CS.build()
+        
+          ans = -int(1e9+7)
+          for i in range(n-k+1):
+            ans = max(ans, CS.query(k+i) - CS.query(i))
+          print(ans)
+        
+        main()
+      </code>
+    </pre>    
+  </details>
 
-## 実装例
-
-### python実装例 
-
-<details>
-<summary> python実装例 </summary>
-
-```python
-class CumulativeSum:
-  def __init__(self, size):
-    self.data = [0] * size
-    self.size = size
-
-  def add(self, key, value):
-    self.data[key] += value
-
-  def build(self):
-    for i in range(1, self.size):
-      self.data[i] += self.data[i - 1]
-  
-  def query(self, kukan):
-    if kukan < 0:
-      return 0
-    return self.data[min(kukan, self.size - 1)]
-```
-
-</details>
-
-### C++実装例
-
-<details>
-<summary> C++実装例 </summary>
-
-```cpp
-template<class T>
-struct CumulativeSum {
-  vector< T > data;
-
-  CumulativeSum(int size) : data(size, 0) {};
-
-  void add(int key, T value) {
-    data[key] += value;
-  }
-
-  void build(){
-    rep(i, 1, data.size()) {
-      data[i] += data[i - 1];
-    }
-  }
-
-  T query(int kukan) {
-    if (kukan < 0) {
-      return 0;
-    }
-    return data[min(kukan, (int)data.size() - 1)];
-  }
-};
-```
-
-</details>
-
-## 使用例
-
-<details>
-<summary> 例題 </summary>
-
-* [AOJ0516 JOI2006 本選A 最大の和](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516) <br>
-
-</details>
-
-### python例
-
-<details>
-<summary> python使用例 </summary>
-
-```python
-
-class CumulativeSum:
-  # 省略
-
-import sys
-
-stdin = sys.stdin
-na = lambda: map(int, stdin.readline().split())
-ns = lambda: stdin.readline().rstrip()
-ni = lambda: int(ns())
-
-def main():
-  n, k = na()
-
-  CS = CumulativeSum(n)
-  for i in range(n):
-    a = ni()
-    CS.add(i, a)
-
-  CS.build()
-
-  ans = -int(1e9+7)
-  for i in range(n-k+1):
-    ans = max(ans, CS.query(k+i) - CS.query(i))
-  print(ans)
-
-main()
-```
-
-</details>
-
-### C++例
-
-<details>
-<summary> C++使用例 </summary>
-
-```cpp
-#include <iostream>
-#include <vector>
-
-using namespace std;
-
-#define rep(i, a, n) for(int i = a; i < (n); ++i)
-#define INF 1000000007
-
-template<class T>
-struct CumulativeSum {
-  // 省略
-};
-
-int main() {
-  int n, k;
-  cin >> n >> k;
-
-  CumulativeSum<int> CS(n);
-  rep(i, 0, n) {
-    int a;
-    cin >> a;
-    CS.add(i, a);
-  }
-
-  CS.build();
-
-  int ans = -INF;
-  rep(i, 0, n - k + 1) {
-    ans = max(ans, CS.query(k + i - 1) - CS.query(i - 1));
-  }
-  cout << ans << endl;
-}
-```
-
-</details>
-
-[前に戻る]({{ site.KyoProurl }}/KyoPro)<br>
-
-[トップページに戻る]({{ site.reseturl }})<br>
+  <details>
+    <summary> C++ </summary>
+    <pre>
+      <code class="prettyprint">
+        #include &lt;iostream&gt;
+        #include &lt;vector&gt;
+        
+        using namespace std;
+        
+        #define rep(i, a, n) for(int i = a; i &lt; (n); ++i)
+        #define INF 1000000007
+        
+        template&lt;class T&gt;
+        struct CumulativeSum {
+          // 省略
+        };
+        
+        int main() {
+          int n, k;
+          cin &gt;&gt; n &gt;&gt; k;
+        
+          CumulativeSum&lt;int&gt; CS(n);
+          rep(i, 0, n) {
+            int a;
+            cin &gt;&gt; a;
+            CS.add(i, a);
+          }
+        
+          CS.build();
+        
+          int ans = -INF;
+          rep(i, 0, n - k + 1) {
+            ans = max(ans, CS.query(k + i - 1) - CS.query(i - 1));
+          }
+          cout &lt;&lt; ans &lt;&lt; endl;
+        }
+      </code>
+    <pre>
+  </details>
+</div>

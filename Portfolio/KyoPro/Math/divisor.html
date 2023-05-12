@@ -1,48 +1,70 @@
-[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 約数列挙(divisor) <br>
-[トップページに戻る]({{ site.reseturl }})
+---
+layout: Portfolio/default
+home: "/Portfolio/KyoPro/index.html"
+title: 約数列挙
+---
+<!-- 
+<	&lt;
+>	&gt;
+'	&#39;
+"	&quot;
+&	&amp;
+ -->
 
-# 約数列挙
-2019/09/25 13:02
+<div>
+  <h2>約数列挙</h2>
+  <h4>2019/09/25</h4>
 
-## 説明
-約数を列挙する
+  <h3>概要</h3>
+  <p>
+    約数を列挙する
+  </p>
 
-## 計算量
-O(√n)
+  <h3>計算量</h3>
+  <p>
+    * O(√n)
+  </p>
 
-## 実装
+  <h3>実装例</h3>
+  <details>
+    <summary> python </summary>
+    <pre>
+      <code class="prettyprint">
+        def divi(n):
+          res = []
+          for i in range(1, int(n**0.5)+1):
+            if n % i == 0:
+              res.append(i)
+              if i != n // i:
+                res.append(n // i)
+          return res
+      </code>
+    </pre>
+  </details>
 
-### python
-```python
-def divi(n):
-  res = []
-  for i in range(1, int(n**0.5)+1):
-    if n % i == 0:
-      res.append(i)
-      if i != n // i:
-        res.append(n // i)
-  return res
-```
-### C++
-```cpp
-template<typename T>
-vector<T> divi(T n) {
-  vector<T> res;
-  for (T i = 1; i * i <= n; ++i) {
-    if (n % i == 0) {
-      res.push_back(i);
-      if (i * i != n) res.push_back(n / i);
-    }
-  }
-  sort(begin(res), end(res));
-  return res;
-}
-```
+  <details>
+    <summary> C++ </summary>
+    <pre>
+      <code class="prettyprint">
+        template&lt;typename T&gt;
+        vector&lt;T&gt; divi(T n) {
+          vector&lt;T&gt; res;
+          for (T i = 1; i * i &lt;= n; ++i) {
+            if (n % i == 0) {
+              res.push_back(i);
+              if (i * i != n) res.push_back(n / i);
+            }
+          }
+          sort(begin(res), end(res));
+          return res;
+        }
+      </code>
+    </pre>
+  </details>
 
-## 使用例
-* [ABC142_D-Disjoint_Set_of_Common_Divisors](https://atcoder.jp/contests/abc142/tasks/abc142_d)<br>
-<br>
-
-[前に戻る]({{ site.KyoProurl }}/KyoPro)
-
-[トップページに戻る]({{ site.reseturl }})
+  <h3>使用例</h3>
+  <p>
+    例題<br>
+    [ABC142_D-Disjoint_Set_of_Common_Divisors](https://atcoder.jp/contests/abc142/tasks/abc142_d)<br>
+  </p>
+</div>

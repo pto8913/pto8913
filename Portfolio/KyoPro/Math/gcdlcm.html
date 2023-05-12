@@ -1,26 +1,43 @@
-[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 最大公約数(gcd)最小公倍数(lcm) <br>
-[トップページに戻る]({{ site.reseturl }})
+---
+layout: Portfolio/default
+home: "/Portfolio/KyoPro/index.html"
+title: 最大公約数最小公倍数
+---
+<!-- 
+<	&lt;
+>	&gt;
+'	&#39;
+"	&quot;
+&	&amp;
+ -->
 
-# 最大公約数最小公倍数
-2019/09/29/10:20 pto8913
+<div>
+  <h2>最大公約数最小公倍数</h2>
+  <h4>2019/09/29</h4>
 
-## 説明
-最大公約数 gcdと最小公倍数 lcmを求める
+  <h3>概要</h3>
+  <p>
+    最大公約数 gcdと最小公倍数 lcmを求める
+  </p>
 
-## 計算量
-O(logN))
+  <h3>計算量</h3>
+  <p>
+    * O(logN)
+  </p>
 
-## 実装例
-```python
-def gcd(n, m):
-  while m:
-    n, m = m, n%m
-  return n
-
-def lcm(n, m):
-  return n * m // gcd(n, m)
-```
-
-[前に戻る]({{ site.KyoProurl }}/KyoPro)
-
-[トップページに戻る]({{ site.reseturl }})
+  <h3>実装例</h3>
+  <details>
+    <summary> python </summary>
+    <pre>
+      <code class="prettyprint">
+        def gcd(n, m):
+          while m:
+            n, m = m, n%m
+          return n
+      
+        def lcm(n, m):
+          return n * m // gcd(n, m)
+      </code>
+    </pre>
+  </details>
+</div>

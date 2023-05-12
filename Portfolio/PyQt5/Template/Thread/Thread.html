@@ -1,0 +1,90 @@
+---
+layout: Portfolio/default
+home: "/Portfolio/PyQt5/index.html"
+title: Thread
+---
+<!-- 
+<	&lt;
+>	&gt;
+'	&#39;
+"	&quot;
+&	&amp;
+ -->
+
+<div>
+  <h2>PyQt5におけるマルチスレッド機能の実装テンプレート</h2>
+  <h4>2019/09/05</h4>
+
+  <h3>概要</h3>
+  <p>
+    Threadで別の処理を回しながらドラッグアンドドロップできるようにしたテンプレート<br>
+
+    `__onClicked`関数内の<br>
+    `self.notifier.notify.connect(self.__sub, type = Qt.DirectConnection)`<br>
+    `self.work`の部分を別の関数に変えてやれば簡単にマルチスレッドにできます<br>   
+  </p>
+  
+  <a href="{{ 'PyQt5/Templates/Thread/Thread.py' | relative_url }}">ソースコード</a>
+
+  <h2>QThreadを使用する際の注意点</h2>
+  <h3>以下はよくない例です</h3>
+  <a href="{{ 'PyQt5/Templates/Thread/Thread_Bad.py' | relative_url }}">ソースコード</a>
+  <p>
+    これを走らせるとわかる通り、`QMessageBox`を表示した瞬間エラーを吐く。<br>
+    理由は、`QThread`に`sub`関数を渡したことで`sub`関数の親が変わっているから。<br>
+
+    これを解消するには、`pyqtSignal`を使ってシグナルを発してやって、<br>
+    そのシグナルを`Main`クラス内で受け取る必要がある。<br>
+  </p>
+  <p>
+    こんな感じ。<br>
+  </p>
+  <a href="{{ 'PyQt5/Templates/Thread/Thread_Good.py' | relative_url }}">ソースコード</a>
+
+  <p>
+    `pyqtSignal`を`pyqtSignal(str)`とすることで例外を受け取ってそれを表示、なんてこともできる。
+  </p>
+  <pre>
+    <code class="prettyprint">
+      def work(self) -> None:
+        try:
+          a = []
+          a[1] = 1
+        except as e:
+          self.exception_sig.emit(str(e))
+    
+      def message(self, exception_msg: str) -> None:
+        QMessageBox.critical(self, &quot;Warning&quot;, exception_msg, QMessageBox.Ok)
+    </code>
+  </pre>
+  <p>
+    `IndexError: list assignment index out of range`こんなのが出るはず。
+  </p>
+
+  <h2>Threadの終了?</h2>
+
+  <p>
+    はっきり言ってよくわからん。<br>
+  </p>
+
+  <h3>terminate()</h3>
+  <p>
+    `terminate()`は、あまりよくない方法で<br>
+    強制的に終了する。処理の途中で終わった場合困る<br>
+    実際使うとエラーを吐いたりして本当に使えるんかこいつってなる<br>
+    使い方が悪いだけだろうけど<br>
+  </p>
+
+  <h3>quit()</h3>
+  <p>
+    `quit()`を使うと次の処理を見てくれるらしい。<br>
+    つまり`isRunning`が`False`になると`quit()`が次の処理を見て処理を終わってくれるらしい？<br>
+    何を言っているのかわからねぇと思うが、俺も何を言ってるのかわからねぇ、スタンド攻撃だとかちゃちなもんじゃあ断じてない。<br>
+    <br>
+  </p>
+
+  <h3>exit()</h3>
+  <p>
+    `exit()`はどこから来たのか、`exit()`は何者か、`exit()`はどこへ行くのか。
+  </p>
+</div>

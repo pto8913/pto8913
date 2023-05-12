@@ -1,15 +1,3 @@
-[TOP]({{ site.reseturl }}) > PyQt5 ScreenCapture
-
-# ScreenCapture
-2019/10/10/2:14 pto8913
-
-## 説明
-スクリーンショットを簡単にとることができるぞ！ <br>
-いつ書いたか覚えてないけどたぶんバグはない！
-
-## コード
-
-```python
 import sys
 from PyQt5.QtCore import Qt, QRect, QPoint, QRectF
 from PyQt5.QtGui import QPixmap, QPainter, QPainterPath, QBrush, QColor, QScreen
@@ -26,7 +14,7 @@ class MainWindow(QMainWindow):
     self.ex = Snip()
   
   def initUI(self):
-    startButton = QPushButton("Start", self)
+    startButton = QPushButton('Start', self)
     startButton.move(50, 50)
     startButton.clicked.connect(self.clickedStartButton)
 
@@ -84,7 +72,7 @@ class Snip(QWidget):
     filename, _ = QFileDialog.getSaveFileName(self)
     if len(filename) == 0:
       return
-    filename = str(Path(filename).with_suffix(".png"))
+    filename = str(Path(filename).with_suffix('.png'))
     pmap.save(filename)
     self.close()
     return MainWindow()
@@ -93,7 +81,3 @@ if __name__ == '__main__':
   app = QApplication(sys.argv)
   ex = MainWindow()
   sys.exit(app.exec_())
-```
-<br>
-
-[トップページに戻る]({{ site.reseturl }})

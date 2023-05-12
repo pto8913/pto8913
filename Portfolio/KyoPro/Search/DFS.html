@@ -1,64 +1,92 @@
-[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 深さ優先探索(DFS)<br>
-[トップページに戻る]({{ site.reseturl }})<br>
+---
+layout: Portfolio/default
+home: "/Portfolio/KyoPro/index.html"
+title: 深さ優先探索(DFS)
+---
+<!-- 
+<	&lt;
+>	&gt;
+'	&#39;
+"	&quot;
+&	&amp;
+ -->
 
-# 深さ優先探索(DFS)
-2019/09/05/13:42 pto8913 <br>
+<div>
+  <h2>深さ優先探索(DFS)</h2>
+  <h4>2019/09/05</h4>
 
-## 計算量
-頂点数 : N 辺数 : M として<br>
-* 各頂点はそれぞれ一回取り出されるので O(N)
-* 各辺は一回だけ探索されるので O(M) <br>
-あわせて O(N + M) となる
+  <h3>概要</h3>
+  <p>
+    探索の始点からから、各地点への最短距離を求めることができる。<br>
 
-## 実装例
+    基本的に無向グラフであって <br>
+    各辺の重みがすべて等しいグラフ <br>
+    重みがある場合には<a href="">ダイクストラ法</a>など
+  </p>
 
-### python実装例
+  <h3>計算量</h3>
+  <p>
+    頂点数 : N 辺数 : M として<br>
+    * 各頂点はそれぞれ一回取り出されるので O(N)
+    * 各辺は一回だけ探索されるので O(M) <br>
+    あわせて O(N + M) となる
+  </p>
 
-```python
-import sys
+  <h2>グラフ上の探索</h2>
+  <p>
+    頂点0から各頂点への距離を求めることができる
+  </p>
 
-sys.setrecursionlimit(10**6) # pythonなら必須
+  <h3>実装例</h3>
+  <details>
+    <summary> python </summary>
+    <pre>
+      <code class="prettyprint">
+        import sys
 
-def dfs(x, y):
-  if x < 0 or y < 0 or x >= w or y >= h or maze[y][x] == "#":
-    return False
-  if reach[y][x]:
-    return False
-  reach[y][x] = True
-  if maze[y][x] == "g":
-    return True
-  return dfs(x+1, y) or dfs(x-1, y) or dfs(x, y+1) or dfs(x, y-1)
-```
+        sys.setrecursionlimit(10**6) # pythonなら必須
+        
+        def dfs(x, y):
+          if x &lt; 0 or y &lt; 0 or x &gt;= w or y &gt;= h or maze[y][x] == &quot;#&quot;:
+            return False
+          if reach[y][x]:
+            return False
+          reach[y][x] = True
+          if maze[y][x] == &quot;g&quot;:
+            return True
+          return dfs(x+1, y) or dfs(x-1, y) or dfs(x, y+1) or dfs(x, y-1)
+      </code>
+    </pre>
+  </details>
 
-### C++実装例
+  <details>
+    <summary> C++ </summary>
+    <pre>
+      <code class="prettyprint">
+        // 関数の前にmazeやreachを用意しておく必要がある
+        char maze[100][100];
+        bool reach[100][100] = { false };
 
-```cpp
-// 関数の前にmazeやreachを用意しておく必要がある
-char maze[100][100];
-bool reach[100][100] = { false };
+        bool dfs(int x, int y){
+          if (x &lt; 0 || y &lt; 0 || x >= w || y &gt;= h || maze[y][x] == &quot;#&quot;) {
+            return false;
+          }
+          if (reach[y][x]) return false;
+          reach[y][x] = true;
+          if (maze[y][x] == &quot;g&quot;) return true;
+          return dfs(x+1, y) || dfs(x-1, y) || dfs(x, y+1) || dfs(x, y-1);
+        }
+      </code>
+    </pre>
+  </details>
 
-bool dfs(int x, int y){
-  if (x < 0 || y < 0 || x >= w || y >= h || maze[y][x] == '#') {
-    return false;
-  }
-  if (reach[y][x]) return false;
-  reach[y][x] = true;
-  if (maze[y][x] == 'g') return true;
-  return dfs(x+1, y) || dfs(x-1, y) || dfs(x, y+1) || dfs(x, y-1);
-}
-```
-
-<details>
-<summary> 例題 </summary>
-
-* [ATC001 A-DFS](https://atcoder.jp/contests/atc001/tasks/dfs_a)
-* [ARC031 B-埋め立て](https://atcoder.jp/contests/arc031/tasks/arc031_2)
-* [ARC037 B-バウムテスト](https://atcoder.jp/contests/arc037/tasks/arc037_b)
-* [AOJ1160 島はいくつある？](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1160&lang=jp)
-* [POJ2386 Lake Counting](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1160&lang=jp)
-
-</details>
-
-[前のページに戻る]({{ site.KyoProurl }}/KyoPro)<br>
-
-[トップページに戻る]({{ site.reseturl }})<br>
+  <h3>使用例</h3>
+  <p>
+    例題<br>
+    * [ATC001 A-DFS](https://atcoder.jp/contests/atc001/tasks/dfs_a)
+    * [ARC031 B-埋め立て](https://atcoder.jp/contests/arc031/tasks/arc031_2)
+    * [ARC037 B-バウムテスト](https://atcoder.jp/contests/arc037/tasks/arc037_b)
+    * [AOJ1160 島はいくつある？](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1160&lang=jp)
+    * [POJ2386 Lake Counting](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1160&lang=jp)    
+  </p>
+</div>

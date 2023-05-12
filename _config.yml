@@ -96,13 +96,35 @@ idx-Portfolio:
       - title: "星の守り人"
         img: "/Hoshimori/assets/images/T_Title.png"
         url: "/Portfolio/Hoshimori/index.html"
-  # - subject: "PyQt5"
-  #   contents:
-  #     - title: "あ"
-  # - subject: "競プロ"
-  #   contents:
-  #     - title: "競プロ"
-  #       url: "/Portfolio/KyoPro/index.html"
+  - subject: "PyQt5"
+    contents:
+      - title: "画面のキャプチャ"
+        img: "/Portfolio/Tools/ScreenCapture/icon.png"
+        url: "/Portfolio/Tools/ScreenCapture/ScreenCapture.html"
+      - title: "時計"
+        img: "/Portfolio/Tools/Timer/icon.png"
+        url: "/Portfolio/Tools/Timer/Timer.html"
+  - subject: "PyQt5のテンプレート？"
+    contents:
+      - title: "コピー"
+        img: "/Portfolio/Template/Clipboard/icon.png"
+        url: "/Portfolio/Template/Clipboard/Clipboard.html"
+      - title: "ドラッグアンドドロップ"
+        img: "/Portfolio/Template/DnD/icon.png"
+        url: "/Portfolio/Template/DnD/DnD.html"
+      - title: "スレッド"
+        img: "/Portfolio/Template/Thread/icon.png"
+        url: "/Portfolio/Template/Thread/Thread.html"
+      - title: "ディレクトリツリー"
+        img: "/Portfolio/Tools/DirViewer/icon.png"
+        url: "/Portfolio/Tools/DirViewer/DirViewer.html"
+      # - title: "キーの同時入力"
+      #   img: "/Portfolio/Template/keyPressMulti/icon.png"
+      #   url: "/Portfolio/Template/keyPressMulti/keyPressMulti.html"
+  - subject: "競プロ"
+    contents:
+      - title: "競プロ"
+        url: "/Portfolio/KyoPro/index.html"
 
 # ---------------- Portfolio Hoshimori ----------------
 nav-header-Portfolio-Hoshimori:

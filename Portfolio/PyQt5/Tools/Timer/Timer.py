@@ -1,15 +1,3 @@
-[TOP]({{ site.reseturl }}) > PyQt5 Timer
-
-# Timer
-2019/10/10/2:17 pto8913
-
-## 説明
-時計 <br>
-PyQtを初めて使うときに作った気がする!
-
-## コード
-
-```python
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QLCDNumber, QHBoxLayout
 from PyQt5.QtCore import QTimer, QDateTime
@@ -45,7 +33,3 @@ if __name__ == '__main__':
   app = QApplication(sys.argv)
   ex = Timer()
   sys.exit(app.exec_())
-```
-<br>
-
-[トップページに戻る]({{ site.reseturl }})

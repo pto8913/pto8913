@@ -1,44 +1,65 @@
-[前のページに戻る]({{ site.KyoProurl }}/KyoPro) > 競プロ用ライブラリ KyoPro 素数判定(isprime) <br>
-[トップページに戻る]({{ site.reseturl }})
+---
+layout: Portfolio/default
+home: "/Portfolio/KyoPro/index.html"
+title: 素数判定
+---
+<!-- 
+<	&lt;
+>	&gt;
+'	&#39;
+"	&quot;
+&	&amp;
+ -->
 
-# 素数判定
-2019/09/28 pto8913
+<div>
+  <h2>素数判定</h2>
+  <h4>2019/09/28</h4>
 
-## 解説
-素数判定
+  <h3>概要</h3>
+  <p>
+    約数を列挙する
+  </p>
 
-## 計算量
-O(√n)
+  <h3>計算量</h3>
+  <p>
+    * O(√n)
+  </p>
 
-## 実装例
+  <h3>実装例</h3>
+  <details>
+    <summary> python </summary>
+    <pre>
+      <code class="prettyprint">
+        def isprime(n):
+          if n == 1:
+            return False
+          for i in range(2, int(n**0.5) + 1):
+            if (n % i == 0):
+              return False
+          return True
+      </code>
+    </pre>
+  </details>
 
-### python
+  <details>
+    <summary> C++ </summary>
+    <pre>
+      <code class="prettyprint">
+        template&lt;typename T&gt;
+        bool isprime(T n) {
+          if (n == 1) return false;
+          for (int i = 2;  i * i &lt;= n; ++i) {
+            if (n % i == 0) return false;
+          }
+          return true;
+        }
+      </code>
+    </pre>
+  </details>
 
-```python
-def isprime(n):
-  if n == 1:
-    return False
-  for i in range(2, int(n**0.5) + 1):
-    if (n % i == 0):
-      return False
-  return True
-```
-
-### C++
-```cpp
-template<typename T>
-bool isprime(T n) {
-  if (n == 1) return false;
-  for (int i = 2;  i * i <= n; ++i) {
-    if (n % i == 0) return false;
-  }
-  return true;
-}
-```
-## 使用例
-* [ABC142_D-Disjoint_Set_of_Common_Divisors](https://atcoder.jp/contests/abc142/tasks/abc142_d)<br>
-<br>
-
-[前に戻る]({{ site.KyoProurl }}/KyoPro)
-
-[トップページに戻る]({{ site.reseturl }})
+  <h3>使用例</h3>
+  <p>
+    例題<br>
+    [ABC142_D-Disjoint_Set_of_Common_Divisors](https://atcoder.jp/contests/abc142/tasks/abc142_d)<br>
+  </p>
+</div>
