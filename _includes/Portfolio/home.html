@@ -23,7 +23,7 @@
               <p class="img_card_title">{{ row.title }}</p>
             </a>
           </div>
-        {% else %}
+        {% endif %}
       {% endfor %}
       {% for row in data.contents %}
         {% if !row.img %}
