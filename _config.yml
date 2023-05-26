@@ -91,11 +91,19 @@ nav-header-Portfolio:
   ホーム: "/Portfolio/index.html"
 # ---------------- Portfolio Index ----------------
 idx-Portfolio:
-  - subject: "ゲーム"
+  - subject: "ゲーム(Unreal Engine)"
     contents:
       - title: "星の守り人"
         img: "/Hoshimori/assets/images/T_Title.png"
         url: "/Portfolio/Hoshimori/index.html"
+  # - subject: "プラグイン(Unreal Engine)"
+  #   contents:
+  #     - title: インベントリシステム
+  #       img: "/Portfolio/Plugins/ptoInventorySystem/assets/images/icon.png"
+  #       url: "/Portfolio/Plugins/ptoInventorySystem/index.html"
+  #     - title: NPCとの会話システム
+  #       img: "/Portfolio/Plugins/ptoTalkSystem/assets/images/icon.png"
+  #       url: "/Portfolio/Plugins/ptoTalkSystem/index.html"
   - subject: "PyQt5"
     contents:
       - title: "画面のキャプチャ"
