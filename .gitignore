@@ -6,5 +6,6 @@ vendor
 .vscode
 
 service_account.json
+sheet.json
 
 *__pycache__/
