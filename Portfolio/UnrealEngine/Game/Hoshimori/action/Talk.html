@@ -1,0 +1,52 @@
+---
+layout: Portfolio/UnrealEngine/Game/Hoshimori/page-Image
+title: "ポートフォリオ | 星の守り人 | アクション"
+home: '/Portfolio/UnrealEngine/Game/Hoshimori/index.html'
+custom-header: true
+images:
+  - subject: "会話"
+    contents:
+      - description: 
+          - text: "テキストデータについて"
+            type: h3
+          - text: 'https://docs.google.com/spreadsheets/d/1NFVjT8n57PvUyzLD3UZI6w4Wuo5J12zI4NV50nQFz_0/edit#gid=471579161'
+            type: a
+            title: "テキストデータの仕様書"
+          - text: "テキストデータはGameStateが保持していて、テキストデータに対する処理はすべてGameState上で行う"
+          - text: "テキストデータの遷移は、クエストの進行度もしくはBP_NPCのBP上で行われている"
+          - text: "テキストデータの取得は会話を開始したBP_NPCに設定されたIDでGameStateから取得"
+          - text: "テキストデータにはETalkDisplayTypeがあり、ETalkDisplayTypeに応じてChoiceButtonのOnClickedイベントへのバインドを変更し処理を行う"
+      - url: 'https://drive.google.com/file/d/1ir-oNowQm9NVvlE5IwrnkoNtx9QgcgBm'
+        img-type: "gd-movie"
+        description: 
+          - text: "会話(通常)"
+            type: h3
+          - text: "プレイヤーがBP_NPCに対してアクションキーを入力した場合に行える"
+          - text: "BP_NPC上で会話ができるかどうかを決められる"
+          - text: "会話ができない場合は頭の上にテキストを表示するなどができる"
+          - text: "テキストデータに含まれるEMessageEmotionで感情表現ができる"
+          - text: "感情表現はNPCキャラクターのABP_Emote_Layerで個別に設定できる"
+      - url: 'https://drive.google.com/file/d/1OhmWAbfaZVPB1ePdbNHlKc-bXlegsf72'
+        img-type: "gd-movie"
+        description: 
+          - text: "会話(クエスト)"
+            type: h3
+          - text: "テキストデータで選択肢の表示を制御できる"
+          - text: "選択肢にはChoiceTypeやChoiceButtonClassが設定されていて、ChoiceTypeによって処理を行う"
+          - text: "クエストではETalkDisplayTypeがQuestで、ChoiceButtonのChoiceTypeにはQuestAcceptもしくはQuestRefuseが設定されている"
+      - url: 'https://drive.google.com/file/d/1-U8WrAlxyb-m3Ll7yPokxKchy13AN6Gu'
+        img-type: "gd-movie"
+        description: 
+          - text: "会話(アイテムの売買)"
+            type: h3
+          - text: "アイテムの売買ではETalkDisplayTypeがTradeで、ChoiceButtonのChoiceTypeにはWaitingBuyもしくはWaitingSell Cancelが設定されている"
+          - text: "テキストデータではアイテムの売買に関するChoiceが表示されるものにはすべてETalkDisplayType:Tradeを設定する必要がある"
+          - text: "購入アイテムはBP_NPCのInventoryComponentに個別に設定することができる"
+      - url: 'https://drive.google.com/file/d/1YZne9fY3gzqbSLdTqf9ZMayuQGEZIFez'
+        img-type: "gd-movie"
+        description: 
+          - text: "会話(アイテムを店頭から直接購入)"
+            type: h3
+          - text: "プレイヤーがBP_BuyableActorに対してアクションキーを入力した場合に行える"
+          - text: "BP_BuyableActorに設定されたBP_NPCに対してアクション:会話を呼び出し、テキストデータのChoiceResultTypeがHowManyやCheckOutに設定されたものが表示される"
+---

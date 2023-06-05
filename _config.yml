@@ -95,9 +95,12 @@ idx-Portfolio:
     contents:
       - title: "星の守り人"
         img: "/Hoshimori/assets/images/T_Title.png"
-        url: "/Portfolio/Hoshimori/index.html"
-  # - subject: "プラグイン(Unreal Engine)"
-  #   contents:
+        url: "/Portfolio/UnrealEngine/Game/Hoshimori/index.html"
+  - subject: "プラグイン(Unreal Engine)"
+    contents:
+      - title: "GoogleSpreadSheetToUnreal"
+        img: "/Portfolio/UnrealEngine/Plugins/SpreadSheetToUnreal/images/icon.png"
+        url: "https://github.com/pto8913/SpreadSheetToUnreal"
   #     - title: インベントリシステム
   #       img: "/Portfolio/Plugins/ptoInventorySystem/assets/images/icon.png"
   #       url: "/Portfolio/Plugins/ptoInventorySystem/index.html"
@@ -139,7 +142,7 @@ idx-Portfolio:
 
 # ---------------- Portfolio Hoshimori ----------------
 nav-header-Portfolio-Hoshimori:
-  ホーム: "/Portfolio/Hoshimori/index.html"
+  ホーム: "/Portfolio/UnrealEngine/Game/Hoshimori/index.html"
   守護者の力: "Portfolio/Hoshimori/metamorphosis/index.html"
   アクション:
     登る: "Portfolio/Hoshimori/action/Climbing.html"
@@ -165,25 +168,25 @@ nav-header-Portfolio-Hoshimori:
     ヴァルゴ: "Portfolio/Hoshimori/enemy/Virgo.html"
     魔王: "Portfolio/Hoshimori/enemy/Typhon.html"
   UI:
-    タイトルUI: "/Portfolio/Hoshimori/ui/title.html"
-    チュートリアルUI: "/Portfolio/Hoshimori/ui/tutorial.html"
-    HUD: "/Portfolio/Hoshimori/ui/hud.html"
-    かばんUI: "/Portfolio/Hoshimori/ui/belongings.html"
-    戦闘UI: "/Portfolio/Hoshimori/ui/battle.html"
-    NPCとの会話UI: "/Portfolio/Hoshimori/ui/talk.html"
-    カメラUI: "/Portfolio/Hoshimori/ui/camera.html"
-    釣りUI: "/Portfolio/Hoshimori/ui/fishing.html"
-    休むUI: "/Portfolio/Hoshimori/ui/rest.html"
-    ローディングUI: "/Portfolio/Hoshimori/ui/loading.html"
+    タイトルUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/title.html"
+    チュートリアルUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/tutorial.html"
+    HUD: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/hud.html"
+    かばんUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/belongings.html"
+    戦闘UI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/battle.html"
+    NPCとの会話UI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/talk.html"
+    カメラUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/camera.html"
+    釣りUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/fishing.html"
+    休むUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/rest.html"
+    ローディングUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/loading.html"
   レベルデザイン:
-    聖域: "/Portfolio/Hoshimori/level/Sanctuary.html"
-    天望島: "/Portfolio/Hoshimori/level/RegionTenbou.html"
-    カトラス島: "/Portfolio/Hoshimori/level/RegionCatlas.html"
-    ルコス地方: "/Portfolio/Hoshimori/level/RegionLkos.html"
-    ラーボ地方: "/Portfolio/Hoshimori/level/RegionLabo.html"
-    シラージェ火山: "/Portfolio/Hoshimori/level/RegionSillarje.html"
-    グラム谷: "/Portfolio/Hoshimori/level/RegionGlam.html"
-    アクア団基地: "/Portfolio/Hoshimori/level/RegionWasser.html"
+    聖域: "/Portfolio/UnrealEngine/Game/Hoshimori/level/Sanctuary.html"
+    天望島: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionTenbou.html"
+    カトラス島: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionCatlas.html"
+    ルコス地方: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionLkos.html"
+    ラーボ地方: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionLabo.html"
+    シラージェ火山: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionSillarje.html"
+    グラム谷: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionGlam.html"
+    アクア団基地: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionWasser.html"
   プレイ映像: "Portfolio/Hoshimori/capture/index.html"
 
 # ------------------------------ Hoshimori ------------------------------
