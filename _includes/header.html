@@ -3,16 +3,22 @@
     .nav_ul {
       padding: 0;
       text-align: center;
+      justify-content: flex-end;
     }
     .nav_li {
-      width: 130px;
+      /* width: 130px; */
+      width: auto;
+      min-width: 50px;
+    }
+    .header_container {
+      width: 100%
     }
   </style>
   <link rel="stylesheet" href="{{ '/assets/css/navigation.css' | relative_url }}">
 </haed>
 
 <header>
-  <div>
+  <div class="header_container">
     <div class="flex">
       <a href="{{ '/' | relative_url }}" class="title">
         <img class="logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
