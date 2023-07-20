@@ -6,20 +6,40 @@ home: '/Portfolio/index.html'
 ---
 
 <head>
-    <style>
-        .TokoPuyoImg {
-            width: 380px;
-            height: 410px;
-        }
-        .TokoPuyoHead {
-            align-self: center;
-        }
-    </style>
+  <style>
+    .TokoPuyoBackground {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+    .TokoPuyoHead {
+      text-align: center;
+    }
+    .TokoPuyoImg {
+      width: 380px;
+      height: 410px;
+    }
+    .TokoPuyoBody {
+      display: flex;
+    }
+  </style>
 </head>
 
-<div>
+<div class="TokoPuyoBackground">
+  <h2 class="TokoPuyoHead">とこぷよ</h2>
+  <div class="TokoPuyoBody">
+    <img class="TokoPuyoImg" src="{{ '/Portfolio/DirectX/Game/TokoPuyo/assets/images/thumbnail.png' | relative_url }}" alt="" />
     <div>
-        <h2 class="TokoPuyoHead">とこぷよ</h2>
-        <img class="TokoPuyoImg" src="{{ '/Portfolio/DirectX/Game/TokoPuyo/assets/images/thumbnail.png' | relative_url }}" alt="" />
+      <h3>操作方法</h3>
+      <p>
+        ↑ : 右回転
+        ← : 左に移動
+        → : 右に移動
+        ↓ : 下に移動
+        z : 左回転
+        x : 右回転
+      </p>
+      <h3>ダウロード</h3>
+      <a href=""></a>
     </div>
+  </div>
 </div>
