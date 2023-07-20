@@ -5,9 +5,21 @@ background: ホーム
 home: '/Portfolio/index.html'
 ---
 
+<head>
+    <style>
+        .TokoPuyoImg {
+            width: 380px;
+            height: 410px;
+        }
+        .TokoPuyoHead {
+            align-self: center;
+        }
+    </style>
+</head>
+
 <div>
     <div>
-        <p>とこぷよ</p>
-        <img src="{{ '/Portfolio/DirectX/Game/TokoPuyo/assets/images/thumbnail.png' | relative_url }}" width="761px" height="820px" alt="" />
+        <h2 class="TokoPuyoHead">とこぷよ</h2>
+        <img class="TokoPuyoImg" src="{{ '/Portfolio/DirectX/Game/TokoPuyo/assets/images/thumbnail.png' | relative_url }}" alt="" />
     </div>
 </div>
