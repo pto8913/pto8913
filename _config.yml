@@ -94,11 +94,14 @@ nav-header-Portfolio:
   ホーム: "/Portfolio/index.html"
 # ---------------- Portfolio Index ----------------
 idx-Portfolio:
-  - subject: "ゲーム(Unreal Engine)"
+  - subject: "ゲーム"
     contents:
       - title: "星の守り人"
         img: "/Hoshimori/assets/images/T_Title.png"
         url: "/Portfolio/UnrealEngine/Game/Hoshimori/index.html"
+      - title: "とこぷよ"
+        img: "/Portfolio/DirectX/Game/TokoPuyo/assets/images/icon.png"
+        url: "/Portfolio/DirectX/Game/TokoPuyo/index.html"
   - subject: "プラグイン(Unreal Engine)"
     contents:
       - title: "GoogleSpreadSheetToUnreal"
