@@ -103,7 +103,7 @@ idx-Portfolio:
         img: "/Portfolio/DirectX/Game/TokoPuyo/assets/images/icon.png"
         url: "/Portfolio/DirectX/Game/TokoPuyo/index.html"
       - title: "Tappy Cube"
-        url: "/Portfolio/Unity/Game/TappyCube/assets/images/icon.png"
+        img: "/Portfolio/Unity/Game/TappyCube/assets/images/icon.png"
         url: "/Portfolio/Unity/Game/TappyCube/index.html"
   - subject: "プラグイン(Unreal Engine)"
     contents:
