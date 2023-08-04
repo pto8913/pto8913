@@ -34,7 +34,11 @@
 
   {% if page.custom-header %}
   {% else %}
-    {% include header.html home=page.home navigation=pages %}
+    {% if page.home %}
+      {% include header.html home=page.home navigation=pages %}
+    {% else %}
+      {% include header.html home=page.home navigation=pages %}
+    {% endif %}
   {% endif %}
   
   {{ content }}

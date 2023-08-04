@@ -23,18 +23,18 @@
       <a href="{{ '/' | relative_url }}" class="title">
         <img class="logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
       </a>
-      {% if include.home %}
-        <!-- <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a> -->
-        {% if page.new_title %}
-          <a href="{{ '/index.html' | relative_url }}">ホーム</a>
-          {% for row in page.title %}
-            <a href="{{ row.url | relative_url }}">| {{ row.title | escape }} </a>
-          {% endfor %}
-        {% else %}
-          <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a>
-        {% endif %}
+      <!-- <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a> -->
+      {% if page.new_title %}
+        <a href="{{ '/index.html' | relative_url }}">ホーム</a>
+        {% for row in page.title %}
+          <a href="{{ row.url | relative_url }}">| {{ row.title | escape }} </a>
+        {% endfor %}
       {% else %}
-        <!-- <a href="{{ '/' | relative_url }}" class="title">{{ site.title | escape }}</a> -->
+        {% if include.home %}
+          <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a>
+        {% else %}
+          <a href="{{ '/index.html' | relative_url }}" class="title">{{ page.title | escape }}</a>
+        {% endif %}
       {% endif %}
     </div>
     {% include menu.html navigation=include.navigation %}
