@@ -26,14 +26,9 @@
       {% if include.home %}
         <!-- <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a> -->
         {% if page.new_title %}
-          <a href="{{ page.home | relative_url }}">ホーム</a>
+          <a href="{{ '/index.html' | relative_url }}">ホーム</a>
           {% for row in page.title %}
-            {% if row.url %}
-              <a href="{{ row.url | relative_url }}"> | {{ row.title | escape }}</a>
-            {% else %}
-              <a href="{{ row.url | relative_url }}"> | {{ row.title | escape }}</a>
-              <!-- | {{ row.title | escape }} -->
-            {% endif %}
+            <a href="{{ row.url | relative_url }}">| {{ row.title | escape }} </a>
           {% endfor %}
         {% else %}
           <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a>
