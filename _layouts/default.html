@@ -42,23 +42,25 @@
     {% include sidebar.html %}
   {% endif %}
 -->
-  {% if page.header %}
-    {% assign nav = page.header %}
+  {% if page.nav-header %}
+    {% assign nav-header = page.nav-header %}
   {% else %}
-    {% assign nav = site.nav-header %}
+    {% assign nav-header = site.nav-header %}
   {% endif %}
 
   {% if page.home %}
-    {% include header.html home=page.home navigation=nav %}
-  {% else %}
-    {% include header.html navigation=nav %}
+    {% assign home = page.home %}
   {% endif %}
+
+  {% if page.nav-footer %}
+    {% assign nav-footer = page.nav-footer %}
+  {% else %}
+    {% assign nav-footer = site.nav-footer %}
+  {% endif %}
+
+  {% include header.html home=home navigation=nav-header %}
 
   {{ content }}
 
-  {% if page.footer %}
-    {% include footer.html navigation=page.footer %}
-  {% else %}
-    {% include footer.html navigation=site.nav-footer %}
-  {% endif %}
+  {% include footer.html navigation=nav-footer %}
 </html>
