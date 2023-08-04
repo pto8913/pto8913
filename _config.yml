@@ -239,10 +239,10 @@ img-hoshimori-character-bg:
   タウロス : "/Hoshimori/Characters/Background_Taurus.png"
   ヴァルゴ : "/Hoshimori/Characters/Background_Virgo.png"
   レオ : "/Hoshimori/Characters/Background_Leo.png"
-  ピス : "/Hoshimori/Characters/Background_Pis.png"
+  ピス : "/Hoshimori/Characters/Background_PisCes.png"
   アクア : "/Hoshimori/Characters/Background_Aqua.png"
-  ケス : "/Hoshimori/Characters/Background_Ces.png"
-  ステラ : "/Hoshimori/Characters/Background_Stella.png"
+  ケス : "/Hoshimori/Characters/Background_PisCes.png"
+  ステラ : "/Hoshimori/Characters/Background_Aqua.png"
 
 
 # Exclude from processing.
