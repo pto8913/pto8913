@@ -3,6 +3,14 @@ layout: Hoshimori/default
 home: '/Hoshimori/index.html'
 ---
 
+<!-- {% 
+  include default-layout.html 
+    home=page.home 
+    nav-header=site.nav-header-Hoshimori
+    nav-footer=site.nav-footer-Hoshimori
+%} -->
+{{ content }}
+
 <div class="Hoshimori_bg_sec">
   {% 
     include Hoshimori/card.html 
@@ -11,5 +19,3 @@ home: '/Hoshimori/index.html'
   %}
   {% include carousel.html links=site.hoshimori-character current=page.background %}
 </div>
-
-{{ content }}
