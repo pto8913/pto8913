@@ -152,7 +152,7 @@ idx-Portfolio:
 # ---------------- Portfolio Hoshimori ----------------
 nav-header-Portfolio-Hoshimori:
   ホーム: "/Portfolio/UnrealEngine/Game/Hoshimori/index.html"
-  物語 : "/Portfolio/UnrealEngine/Game/Hoshimori/stiry/index.html"
+  物語 : "/Portfolio/UnrealEngine/Game/Hoshimori/story/index.html"
   守護者の力: "/Portfolio/UnrealEngine/Game/Hoshimori/metamorphosis/index.html"
   アクション:
     登る: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Climbing.html"
