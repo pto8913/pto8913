@@ -42,19 +42,22 @@
     {% include sidebar.html %}
   {% endif %}
 -->
-  {% if page.custom-header %}
+  {% if page.header %}
+    {% assign nav = page.header %}
   {% else %}
-    {% if page.home %}
-      {% include header.html home=page.home navigation=include.header %}
-    {% else %}
-      {% include header.html navigation=site.nav-header %}
-    {% endif %}
+    {% assign nav = site.nav-header %}
+  {% endif %}
+
+  {% if page.home %}
+    {% include header.html home=page.home navigation=nav %}
+  {% else %}
+    {% include header.html navigation=nav %}
   {% endif %}
 
   {{ content }}
 
-  {% if include.footer %}
-    {% include footer.html navigation=include.footer %}
+  {% if page.footer %}
+    {% include footer.html navigation=page.footer %}
   {% else %}
     {% include footer.html navigation=site.nav-footer %}
   {% endif %}

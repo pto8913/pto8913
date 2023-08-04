@@ -1,9 +1,13 @@
+---
+layout: default
+---
+
 <head>
   <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
 </head>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
   {% if page.new_title %}
     <title>
@@ -45,14 +49,6 @@
   {% if site.nav-footer %}
     {% include footer.html navigation=site.nav-footer %}
   {% endif %}
-</html>
+</html> -->
 
-{% if include.header %}
-  {% if include.footer %}
-    {% include default.html header=include.header footer=include.footer %}
-  {% else %}
-    {% include default.html header=include.header %}
-  {% endif %}
-{% else %}
-  {% include default.html %}
-{% endif %}
+{{ content }}
