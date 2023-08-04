@@ -1,9 +1,5 @@
 ---
-layout: default
-background: 
 home: '/Hoshimori/index.html'
-nav-header: site.nav-header-Hoshimori
-nav-footer: site.nav-footer-Hoshimori
 ---
 
 <head>
@@ -24,4 +20,9 @@ nav-footer: site.nav-footer-Hoshimori
   <link rel="shortcut icon" type="image/x-icon" href="{{ '/Hoshimori/assets/images/favicon.ico' | relative_url }}">
 </head>
 
-{{ content }}
+{% 
+  include default-layout.html 
+    home=page.home 
+    nav-header=site.nav-header-Hoshimori
+    nav-footer=site.nav-footer-Hoshimori
+%}
