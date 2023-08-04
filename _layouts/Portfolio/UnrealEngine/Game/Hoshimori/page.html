@@ -1,5 +1,4 @@
 ---
-layout: Portfolio/default
 background: Home
 home: '/Portfolio/UnrealEngine/Game/Hoshimori/index.html'
 nav-header: site.nav-header-Portfolio-Hoshimori
@@ -9,4 +8,5 @@ nav-header: site.nav-header-Portfolio-Hoshimori
   <link rel="stylesheet" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/css/portfolio-hoshimori.css' | relative_url }}">
 </head>
 
-{{ content }}
+{% include default-layout header=site.nav-header-Portfolio-Hoshimori %}
+
