@@ -1,5 +1,4 @@
 ---
-layout: Portfolio/UnrealEngine/Game/Hoshimori/page
 title: 
   - title: "ポートフォリオ"
     url: '/Portfolio/index.html'
@@ -8,9 +7,20 @@ title:
   - title: "物語"
 new_title: true
 home: '/Portfolio/UnrealEngine/Game/Hoshimori/index.html'
-nav-header: site.nav-header-Portfolio-Hoshimori
-nav-footer: site.nav-footer
 ---
+
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/css/portfolio-hoshimori.css' | relative_url }}">
+</head>
+
+{% 
+  include default-layout.html 
+    home=page.home 
+    nav-header=site.nav-header-Portfolio-Hoshimori 
+    nav-footer=site.nav-footer
+%}
 
 <head>
   <style>
