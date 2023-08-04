@@ -37,7 +37,7 @@
             {% endfor %}
           </title>
         {% else %}
-          <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+          <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a>
         {% endif %}
       {% else %}
         <!-- <a href="{{ '/' | relative_url }}" class="title">{{ site.title | escape }}</a> -->
