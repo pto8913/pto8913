@@ -42,7 +42,7 @@
   
     {% include header.html home=home navigation=nav-header %}
   
-    {% if page.no-content %}
+    {% if include.no-content %}
     {% else %}
       {{ content }}
     {% endif %}
