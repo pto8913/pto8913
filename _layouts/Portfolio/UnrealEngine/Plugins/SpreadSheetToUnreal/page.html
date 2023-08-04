@@ -2,7 +2,6 @@
 layout: Portfolio/default
 background: Home
 home: '/Portfolio/UnrealEngine/Plugins/SpreadSheetToUnreal/index.html'
-custom-header: true
 nav-header:
   ホーム: "/Portfolio/UnrealEngine/Plugins/SpreadSheetToUnreal/index.html"
   準備: "/Portfolio/UnrealEngine/Plugins/SpreadSheetToUnreal/setup.html"
@@ -12,10 +11,5 @@ nav-header:
 <head>
   <link rel="stylesheet" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/css/portfolio-hoshimori.css' | relative_url }}">
 </head>
-
-{% if page.custom-header %}
-  <!-- {% include header.html home=page.home navigation=site.nav-header-Portfolio-Hoshimori %} -->
-  {% include header.html home=page.home navigation=page.nav-header %}
-{% endif %}
 
 {{ content }}

@@ -24,31 +24,4 @@ nav-footer: site.nav-footer-Hoshimori
   <link rel="shortcut icon" type="image/x-icon" href="{{ '/Hoshimori/assets/images/favicon.ico' | relative_url }}">
 </head>
 
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
-  <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
-  <meta charset="{{ site.encoding }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="{{ page.author | default: site.author | escape }}">
-  <meta name="generator" content="Jekyll v{{ jekyll.version }}">
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
-  {% if site.show_frame %}
-    <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
-  {% else %}
-  <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
-  {% endif %}
-
-  {% if site.nav-header-Hoshimori %}
-    {% assign pages = site.nav-header-Hoshimori %}
-  {% else %}
-    {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
-  {% endif %}
-
-  {% include header.html home=page.home navigation=pages %}
-
-  {{ content }}
-
-  {% if site.nav-footer-Hoshimori %}
-    {% include footer.html navigation=site.nav-footer-Hoshimori %}
-  {% endif %}
-</html>
+{{ content }}
