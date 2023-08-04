@@ -29,9 +29,9 @@
           <a href="{{ page.home | relative_url }}">ホーム</a>
           {% for row in page.title %}
             {% if row.url %}
-              <a href="{{ row.url | relative_url }}">\ | {{ row.title | escape }}</a>
+              <a href="{{ row.url | relative_url }}">{{ | }}{{ row.title | escape }}</a>
             {% else %}
-              <a href="{{ row.url | relative_url }}">\ | {{ row.title | escape }}</a>
+              <a href="{{ row.url | relative_url }}">{{ | }}{{ row.title | escape }}</a>
               <!-- | {{ row.title | escape }} -->
             {% endif %}
           {% endfor %}
