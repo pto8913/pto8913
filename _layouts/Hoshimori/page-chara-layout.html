@@ -44,6 +44,15 @@ home: '/Hoshimori/index.html'
   {% include header.html home=page.home navigation=pages %}
 
   <body>
+    <div class="Hoshimori_bg_sec">
+      {% 
+        include Hoshimori/card.html 
+        name=page.background 
+        description=content 
+      %}
+      {% include carousel.html links=site.hoshimori-character current=page.background %}
+    </div>
+    
     {{ content }}
   </body>
 
