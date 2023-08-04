@@ -5,8 +5,13 @@ nav-header: site.nav-header-Portfolio-Hoshimori
 ---
 
 <head>
+  <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
+</head>
+<head>
   <link rel="stylesheet" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/css/portfolio-hoshimori.css' | relative_url }}">
 </head>
 
-{% include default-layout header=site.nav-header-Portfolio-Hoshimori %}
+{{ content }}
 
+{% include default-layout.html header=site.nav-header-Portfolio-Hoshimori %}
