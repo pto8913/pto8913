@@ -7,13 +7,9 @@
 <html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
   {% if page.new_title %}
     <title>
-      <a href="{{ page.home | realtive_url }}">ホーム</a>
+      ホーム
       {% for row in page.title %}
-        {% if row.url %}
-          <a href="{{ row.url | relative_url }}"> | {{ row.title | escape }}</a>
-        {% else %}
-          | {{ row.title | escape }}
-        {% endif %}
+        | {{ row.title | escape }}
       {% endfor %}
     </title>
   {% else %}

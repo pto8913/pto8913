@@ -24,7 +24,21 @@
         <img class="logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
       </a>
       {% if include.home %}
-        <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a>
+        <!-- <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a> -->
+        {% if page.new_title %}
+          <title>
+            <a href="{{ page.home | realtive_url }}">ホーム</a>
+            {% for row in page.title %}
+              {% if row.url %}
+                <a href="{{ row.url | relative_url }}"> | {{ row.title | escape }}</a>
+              {% else %}
+                | {{ row.title | escape }}
+              {% endif %}
+            {% endfor %}
+          </title>
+        {% else %}
+          <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+        {% endif %}
       {% else %}
         <!-- <a href="{{ '/' | relative_url }}" class="title">{{ site.title | escape }}</a> -->
       {% endif %}
