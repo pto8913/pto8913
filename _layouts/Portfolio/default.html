@@ -9,7 +9,7 @@
     <title>
       <a href="{{ page.home | realtive_url }}">ホーム</a>
       {% for row in page.title %}
-        <a href="{{ row.url | relative_url }}"> | {{ row.title }}</a>
+        <a href="{{ row.url | relative_url }}"> | {{ row.title | escape }}</a>
       {% endfor %}
     </title>
   {% else %}
