@@ -4,7 +4,15 @@
 
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
-  <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+  {% if page.new_title %}
+    <title>
+      ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
+    </title>
+  {% else %}
+    <title>
+      {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
+    </title>
+  {% endif %}
   <meta charset="{{ site.encoding }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="{{ page.author | default: site.author | escape }}">
@@ -15,6 +23,7 @@
   {% else %}
   <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
   {% endif %}
+<!-- 
   {% if site.plugins contains "jekyll-feed" %}
     <link rel="alternate" href="{{ site.feed.path | default: '/feed.xml' | relative_url }}" type="application/atom+xml" title="{{ site.title }}">
   {% endif %}
@@ -32,18 +41,21 @@
   {% if site.show_sidebar or site.sidebar %}
     {% include sidebar.html %}
   {% endif %}
-
-  {% if site.nav-header %}
-    {% assign pages = site.nav-header %}
+-->
+  {% if page.custom-header %}
   {% else %}
-    {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
+    {% if page.home %}
+      {% include header.html home=page.home navigation=include.header %}
+    {% else %}
+      {% include header.html navigation=site.nav-header %}
+    {% endif %}
   {% endif %}
-
-  {% include header.html navigation=pages %}
 
   {{ content }}
 
-  {% if site.nav-footer %}
+  {% if include.footer %}
+    {% include footer.html navigation=include.footer %}
+  {% else %}
     {% include footer.html navigation=site.nav-footer %}
   {% endif %}
 </html>

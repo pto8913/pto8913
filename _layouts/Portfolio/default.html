@@ -7,13 +7,12 @@
 <html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
   {% if page.new_title %}
     <title>
-      ホーム
-      {% for row in page.title %}
-        | {{ row.title | escape }}
-      {% endfor %}
+      ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
     </title>
   {% else %}
-    <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+    <title>
+      {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
+    </title>
   {% endif %}
   <meta charset="{{ site.encoding }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,3 +46,13 @@
     {% include footer.html navigation=site.nav-footer %}
   {% endif %}
 </html>
+
+{% if include.header %}
+  {% if include.footer %}
+    {% include default.html header=include.header footer=include.footer %}
+  {% else %}
+    {% include default.html header=include.header %}
+  {% endif %}
+{% else %}
+  {% include default.html %}
+{% endif %}
