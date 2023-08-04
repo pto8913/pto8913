@@ -1,0 +1,47 @@
+---
+background: 
+home: '/Hoshimori/index.html'
+---
+
+<head>
+  <style>
+    .Hoshimori_bg_sec {
+      background-image: url('{{ site.img-hoshimori-character-bg[page.background] | relative_url }}');
+      width: 100%;
+      height: 600px;
+      background-color: rgba(172, 172, 172, 1);
+      background-repeat: no-repeat;
+      /* background-size: cover */
+      background-position: center;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  <link rel="stylesheet" href="{{ '/Hoshimori/assets/css/Hoshimori.css' | relative_url }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ '/Hoshimori/assets/images/favicon.ico' | relative_url }}">
+</head>
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
+  <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+  <meta charset="{{ site.encoding }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="{{ page.author | default: site.author | escape }}">
+  <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {% if site.show_frame %}
+    <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
+  {% else %}
+  <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
+  {% endif %}
+
+  {% include header.html home=page.home navigation=site.nav-header-Portfolio-Hoshimori %}
+
+  <body>
+    {{ content }}
+  </body>
+
+  {% if site.nav-footer-Hoshimori %}
+    {% include footer.html navigation=site.nav-footer-Hoshimori %}
+  {% endif %}
+</html>
