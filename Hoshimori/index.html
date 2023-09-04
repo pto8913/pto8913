@@ -13,6 +13,16 @@ nav-footer: site.nav-footer-Hoshimori
       display: flex;
       justify-content: right;
     }
+    .Portfolio_Hoshimori_sub {
+      display: flex;
+    }
+    .Portfolio_Hoshimori_sub.download {
+      justify-content: left;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      color: rgba(0, 0, 0, 1);
+    }
     .Portfolio_Hoshimori_img_card.teaser {
       align-self: flex-end;
       padding-right: 15px;
@@ -33,6 +43,19 @@ nav-footer: site.nav-footer-Hoshimori
 </head>
 
 <div class="Hoshimori_bg_sec title">
+  <div class="Portfolio_Hoshimori_sub">
+    <a href="https://drive.google.com/u/4/uc?id=1yHBOxEOb17XQw9xNutKXJvb6AX5GmB1Q&export=download">
+      <p class="Portfolio_Hoshimori_sub download">ダウンロード</p>
+    </a>
+    <div class="Portfolio_Hoshimori_img_card teaser">
+      <iframe class="Portfolio_Hoshimori_img teaser" allowfullscreen src="{{ site.Hoshimori-teaser-url }}">
+        ティザー映像
+      </iframe>
+      <p class="Portfolio_Hoshimori_img_card_name title">
+        ティザー映像
+      </p>
+    </div>
+  </div>
   <!-- <div class="Hoshimori_home_platform_description">
     <p class="Hoshimori_home_text">ダウンロード</p>
     <div class="Hoshimori_home_platform_links">
@@ -41,12 +64,4 @@ nav-footer: site.nav-footer-Hoshimori
       </a>
     </div>
   </div> -->
-  <div class="Portfolio_Hoshimori_img_card teaser">
-    <iframe class="Portfolio_Hoshimori_img teaser" allowfullscreen src="{{ site.Hoshimori-teaser-url }}">
-      ティザー映像
-    </iframe>
-    <p class="Portfolio_Hoshimori_img_card_name title">
-      ティザー映像
-    </p>
-  </div>
 </div>
