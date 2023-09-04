@@ -15,7 +15,14 @@ nav-footer: site.nav-footer-Hoshimori
     }
     .Portfolio_Hoshimori_sub {
       display: flex;
+      align-self: flex-end;
+      position: relative;
+      height: 50%;
     }
+    .Portfolio_Hoshimori_sub.link {
+      align-self: center;
+    }
+
     .Portfolio_Hoshimori_sub.download {
       justify-content: left;
       font-weight: bold;
@@ -23,11 +30,14 @@ nav-footer: site.nav-footer-Hoshimori
       padding: 0;
       color: rgba(0, 0, 0, 1);
     }
+
     .Portfolio_Hoshimori_img_card.teaser {
-      align-self: flex-end;
       padding-right: 15px;
       padding-left: 15px;
       background-color: rgba(50, 50, 50, 0.5);
+      position: absolute;
+      right: 0.5%;
+      top: -5%;
     }
     .Portfolio_Hoshimori_img.teaser {
       width: 375px;
@@ -37,6 +47,7 @@ nav-footer: site.nav-footer-Hoshimori
     .Portfolio_Hoshimori_img_card_name.title {
       margin: 5px;
       size: 15px;
+      text-align: center;
     }
 
   </style>
@@ -44,7 +55,7 @@ nav-footer: site.nav-footer-Hoshimori
 
 <div class="Hoshimori_bg_sec title">
   <div class="Portfolio_Hoshimori_sub">
-    <a href="https://drive.google.com/u/4/uc?id=1yHBOxEOb17XQw9xNutKXJvb6AX5GmB1Q&export=download">
+    <a class="Portfolio_Hoshimori_sub link" href="https://drive.google.com/u/4/uc?id=1yHBOxEOb17XQw9xNutKXJvb6AX5GmB1Q&export=download">
       <p class="Portfolio_Hoshimori_sub download">ダウンロード</p>
     </a>
     <div class="Portfolio_Hoshimori_img_card teaser">
