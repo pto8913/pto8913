@@ -48,21 +48,17 @@
 <div>
   <table id="SortTable">
     {% for item in items %}
-      <thead>
+      <tr>
+        {% for columnTitle in item.columnTitles %}
+          <th SortButton class="SortTable th">{{ columnTitle.title }}</th>
+        {% endfor %}
+      </tr>
+      {% for row in item.rows %}
         <tr>
-          {% for columnTitle in item.columnTitles %}
-            <th SortButton class="SortTable th">{{ columnTitle.title }}</th>
+          {% for column in row %}
+            <td>{{ column.title }}</td>
           {% endfor %}
         </tr>
-      </thead>
-      {% for row in item.rows %}
-        <thread>
-          <tr>
-            {% for column in row %}
-              <td>{{ column.title }}</td>
-            {% endfor %}
-          </tr>
-        </thread>
       {% endfor %}
     {% endfor %}
   </table>
