@@ -6,15 +6,25 @@ title:
   - title: "DirectX"
   - title: "とこぷよ"
 new_title: true
-testTitles:
-  - UnrealEngine
-  - DirectX11
-  - Unity
-testRows:
-  - { 1, hoshi, 20230329 }
-  - { 2, toko, 20230929 }
-  - { 3, tapp, 20230719 }
-
+items:
+  - column:
+    - title: UnrealEngine
+      isTitle: true
+    - title: "1"
+    - title: "2"
+    - title: "3"
+  - column:
+    - title: DirectX11
+      isTitle: true
+    - title: "hoshi"
+    - title: "toko"
+    - title: "tapp"
+  - column:
+    - title: Unity
+      isTitle: true
+    - title: "20230329"
+    - title: "20230929"
+    - title: "20230719"
 ---
 
 <head>
@@ -45,7 +55,7 @@ testRows:
   </style>
 </head>
 
-{% include sortable.html titles=site.testTitles rows=site.testRows %}
+{% include sortable.html items=site.items %}
 
 <div class="TokoPuyoBackground">
   <h2 class="TokoPuyoHead">とこぷよ</h2>

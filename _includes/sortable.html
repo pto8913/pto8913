@@ -44,25 +44,21 @@
   </style>
 </head>
 
-{% assign listTitles = include.titles %}
-{% assign listRows = include.rows %}
+{% assign items = include.items %}
 <div>
   <table id="SortTable">
-    <thead>
-      <tr>
-        {% for title in listTitles %}
-          <th SortButton class="SortTable th">{{ title }}</th>
-        {% endfor %}
-      </tr>
-    </thead>
-    {% for rows in listRows %}
-      <thead>
-        <tr>
-          {% for rowElem in rows %}
-            <th>{{ rowElem }}</th>
-          {% endfor %}
-        </tr>
-      </thead>
+    {% for item in items %}
+      {% for column in item.column %}
+        <thead>
+          <tr>
+            {% if column.isTitle == true %}
+              <th SortButton class="SortTable th">{{ column.title }}</th>
+            {% else %}
+              <td>{{ column.title }}</td>
+            {% endif %}
+          </tr>
+        </thead>
+      {% endfor %}
     {% endfor %}
   </table>
 </div>
