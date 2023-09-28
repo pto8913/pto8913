@@ -46,7 +46,7 @@
 
 {% assign items = include.items %}
 <div>
-  <table>
+  <table id="SortTable">
     {% for item in items %}
       <tr>
         {% for columnTitle in item.columnTitles %}
