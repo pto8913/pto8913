@@ -46,11 +46,11 @@
 
 {% assign items = include.items %}
 <div>
-  <table id="SortTable">
+  <table>
     {% for item in items %}
       <tr>
         {% for columnTitle in item.columnTitles %}
-          <th SortButton class="SortTable th">{{ columnTitle.title }}</th>
+          <th>{{ columnTitle.title }}</th>
         {% endfor %}
       </tr>
       {% for row in item.rows %}
