@@ -51,14 +51,14 @@
       <thead>
         <tr>
           {% for columnTitle in item.columnTitles %}
-            <th SortButton class="SortTable th">{{ column.columnTitle }}</th>
+            <th SortButton class="SortTable th">{{ columnTitle.title }}</th>
           {% endfor %}
         </tr>
       </thead>
       <thread>
         <tr>
           {% for row in item.rows %}
-            <td>{{ row.title }}</td>
+            <td>{{ row.row.title }}</td>
           {% endfor %}
         </tr>
       </thread>
