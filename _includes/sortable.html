@@ -1,0 +1,68 @@
+<head>
+  <style>
+    .SortTable th {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .SortTable th::before, .SortTable th::after {
+      content: "";
+      height: 8px;
+      width: 8px;
+      position: absolute;
+      border-top: 2px #888 solid;
+      border-right: 2px #888 solid;
+      right: 10px;
+      top: 50%;
+    }
+
+    .SortTable th::before {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    .SortTable th::after {
+      transform: translateY(2px) rotate(135deg);
+    }
+    .indicator::before {
+      content: "";
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      border-top: 10px solid;
+      border-right: 10px solid;
+      transform: translateY(20px) translateX(50px) rotate(-45deg);
+    }
+
+    .indicator::after {
+      content: "";
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      border-top: 10px solid;
+      border-right: 10px solid;
+      transform: translateY(80px) translateX(50px) rotate(135deg);
+    }
+  </style>
+</head>
+
+{% assign listTitles = include.titles %}
+{% assign listRows = include.rows %}
+<div>
+  <table id="SortTable">
+    <thead>
+      <tr>
+        {% for title in listTitles %}
+          <th SortButton class="SortTable th">{{ title }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    {% for rows in listRows %}
+      <thead>
+        <tr>
+          {% for rowElem in rows %}
+            <th>{{ rowElem }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+    {% endfor %}
+  </table>
+</div>
