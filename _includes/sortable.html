@@ -55,13 +55,15 @@
           {% endfor %}
         </tr>
       </thead>
-      <thread>
-        <tr>
-          {% for row in item.rows %}
-            <td>{{ row.row.title }}</td>
-          {% endfor %}
-        </tr>
-      </thread>
+      {% for row in item.rows %}
+        <thread>
+          <tr>
+            {% for column in row %}
+              <td>{{ column.title }}</td>
+            {% endfor %}
+          </tr>
+        </thread>
+      {% endfor %}
     {% endfor %}
   </table>
 </div>
