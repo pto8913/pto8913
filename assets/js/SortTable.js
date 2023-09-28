@@ -26,7 +26,7 @@ function InitSort()
                 newButton += '<svg class="SortTable th" id="desc_'+i+'" onclick="Sort(this)"></svg>'
                 newButton += '</div>';
 
-                td[i].innerHTML += newButton;
+                td[i].innerHTML = td[i].innerHTML + newButton;
             }
         }
         if (newButton != '')

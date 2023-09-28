@@ -49,16 +49,19 @@
   <table id="SortTable">
     {% for item in items %}
       <thead>
-        {% for column in item.column %}
-          <tr>
-            {% if column.isTitle == true %}
-              <th SortButton class="SortTable th">{{ column.title }}</th>
-            {% else %}
-              <td>{{ column.title }}</td>
-            {% endif %}
-          </tr>
-        {% endfor %}
+        <tr>
+          {% for columnTitle in item.columnTitles %}
+            <th SortButton class="SortTable th">{{ column.columnTitle }}</th>
+          {% endfor %}
+        </tr>
       </thead>
+      <thread>
+        <tr>
+          {% for row in item.rows %}
+            <td>{{ row.title }}</td>
+          {% endfor %}
+        </tr>
+      </thread>
     {% endfor %}
   </table>
 </div>
