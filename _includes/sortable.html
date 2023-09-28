@@ -55,7 +55,7 @@
       </tr>
       {% for row in item.rows %}
         <tr>
-          {% for column in row %}
+          {% for column in row.row %}
             <td>{{ column.title }}</td>
           {% endfor %}
         </tr>
