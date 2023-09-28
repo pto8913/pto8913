@@ -19,7 +19,7 @@ function InitSort()
         var td = rows[rowIdx].cells;
         for (var i = 0; i < td.length; ++i)
         {
-            if (td[i].getAttribute('SortButton') !== null)
+            if (td[i].getAttribute('sortbutton') !== null)
             {
                 newButton = '<div class="SortButtonArea">';
                 newButton += '<svg class="SortButton" id="asc_'+i+'" onclick="Sort(this)"></svg>'
