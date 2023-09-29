@@ -1,4 +1,4 @@
-var coll = document.getElementsByClassName("collapsible");
+var coll = document.getElementsByClassName("collapse");
 
 for (var collIdx = 0; coll.length; ++collIdx)
 {
