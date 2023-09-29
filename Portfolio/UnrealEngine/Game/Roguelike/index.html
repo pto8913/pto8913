@@ -11,6 +11,8 @@ new_title: true
 <head>
   <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/Collapsible.css' | relative_url }}">
+  <script src="{{ '/assets/js/Collapsible.js' | relative_url }}"></script>
   <style>
     .TokoPuyoBackground {
       margin-right: 15px;
@@ -40,7 +42,7 @@ new_title: true
   <h2 class="TokoPuyoHead">ぴの塔</h2>
   <div class="TokoPuyoBody">
     <div>
-      <iframe class="TokoPuyoImg" allowfullscreen src="https://drive.google.com/file/d/1cYms_xO5F1sAQWTepgTPFv7c_Dnv2kjU/preview">
+      <iframe class="TokoPuyoImg" allowfullscreen src="https://drive.google.com/file/d/1Ra-P9I45--UI9ULJY9zfcvvB6Mv3Ia34/preview">
         プレイ動画
       </iframe>
       <p class = TokoPuyoHead>
@@ -58,15 +60,17 @@ new_title: true
       </p>
       <p>注意</p>
         UnrealEngine4.22.3で作られたゲームのためそれ以降での動作は確認されていません。<br>
-      <h3>操作方法</h3>
-      <p>
-        ← : 左に移動<br>
-        ↑ : 右回転<br>
-        → : 右に移動<br>
-        ↓ : 下に移動<br>
-        z : 左回転<br>
-        x : 右回転<br>
-      </p>
+      <button type="button" class="Collapsible"><h3>操作方法</h3></button>
+      <div class="content">
+        <p>
+          ← : 左に移動<br>
+          ↑ : 右回転<br>
+          → : 右に移動<br>
+          ↓ : 下に移動<br>
+          z : 左回転<br>
+          x : 右回転<br>
+        </p>
+      </div>
       <h3>ダウンロード</h3>
       <a href="https://github.com/pto8913/pto8913-TokoPuyo/releases">https://github.com/pto8913/pto8913-TokoPuyo/releases</a>
       <h3>使用アセット</h3>

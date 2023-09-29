@@ -3,6 +3,8 @@
     .SortButtonArea{
       line-height: 1;
       display: grid;
+      position: relative;
+      right: -10;
     }
     /* === ソートボタン ============================== */
     .SortButton {
@@ -84,8 +86,8 @@
       transform: translateY(80px) translateX(50px) rotate(135deg);
     }
   </style>
+  <script src="{{ '/assets/js/SortTable.js' | relative_url }}"></script>
 </head>
-<script src="{{ '/assets/js/SortTable.js' | relative_url }}"></script>
 {% assign items = include.items %}
 <div>
   <table id="SortTable">
