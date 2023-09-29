@@ -42,6 +42,48 @@ function InitSort()
     }
 }
 
+
+function SortNumAsc(a, b) 
+{
+    a = parseInt(a.replace(/,/g, ''));
+    b = parseInt(b.replace(/,/g, ''));
+    return a - b;
+}
+
+function SortNumDesc(a, b) 
+{
+    a = parseInt(a.replace(/,/g, ''));
+    b = parseInt(b.replace(/,/g, ''));
+    return b - a;
+}
+
+function SortStrAsc(a, b)
+{
+    a = a.toString();
+    b = b.toString();
+    if(mSortAa == 1){             // 1 : 英大文字小文字を区別しない
+    a = a.toLowerCase();
+    b = b.toLowerCase();
+    }
+    if     (a < b){ return -1; }
+    else if(a > b){ return  1; }
+    return 0;
+}
+
+function SortStrDesc(a, b)
+{
+    a = a.toString();
+    b = b.toString();
+    if(mSortAa == 1){             // 1 : 英大文字小文字を区別しない
+    a = a.toLowerCase();
+    b = b.toLowerCase();
+    }
+
+    if     (b < a){ return -1; }
+    else if(b > a){ return  1; }
+    return 0;
+}
+
 function Sort(argObj)
 {
     /*
@@ -115,45 +157,4 @@ function Sort(argObj)
         lastRow.parentNode.insertBefore(srcRow.cloneNode(true));
         tables.deleterow(moveRow[rowIdx]);
     }
-}
-
-function SortNumAsc(a, b) 
-{
-    a = parseInt(a.replace(/,/g, ''));
-    b = parseInt(b.replace(/,/g, ''));
-    return a - b;
-}
-
-function SortNumDesc(a, b) 
-{
-    a = parseInt(a.replace(/,/g, ''));
-    b = parseInt(b.replace(/,/g, ''));
-    return b - a;
-}
-
-function SortStrAsc(a, b)
-{
-    a = a.toString();
-    b = b.toString();
-    if(mSortAa == 1){             // 1 : 英大文字小文字を区別しない
-    a = a.toLowerCase();
-    b = b.toLowerCase();
-    }
-    if     (a < b){ return -1; }
-    else if(a > b){ return  1; }
-    return 0;
-}
-
-function SortStrDesc(a, b)
-{
-    a = a.toString();
-    b = b.toString();
-    if(mSortAa == 1){             // 1 : 英大文字小文字を区別しない
-    a = a.toLowerCase();
-    b = b.toLowerCase();
-    }
-
-    if     (b < a){ return -1; }
-    else if(b > a){ return  1; }
-    return 0;
 }
