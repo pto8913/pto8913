@@ -108,6 +108,12 @@ idx-Portfolio:
       - title: "Roguelike"
         img: "/Portfolio/UnrealEngine/Game/Roguelike/images/icon.png"
         url: "/Portfolio/UnrealEngine/Game/Roguelike/index.html"
+      - title: "Shooting"
+        img: "/Portfolio/UnrealEngine/Game/Shooting/images/icon.png"
+        url: "/Portfolio/UnrealEngine/Game/Shooting/index.html"
+      - title: "Maze"
+        img: "/Portfolio/UnrealEngine/Game/Maze/images/icon.png"
+        url: "/Portfolio/UnrealEngine/Game/Maze/index.html"
   - subject: "プラグイン(Unreal Engine)"
     contents:
       - title: "GoogleSpreadSheetToUnreal"
