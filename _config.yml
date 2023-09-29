@@ -83,7 +83,7 @@ nav-footer:                  # shows a footer with social links - for available 
   - {title: Gmail, icon: '/assets/images/gmail.png', url: "mailto:pto8913project@gmail.com"}
   - {title: Github, icon: '/assets/images/github.png', url: "https://github.com/pto8913"}
   - {title: HatenaBlog, icon: '/assets/images/hatenablog.png', url: "https://pto8913.hatenablog.com/"}
-  - {title: Youtube, icon: '/assets/images/youtube.png', url: "https://www.youtube.com/@Hosinomoribito_JP"}
+  - {title: Youtube, icon: '/assets/images/youtube.png', url: "https://www.youtube.com/@pto8913/featured"}
   - {title: Discord, icon: '/assets/images/discord.png', url: "https://discord.gg/mXntvZdCFf"}
 
 # ------------------------------ Portfolio ------------------------------
