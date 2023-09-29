@@ -3,7 +3,7 @@ layout: Hoshimori/default
 title: "星の守り人 | 物語"
 home: '/Hoshimori/index.html'
 ---
-
+<!-- 
 <head>
   <style>
     .Hoshimori_fixed_bg {
@@ -48,6 +48,115 @@ home: '/Hoshimori/index.html'
 
     .Hoshimori_fixed_bg.story_3 {
       background-image: url("{{ '/Hoshimori/Story/Images/Departure.png' | relative_url }}");
+      height: 300px;
+    }
+    .Hoshimori_story_text_container.story_3 {
+      top: 15px;
+      left: 15px;
+    }
+  </style>
+</head>
+
+<div>
+  <div class="Hoshimori_fixed_bg story_star">
+    <div class="Hoshimori_story_text_container story_star">
+      <p class="Hoshimori_story_text">
+        大昔、この星の近くを通過した魔物の星から<br>
+        魔王が侵攻してきた。
+      </p>
+    </div>
+  </div>
+  <div class="Hoshimori_fixed_bg story_0">
+    <div class="Hoshimori_story_text_container story_0">
+      <p class="Hoshimori_story_text">
+        しかし、星の守護者たちの活躍により何とか撃退に成功する。
+      </p>
+    </div>
+  </div>
+  <div class="Hoshimori_fixed_bg story_1">
+    <div class="Hoshimori_story_text_container story_1">
+      <p class="Hoshimori_story_text">
+        時は流れ 巨人の星や蛇の星からの侵攻により<br>
+        守護者は命を落としていった・・・
+      </p>
+    </div>
+  </div>
+  <div class="Hoshimori_fixed_bg story_2">
+    <div class="Hoshimori_story_text_container story_2">
+      <p class="Hoshimori_story_text">
+        さらに時は流れ 再び魔物の星からの侵攻の予兆があった。
+      </p>
+    </div>
+  </div>
+  <div class="Hoshimori_fixed_bg story_3">
+    <div class="Hoshimori_story_text_container story_3">
+      <p class="Hoshimori_story_text">
+        主人公トレミーは魔物の星からの侵攻に<br>
+        立ち向かうために旅に出る
+      </p>
+    </div>
+  </div>
+</div> -->
+
+
+<head>
+  <style>
+    .Hoshimori_fixed_bg {
+      background-attachment: initial;
+    }
+    .Hoshimori_story_text_container
+    {
+      color: rgba(255, 255, 255, 1);;
+      background-color: rgba(25, 25, 25, 0.75);;
+      padding: 5px;
+      position: relative;
+      text-align: center;
+      width: fit-content;
+      top: 10px
+    }
+    .Hoshimori_fixed_bg.story_star {
+      background-image: url("{{ '/Hoshimori/Story/Images/Background_Star.png' | relative_url }}");
+      background-attachment: initial;
+      height: 200px;
+    }
+    .Hoshimori_story_text_container.story_star {
+      left: 15px;
+      top: 10px;
+    }
+
+    .Hoshimori_fixed_bg.story_0 {
+      background-image: url("{{ '/Hoshimori/Story/Images/EncientBattle.png' | relative_url }}");
+      background-attachment: initial;
+      height: 400px;
+    }
+    .Hoshimori_story_text_container.story_0 {
+      left: 15px;
+      bottom: 10px;
+    }
+
+    .Hoshimori_fixed_bg.story_1 {
+      background-image: url("{{ '/Hoshimori/Story/Images/Snake_Giant.png' | relative_url }}");
+      background-attachment: initial;
+      height: 400px;
+    }
+    .Hoshimori_story_text_container.story_1 {
+      left: 250px;
+      bottom: 15px;
+    }
+
+    .Hoshimori_fixed_bg.story_2 {
+      background-image: url("{{ '/Hoshimori/Story/Images/DevilStar_Omen.png' | relative_url }}");
+      background-attachment: initial;
+      height: 200px;
+    }
+    .Hoshimori_story_text_container.story_2 {
+      top: 10px;
+      right: 10px;
+    }
+
+    .Hoshimori_fixed_bg.story_3 {
+      background-image: url("{{ '/Hoshimori/Story/Images/Departure.png' | relative_url }}");
+      background-attachment: initial;
       height: 300px;
     }
     .Hoshimori_story_text_container.story_3 {
