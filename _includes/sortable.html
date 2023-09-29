@@ -2,16 +2,17 @@
   <style>
     .SortButtonArea{
       line-height: 1;
+      display: grid;
     }
     /* === ソートボタン ============================== */
     .SortButton {
       display    : inline-block;
       width      : 8px;
-      height     : 6px;
+      height     : 8px;
       background : #eee;
       border     : 1px solid #777;
-      margin     : 1px 3px;
-      padding    : 3px;
+      margin     : 1px 1px;
+      /* padding    : 3px; */
       cursor     : pointer;
     }
     /* === ソートボタン（カーソルオーバー時）========= */
@@ -28,6 +29,9 @@
       border-collapse: collapse;
       border-spacing : 0;
       font-size      : 9pt;  
+    }
+    .thContainer {
+      display: flex; 
     }
     .SortTable th {
       text-align    : center;
@@ -88,7 +92,9 @@
     {% for item in items %}
       <tr>
         {% for columnTitle in item.columnTitles %}
-          <th sortbutton>{{ columnTitle.title }}</th>
+          <div class="thContainer">
+            <th sortbutton>{{ columnTitle.title }}</th>
+          </div>
         {% endfor %}
       </tr>
       {% for row in item.rows %}
