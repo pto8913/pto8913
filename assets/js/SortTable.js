@@ -68,7 +68,7 @@ function Sort(argObj)
 
     if (sortKey[1] == 'asc')
     {
-        if ((SortNum == 1) && (notNum == 0))
+        if ((mSortNum == 1) && (notNum == 0))
         {
             itemSorted.sort(SortNumAsc);
         }
@@ -79,7 +79,7 @@ function Sort(argObj)
     }
     else
     {    
-        if ((sortNum == 1) && (notNum == 0))
+        if ((mSortNum == 1) && (notNum == 0))
         {
             itemSorted.sort(SortNumDesc);
         }
@@ -130,7 +130,7 @@ function SortStrA(a, b)
 {
     a = a.toString();
     b = b.toString();
-    if(gSortAa == 1){             // 1 : 英大文字小文字を区別しない
+    if(mSortAa == 1){             // 1 : 英大文字小文字を区別しない
     a = a.toLowerCase();
     b = b.toLowerCase();
     }
@@ -143,7 +143,7 @@ function SortStrD(a, b)
 {
     a = a.toString();
     b = b.toString();
-    if(gSortAa == 1){             // 1 : 英大文字小文字を区別しない
+    if(mSortAa == 1){             // 1 : 英大文字小文字を区別しない
     a = a.toLowerCase();
     b = b.toLowerCase();
     }
