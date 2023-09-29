@@ -11,7 +11,7 @@ window.onload = function()
 function InitSort()
 {
     var tables = document.getElementById(mID);
-    var rows = tables[tableIdx].rows;
+    var rows = tables.rows;
     var newButton = '';
 
     for (var rowIdx = 0; rowIdx < rows.length; ++rowIdx)
