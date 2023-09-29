@@ -212,7 +212,7 @@ nav-header-Portfolio-Hoshimori:
 # ------------------------------ Hoshimori ------------------------------
 # Navigations
 
-nav-header-Hoshimori:
+nav-header-Portfolio-Hoshimori:
   ホーム: "/Hoshimori/index.html"
   物語: "/Hoshimori/story.html"
   登場人物: "Hoshimori/Characters/Tolemy.html"

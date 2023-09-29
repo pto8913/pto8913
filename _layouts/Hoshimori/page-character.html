@@ -43,8 +43,8 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/index.html'
   <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
   {% endif %}
 
-  {% if site.nav-header-Hoshimori %}
-    {% assign pages = site.nav-header-Hoshimori %}
+  {% if site.nav-header-Portfolio-Hoshimori %}
+    {% assign pages = site.nav-header-Portfolio-Hoshimori %}
   {% else %}
     {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
   {% endif %}
