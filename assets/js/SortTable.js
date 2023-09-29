@@ -22,8 +22,8 @@ function InitSort()
             if (td[i].getAttribute('sortbutton') !== null)
             {
                 newButton = '<div class="SortButtonArea">';
-                newButton += '<svg class="SortButton" id="asc_'+i+'" onclick="Sort(this)"></svg>'
-                newButton += '<svg class="SortButton" id="desc_'+i+'" onclick="Sort(this)"></svg>'
+                newButton += '<svg class="SortButton" id="asc_'+i+'" onclick="Sort(this)"><path d="M4 0 L0 6 L8 6 Z"></path></svg>'
+                newButton += '<svg class="SortButton" id="desc_'+i+'" onclick="Sort(this)"><path d="M0 0 L8 0 L4 7 Z"></path></svg>'
                 newButton += '</div>';
 
                 td[i].innerHTML = td[i].innerHTML + newButton;
