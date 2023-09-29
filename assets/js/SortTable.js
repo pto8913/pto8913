@@ -117,21 +117,21 @@ function Sort(argObj)
     }
 }
 
-function SortNumA(a, b) 
+function SortNumAsc(a, b) 
 {
     a = parseInt(a.replace(/,/g, ''));
     b = parseInt(b.replace(/,/g, ''));
     return a - b;
 }
 
-function SortNumD(a, b) 
+function SortNumDesc(a, b) 
 {
     a = parseInt(a.replace(/,/g, ''));
     b = parseInt(b.replace(/,/g, ''));
     return b - a;
 }
 
-function SortStrA(a, b)
+function SortStrAsc(a, b)
 {
     a = a.toString();
     b = b.toString();
@@ -144,7 +144,7 @@ function SortStrA(a, b)
     return 0;
 }
 
-function SortStrD(a, b)
+function SortStrDesc(a, b)
 {
     a = a.toString();
     b = b.toString();
