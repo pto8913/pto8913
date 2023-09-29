@@ -90,6 +90,95 @@ new_title: true
     </div>
   </div>
 </div>
+
+<head>
+  <style>
+    .Hoshimori_fixed_bg.background {
+      background-image: url("{{ '/Hoshimori/Description/Images/Background_4.png' | relative_url }}");
+    }
+    .Hoshimori_fixed_bg.background.movie {
+      height: 400px;
+    }
+
+    .Hoshimori_fixed_bg.background.description {
+      height: auto;
+    }
+    .Hoshimori_character_card_container {
+      padding: 10px;
+      height: 300px;
+    }
+    .Hoshimori_character_card_container.inner {
+      align-items: center;
+      margin: 0;
+      justify-content: center
+    }
+    .Hoshimori_character_card_img {
+      width: 75%;
+      height: 100%;
+    }
+    .Hoshimori_character_card_name {
+      text-align: center;
+    }
+    .Hoshimori_character_card_detail_container {
+      width: auto;
+    }
+    .Hoshimori_description_movie_container {
+      height: 225px;
+      padding: 20px;
+    }
+    .Hoshimori_description_movie {
+      padding: 0px;
+      height: 100%;
+    }
+    .Portfolio_Hoshimori_img_card.teaser {
+      align-self: flex-end;
+    }
+    .Portfolio_Hoshimori_img.teaser {
+      width: 225px;
+      height: 150px;
+      margin: 0px;
+      padding: 0px;
+    }
+    .Portfolio_Hoshimori_img_card_name.teaser {
+      padding: 0px;
+      text-align: center;
+    }
+  </style>  
+</head>
+<div>
+  <div class="Hoshimori_description_subject_container">
+    <h2 class="Hoshimori_description_subject_text">
+      ゲームの特徴
+    </h2>
+  </div>
+  <div class="Hoshimori_fixed_bg background description">
+    <div class="Hoshimori_character_card_container inner">
+      {% 
+        include Hoshimori/card.html 
+        img-index="/Hoshimori/Description/Images/Background_1"
+        name="冒険の旅" 
+        description="失われた守護者の力を受け継ぐため、旅に出る。"
+      %}
+    </div>
+    <div class="Hoshimori_character_card_container inner">
+      {% 
+        include Hoshimori/card.html 
+        img-index="/Hoshimori/Description/Images/Background_2" 
+        img-R=true
+        name="守護者の力を受け継ぐ" 
+        description="守護者に自分の力を認めさせて、力を受け継ごう。"
+      %}
+    </div>
+    <div class="Hoshimori_character_card_container inner">
+      {% 
+        include Hoshimori/card.html 
+        img-index="/Hoshimori/Description/Images/Background_3" 
+        name="守護者の力を使う" 
+        description="守護者の力で謎を解き、魔王を倒す。"
+      %}
+    </div>
+  </div>
+</div>
 <!-- 
 <head>
   <style>
