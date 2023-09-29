@@ -1,52 +1,54 @@
 <head>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
-  </head>
-  
-  <!DOCTYPE html>
-  <html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
-    {% if page.new_title %}
-      <title>
-        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
-      </title>
-    {% else %}
-      <title>
-        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
-      </title>
-    {% endif %}
-    <meta charset="{{ site.encoding }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="{{ page.author | default: site.author | escape }}">
-    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
-    {% if site.show_frame %}
-      <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
-    {% else %}
+  <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
+</head>
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
+  {% if page.new_title %}
+    <title>
+      ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
+    </title>
+  {% else %}
+    <title>
+      {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
+    </title>
+  {% endif %}
+  <meta charset="{{ site.encoding }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="{{ page.author | default: site.author | escape }}">
+  <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {% if site.show_frame %}
+    <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
+  {% else %}
     <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
-    {% endif %}
+  {% endif %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/collapse.css' | relative_url }}">
+  <script src="{{ '/assets/js/collapse.js' | relative_url }}"></script>
+
+  {% if include.nav-header %}
+    {% assign nav-header = include.nav-header %}
+  {% else %}
+    {% assign nav-header = site.nav-header %}
+  {% endif %}
+
+  {% if include.home %}
+    {% assign home = include.home %}
+  {% endif %}
+
+  {% if include.nav-footer %}
+    {% assign nav-footer = include.nav-footer %}
+  {% else %}
+    {% assign nav-footer = site.nav-footer %}
+  {% endif %}
+
+  {% include header.html home=home navigation=nav-header %}
+
+  {% if include.no-content %}
+  {% else %}
+    {{ content }}
+  {% endif %}
   
-    {% if include.nav-header %}
-      {% assign nav-header = include.nav-header %}
-    {% else %}
-      {% assign nav-header = site.nav-header %}
-    {% endif %}
-  
-    {% if include.home %}
-      {% assign home = include.home %}
-    {% endif %}
-  
-    {% if include.nav-footer %}
-      {% assign nav-footer = include.nav-footer %}
-    {% else %}
-      {% assign nav-footer = site.nav-footer %}
-    {% endif %}
-  
-    {% include header.html home=home navigation=nav-header %}
-  
-    {% if include.no-content %}
-    {% else %}
-      {{ content }}
-    {% endif %}
-    
-    {% include footer.html navigation=nav-footer %}
-  </html>
-  
+  {% include footer.html navigation=nav-footer %}
+</html>
