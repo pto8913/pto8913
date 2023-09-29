@@ -92,7 +92,7 @@
     {% for item in items %}
       <tr>
         {% for columnTitle in item.columnTitles %}
-          <th sortbutton class="thContainer">{{ columnTitle.title }}</th>
+          <th sortbutton>{{ columnTitle.title }}</th>
         {% endfor %}
       </tr>
       {% for row in item.rows %}

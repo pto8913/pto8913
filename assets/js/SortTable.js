@@ -27,6 +27,11 @@ function InitSort()
                 newButton += '</div>';
 
                 td[i].innerHTML = td[i].innerHTML + newButton;
+
+                var containerBegin = '<div class="thContainer">';
+                var containerEnd = '</div>';
+                
+                td[i].innerHTML = containerBegin + td[i].innerHTML + containerEnd;
             }
         }
         if (newButton != '')
