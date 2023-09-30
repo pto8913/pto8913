@@ -16,7 +16,7 @@
           <a href="#carousel__slide{{ prevIdx }}" class="carousel__prev">Go to Slide{{ prevIdx }}</a>
 
           <a href="{{ link[1] | relative_url }}.html">
-            <img src="{{ link[1] | relative_url }}.png" alt="" />
+            <img src="{{ link[1] | relative_url }}.png" class="carousel__image" alt="" />
           </a>
 
           {% assign nextIdx = currentIdx | plus:1 %}
