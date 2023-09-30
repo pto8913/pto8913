@@ -56,10 +56,10 @@ ol, li
 
 .carousel
   position: relative
-  padding-top: 75%
   filter: drop-shadow(0 0 10px #0003)
   perspective: 100px
   width: 100%
+  height: 320px
 
 .carousel__viewport
   position: absolute
@@ -77,11 +77,8 @@ ol, li
   position: relative
   flex: 0 0 100%
   width: 100%
-  background-color: #f99
+  background-color: #555
   counter-increment: item
-
-.carousel__slide:nth-child(even)
-  background-color: #99f
 
 .carousel__slide:before
   // content: counter(item)
@@ -99,6 +96,9 @@ ol, li
   width: 100%
   height: 100%
   scroll-snap-align: center
+  display: flex
+  justify-content: center
+  align-items: center
 
 @media (hover: hover)
   .carousel__snapper
