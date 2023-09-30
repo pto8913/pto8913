@@ -4,7 +4,7 @@
 {% assign lenLinks = links.size %}
 {% assign currentIdx = 1 %}
 
-<section class="carousel" aria-label="Gallery">
+<div class="carousel" aria-label="Gallery">
   <ol class="carousel__viewport">
     {% for link in links %}
       <li id="carousel__slide{{ currentIdx }}" tabindex="0" class="carousel__slide">
@@ -40,7 +40,7 @@
       {% endfor %}
     </ol>
   </aside>
-</section>
+</div>
 <!-- 
 <section class="carousel" aria-label="Gallery">
   <ol class="carousel__viewport">
