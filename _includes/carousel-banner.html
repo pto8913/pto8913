@@ -8,7 +8,7 @@
   <ol class="carousel__viewport">
     {% for link in links %}
       <li id="carousel__slide{{ currentIdx }}" tabindex="0" class="carousel__slide">
-        <div class="carousel_snapper">
+        <div class="carousel__snapper">
           {% assign prevIdx = currentIdx | minus:1 %}
           {% if prevIdx < 0 %}
             {% assign prevIdx = lenLinks %}
