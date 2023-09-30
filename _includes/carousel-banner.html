@@ -2,7 +2,7 @@
 
 {% assign links = include.links %}
 {% assign lenLinks = links.size %}
-{% assign currentIdx = 0 %}
+{% assign currentIdx = 1 %}
 
 <section class="carousel" aria-label="Gallery">
   <ol class="carousel__viewport">
@@ -10,8 +10,8 @@
       <li id="carousel__slide{{ currentIdx }}" tabindex="0" class="carousel__slide">
         <div class carousel_snapper>
           {% assign prevIdx = currentIdx | minus:1 %}
-          {% if prevIdx == -1 %}
-            {% assign prevIdx = lenLinks-1 %}
+          {% if prevIdx == 0 %}
+            {% assign prevIdx = lenLinks %}
           {% endif %}
           <a href="#carousel__slide{{ prevIdx }}" class="carousel__prev">Go to Slide{{ prevIdx }}</a>
 
@@ -20,8 +20,8 @@
           </a>
 
           {% assign nextIdx = currentIdx | plus:1 %}
-          {% if nextIdx == lenLinks-1 %}
-            {% assign nextIdx = 0 %}
+          {% if nextIdx == lenLinks %}
+            {% assign nextIdx = 1 %}
           {% endif %}
           <a href="#carousel__slide{{ nextIdx }}" class="carousel__next">Go to Slide{{ nextIdx }}</a>
         </div>
@@ -29,7 +29,7 @@
       {% assign currentIdx = currentIdx | plus:1 %}
     {% endfor %}
   </ol>
-  {% assign currentIdx = 0 %}
+  {% assign currentIdx = 1 %}
   <aside class="carousel__navigation">
     <ol class="carousel__navigation-list">
       {% for link in links %}
