@@ -8,10 +8,12 @@ title: "ホーム"
   <srcipt type="text/javascript" src="{{ '/assets/js/hatenablog.js' | relative_url}}"></srcipt>
   <link rel="stylesheet" href="{{ '/assets/css/automap.css' | relative_url }}">
 </head>
-<div class="flex">
+<div>
   {% include carousel-banner.html %}
-  {% include Portfolio/home.html %}
-  <div id="auto-site-map"></div>
+  <div class="flex">
+    {% include Portfolio/home.html %}
+    <div id="auto-site-map"></div>
+  </div>
 </div>
 <!-- 
 {% if site.show_excerpts %}
