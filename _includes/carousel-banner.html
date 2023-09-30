@@ -1,52 +1,46 @@
-<!-- <p class="carousel-p">使用したライブラリ：<a href="https://kenwheeler.github.io/slick/" target="_blank">https://kenwheeler.github.io/slick/</a></p> -->
-<link rel="stylesheet" href="{{ '/assets/css/carousel.css' | relative_url }}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<script src="{{ '/assets/js/carousel-banner.js' | relative_url }}"></script> 
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-<style>
-  .slider .slick-slide {
-    height: 100%;
-    width: 100%;
-  }
-</style>
-<div class="carousel-div">
-  <ul class="slider">
-    {% for link in include.links %}
-      {% if include.current %}
-        {% if link[0] != include.current %}
-          <li class="carousel-li">
-            <a class="carousel-a" href="{{ link[1] | relative_url }}.html">
-              <div class="carousel-div-selectable">
-                <img class="carousel-img" src="{{ link[1] | relative_url }}.png" alt="">
-                <p class="carousel-p">{{ link[0] }}</p>
-              </div>
-            </a>
-          </li>
-        {% else %}
-          <li class="carousel-li">
-            <a class="carousel-a" href="{{ link[1] | relative_url }}.html">
-              <div class="carousel-div-select">
-                <img class="carousel-img" src="{{ link[1] | relative_url }}.png" alt="">
-                <p class="carousel-p-select">{{ link[0] }}</p>
-              </div>
-            </a>
-          </li>
-        {% endif %}
-      {% else %}
-        <li class="carousel-li">
-          <a class="carousel-a" href="{{ link[1] | relative_url }}.html">
-            <div class="carousel-div-selectable">
-              <img class="carousel-img" src="{{ link[1] | relative_url }}.png" alt="">
-              <p class="carousel-p">{{ link[0] }}</p>
-            </div>
-          </a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="{{ '/assets/js/carousel.js' | relative_url }}"></script> 
-
+<section class="carousel" aria-label="Gallery">
+  <ol class="carousel__viewport">
+    <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+      <div class="carousel__snapper">
+        <a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
+        <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+      </div>
+    </li>
+    <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+      <div class="carousel__snapper">
+        <a href="#carousel__slide1" class="carousel__prev">Go to last slide</a>
+        <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+      </div>
+    </li>
+    <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+      <div class="carousel__snapper">
+        <a href="#carousel__slide2" class="carousel__prev">Go to last slide</a>
+        <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
+      </div>
+    </li>
+    <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+      <div class="carousel__snapper">
+        <a href="#carousel__slide3" class="carousel__prev">Go to last slide</a>
+        <a href="#carousel__slide1" class="carousel__next">Go to next slide</a>
+      </div>
+    </li>
+  </ol>
+  <aside class="carousel__navigation">
+    <ol class="carousel__navigation-list">
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide1</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide2</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide3" class="carousel__navigation-button">Go to slide3</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide4" class="carousel__navigation-button">Go to slide4</a>
+      </li>
+    </ol>
+  </aside>
+</section>
