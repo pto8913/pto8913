@@ -95,15 +95,19 @@ Hoshimori-teaser-url: "https://drive.google.com/file/d/1EavglxdZwW2IZH8k2b-mfpsX
 nav-header-Portfolio:
   ホーム: "/Portfolio/index.html"
 # ---------------- Portfolio Index ----------------
+idx-Portfolio-Game:
+  星の守り人: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori"
+  とこぷよ: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo"
 idx-Portfolio:
   - subject: "ゲーム"
     contents:
       - title: "星の守り人"
-        img: "/Portfolio/UnrealEngine/Game/Hoshimori/assets/images/T_Title.png"
-        url: "/Portfolio/UnrealEngine/Game/Hoshimori/index.html"
+        img: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.png"
+        url: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html"
+        isCarousel: "true"
       - title: "とこぷよ"
-        img: "/Portfolio/DirectX/Game/TokoPuyo/assets/images/icon.png"
-        url: "/Portfolio/DirectX/Game/TokoPuyo/index.html"
+        img: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo.png"
+        url: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo.html"
       - title: "Tappy Cube"
         img: "/Portfolio/Unity/Game/TappyCube/assets/images/icon.png"
         url: "/Portfolio/Unity/Game/TappyCube/index.html"
@@ -162,7 +166,7 @@ idx-Portfolio:
 
 # ---------------- Portfolio Hoshimori ----------------
 nav-header-Portfolio-Hoshimori:
-  ホーム: "/Portfolio/UnrealEngine/Game/Hoshimori/index.html"
+  ホーム: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html"
   物語 : "/Portfolio/UnrealEngine/Game/Hoshimori/story/index.html"
   守護者の力: "/Portfolio/UnrealEngine/Game/Hoshimori/metamorphosis/index.html"
   アクション:
@@ -229,7 +233,7 @@ hoshimori-character:
   ケス : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Ces"
   ステラ : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Stella"
 img-hoshimori-character-bg:
-  ホーム : "/Portfolio/UnrealEngine/Game/Hoshimori/assets/images/T_Title.png"
+  ホーム : "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.png"
   ベータ : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Background_Beta.png"
   トレミー : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Background_Tolemy.png"
   アルファ : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Background_Alpha.png"
