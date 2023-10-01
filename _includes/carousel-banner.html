@@ -8,28 +8,28 @@
   <ol class="carousel__viewport">
     {% for link in links %}
       <li id="carousel__slide{{ currentIdx }}" tabindex="0" class="carousel__slide">
-        <div class="carousel__snapper">
-          {% assign prevIdx = currentIdx | minus:1 %}
-          {% if prevIdx <= 0 %}
-            {% assign prevIdx = lenLinks %}
-          {% endif %}
-          <a href="#carousel__slide{{ prevIdx }}" class="carousel__prev">Go to Slide{{ prevIdx }}</a>
+        <a href="{{ link[1] | relative_url }}.html">
+          <div class="carousel__snapper">
+            {% assign prevIdx = currentIdx | minus:1 %}
+            {% if prevIdx <= 0 %}
+              {% assign prevIdx = lenLinks %}
+            {% endif %}
+            <a href="#carousel__slide{{ prevIdx }}" class="carousel__prev">Go to Slide{{ prevIdx }}</a>
 
-          <a href="{{ link[1] | relative_url }}.html">
-            <div class="carousel__image_container">
-              {% if include.title %}
-                <p class="carousel__title">{{ include.title }} : {{ link[0] }}</p>
-              {% endif %}
-                <img src="{{ link[1] | relative_url }}.png" class="carousel__image" alt="" />
-            </div>
-          </a>
+              <div class="carousel__image_container">
+                {% if include.title %}
+                  <p class="carousel__title">{{ include.title }} : {{ link[0] }}</p>
+                {% endif %}
+                  <img src="{{ link[1] | relative_url }}.png" class="carousel__image" alt="" />
+              </div>
 
-          {% assign nextIdx = currentIdx | plus:1 %}
-          {% if nextIdx > lenLinks %}
-            {% assign nextIdx = 1 %}
-          {% endif %}
-          <a href="#carousel__slide{{ nextIdx }}" class="carousel__next">Go to Slide{{ nextIdx }}</a>
-        </div>
+            {% assign nextIdx = currentIdx | plus:1 %}
+            {% if nextIdx > lenLinks %}
+              {% assign nextIdx = 1 %}
+            {% endif %}
+            <a href="#carousel__slide{{ nextIdx }}" class="carousel__next">Go to Slide{{ nextIdx }}</a>
+          </div>
+        </a>
       </li>
       {% assign currentIdx = currentIdx | plus:1 %}
     {% endfor %}
