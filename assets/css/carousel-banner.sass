@@ -68,7 +68,7 @@ ol, li
   bottom: 0
   left: 0
   display: flex
-  overflow-x: scroll
+  overflow-x: hidden
   counter-reset: item
   scroll-behavior: smooth
   scroll-snap-type: x mandatory
@@ -155,11 +155,11 @@ ol, li
 
 .carousel::before,
 .carousel__prev
-  left: -1rem
+  left: 1rem
 
 .carousel::after,
 .carousel__next
-  right: -1rem
+  right: 1rem
 
 .carousel::before,
 .carousel::after

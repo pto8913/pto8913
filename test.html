@@ -4,9 +4,8 @@ title: "ホーム"
 ---
 
 <head>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <srcipt type="text/javascript" src="{{ '/assets/js/hatenablog.js' | relative_url}}"></srcipt>
   <link rel="stylesheet" href="{{ '/assets/css/automap.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
 </head>
 <div>
   {% include carousel-banner.html links=site.idx-Portfolio-Game %}
@@ -21,3 +20,6 @@ title: "ホーム"
 {% else %}
   {% include archive.html title="Posts" %}
 {% endif %} -->
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<srcipt type="text/javascript" src="{{ '/assets/js/hatenablog.js' | relative_url}}"></srcipt>
