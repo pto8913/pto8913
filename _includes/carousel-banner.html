@@ -5,6 +5,9 @@
 {% assign currentIdx = 1 %}
 
 <div class="carousel" aria-label="Gallery">
+  {% if include.title %}
+    <p>{{ include.title }}</p>
+  {% endif %}
   <ol class="carousel__viewport">
     {% for link in links %}
       <li id="carousel__slide{{ currentIdx }}" tabindex="0" class="carousel__slide">
