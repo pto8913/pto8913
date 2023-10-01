@@ -49,16 +49,19 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
     {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
   {% endif %}
 
-  {% include header.html home=page.home navigation=pages %}
+  {% include header.html home=page.home %}
 
   <body>
-    <div class="Hoshimori_bg_sec">
-      {% 
-        include Hoshimori/card.html 
-        name=page.background 
-        description=content 
-      %}
-      {% include carousel-character.html links=site.hoshimori-character current=page.background %}
+    <div>
+      {% include menu.html navigation=pages %}
+      <div class="Hoshimori_bg_sec">
+        {% 
+          include Hoshimori/card.html 
+          name=page.background 
+          description=content 
+        %}
+        {% include carousel-character.html links=site.hoshimori-character current=page.background %}
+      </div>
     </div>
   </body>
 

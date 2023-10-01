@@ -41,10 +41,13 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
     {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
   {% endif %}
 
-  {% include header.html home=page.home navigation=pages %}
+  {% include header.html home=page.home %}
 
   <body>
-    {{ content }}
+    <div>
+      {% include menu.html navigation=pages %}
+      {{ content }}
+    </div>
   </body>
 
   {% if site.nav-footer %}

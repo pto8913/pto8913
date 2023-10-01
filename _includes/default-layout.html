@@ -42,12 +42,15 @@
     {% assign nav-footer = site.nav-footer %}
   {% endif %}
 
-  {% include header.html home=home navigation=nav-header %}
+  {% include header.html home=home %}
 
-  {% if include.no-content %}
-  {% else %}
-    {{ content }}
-  {% endif %}
+  <div>
+    {% include menu.html navigation=nav-header %}
+    {% if include.no-content %}
+    {% else %}
+      {{ content }}
+    {% endif %}
+  </div>
   
   {% include footer.html navigation=nav-footer %}
 
