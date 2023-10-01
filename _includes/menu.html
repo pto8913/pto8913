@@ -1,13 +1,16 @@
 <style>
-  .sticky {
+  .menu_sticky {
     position: sticky;
     top: 0;
     z-index: 9;
   }
-  .li_container {
+  .menu_li_container {
     display: flex;
+    padding: 0;
+    text-align: center;
+    justify-content: flex-end;
   }
-  li {
+  .menu_li {
     list-style: none;
     position: relative;
     transition: all .3s;
@@ -16,10 +19,10 @@
     background-color: rgb(0,0,0);
     margin-right: 2.5px;
   }
-  li:hover {
+  .menu_li:hover {
     background-color: rgba(30, 30, 30, 1);
   }
-  li:not(:first-child)::before {
+  .menu_li:not(:first-child)::before {
     content: "";
     width: 0px;
     height: 100%;
@@ -29,11 +32,11 @@
     left: 0;
     transition: all .3s;
   }
-  li:hover::before {
+  .menu_li:hover::before {
     background-color: rgb(0, 0, 0);
   }
 
-  a {
+  .menu_a {
     display: block;
     text-decoration: none;
     color: white;
@@ -42,11 +45,11 @@
       color: rgba(255, 255, 255, 1);
     }
   }
-  li:hover a {
+  .menu_li:hover a {
     color: rgba(255, 255, 255, 1);
   }
 
-  .dropdown_list_container {
+  .menu_dropdown_list_container {
     display: none;
     width: 175px;
     position: absolute;
@@ -54,12 +57,12 @@
     left: -35%;
     z-index: 4;
   }
-  li:hover .dropdown_list_container {
+  .menu_li:hover .menu_dropdown_list_container {
     display: block;
     z-index: 4;
   }
 
-  li.dropdown_list {
+  .menu_li.menu_dropdown_list {
     background-color: rgb(0, 0, 0);
     transition: all .3s;
     position: relative;
@@ -68,7 +71,7 @@
     white-space: nowrap;
     z-index: 4;
   }
-  li.dropdown_list:not(:first-child)::before {
+  .menu_li.menu_dropdown_list:not(:first-child)::before {
     content: "";
     width: 100%;
     height: 1px;
@@ -77,10 +80,10 @@
     top: 0;
     left: 0;
   }
-  li.dropdown_list:hover {
+  .menu_li.menu_dropdown_list:hover {
     background-color: rgba(30, 30, 30, 1);
   }
-  li.dropdown_list a::before {
+  .menu_li.menu_dropdown_list a::before {
     content: '';
     display: block;
     width: 6px;
@@ -93,16 +96,16 @@
     top: calc(50% - 5px);
   }
 </style>
-<div class="sticky">
-  <ul class="li_container">
+<div class="menu_sticky">
+  <ul class="menu_li_container">
     {% for nav in include.navigation %}
       {% if nav[1].first %}
-        <li>
-          <a>{{ nav[0] }}</a>
-          <ul class="dropdown_list_container">
+        <li class="menu_li">
+          <a class="menu_a">{{ nav[0] }}</a>
+          <ul class="menu_dropdown_list_container">
             {% for sub_page in nav[1] %}
-              <li class="dropdown_list">
-                <a href="{{ sub_page[1] | relative_url }}" aria-label="{{ sub_page[0] }}">
+              <li class="menu_li menu_dropdown_list">
+                <a class="menu_a" href="{{ sub_page[1] | relative_url }}" aria-label="{{ sub_page[0] }}">
                   {{ sub_page[0] }}
                 </a>
               </li>
@@ -110,8 +113,8 @@
           </ul>
         </li>
       {% else %}
-        <li>
-          <a href="{{ nav[1] | relative_url }}" aria-label="{{ nav[0] }}">
+        <li class="menu_li">
+          <a class="menu_a" href="{{ nav[1] | relative_url }}" aria-label="{{ nav[0] }}">
             {{ nav[0] }}
           </a>
         </li>
