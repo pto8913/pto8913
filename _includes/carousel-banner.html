@@ -17,7 +17,7 @@
 
           <div>
             {% if include.title %}
-              <p>{{ include.title }}</p>
+              <p class="carousel__title">{{ include.title }}</p>
             {% endif %}
             <a href="{{ link[1] | relative_url }}.html">
               <img src="{{ link[1] | relative_url }}.png" class="carousel__image" alt="" />
