@@ -92,8 +92,6 @@ nav-footer:                  # shows a footer with social links - for available 
 
 Hoshimori-teaser-url: "https://drive.google.com/file/d/1EavglxdZwW2IZH8k2b-mfpsXr_gHR9fc/preview"
 
-nav-header-Portfolio:
-  ホーム: "/Portfolio/index.html"
 # ---------------- Portfolio Index ----------------
 idx-Portfolio-Game:
   星の守り人: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori"

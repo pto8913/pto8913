@@ -4,21 +4,117 @@ title: "ホーム"
 ---
 
 <head>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <srcipt type="text/javascript" src="{{ '/assets/js/hatenablog.js' | relative_url}}"></srcipt>
   <link rel="stylesheet" href="{{ '/assets/css/automap.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
+  <style>
+    .bg {
+      min-height: 600px;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+  </style>
 </head>
+<script>
+  $(document).ready(function(){
+    if( $('#auto-site-map').length == 0 ){
+      console.log( "no tag end--->" + $('#auto-site-map').length ) ;
+      return ;
+    }
+    var page = 1 ;
+    var myUrl = 'https://pto8913.hatenablog.com'
+    var sitemap_url = new Array() ;
+    var sitemap_time = new Array() ;
+    const num_of_post = 5;
+    for (var post_idx=0; post_idx < num_of_post; ++post_idx){
+      var data = getArchive( myUrl + '/archive?page=' + page);
+      var html = jQuery(jQuery.parseHTML(data));
+      html.find('.archive-entry .entry-title a').each(
+        function( i, val )
+        {
+          console.log(val);
+
+          if (i >= num_of_post - 1)
+          {
+            return false;
+          }
+          var url = $(val).prop("outerHTML");
+          sitemap_url.push(url);
+        }
+      );
+      html.find('time').each(
+        function(i, val)
+        {
+          console.log(val);
+
+          if (i >= num_of_post - 1)
+          {
+            return false;
+          }
+          var time = $(val).prop("outerHTML");
+          sitemap_time.push(time);
+        }
+      );
+      if( html.find('.pager-next').length == 0 ){
+        break;
+      }
+      page++;
+    }
+    var htmlstr = "";
+    htmlstr += '<div class="auto-map">';
+    htmlstr += '<h2 class="auto-map-subject">最新の記事</h2>';
+    for(var idx=0; idx < num_of_post; ++idx){
+      htmlstr += '<div class="auto-map-post">';
+      htmlstr += sitemap_time[idx];
+      htmlstr += '<p class="auto-map-title">' + sitemap_url[idx] + '</p>';
+      htmlstr += "</div>" ;
+    }
+    htmlstr += '<div class="auto-map-more">';
+    htmlstr += '<a href="https://pto8913.hatenablog.com/archive">もっと見る</h2>';
+    htmlstr += '</div>';
+    htmlstr += '</div>';
+    $("#auto-site-map").html( htmlstr ) ;
+  });
+
+  function getArchive(urlInfo){
+    var data= $.ajax({
+      type: 'GET',
+      url: urlInfo,
+      async: false,
+      dataType: 'html',
+      success: function( data ){
+      },
+      error:function() {
+        console.log("何らかの理由で失敗しました");
+      }
+    }).responseText;
+    return data;
+  }
+</script>
 <div>
   {% include carousel-banner.html links=site.idx-Portfolio-Game title="最新のゲーム" %}
   <div class="flex">
-    {% include Portfolio/home.html %}
+    <div class="bg">
+      {% for data in site.idx-Portfolio %}
+        <h2 class="Portfolio_subject">
+          {{ data.subject }}
+        </h2>
+        <div class="Portfolio_grid_3x">
+          {% for row in data.contents %}
+            {% if row.img %}
+              <div class="img_card_container">
+                <a href="{{ row.url | relative_url }}">
+                  <img src="{{ row.img | relative_url }}" class="img_card" alt="" />
+                  <p class="img_card_title">{{ row.title }}</p>
+                </a>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
     <div id="auto-site-map"></div>
   </div>
 </div>
-<!-- 
-{% if site.show_excerpts %}
-  {% include home.html %}
-{% else %}
-  {% include archive.html title="Posts" %}
-{% endif %} -->
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
