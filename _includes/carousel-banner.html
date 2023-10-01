@@ -10,7 +10,7 @@
       <li id="carousel__slide{{ currentIdx }}" tabindex="0" class="carousel__slide">
         <div class="carousel__snapper">
           {% assign prevIdx = currentIdx | minus:1 %}
-          {% if prevIdx < 0 %}
+          {% if prevIdx <= 0 %}
             {% assign prevIdx = lenLinks %}
           {% endif %}
           <a href="#carousel__slide{{ prevIdx }}" class="carousel__prev">Go to Slide{{ prevIdx }}</a>
