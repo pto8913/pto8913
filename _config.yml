@@ -87,14 +87,15 @@ nav-footer:                  # shows a footer with social links - for available 
   - {title: Discord, icon: '/assets/images/discord.png', url: "https://discord.gg/mXntvZdCFf"}
 
 categories:
-  UnrealEngine: 
+  - subject: "UnrealEngine" 
     url: '/Portfolio/UnrealEngine/UnrealEngine.html'
-    - Game:
-      url: 
-    - Plugin:
-      url:
-    - Note:
-      url:
+    contents:
+      - title: "Game"
+        url: 
+      - title: "Plugin"
+        url:
+      - title: Note
+        url:
   DirectX11 C++:
     Game:
       url:
