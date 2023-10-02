@@ -96,12 +96,12 @@ categories:
         url: '/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html'
       - title: Note
         url:
-  subject: "DirectX11 C++"
+  DirectX11 C++:
     url: ''
     contents: 
       - title: "Game"
         url:
-  subject: "Unity"
+  Unity:
     url: ''
     contents:
       - title: "Game"
