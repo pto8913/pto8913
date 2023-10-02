@@ -95,6 +95,10 @@ nav-categories:
         contents:
           - title: "星の守り人"
             url: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html"
+          - title: "test"
+            contents:
+              - title: "test child 1"
+                contents: "test child 1's child"
       - title: "Plugin"
         url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
       - title: Note

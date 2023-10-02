@@ -6,8 +6,9 @@
     list-style-type: disk;
   }
 </style>
+{% assigns contents = include.lists %}
 <ul class="index_ul">
-  {% for con in include.lists %}
+  {% for con in contents %}
     <li class="index_li">
       {% if con.url %}
         <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
