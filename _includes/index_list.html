@@ -14,8 +14,9 @@
         <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
       {% else %}
         {{ con.title }}
-        {% assign child_lists = con.contents %}
-        {% include index_list.html lists=child_lists %}
+        {% if con.contents %}
+          {% include index_list.html lists=con.contents %}
+        {% endif %}
       {% endif %}
     </li>
   {% endfor %}

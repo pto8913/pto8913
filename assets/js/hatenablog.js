@@ -1,23 +1,18 @@
-var script = document.createElement('script');
-script.src = 'https://code.jquery.com/jquery-3.6.3.min.js'; // Check https://jquery.com/ for the current version
-document.getElementsByTagName('head')[0].appendChild(script);
+// var script = document.createElement('script');
+// script.src = 'https://code.jquery.com/jquery-3.6.3.min.js'; // Check https://jquery.com/ for the current version
+// document.getElementsByTagName('head')[0].appendChild(script);
 
-window.addEventListener('DOMContentLoaded',
-    function(event)
+fetch('https://code.jquery.com/jquery-3.6.3.min.js').then(r=>{return r.text()}).then(t=>eval(t)).then(()=>{
+    if($('#auto-site-map').length == 0)
     {
-        console.log("DOM fully loaded");
-        if($('#auto-site-map').length == 0)
-        {
-            console.log( "no tag end--->" + $('#auto-site-map').length ) ;
-            return ;
-        }
-        Init();
+        console.log( "no tag end--->" + $('#auto-site-map').length ) ;
+        return ;
     }
-);
+    Init();
+});
 
 function Init()
 {
-    console.log("hatenablog.js ok!");
     var page = 1;
     var myUrl = 'https://pto8913.hatenablog.com';
     var sitemap_url = new Array();
