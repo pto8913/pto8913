@@ -1,0 +1,13 @@
+---
+layout: default
+title: 
+  - title: "ホーム"
+new_title: true
+category: "UnrealEngine"
+---
+
+<div>
+  {% assign cat = site.nav-categories[{{ page.category }}] %}
+  <a href="{{ cat.url | relative_url }}">{{ page.category }}</a>
+  {% include index_list.html lists=cat.contents %}
+</div>

@@ -1,33 +1,10 @@
 ---
-layout: default
+layout: index
 title: 
   - title: "ホーム"
   - title: "ポートフォリオ"
   - title: "UnrealEngine"
     url: '/Portfolio/UnrealEngine/UnrealEngine_Index.html'
 new_title: true
-category_name: "UnrealEngine"
+category: "UnrealEngine"
 ---
-
-<div>
-  ------------------------------------------<br>
-  <br>
-  1. {{ site.nav-categories["UnrealEngine"] }} <br>
-  3. {{ site.nav-categories["UnrealEngine"]["url"] }} <br>
-  6. {{ site.nav-categories["UnrealEngine"].url }} <br>
-
-  ------------------------------------------<br>
-  <br>
-
-  <div>
-    {% assign UE = site.nav-categories["UnrealEngine"] %}
-    <a href="{{ UE.url | relative_url }}">"UnrealEngine"</a>
-    <ul>
-      {% for con in UE.contents %}
-        <li>
-          <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</div>

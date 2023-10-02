@@ -1,0 +1,20 @@
+<style>
+  .index_ul {
+    margin: 0
+  }
+  .index_li {
+    list-style-type: disk;
+  }
+</style>
+<ul class="index_ul">
+  {% for con in include.lists %}
+    <li class="index_li">
+      {% if con.url %}
+        <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
+      {% else %}
+        {% assign lists = con.contents %}
+        {% include index_list.html lists %}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
