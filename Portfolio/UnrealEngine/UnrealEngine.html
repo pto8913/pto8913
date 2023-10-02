@@ -4,8 +4,8 @@ title: "ホーム"
 background: 星の守り人
 ---
 
-<p>{{ site.categories.subject }}</p><br>
-<p>{{ site.categories.url }}</p><br>
+<p>{{ site.categories[0].subject }}</p><br>
+<p>{{ site.categories[0].url }}</p><br>
 
 {% for elem in site.categories.contents %}
   <p>{{ elem.title }}</p><br>
