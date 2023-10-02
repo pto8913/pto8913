@@ -13,9 +13,18 @@ new_title: true
     {{ a[0] : a[1] }}<br>
   {% endfor %}
   subject : {{ site.categories['UnrealEngine'] }}<br>
+  subject : {{ site.categories['UnrealEngine'][0] }}<br>
+  subject : {{ site.categories['UnrealEngine'][1] }}<br>
+  url : {{ site.categories['UnrealEngine']['url'][0] }}<br>
   url : {{ site.categories['UnrealEngine']['url'][1] }}<br>
+  url : {{ site.categories['UnrealEngine']['url'] }}<br>
 
   {% for elem in site.categories['UnrealEngine']['contents'] %}
+    content title : {{ elem.title }}<br>
+    content url : {{ elem.url }}<br>
+  {% endfor %}
+  
+  {% for elem in site.categories['UnrealEngine'].contents %}
     content title : {{ elem.title }}<br>
     content url : {{ elem.url }}<br>
   {% endfor %}
