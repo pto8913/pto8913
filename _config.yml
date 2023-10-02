@@ -89,11 +89,11 @@ nav-footer:                  # shows a footer with social links - for available 
 categories:
   UnrealEngine: 
     url: '/Portfolio/UnrealEngine/UnrealEngine.html'
-    Game:
+    - Game:
       url: 
-    Plugin:
+    - Plugin:
       url:
-    Note:
+    - Note:
       url:
   DirectX11 C++:
     Game:
