@@ -86,6 +86,21 @@ nav-footer:                  # shows a footer with social links - for available 
   - {title: Youtube, icon: '/assets/images/youtube.png', url: "https://www.youtube.com/@pto8913/featured"}
   - {title: Discord, icon: '/assets/images/discord.png', url: "https://discord.gg/mXntvZdCFf"}
 
+categories:
+  UnrealEngine: '/Portfolio/UnrealEngine/UnrealEngine.html'
+    Game:
+      url: 
+    Plugin:
+      url:
+    Note:
+      url:
+  DirectX11 C++:
+    Game:
+      url:
+  Unity:
+    Game:
+      url:
+
 # ------------------------------ Portfolio ------------------------------
 # Navigations
 
