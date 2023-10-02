@@ -12,17 +12,18 @@ category_name: "UnrealEngine"
 <div>
   ------------------------------------------<br>
   <br>
-  1. {{ site.nav-categories2["UnrealEngine"] }} <br>
-  3. {{ site.nav-categories2["UnrealEngine"]["url"] }} <br>
-  6. {{ site.nav-categories2["UnrealEngine"].url }} <br>
+  1. {{ site.nav-categories["UnrealEngine"] }} <br>
+  3. {{ site.nav-categories["UnrealEngine"]["url"] }} <br>
+  6. {{ site.nav-categories["UnrealEngine"].url }} <br>
 
   ------------------------------------------<br>
   <br>
 
   <div>
-    <a href="{{ site.nav-categories[{{ page.category_name }}].url | relative_url }}">{{ page.category_name }}</a>
+    {% assign UE = site.nav-categories["UnrealEngine"] %}
+    <a href="{{ UE.url | relative_url }}">"UnrealEngine"</a>
     <ul>
-      {% for con in site.nav-categories[{{ page.category_name }}].contents %}
+      {% for con in UE.contents %}
         <li>
           <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
         </li>
