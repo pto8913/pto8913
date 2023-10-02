@@ -24,5 +24,15 @@ aaaaaaa<br>
 {{ site.categories['UnrealEngine'].content[0] }}
 {{ site.categories['UnrealEngine'].content[1] }}
 
+{% for category in site.categories %}
+  <a href="{{ category.url | relative_url }}">{{ category.subject }}</a>
+  <ol>
+    {% for con in category.contents %}
+      <li>
+        <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
+      </li>
+    {% endfor %}
+  </ol>
+{% endfor %}
 bbbbbbb<br>
 </div>
