@@ -86,14 +86,8 @@ nav-footer:                  # shows a footer with social links - for available 
   - {title: Youtube, icon: '/assets/images/youtube.png', url: "https://www.youtube.com/@pto8913/featured"}
   - {title: Discord, icon: '/assets/images/discord.png', url: "https://discord.gg/mXntvZdCFf"}
 
-nav-categories2:
-  UnrealEngine:
-    url: "/Portfolio/UnrealEngine/UnrealEngine_Index.html"
-    contents:
-      - title: "Game"
-        url: ""
 nav-categories:
-  - subject: "UnrealEngine" 
+  UnrealEngine: 
     url: "/Portfolio/UnrealEngine/UnrealEngine_Index.html"
     contents :
       - title: "Game"
@@ -102,12 +96,12 @@ nav-categories:
         url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
       - title: Note
         url: ""
-  - subject: "DirectX11 C++"
+  DirectX11 C++:
     url: ""
     contents: 
       - title: "Game"
         url : ""
-  - subject: "Unity"
+  Unity:
     url: ""
     contents :
       - title: "Game"

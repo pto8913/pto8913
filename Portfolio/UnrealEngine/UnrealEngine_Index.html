@@ -6,33 +6,16 @@ title:
   - title: "UnrealEngine"
     url: '/Portfolio/UnrealEngine/UnrealEngine_Index.html'
 new_title: true
+category_name: "UnrealEngine"
 ---
 
 <div>
-  ------------------------------------------<br>
-  <br>
-  1. {{ site.nav-categories2["UnrealEngine"] }} <br>
-  2. {{ site.nav-categories2["UnrealEngine"][0] }} <br>
-  3. {{ site.nav-categories2["UnrealEngine"]["url"] }} <br>
-  4. {{ site.nav-categories2["UnrealEngine"]["url"][0] }} <br>
-  5. {{ site.nav-categories2["UnrealEngine"]["url"][1] }} <br>
-  6. {{ site.nav-categories2["UnrealEngine"].url }} <br>
-  7. {{ site.nav-categories2["UnrealEngine"].url[0] }} <br>
-  8. {{ site.nav-categories2["UnrealEngine"].url[1] }} <br>
-
-  ------------------------------------------<br>
-  <br>
-
-  {% for category in site.nav-categories %}
-    {% if category.subject == "UnrealEngine" %}
-      <a href="{{ category.url | relative_url }}">{{ category.subject }}</a>
-      <ul>
-        {% for con in category.contents %}
-          <li>
-            <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  {% endfor %}
+  <a href="{{ site.nav-categories[category_name].url | relative_url }}">{{ category_name }}</a>
+  <ul>
+    {% for con in site.nav-categories[category_name].contents %}
+      <li>
+        <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
