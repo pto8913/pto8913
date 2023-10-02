@@ -94,7 +94,7 @@ nav-categories:
       - title: "Game"
         contents:
           - title: "星の守り人"
-            url: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori"
+            url: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html"
           - title: "test"
             contents:
               - title: "test child 1"
