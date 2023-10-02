@@ -88,12 +88,12 @@ nav-footer:                  # shows a footer with social links - for available 
 
 categories:
   - subject: "UnrealEngine" 
-    url: '/Portfolio/UnrealEngine/UnrealEngine.html'
+    url: '/Portfolio/UnrealEngine/UnrealEngine_Index.html'
     contents:
       - title: "Game"
         url: 
       - title: "Plugin"
-        url:
+        url: '/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html'
       - title: Note
         url:
   - subject: "DirectX11 C++"
