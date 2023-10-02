@@ -39,7 +39,10 @@ title: "ホーム"
         </div>
       {% endfor %}
     </div>
-    <div id="auto-site-map"></div>
+    <div>
+      <div id="auto-site-map"></div>
+      {% include category.html list=site.nav-categories %}
+    </div>
   </div>
 </div>
 

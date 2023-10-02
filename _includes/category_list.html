@@ -1,0 +1,16 @@
+<ul>
+  {% for con in include.lists %}
+    <li>
+      <button type="button" class="collapse">
+        {% if con.url %}
+          <a href="{ con.url | relative_url }">{{ con.title }}</a>
+        {% else %}
+          <p>{{ con.title }}</p>
+        {% endif %}
+      </button>
+      <div class="collapse_content">
+        {% include category_list.html lists=con.contents %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>
