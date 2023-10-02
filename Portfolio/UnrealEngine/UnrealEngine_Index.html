@@ -11,20 +11,20 @@ new_title: true
 <div>
 aaaaaaa<br>
 
-{{ site.categories['UnrealEngine'] }}
-{{ site.categories['UnrealEngine'][0] }}
-{{ site.categories['UnrealEngine'][1] }}
-{{ site.categories['UnrealEngine'].url[0] }}
-{{ site.categories['UnrealEngine'].url[1] }}
-{{ site.categories['UnrealEngine'].url }}
-{{ site.categories['UnrealEngine']['url'][0] }}
-{{ site.categories['UnrealEngine']['url'][1] }}
-{{ site.categories['UnrealEngine']['url'] }}
-{{ site.categories['UnrealEngine'].content }}
-{{ site.categories['UnrealEngine'].content[0] }}
-{{ site.categories['UnrealEngine'].content[1] }}
+{{ site.nav-categories['UnrealEngine'] }}
+{{ site.nav-categories['UnrealEngine'][0] }}
+{{ site.nav-categories['UnrealEngine'][1] }}
+{{ site.nav-categories['UnrealEngine'].url[0] }}
+{{ site.nav-categories['UnrealEngine'].url[1] }}
+{{ site.nav-categories['UnrealEngine'].url }}
+{{ site.nav-categories['UnrealEngine']['url'][0] }}
+{{ site.nav-categories['UnrealEngine']['url'][1] }}
+{{ site.nav-categories['UnrealEngine']['url'] }}
+{{ site.nav-categories['UnrealEngine'].content }}
+{{ site.nav-categories['UnrealEngine'].content[0] }}
+{{ site.nav-categories['UnrealEngine'].content[1] }}
 
-{% for category in site.categories %}
+{% for category in site.nav-categories %}
   <a href="{{ category.url | relative_url }}">{{ category.subject }}</a>
   <ol>
     {% for con in category.contents %}
