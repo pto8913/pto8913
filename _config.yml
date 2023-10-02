@@ -96,12 +96,16 @@ categories:
         url:
       - title: Note
         url:
-  DirectX11 C++:
-    Game:
-      url:
-  Unity:
-    Game:
-      url:
+  - subject: "DirectX11 C++"
+    url: ''
+    contents: 
+      - title: "Game"
+        url:
+  - subject: "Unity"
+    url: ''
+    contents:
+      - title: "Game"
+        url: ''
 
 # ------------------------------ Portfolio ------------------------------
 # Navigations
