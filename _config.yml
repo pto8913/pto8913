@@ -88,24 +88,24 @@ nav-footer:                  # shows a footer with social links - for available 
 
 categories:
   UnrealEngine: 
-    url: '/Portfolio/UnrealEngine/UnrealEngine_Index.html'
+    url: "/Portfolio/UnrealEngine/UnrealEngine_Index.html"
     contents:
       - title: "Game"
         url: 
       - title: "Plugin"
-        url: '/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html'
+        url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
       - title: Note
         url:
   DirectX11 C++:
-    url: ''
+    url: ""
     contents: 
       - title: "Game"
         url:
   Unity:
-    url: ''
+    url: ""
     contents:
       - title: "Game"
-        url: ''
+        url: ""
 
 # ------------------------------ Portfolio ------------------------------
 # Navigations
