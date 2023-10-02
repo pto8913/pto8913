@@ -10,12 +10,23 @@ category_name: "UnrealEngine"
 ---
 
 <div>
-  <a href="{{ site.nav-categories[page.category_name].url | relative_url }}">{{ page.category_name }}</a>
-  <ul>
-    {% for con in site.nav-categories[page.category_name].contents %}
-      <li>
-        <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+  ------------------------------------------<br>
+  <br>
+  1. {{ site.nav-categories2["UnrealEngine"] }} <br>
+  3. {{ site.nav-categories2["UnrealEngine"]["url"] }} <br>
+  6. {{ site.nav-categories2["UnrealEngine"].url }} <br>
+
+  ------------------------------------------<br>
+  <br>
+
+  <div>
+    <a href="{{ site.nav-categories[{{ page.category_name }}].url | relative_url }}">{{ page.category_name }}</a>
+    <ul>
+      {% for con in site.nav-categories[{{ page.category_name }}].contents %}
+        <li>
+          <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
