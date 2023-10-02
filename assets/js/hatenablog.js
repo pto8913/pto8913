@@ -2,14 +2,16 @@
 // script.src = 'https://code.jquery.com/jquery-3.6.3.min.js'; // Check https://jquery.com/ for the current version
 // document.getElementsByTagName('head')[0].appendChild(script);
 
-fetch('https://code.jquery.com/jquery-3.6.3.min.js').then(r=>{return r.text()}).then(t=>eval(t)).then(()=>{
-    if($('#auto-site-map').length == 0)
-    {
-        console.log( "no tag end--->" + $('#auto-site-map').length ) ;
-        return ;
+fetch('https://code.jquery.com/jquery-3.6.3.min.js').then(r=>r.text()).then(t=>eval(t)).then(
+    ()=>{
+        if($('#auto-site-map').length == 0)
+        {
+            console.log( "no tag end--->" + $('#auto-site-map').length ) ;
+            return ;
+        }
+        Init();
     }
-    Init();
-});
+);
 
 function Init()
 {
