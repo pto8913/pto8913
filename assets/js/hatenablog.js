@@ -6,16 +6,12 @@ window.addEventListener('DOMContentLoaded',
     function(event)
     {
         console.log("DOM fully loaded");
-        $(document).ready(
-            function() {
-                if($('#auto-site-map').length == 0)
-                {
-                    console.log( "no tag end--->" + $('#auto-site-map').length ) ;
-                    return ;
-                }
-                Init();
-            }
-        )
+        if($('#auto-site-map').length == 0)
+        {
+            console.log( "no tag end--->" + $('#auto-site-map').length ) ;
+            return ;
+        }
+        Init();
     }
 );
 // window.onload = Init();
