@@ -87,7 +87,8 @@ nav-footer:                  # shows a footer with social links - for available 
   - {title: Discord, icon: '/assets/images/discord.png', url: "https://discord.gg/mXntvZdCFf"}
 
 categories:
-  UnrealEngine: '/Portfolio/UnrealEngine/UnrealEngine.html'
+  UnrealEngine: 
+    url: '/Portfolio/UnrealEngine/UnrealEngine.html'
     Game:
       url: 
     Plugin:
@@ -108,9 +109,10 @@ categories:
 Hoshimori-teaser-url: "https://drive.google.com/file/d/1EavglxdZwW2IZH8k2b-mfpsXr_gHR9fc/preview"
 
 # ---------------- Portfolio Index ----------------
-idx-Portfolio-Game:
+News:
   星の守り人: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori"
   とこぷよ: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo"
+
 idx-Portfolio:
   - subject: "ゲーム"
     contents:
