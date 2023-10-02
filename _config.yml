@@ -87,25 +87,25 @@ nav-footer:                  # shows a footer with social links - for available 
   - {title: Discord, icon: '/assets/images/discord.png', url: "https://discord.gg/mXntvZdCFf"}
 
 categories:
-  UnrealEngine : 
-    url : "/Portfolio/UnrealEngine/UnrealEngine_Index.html"
+  UnrealEngine: 
+    url: "/Portfolio/UnrealEngine/UnrealEngine_Index.html"
     contents :
-      - title : "Game"
-        url : 
-      - title : "Plugin"
-        url : "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
-      - title : Note
-        url :
+      - title: "Game"
+        url: ""
+      - title: "Plugin"
+        url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
+      - title: Note
+        url: ""
   DirectX11 C++ :
-    url : ""
-    contents : 
-      - title : "Game"
-        url :
-  Unity :
-    url : ""
-    contents :
-      - title : "Game"
+    url: ""
+    contents: 
+      - title: "Game"
         url : ""
+  Unity :
+    url: ""
+    contents :
+      - title: "Game"
+        url: ""
 
 # ------------------------------ Portfolio ------------------------------
 # Navigations
