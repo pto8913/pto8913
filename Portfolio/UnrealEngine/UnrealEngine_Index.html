@@ -8,26 +8,15 @@ title:
 new_title: true
 ---
 
-<div>
-  {% for a in site.nav-header %}
-    {{ a[0] : a[1] }}<br>
-  {% endfor %}
-  subject : {{ site.categories[0]['UnrealEngine'] }}<br>
-  subject : {{ site.categories[0].UnrealEngine }}<br>
-  subject : {{ site.categories['UnrealEngine'] }}<br>
-  subject : {{ site.categories['UnrealEngine'][0] }}<br>
-  subject : {{ site.categories['UnrealEngine'][1] }}<br>
-  url : {{ site.categories['UnrealEngine']['url'][0] }}<br>
-  url : {{ site.categories['UnrealEngine']['url'][1] }}<br>
-  url : {{ site.categories['UnrealEngine']['url'] }}<br>
-
-  {% for elem in site.categories['UnrealEngine']['contents'] %}
-    content title : {{ elem.title }}<br>
-    content url : {{ elem.url }}<br>
-  {% endfor %}
-  
-  {% for elem in site.categories['UnrealEngine'].contents %}
-    content title : {{ elem.title }}<br>
-    content url : {{ elem.url }}<br>
-  {% endfor %}
-</div>
+{{ site.categories['UnrealEngine'] }}
+{{ site.categories['UnrealEngine'][0] }}
+{{ site.categories['UnrealEngine'][1] }}
+{{ site.categories['UnrealEngine'].url[0] }}
+{{ site.categories['UnrealEngine'].url[1] }}
+{{ site.categories['UnrealEngine'].url }}
+{{ site.categories['UnrealEngine']['url'][0] }}
+{{ site.categories['UnrealEngine']['url'][1] }}
+{{ site.categories['UnrealEngine']['url'] }}
+{{ site.categories['UnrealEngine'].content }}
+{{ site.categories['UnrealEngine'].content[0] }}
+{{ site.categories['UnrealEngine'].content[1] }}
