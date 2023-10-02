@@ -10,9 +10,9 @@ category_name: "UnrealEngine"
 ---
 
 <div>
-  <a href="{{ site.nav-categories[category_name].url | relative_url }}">{{ category_name }}</a>
+  <a href="{{ site.nav-categories[page.category_name].url | relative_url }}">{{ page.category_name }}</a>
   <ul>
-    {% for con in site.nav-categories[category_name].contents %}
+    {% for con in site.nav-categories[page.category_name].contents %}
       <li>
         <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
       </li>
