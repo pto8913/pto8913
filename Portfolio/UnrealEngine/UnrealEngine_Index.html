@@ -9,8 +9,11 @@ new_title: true
 ---
 
 <div>
+  {% for a in site.nav-header %}
+    a[0] : a[1]<br>
+  {% endfor %}
   subject : {{ site.categories['UnrealEngine'] }}<br>
-  url : {{ site.categories['UnrealEngine'].url }}<br>
+  url : {{ site.categories['UnrealEngine'].url[1] }}<br>
 
   {% for elem in site.categories['UnrealEngine'] %}
     content title : {{ elem.title }}<br>
