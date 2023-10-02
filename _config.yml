@@ -92,7 +92,6 @@ nav-categories:
     url: "/Portfolio/UnrealEngine/UnrealEngine_Index.html"
     contents:
       - title: "Game"
-        url: ""
         contents:
           - title: "星の守り人"
             url: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html"
