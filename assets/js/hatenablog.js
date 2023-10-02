@@ -14,7 +14,6 @@ window.addEventListener('DOMContentLoaded',
         Init();
     }
 );
-// window.onload = Init();
 
 function Init()
 {
