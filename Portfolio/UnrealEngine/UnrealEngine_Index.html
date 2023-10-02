@@ -8,10 +8,16 @@ title:
 new_title: true
 ---
 
-<p>{{ site.categories[0].subject }}</p><br>
-<p>{{ site.categories[0].url }}</p><br>
+<div>
+  <p>{{ site.categories[0].subject }}</p><br>
+  <p>{{ site.categories[0].url }}</p><br>
 
-{% for elem in site.categories.contents %}
-  <p>{{ elem.title }}</p><br>
-  <p>{{ elem.url }}</p><br>
-{% endfor %}
+  {% for elem in site.categories %}
+    <p>{{ elem.subject }}</p><br>
+    <p>{{ elem.url }}</p><br>
+    {% for con in elem.contents %}
+      <p>{{ con.title }}</p><br>
+      <p>{{ con.url }}</p><br>
+    {% endfor %}
+  {% endfor %}
+</div>
