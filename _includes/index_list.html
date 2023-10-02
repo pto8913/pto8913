@@ -13,8 +13,8 @@
       {% if con.url %}
         <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
       {% else %}
-        {% assign lists = con.contents %}
-        {% include index_list.html lists %}
+        {% assign child_lists = con.contents %}
+        {% include index_list.html lists=child_lists %}
       {% endif %}
     </li>
   {% endfor %}
