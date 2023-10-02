@@ -2,16 +2,23 @@ var script = document.createElement('script');
 script.src = 'https://code.jquery.com/jquery-3.6.3.min.js'; // Check https://jquery.com/ for the current version
 document.getElementsByTagName('head')[0].appendChild(script);
 
-$(document).ready(
-    function() {
-        if($('#auto-site-map').length == 0)
-        {
-            console.log( "no tag end--->" + $('#auto-site-map').length ) ;
-            return ;
-        }
-        Init();
+window.addEventListener('DOMContentLoaded',
+    function(event)
+    {
+        console.log("DOM fully loaded");
+        $(document).ready(
+            function() {
+                if($('#auto-site-map').length == 0)
+                {
+                    console.log( "no tag end--->" + $('#auto-site-map').length ) ;
+                    return ;
+                }
+                Init();
+            }
+        )
     }
-)
+);
+// window.onload = Init();
 
 function Init()
 {

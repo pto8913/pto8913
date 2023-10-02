@@ -10,5 +10,6 @@ category: "UnrealEngine"
   {% assign cat = site.nav-categories[{{ page.category }}] %}
   <a href="{{ cat.url | relative_url }}">{{ page.category }}</a>
   {% include index_list.html lists=cat.contents %}
+  0. {{ cat }}
   1. {{ cat.contents }}
 </div>
