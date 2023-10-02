@@ -9,11 +9,11 @@ new_title: true
 ---
 
 <div>
-  <p>{{ site.categories['UnrealEngine'] }}</p><br>
-  <p>{{ site.categories['UnrealEngine'].url }}</p><br>
+  subject : {{ site.categories['UnrealEngine'] }}<br>
+  url : {{ site.categories['UnrealEngine'].url }}<br>
 
   {% for elem in site.categories['UnrealEngine'] %}
-    <p>{{ elem.title }}</p><br>
-    <p>{{ elem.url }}</p><br>
+    content title : {{ elem.title }}<br>
+    content url : {{ elem.url }}<br>
   {% endfor %}
 </div>
