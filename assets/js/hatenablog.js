@@ -22,6 +22,7 @@ window.addEventListener('DOMContentLoaded',
 
 function Init()
 {
+    console.log("hatenablog.js ok!");
     var page = 1;
     var myUrl = 'https://pto8913.hatenablog.com';
     var sitemap_url = new Array();
