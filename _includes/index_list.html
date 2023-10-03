@@ -1,4 +1,5 @@
-{% if include.__recursive == "" %}
+{% assign __recursive=include.recursive | default: false %}
+{% if __recursive == false %}
   <style>
     .index_ul {
       margin: 0
@@ -17,7 +18,7 @@
       {% else %}
         {{ con.title }}
         {% if con.contents %}
-          {% include index_list.html lists=con.contents __recursive="true" %}
+          {% include index_list.html lists=con.contents recursive=true %}
         {% endif %}
       {% endif %}
     </li>
