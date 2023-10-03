@@ -7,7 +7,9 @@
   }
 </style>
 {% assign contents = include.lists %}
-<ul class="index_ul">
+<button type="button" class="collapse">
+</button>
+<ul class="index_ul collapse_content">
   {% for con in contents %}
     <li class="index_li">
       {% if con.url %}
