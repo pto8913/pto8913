@@ -1,25 +1,23 @@
-<ul>
-  {% assign contents=include.lists %}
-  {% for con in contents %}
+{% assign contents=include.lists %}
+{% for con in contents %}
+  <button type="button" class="collapse">
+    {% if con.title %}
+      {% if con.url %}
+        <a href="{ con.url | relative_url }">{{ con.title }}</a>
+      {% else %}
+        <p>{{ con.title }}</p>
+      {% endif %}
+    {% else %}
+      {% if con.url %}
+        <a href="{ con.url | relative_url }">{{ con[0] }}</a>
+      {% else %}
+        <p>{{ con[0] }}</p>
+      {% endif %}
+    {% endif %}
+  </button>
+  <ul class="collapse_content">
     <li>
-      <button type="button" class="collapse">
-        {% if con.title %}
-          {% if con.url %}
-            <a href="{ con.url | relative_url }">{{ con.title }}</a>
-          {% else %}
-            <p>{{ con.title }}</p>
-          {% endif %}
-        {% else %}
-          {% if con.url %}
-            <a href="{ con.url | relative_url }">{{ con[0] }}</a>
-          {% else %}
-            <p>{{ con[0] }}</p>
-          {% endif %}
-        {% endif %}
-      </button>
-      <div><!-- class="collapse_content"> -->
-        {% include category.html lists=con.contents %}
-      </div>
+      {% include category.html lists=con.contents %}
     </li>
-  {% endfor %}
-</ul>
+  </ul>
+{% endfor %}
