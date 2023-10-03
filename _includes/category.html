@@ -1,24 +1,25 @@
+{% assign __recursive=include.recursive | default: false %}
 {% assign subjects=include.lists %}
 <ul>
   {% for subject in subjects %}
     <button type="button" class="collapse">
-      {% if subject.title %}
-        {% if subject.url %}
-          <a href="{ subject.url | relative_url }">{{ subject.title }}</a>
+      {% if subject[0].title %}
+        {% if subject[0].url %}
+          <a href="{ subject[0].url | relative_url }">{{ subject[0].title }}</a>
         {% else %}
-          <p>{{ subject.title }}</p>
+          <p>{{ subject[0].title }}</p>
         {% endif %}
       {% else %}
-        {% if subject.url %}
-          <a href="{ subject.url | relative_url }">{{ subject[0] }}</a>
+        {% if subject[0].url %}
+          <a href="{ subject[0].url | relative_url }">{{ subject[0] }}</a>
         {% else %}
           <p>{{ subject[0] }}</p>
         {% endif %}
       {% endif %}
     </button>
-    subject : {{ subject }}<br>
-    contents : {{ subject.contents }}<br>
-    {% for con in subject.contents %}
+    subject : {{ subject[0] }}<br>
+    contents : {{ subject[0].contents }}<br>
+    {% for con in subject[0].contents %}
       sub.contents.child : {{ con }}<br>
       <li class="collapse_content">
         {% include category.html lists=con.contents %}
