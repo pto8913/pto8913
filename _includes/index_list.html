@@ -1,15 +1,15 @@
-<style>
-  .index_ul {
-    margin: 0
-  }
-  .index_li {
-    list-style-type: disc
-  }
-</style>
+{% if include.__recursive == "" %}
+  <style>
+    .index_ul {
+      margin: 0
+    }
+    .index_li {
+      list-style-type: disc
+    }
+  </style>
+{% endif %}
 {% assign contents = include.lists %}
-<button type="button" class="collapse">
-</button>
-<ul class="index_ul collapse_content">
+<ul class="index_ul">
   {% for con in contents %}
     <li class="index_li">
       {% if con.url %}
@@ -17,7 +17,7 @@
       {% else %}
         {{ con.title }}
         {% if con.contents %}
-          {% include index_list.html lists=con.contents %}
+          {% include index_list.html lists=con.contents __recursive="true" %}
         {% endif %}
       {% endif %}
     </li>
