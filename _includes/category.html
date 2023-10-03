@@ -6,12 +6,16 @@
     {% assign subject_contents = __categories[subject_name] %}
     <button type="button" class="collapse">{{ subject_name }}</button>
     {% for subject in subject_contents.contents %}
-      subject : {{ subject }}<br>
-      contents : {{ subject.contents }}<br>
       {% for con in subject.contents %}
-        sub.contents.child : {{ con }}<br>
         <li class="collapse_content">
-          {% include category.html lists=con.contents %}
+          {% if con.url %}
+            <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
+          {% else %}
+            {{ con.title }}
+            {% if con.contents %}
+              {% include category.html lists=con.contents %}
+            {% endif %}
+          {% endif %}
         </li>
       {% endfor %}
     {% endfor %}
