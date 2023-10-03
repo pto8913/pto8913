@@ -22,14 +22,9 @@
 
       <button type="button" class="collapse">{{ subject_name }}</button>
       {% for subject in subject_contents.contents %}
-        {% for con in subject.contents %}
-          <li class="collapse_content">
-            {{ con.title }}
-            {% if con.contents %}
-              {% include category.html lists=con.contents %}
-            {% endif %}
-          </li>
-        {% endfor %}
+        <li class="collapse_content">
+          {% include category.html lists=subject_contents.contents %}
+        </li>
       {% endfor %}
     {% endif %}
   {% endfor %}
