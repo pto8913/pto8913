@@ -1,5 +1,6 @@
 <ul>
-  {% for con in include.lists %}
+  {% assign contents=include.lists %}
+  {% for con in contents %}
     <li>
       <button type="button" class="collapse">
         {% if con.title %}
@@ -15,7 +16,6 @@
             <p>{{ con[0] }}</p>
           {% endif %}
         {% endif %}
-
       </button>
       <div class="collapse_content">
         {% include category.html lists=con.contents %}
