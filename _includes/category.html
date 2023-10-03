@@ -10,7 +10,11 @@
         <li>{{ subject_name }}</li>
       {% else %}
         <button type="button" class="collapse">
-          <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
+          {% if category.url %}
+            <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
+          {% else %}
+            {{ subject_name }}
+          {% endif %}
         </button>
         <li class="collapse_content">
           {% include category.html lists=category.contents %}
