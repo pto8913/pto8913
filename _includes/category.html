@@ -2,11 +2,20 @@
   {% for con in include.lists %}
     <li>
       <button type="button" class="collapse">
-        {% if con.url %}
-          <a href="{ con.url | relative_url }">{{ con.title }}</a>
+        {% if con.title %}
+          {% if con.url %}
+            <a href="{ con.url | relative_url }">{{ con.title }}</a>
+          {% else %}
+            <p>{{ con.title }}</p>
+          {% endif %}
         {% else %}
-          <p>{{ con.title }}</p>
+          {% if con.url %}
+            <a href="{ con.url | relative_url }">{{ con[0] }}</a>
+          {% else %}
+            <p>{{ con[0] }}</p>
+          {% endif %}
         {% endif %}
+
       </button>
       <div class="collapse_content">
         {% include category.html lists=con.contents %}
