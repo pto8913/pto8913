@@ -103,13 +103,13 @@ nav-categories:
         url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
       - title: Note
         url: ""
-  DirectX11 C++:
-    url: ""
+  DirectX11-C++:
+    url: "/Portfolio/DirectX11-C++/DirectX11_Index.html"
     contents: 
       - title: "Game"
         url : ""
   Unity:
-    url: ""
+    url: "/Portfolio/Unity/Unity_Index.html"
     contents :
       - title: "Game"
         url: ""

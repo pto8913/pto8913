@@ -2,22 +2,39 @@
 {% assign __categories=include.lists %}
 <ul>
   {% for category in __categories %}
-    {% assign subject_name = category[0] %}
-    {% assign subject_contents = __categories[subject_name] %}
-    <button type="button" class="collapse">{{ subject_name }}</button>
-    {% for subject in subject_contents.contents %}
-      {% for con in subject.contents %}
+    {% if category.title %}
+      {% assign subject_name = category.title %}
+      {% assign subject_contents = category.contents %}
+
+      {% if category.url %}
+        <li>{{ subject_name }}</li>
+      {% else %}
+        <button type="button" class="collapse">
+          <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
+        </button>
         <li class="collapse_content">
-          {% if con.url %}
-            <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
-          {% else %}
-            {{ con.title }}
-            {% if con.contents %}
-              {% include category.html lists=con.contents %}
-            {% endif %}
-          {% endif %}
+          {% include category.html lists=category.contents %}
         </li>
+      {% endif %}
+    {% else %}
+      {% assign subject_name = category[0] %}
+      {% assign subject_contents = __categories[subject_name] %}
+
+      <button type="button" class="collapse">{{ subject_name }}</button>
+      {% for subject in subject_contents.contents %}
+        {% for con in subject.contents %}
+          <li class="collapse_content">
+            {% if con.url %}
+              <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
+            {% else %}
+              {{ con.title }}
+              {% if con.contents %}
+                {% include category.html lists=con.contents %}
+              {% endif %}
+            {% endif %}
+          </li>
+        {% endfor %}
       {% endfor %}
-    {% endfor %}
+    {% endif %}
   {% endfor %}
 </ul>
