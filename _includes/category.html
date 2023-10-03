@@ -24,13 +24,9 @@
       {% for subject in subject_contents.contents %}
         {% for con in subject.contents %}
           <li class="collapse_content">
-            {% if con.url %}
-              <a href="{{ con.url | relative_url }}">{{ con.title }}</a>
-            {% else %}
-              {{ con.title }}
-              {% if con.contents %}
-                {% include category.html lists=con.contents %}
-              {% endif %}
+            {{ con.title }}
+            {% if con.contents %}
+              {% include category.html lists=con.contents %}
             {% endif %}
           </li>
         {% endfor %}
