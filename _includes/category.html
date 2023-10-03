@@ -16,7 +16,9 @@
         {% endif %}
       {% endif %}
     </button>
+    contents : {{ subject.contents }}<br>
     {% for con in subject.contents %}
+      sub.contents.child : {{ con }}<br>
       <li class="collapse_content">
         {% include category.html lists=con.contents %}
       </li>
