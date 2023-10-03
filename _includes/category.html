@@ -5,9 +5,7 @@
     {% assign subject_name = category[0] %}
     {% assign subject_contents = __categories[subject_name] %}
     <button type="button" class="collapse">{{ subject_name }}</button>
-    subject_name : {{ subject_name }}<br>
-    subject_contents : {{ subject_contents }}<br>
-    {% for subject in subject_contents %}
+    {% for subject in subject_contents.contents %}
       subject : {{ subject }}<br>
       contents : {{ subject.contents }}<br>
       {% for con in subject.contents %}
