@@ -1,6 +1,14 @@
 {% assign __recursive=include.recursive | default: false %}
+{% if __recursive == false %}
+  <style>
+    .category_ul {
+      padding: 0;
+      margin: 10px;
+    }
+  </style>
+{% endif %}
 {% assign __categories=include.lists %}
-<ul>
+<ul class="category_ul">
   {% for category in __categories %}
     {% if category.title %}
       {% assign subject_name = category.title %}
