@@ -108,10 +108,18 @@ nav-categories:
     contents: 
       - title: "Game"
         url : ""
+      - title: "Plugin"
+        url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
+      - title: Note
+        url: ""
   Unity:
     url: "/Portfolio/Unity/Unity_Index.html"
     contents :
       - title: "Game"
+        url: ""
+      - title: "Plugin"
+        url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
+      - title: Note
         url: ""
 
 # ------------------------------ Portfolio ------------------------------
