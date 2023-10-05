@@ -7,9 +7,8 @@
     }
   </style>
 {% endif %}
-{% assign __categories=include.lists %}
 <ul class="category_ul">
-  {% for category in __categories %}
+  {% for category in include.lists %}
     {% if category.title %}
       {% assign subject_name = category.title %}
       {% assign subject_contents = category.contents %}
@@ -31,18 +30,12 @@
     {% else %}
       {% assign subject_name = category[0] %}
       {% assign subject_contents = include.lists[subject_name] %}
-      aaaaaa<br>
-      {{ subject_name }}<br>
-      __categories : {{ include.lists }}<br>
-      {{ subject_contents }}<br>
-      cat : {{ include.lists[subject_name] }}<br>
       <button type="button" class="collapse">{{ subject_name }}</button>
       {% for subject in subject_contents.contents %}
         <li class="collapse_content">
           {% include category.html lists=subject_contents.contents %}
         </li>
       {% endfor %}
-      ----aaaaaa<br>
     {% endif %}
   {% endfor %}
 </ul>
