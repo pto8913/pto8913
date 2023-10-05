@@ -35,6 +35,7 @@
       {{ subject_name }}<br>
       __categories : {{ __categories }}<br>
       {{ subject_contents }}<br>
+      cat : {{ __categories[subject_name] }}<br>
       <button type="button" class="collapse">{{ subject_name }}</button>
       {% for subject in subject_contents.contents %}
         <li class="collapse_content">
