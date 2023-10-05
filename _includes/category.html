@@ -32,6 +32,8 @@
       {% assign subject_name = category[0] %}
       {% assign subject_contents = __categories[subject_name] %}
       aaaaaa<br>
+      {{ subject_name }}<br>
+      {{ subject_contents }}<br>
       <button type="button" class="collapse">{{ subject_name }}</button>
       {% for subject in subject_contents.contents %}
         <li class="collapse_content">
