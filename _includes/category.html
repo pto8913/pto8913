@@ -15,10 +15,9 @@
   </style>
 {% endif %}
 
-{% assign __recursive=include.recursive | default: false %}
 {% if __recursive == false %}
   <ul class="category_ul_owner">
-{% else %}
+{% elsif __recursive == true %}
   <ul class="category_ul">
 {% endif %}
   {% for category in include.lists %}
@@ -37,7 +36,7 @@
           {% endif %}
         </button>
         <li class="collapse_content">
-          {% include category.html lists=category.contents %}
+          {% include category.html lists=category.contents recursive=true %}
         </li>
       {% endif %}
     {% else %}
@@ -46,7 +45,7 @@
       <button type="button" class="collapse">{{ subject_name }}</button>
       {% for subject in subject_contents.contents %}
         <li class="collapse_content">
-          {% include category.html lists=subject_contents.contents %}
+          {% include category.html lists=subject_contents.contents recursive=true %}
         </li>
       {% endfor %}
     {% endif %}
