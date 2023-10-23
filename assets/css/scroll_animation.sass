@@ -1,73 +1,11 @@
 ---
 ---
 
-.fade-in
+.fade_box
+  width: 100%
   opacity: 0
-  transition-duration: 500ms
-  transition-property: opacity, transform
+  transition: opacity 1s, transform 0.5s
 
-.fade-in-up
-  transform: translate(0, 50px)
-
-.fade-in-down
-  transform: translate(0, -50px)
-
-.fade-in-left
-  transform: translate(-50px, 0)
-
-.fade-in-right
-  transform: translate(50px, 0)
-
-.scroll-in
+.fadein
   opacity: 1
-  transform: translate(0, 0)
-
-.scroll-out
-  opacity: 0
-  transform: translate(0, 0)
-  display: none
-
-
-
-.fadeBox
-  height: 500px
-.itemBox
-  width: 300px
-  height: 70px
-  background-color: #999
-  margin: 50px auto
-  border-radius: 10px
-  text-align: center
-  line-height: 70px
-
-.fadeUp
-  -webkit-animation-name: fadeUpAnime
-          animation-name: fadeUpAnime
-  -webkit-animation-duration: 1s
-          animation-duration: 1s
-  -webkit-animation-fill-mode: forwards
-          animation-fill-mode: forwards
-@-webkit-keyframes fadeUpAnime
-  0%
-    opacity: 0
-    -webkit-transform: translateY(100px)
-            transform: translateY(100px)
-
-  100%
-    opacity: 1
-    -webkit-transform: translateY(0)
-            transform: translateY(0)
-
-@keyframes fadeUpAnime
-  0%
-    opacity: 0
-    -webkit-transform: translateY(100px)
-            transform: translateY(100px)
-
-  100%
-    opacity: 1
-    -webkit-transform: translateY(0)
-            transform: translateY(0)
-
-.fadeUpTrigger
-  opacity: 0
+  transform: translateY(0)

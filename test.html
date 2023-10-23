@@ -27,10 +27,10 @@ title: "ホーム"
         <h2 class="Portfolio_subject">
           {{ data.subject }}
         </h2>
-        <div class="Portfolio_grid_3x fadeBox">
+        <div class="Portfolio_grid_3x fade_box">
           {% for row in data.contents %}
             {% if row.img %}
-              <div class="img_card_container fadeUpTrigger itemBox">
+              <div class="img_card_container">
                 <a href="{{ row.url | relative_url }}">
                   <img src="{{ row.img | relative_url }}" class="img_card" alt="" />
                   <p class="img_card_title">{{ row.title }}</p>
