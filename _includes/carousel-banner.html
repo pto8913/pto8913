@@ -225,16 +225,18 @@
   </aside>
 </div> -->
 
-<div class="carousel-001">
+<div>
   {% for link in links %}
-    <div class="carousel__slide-001">
-      <div class="carousel__slide-content-001">
-        <a href="{{ link[1] | relative_url }}.html">
-          <img src="{{ link[1] | relative_url }}.png" alt="" />
-          {% if include.title %}
-            <p class="carousel__slide-caption-001">{{ include.title }} : {{ link[0] }}</p>
-          {% endif %}
-        </a>
+    <div class="carousel-001">
+      <div class="carousel__slide-001">
+        <div class="carousel__slide-content-001">
+          <a href="{{ link[1] | relative_url }}.html">
+            <img src="{{ link[1] | relative_url }}.png" alt="" />
+            {% if include.title %}
+              <p class="carousel__slide-caption-001">{{ include.title }} : {{ link[0] }}</p>
+            {% endif %}
+          </a>
+        </div>
       </div>
     </div>
   {% endfor %}
