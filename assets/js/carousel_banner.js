@@ -93,7 +93,8 @@ carousels.forEach(
 
 function changeSlide()
 {
-  slides.forEach(
+    slideIndex == slides.length ? (slideIndex = 1) : ++slideIndex;
+    slides.forEach(
     (slide, cont_slide) => {
       slide.style = "left: -" + (slideIndex - 1) * 100 + "%;";
     }
