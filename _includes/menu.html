@@ -98,11 +98,11 @@
     top: calc(50% - 5px);
   }
 
-  .logo {
+  .menu_logo {
     opacity: 0;
     display: none;
   }
-  .logo_visible {
+  .menu_logo_visible {
     opacity: 1;
     display: block;
   }
@@ -113,20 +113,20 @@
     entry=> {
       if (entry[0].isIntersecting)
       {
-        entry[0].target.classList.remove("logo_visible");
+        entry[0].target.classList.remove("menu_logo_visible");
       }
       else
       {
-        entry[0].target.classList.add("logo_visible");
+        entry[0].target.classList.add("menu_logo_visible");
       }
     }
     ).observe(
-      document.querySelector("logo")
+      document.querySelector("menu_logo")
     );
 </script>
 <div class="menu_sticky">
   <a href="{{ '/' | relative_url }}" class="title">
-    <img class="logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
+    <img class="menu_logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
   </a>
   <ul class="menu_li_container">
     {% for nav in include.navigation %}
