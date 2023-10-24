@@ -26,7 +26,16 @@ carousels.forEach(
     /* clicked prev button event */
     prev.addEventListener(
       "click",
-      {name: userName, handleEvent: clickedPrev}
+      (e) => {
+        slideIndex == 1 ? (slideIndex = slides.length) : --slideIndex;
+        activeCarouselIndex = slideIndex;
+        activeCarousel = slides[slideIndex];
+        slides.forEach(
+          (slide, cont_slide) => {
+            slide.style = "left: -" + (slideIndex - 1) * 100 + "%;";
+          }
+        );
+      }
     );
 
     /* create move to next slide button */ 
@@ -81,22 +90,9 @@ carousels.forEach(
   }
 );
 
-function clickedPrev(e)
-{
-  slideIndex == 1 ? (slideIndex = slides.length) : --slideIndex;
-  activeCarouselIndex = slideIndex;
-  activeCarousel = slides[slideIndex];
-  slides.forEach(
-    (slide, cont_slide) => {
-      slide.style = "left: -" + (slideIndex - 1) * 100 + "%;";
-    }
-  );
-}
-
-
 function changeSlide()
 {
-  let width = activeCarousel.outerWidth(true);
+  let width = activeCarousel.outerWidth;
   activeCarousel.stop().animate(
     {
       left: activeCarouselIndex * -width
