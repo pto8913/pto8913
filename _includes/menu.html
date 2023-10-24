@@ -111,21 +111,27 @@
   </style>
   <script>
     /* set logo visible, when the logo is not intersecting */
-    window.onscroll = function() {
-      var scroll_top = document.body.scrollTop;
-      console.log(scroll_top);
-      if (scroll_top <= 100)
+    $(window).on
+    {
+      "scroll",
+      function()
       {
-        if (document.getElementById("menu_logo").classList.contains("fadein"))
+        var scroll_top = $(window).scrollTop();
+        if (scroll_top <= 100)
         {
-          document.getElementById("menu_logo").classList.remove("fadein");
+          $("menu_logo").removeClass("fadein");
+          // if (document.getElementById("menu_logo").classList.contains("fadein"))
+          // {
+          //   document.getElementById("menu_logo").classList.remove("fadein");
+          // }
         }
-      }
-      else
-      {
-        if (!document.getElementById("menu_logo").classList.contains("fadein"))
+        else
         {
-          document.getElementById("menu_logo").classList.add("fadein");
+          $("menu_logo").addClass("fadein");
+          // if (!document.getElementById("menu_logo").classList.contains("fadein"))
+          // {
+          //   document.getElementById("menu_logo").classList.add("fadein");
+          // }
         }
       }
     };
