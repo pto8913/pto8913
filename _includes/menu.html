@@ -100,10 +100,13 @@
       top: calc(50% - 5px);
     }
     .menu_logo {
-      width: 16px;
-      height: 16px;
+      width: 32px;
+      height: 32px;
       margin: 2.5px;
       padding: 0;
+      position: absolute;
+      top: 25%;
+      left: 10%;
     }
   </style>
   <script>
@@ -113,11 +116,11 @@
       console.log(scroll_top);
       if (scroll_top <= 100)
       {
-        document.getElementById("menu_logo").classList.add("fadein");
+        document.getElementById("menu_logo").classList.remove("fadein");
       }
       else
       {
-        document.getElementById("menu_logo").classList.remove("fadein");
+        document.getElementById("menu_logo").classList.add("fadein");
       }
     };
   </script>
