@@ -1,9 +1,9 @@
-const sliders = document.querySelectorAll(".carousel");
+const sliders = document.querySelectorAll(".carousel-001");
 
 sliders.forEach(
   (carousel, cont_slide) => {
     let slideIndex = 1;
-    let slides = carousel.querySelectorAll(".carousel__slide");
+    let slides = carousel.querySelectorAll(".carousel__slide-001");
     let prev = document.createElement("span");
     prev.classList.add("prev-001");
     prev.innerHTML = "&#10094;";
