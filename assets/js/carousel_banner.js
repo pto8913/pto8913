@@ -1,16 +1,16 @@
-const carousels = document.querySelectorAll(".carousel-001");
+const carousels = document.querySelectorAll(".carousel");
 
 carousels.forEach(
   (carousel, cont_slide) => {
     let slideIndex = 1;
-    let slides = carousel.querySelectorAll(".carousel__slide-001");
+    let slides = carousel.querySelectorAll(".carousel__slide");
     let prev = document.createElement("span");
-    prev.classList.add("prev-001");
+    prev.classList.add("prev");
     prev.innerHTML = "&#10094;";
     carousel.append(prev);
 
     let next = document.createElement("span");
-    next.classList.add("next-001");
+    next.classList.add("next");
     next.innerHTML = "&#10095;";
     carousel.append(next);
 

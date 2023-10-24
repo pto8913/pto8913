@@ -1,7 +1,10 @@
 ---
 ---
 
-.carousel-001
+.carousel__container
+  display: flex
+
+.carousel
   width: 100%
   position: relative
   margin: 0 auto
@@ -9,7 +12,7 @@
   display: flex
   border-raidus: 6px
 
-.carousel__slide-001
+.carousel__slide
   width: 100%
   flex-shrink: 0
   position: relative
@@ -17,17 +20,17 @@
   left: 0
   transition: all 0.6s ease-in-out
 
-.carousel__slide-content-001
+.carousel__slide-content
   width: 100%
   height: 400px
   background-color: #c8e4ff
 
-.carousel__slide-content-001 img
+.carousel__slide-content img
   object-fit: cover
   height: 300px
   
 
-.prev-001, .next-001
+.prev, .next
   cursor: pointer
   position: absolute
   top: 50%
@@ -42,14 +45,14 @@
   border-radius: 0 4px 4px 0
   user-select: none
 
-.next-001
+.next
   right: 0
   border-radius: 4px 0 0 4px
 
-.prev-001:hover, .next-001:hover
+.prev:hover, .next:hover
   background-color: rgba(107, 182, 255, 0.8)
 
-.carousel__slide-caption-001
+.carousel__slide-caption
   color: rgba(0, 0, 0, 1)
   font-size: 15px
   padding: 0
