@@ -110,31 +110,41 @@
     }
   </style>
   <script>
-    /* set logo visible, when the logo is not intersecting */
-    $(window).on
-    {
-      "scroll",
-      function()
-      {
-        var scroll_top = $(window).scrollTop();
-        if (scroll_top <= 100)
+    fetch('https://code.jquery.com/jquery-3.6.3.min.js').then(r=>r.text()).then(t=>eval(t)).then(
+      ()=>{
+        if($('#menu_logo').length == 0)
         {
-          $("#menu_logo").removeClass("fadein");
-          // if (document.getElementById("menu_logo").classList.contains("fadein"))
-          // {
-          //   document.getElementById("menu_logo").classList.remove("fadein");
-          // }
+          console.log( "no tag end--->" + $('#menu_logo').length ) ;
+          return ;
         }
-        else
+        /* set logo visible, when the logo is not intersecting */
+        $(window).on
         {
-          $("#menu_logo").addClass("fadein");
-          // if (!document.getElementById("menu_logo").classList.contains("fadein"))
-          // {
-          //   document.getElementById("menu_logo").classList.add("fadein");
-          // }
-        }
+          "scroll",
+          function()
+          {
+            var scroll_top = $(window).scrollTop();
+            if (scroll_top <= 100)
+            {
+              $("#menu_logo").removeClass("fadein");
+              // if (document.getElementById("menu_logo").classList.contains("fadein"))
+              // {
+              //   document.getElementById("menu_logo").classList.remove("fadein");
+              // }
+            }
+            else
+            {
+              $("#menu_logo").addClass("fadein");
+              // if (!document.getElementById("menu_logo").classList.contains("fadein"))
+              // {
+              //   document.getElementById("menu_logo").classList.add("fadein");
+              // }
+            }
+          }
+        };
       }
-    };
+    );
+
   </script>
 </head>
 <div class="menu_sticky">
