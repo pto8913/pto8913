@@ -46,7 +46,7 @@ carousels.forEach(
     let dots = document.createElement("div");
     dots.classList.add("dots");
     carousel.append(dots);
-    carousels.forEach(
+    slides.forEach(
       (slide, cont_slide) => {
         let dot = document.createElement("span");
         dot.classList.add("dot");

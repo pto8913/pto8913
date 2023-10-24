@@ -11,6 +11,7 @@
       padding: 10px;
       margin: 0;
       text-align: center;
+      align-items: center;
       justify-content: flex-end;
       background-color: rgba(0,0,0,1);
     }
@@ -107,10 +108,14 @@
     }
     .menu_title {
       font-size: 1.25em;
+      display: none;
     }
     .menu_li_container_scrolled {
       height: fit-content;
-      align-items: center;
+      justify-content: space-between;
+    }
+    .menu_display {
+      display: block;
     }
   </style>
   <script>
@@ -133,10 +138,12 @@
                 if (scroll_top >= 200)
                 {
                   $(this).addClass("fadein");
+                  $(this).removeClass("menu_display");
                 }
                 else
                 {
                   $(this).removeClass("fadein");
+                  $(this).addClass("menu_display");
                 }
               }
             );
@@ -154,6 +161,7 @@
                 }
               }
             );
+
             /* Don't remove!!! */
             return false;
           }
