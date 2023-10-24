@@ -110,7 +110,8 @@
     /* set logo visible, when the logo is not intersecting */
     window.onscroll = function() {
       var scroll_top = document.body.scrollTop;
-      if (scroll_top <= 200)
+      console.log(scroll_top);
+      if (scroll_top <= 100)
       {
         document.getElementById("menu_logo").classList.add("fadein");
       }
