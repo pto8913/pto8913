@@ -226,8 +226,8 @@
 </div> -->
 
 <div class="carousel__container">
-  <div class="carousel__slide">
-    {% for link in links %}
+  {% for link in links %}
+    <div class="carousel__slide">
       <div class="carousel__slide-content">
         <a href="{{ link[1] | relative_url }}.html">
           <img src="{{ link[1] | relative_url }}.png" alt="" />
@@ -236,6 +236,6 @@
           {% endif %}
         </a>
       </div>
-    {% endfor %}
-  </div>
+    </div>
+  {% endfor %}
 </div>

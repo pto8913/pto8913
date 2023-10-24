@@ -4,9 +4,10 @@ let activeCarouselIndex = 0;
 let activeCarouselLastIndex = 0;
 let timer;
 
-function clickedPrev(e)
+function clickedPrev(inSlides)
 {
-
+  let slides = inSlides;
+  let slideIndex
 }
 
 carousels.forEach(
