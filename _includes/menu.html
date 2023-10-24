@@ -97,8 +97,37 @@
     right: 15px;
     top: calc(50% - 5px);
   }
+
+  .logo {
+    opacity: 0;
+    display: none;
+  }
+  .logo_visible {
+    opacity: 1;
+    display: block;
+  }
 </style>
+<script>
+  /* set logo visible, when the logo is not intersecting */
+  new IntersectionObserver(
+    entry=> {
+      if (entry[0].isIntersecting)
+      {
+        entry[0].target.classList.remove("logo_visible");
+      }
+      else
+      {
+        entry[0].target.classList.add("logo_visible");
+      }
+    }
+    ).observe(
+      document.querySelector("logo")
+    );
+</script>
 <div class="menu_sticky">
+  <a href="{{ '/' | relative_url }}" class="title">
+    <img class="logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
+  </a>
   <ul class="menu_li_container">
     {% for nav in include.navigation %}
       {% if nav[1].first %}
