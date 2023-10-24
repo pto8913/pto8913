@@ -99,9 +99,9 @@
       right: 15px;
       top: calc(50% - 5px);
     }
-    .logo {
-      width: 24px;
-      height: 24px;
+    .menu_logo {
+      width: 16px;
+      height: 16px;
       margin: 2.5px;
       padding: 0;
     }
@@ -109,7 +109,7 @@
   <script>
     /* set logo visible, when the logo is not intersecting */
     window.onscroll = function() {
-      var scroll_top = window.scroll_top;
+      var scroll_top = document.body.scrollTop;
       if (scroll_top <= 200)
       {
         document.getElementById("menu_logo").classList.add("fadein");
@@ -125,7 +125,7 @@
   <ul class="menu_li_container">
     <li>
       <a href="{{ '/' | relative_url }}" class="title fade_box" id="menu_logo">
-        <img class="logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
+        <img class="menu_logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
       </a>
     </li>
     {% for nav in include.navigation %}
