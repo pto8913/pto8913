@@ -232,11 +232,11 @@
         <a href="{{ link[1] | relative_url }}.html">
           <img src="{{ link[1] | relative_url }}.png" alt="" />
           {% if include.title %}
-            <p class="carousel__slide-caption">
-              <p class="carousel__title">
+            <div class="carousel__slide-caption">
+              <div class="carousel__title">
                 {{ include.title }} : {{ link[0] }}    
-              </p>
-            </p>
+              </div>
+            </div>
           {% endif %}
         </a>
       </div>
