@@ -102,16 +102,15 @@
     .menu_logo {
       width: 32px;
       height: 32px;
-      margin: 2.5px;
+      margin: 0;
       padding: 0;
-      position: absolute;
-      top: 25%;
-      left: 10%;
     }
     .menu_title {
       font-size: 1.25em;
-      position: absolute;
-      left: -47.5%;
+    }
+    .menu_li_container_scrolled {
+      height: fit-content;
+      align-items: center;
     }
   </style>
   <script>
@@ -133,25 +132,28 @@
               {
                 if (scroll_top >= 200)
                 {
-                  if(!$(this).hasClass("fadein"))
-                  {
-                    $(this).addClass("fadein");
-                  // if (!document.getElementById("menu_logo").classList.contains("fadein"))
-                  // {
-                  //   document.getElementById("menu_logo").classList.add("fadein");
-                  // }
-                  }
+                  $(this).addClass("fadein");
                 }
                 else
                 {
                   $(this).removeClass("fadein");
-                  // if (document.getElementById("menu_logo").classList.contains("fadein"))
-                  // {
-                  //   document.getElementById("menu_logo").classList.remove("fadein");
-                  // }
                 }
               }
-            )
+            );
+
+            $(".menu_li_container").each(
+              function()
+              {
+                if (scroll_top >= 200)
+                {
+                  $(this).addClass("menu_li_container_scrolled");
+                }
+                else
+                {
+                  $(this).removeClass("menu_li_container_scrolled");
+                }
+              }
+            );
             /* Don't remove!!! */
             return false;
           }
@@ -162,33 +164,33 @@
   </script>
 </head>
 <div class="menu_sticky">
-  <ul class="menu_li_container">
-    <li>
+  <div class="menu_li_container">
+    <div>
       <a href="{{ '/' | relative_url }}" class="menu_title fade_box" id="menu_logo">
         <img class="menu_logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
       </a>
-    </li>
+    </div>
     {% for nav in include.navigation %}
       {% if nav[1].first %}
-        <li class="menu_li">
+        <div class="menu_li">
           <a class="menu_a">{{ nav[0] }}</a>
-          <ul class="menu_dropdown_list_container">
+          <div class="menu_dropdown_list_container">
             {% for sub_page in nav[1] %}
-              <li class="menu_li menu_dropdown_list">
+              <div class="menu_li menu_dropdown_list">
                 <a class="menu_a" href="{{ sub_page[1] | relative_url }}" aria-label="{{ sub_page[0] }}">
                   {{ sub_page[0] }}
                 </a>
-              </li>
+              </div>
             {% endfor %}
-          </ul>
-        </li>
+          </div>
+        </div>
       {% else %}
-        <li class="menu_li">
+        <div class="menu_li">
           <a class="menu_a" href="{{ nav[1] | relative_url }}" aria-label="{{ nav[0] }}">
             {{ nav[0] }}
           </a>
-        </li>
+        </div>
       {% endif %}
     {% endfor %}
-  </ul>
+  </div>
 </div>
