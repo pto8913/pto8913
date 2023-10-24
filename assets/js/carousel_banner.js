@@ -1,14 +1,10 @@
+const userName = "pto8913";
 const carousels = document.querySelectorAll(".carousel__container");
+
 let activeCarousel = null;
 let activeCarouselIndex = 0;
 let activeCarouselLastIndex = 0;
 let timer;
-
-function clickedPrev(inSlides)
-{
-  let slides = inSlides;
-  let slideIndex
-}
 
 carousels.forEach(
   (carousel, cont_slide) => {
@@ -30,16 +26,7 @@ carousels.forEach(
     /* clicked prev button event */
     prev.addEventListener(
       "click",
-      (e) => {
-        slideIndex == 1 ? (slideIndex = slides.length) : --slideIndex;
-        activeCarouselIndex = slideIndex;
-        activeCarousel = slides[slideIndex];
-        slides.forEach(
-          (slide, cont_slide) => {
-            slide.style = "left: -" + (slideIndex - 1) * 100 + "%;";
-          }
-        );
-      }
+      {name: userName, handleEvent: clickedPrev}
     );
 
     /* create move to next slide button */ 
@@ -94,6 +81,19 @@ carousels.forEach(
   }
 );
 
+function clickedPrev(e)
+{
+  slideIndex == 1 ? (slideIndex = slides.length) : --slideIndex;
+  activeCarouselIndex = slideIndex;
+  activeCarousel = slides[slideIndex];
+  slides.forEach(
+    (slide, cont_slide) => {
+      slide.style = "left: -" + (slideIndex - 1) * 100 + "%;";
+    }
+  );
+}
+
+
 function changeSlide()
 {
   let width = activeCarousel.outerWidth(true);
@@ -114,6 +114,19 @@ function startTimer()
         slideIndex = 0;
         changeSlide();
       }
-    }
+      else
+      {
+        ++slideIndex;
+        changeSlide();
+      }
+    },
+    3000 /* millisecconds */
   )
 }
+
+function stopTimer()
+{
+  clearInterval(timer);
+}
+
+startTimer();
