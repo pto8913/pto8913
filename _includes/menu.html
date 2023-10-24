@@ -126,8 +126,6 @@
             $("#menu_logo").each(
               function()
               {
-                var elem_pos = $(this).offset().top;
-                console.log("elempos : ", elem_pos, " scrolltop : ", scroll_top);
                 if (scroll_top >= 200)
                 {
                   if(!$(this).hasClass("fadein"))
@@ -149,6 +147,7 @@
                 }
               }
             )
+            return false;
           }
         );
       }
