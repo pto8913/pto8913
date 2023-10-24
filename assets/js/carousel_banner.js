@@ -1,6 +1,6 @@
-const sliders = document.querySelectorAll(".carousel-001");
+const carousels = document.querySelectorAll(".carousel-001");
 
-sliders.forEach(
+carousels.forEach(
   (carousel, cont_slide) => {
     let slideIndex = 1;
     let slides = carousel.querySelectorAll(".carousel__slide-001");
@@ -18,7 +18,7 @@ sliders.forEach(
     dots.classList.add("dots");
     carousel.append(dots);
 
-    carousel.forEach(
+    carousels.forEach(
       (slide, cont_slide) => {
         let dot = document.createElement("span");
         dot.classList.add("dot");
