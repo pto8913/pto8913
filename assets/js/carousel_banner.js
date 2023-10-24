@@ -5,11 +5,12 @@ let activeCarousel = null;
 let activeCarouselIndex = 0;
 let activeCarouselLastIndex = 0;
 let timer;
+let slides;
+let slideIndex = 1;
 
 carousels.forEach(
   (carousel, cont_slide) => {
-    let slideIndex = 1;
-    let slides = carousel.querySelectorAll(".carousel__slide");
+    slides = carousel.querySelectorAll(".carousel__slide");
 
     if (cont_slide == 1)
     {
@@ -92,10 +93,9 @@ carousels.forEach(
 
 function changeSlide()
 {
-  let width = activeCarousel.outerWidth;
-  activeCarousel.stop().animate(
-    {
-      left: activeCarouselIndex * -width
+  slides.forEach(
+    (slide, cont_slide) => {
+      slide.style = "left: -" + (slideIndex - 1) * 100 + "%;";
     }
   );
 }
