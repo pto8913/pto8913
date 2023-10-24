@@ -116,11 +116,17 @@
       console.log(scroll_top);
       if (scroll_top <= 100)
       {
-        document.getElementById("menu_logo").classList.remove("fadein");
+        if (document.getElementById("menu_logo").classList.contains("fadein"))
+        {
+          document.getElementById("menu_logo").classList.remove("fadein");
+        }
       }
       else
       {
-        document.getElementById("menu_logo").classList.add("fadein");
+        if (!document.getElementById("menu_logo").classList.contains("fadein"))
+        {
+          document.getElementById("menu_logo").classList.add("fadein");
+        }
       }
     };
   </script>
