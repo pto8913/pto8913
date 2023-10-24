@@ -225,21 +225,17 @@
   </aside>
 </div> -->
 
-<div class="carousel-001" aria-label="Gallery">
-  <ol class="carousel__viewport">
-    {% for link in links %}
-      <li tabindex="0" class="carousel__slide-001">
-        <div class="carousel__slide-content-001">
-          <a href="{{ link[1] | relative_url }}.html">
-            <div class="carousel__slide-content-001 img">
-              <img src="{{ link[1] | relative_url }}.png" class="carousel__image" alt="" />
-              {% if include.title %}
-                <p class="carousel__slide-caption-001">{{ include.title }} : {{ link[0] }}</p>
-              {% endif %}
-            </div>
-          </a>
-        </div>
-      </li>
-    {% endfor %}
-  </ol>
+<div class="carousel-001">
+  {% for link in links %}
+    <div class="carousel__slide-001">
+      <div class="carousel__slide-content-001">
+        <a href="{{ link[1] | relative_url }}.html">
+          <img src="{{ link[1] | relative_url }}.png" alt="" />
+          {% if include.title %}
+            <p class="carousel__slide-caption-001">{{ include.title }} : {{ link[0] }}</p>
+          {% endif %}
+        </a>
+      </div>
+    </div>
+  {% endfor %}
 </div>
