@@ -118,16 +118,15 @@
           return ;
         }
         /* set logo visible, when the logo is not intersecting */
-        $(window).on
-        {
+        $(window).on(
           "scroll",
           function()
           {
+            var scroll_top = $(window).scrollTop();
             $("#menu_logo").each(
               function()
               {
                 var elem_pos = $(this).offset().top;
-                var scroll_top = $(window).scrollTop();
                 console.log("elempos : ", elem_pos, " scrolltop : ", scroll_top);
                 if (scroll_top >= 200)
                 {
@@ -151,7 +150,7 @@
               }
             )
           }
-        };
+        );
       }
     );
 
