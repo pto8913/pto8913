@@ -128,13 +128,17 @@
               {
                 var elem_pos = $(this).offset().top;
                 var scroll_top = $(window).scrollTop();
-                if (scroll_top >= elem_pos - windowHeight + 200)
+                console.log("elempos : ", elem_pos, " scrolltop : ", scroll_top);
+                if (scroll_top >= 200)
                 {
-                  $(this).addClass("fadein");
+                  if(!$(this).hasClass("fadein"))
+                  {
+                    $(this).addClass("fadein");
                   // if (!document.getElementById("menu_logo").classList.contains("fadein"))
                   // {
                   //   document.getElementById("menu_logo").classList.add("fadein");
                   // }
+                  }
                 }
                 else
                 {
