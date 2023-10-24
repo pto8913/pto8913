@@ -1,23 +1,10 @@
 const userName = "pto8913";
 const carousels = document.querySelectorAll(".carousel__container");
 
-let activeCarousel = null;
-let activeCarouselIndex = 0;
-let activeCarouselLastIndex = 0;
-let timer;
-let slides;
-let slideIndex = 1;
-
 carousels.forEach(
   (carousel, cont_slide) => {
-    slides = carousel.querySelectorAll(".carousel__slide");
-
-    if (cont_slide == 1)
-    {
-      activeCarousel = carousel;
-      activeCarouselIndex = 0;
-      activeCarouselLastIndex = slides.length - 1;
-    }
+    let slideIndex = 1;
+    let slides = carousel.querySelectorAll(".carousel__slide");
 
     /* create move to prev slide button */ 
     let prev = document.createElement("span");
@@ -29,8 +16,6 @@ carousels.forEach(
       "click",
       (e) => {
         slideIndex == 1 ? (slideIndex = slides.length) : --slideIndex;
-        activeCarouselIndex = slideIndex;
-        activeCarousel = slides[slideIndex];
         slides.forEach(
           (slide, cont_slide) => {
             slide.style = "left: -" + (slideIndex - 1) * 100 + "%;";
@@ -49,8 +34,6 @@ carousels.forEach(
       "click",
       (e) => {
         slideIndex == slides.length ? (slideIndex = 1) : ++slideIndex;
-        activeCarouselIndex = slideIndex;
-        activeCarousel = slides[slideIndex];
         slides.forEach(
           (slide, cont_slide) => {
             slide.style = "left: -" + (slideIndex - 1) * 100 + "%;";
@@ -72,8 +55,6 @@ carousels.forEach(
           "click", 
           (e) => {
             slideIndex = cont_slide + 1;
-            activeCarouselIndex = slideIndex;
-            activeCarousel = slides[slideIndex];
             slides.forEach(
               (slide, cont_slide) => {
                 slide.style = "left: -" + (slideIndex - 1) * 100 + "%;";
@@ -88,42 +69,19 @@ carousels.forEach(
         slide.insertAdjacentElement("afterbegin", numberText);
       }
     );
+
+    /* Set auto slide timer */
+    setInterval(
+      function()
+      {
+        slideIndex == slides.length ? (slideIndex = 1) : ++slideIndex;
+        slides.forEach(
+          (slide, cont_slide) => {
+            slide.style = "left: -" + (slideIndex - 1) * 100 + "%;";
+          }
+        );
+      },
+      3000 /* millisecconds */
+    )
   }
 );
-
-function changeSlide()
-{
-    slideIndex == slides.length ? (slideIndex = 1) : ++slideIndex;
-    slides.forEach(
-    (slide, cont_slide) => {
-      slide.style = "left: -" + (slideIndex - 1) * 100 + "%;";
-    }
-  );
-}
-
-function startTimer()
-{
-  timer = setInterval(
-    function()
-    {
-      if (activeCarouselIndex == activeCarouselLastIndex)
-      {
-        slideIndex = 0;
-        changeSlide();
-      }
-      else
-      {
-        ++slideIndex;
-        changeSlide();
-      }
-    },
-    3000 /* millisecconds */
-  )
-}
-
-function stopTimer()
-{
-  clearInterval(timer);
-}
-
-startTimer();
