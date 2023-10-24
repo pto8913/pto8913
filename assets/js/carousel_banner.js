@@ -1,4 +1,4 @@
-const carousels = document.querySelectorAll(".carousel");
+const carousels = document.querySelectorAll(".carousel__container");
 let activeCarousel = null;
 let activeCarouselIndex = 0;
 let activeCarouselLastIndex = 0;
@@ -6,7 +6,7 @@ let timer;
 
 function clickedPrev(e)
 {
-  
+
 }
 
 carousels.forEach(
