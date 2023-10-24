@@ -23,6 +23,7 @@ title: "ホーム"
 
 <div>
   {% include carousel-banner.html links=site.News title="新着" %}
+  {% include carousel-banner.html links=site.News title="test" %}
   <div class="flex">
     <div class="bg">
       {% for data in site.idx-Portfolio %}
@@ -46,7 +47,6 @@ title: "ホーム"
     <div>
       <div id="auto-site-map"></div>
       {% include category.html lists=site.nav-categories %}
-      {% include carousel-banner.html links=site.News title="新着" %}
     </div>
   </div>
 </div>
