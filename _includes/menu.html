@@ -1,5 +1,4 @@
 <head>
-  <link rel="stylesheet" href="{{ '/assets/css/scroll_animation.css' | relative_url }}">
   <style>
     .menu_sticky {
       position: sticky;
@@ -109,6 +108,9 @@
     .menu_title {
       font-size: 1.25em;
       display: none;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 1s, transform 0.5s;
     }
     .menu_li_container_scrolled {
       height: fit-content;
@@ -137,12 +139,10 @@
               {
                 if (scroll_top >= 200)
                 {
-                  $(this).addClass("fadein");
                   $(this).addClass("menu_display");
                 }
                 else
                 {
-                  $(this).removeClass("fadein");
                   $(this).removeClass("menu_display");
                 }
               }
@@ -168,13 +168,12 @@
         );
       }
     );
-
   </script>
 </head>
 <div class="menu_sticky">
   <div class="menu_li_container">
     <div>
-      <a href="{{ '/' | relative_url }}" class="menu_title fade_box" id="menu_logo">
+      <a href="{{ '/' | relative_url }}" class="menu_title" id="menu_logo">
         <img class="menu_logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
       </a>
     </div>
