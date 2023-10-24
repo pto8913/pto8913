@@ -81,7 +81,7 @@ carousels.forEach(
           }
         );
       },
-      5000 /* millisecconds */
+      7500 /* millisecconds */
     )
   }
 );
