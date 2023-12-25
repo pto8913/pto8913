@@ -170,7 +170,7 @@ idx-Portfolio:
     content:
       - title: "MusicPlayer for Windows"
         img: "/Portfolio/Java/Windows/MusicPlayer/images/icon.png"
-        url: "/Portfolio/Java/Windows/MusicPlayer.html"
+        url: "/Portfolio/Java/Windows/MusicPlayer/MusicPlayer.html"
   - subject: "PyQt5"
     contents:
       - title: "画面のキャプチャ"
