@@ -9,8 +9,17 @@
       padding: 0;
       margin: 10px;
     }
+
   </style>
 {% endif %}
+<style>
+  .category_button {
+    background-color: transparent;
+    color: white;
+    padding: 1px;
+    border: 0;
+  }
+</style>
 
 {% if __recursive == false %}
   <ul class="category_ul_owner">
@@ -25,7 +34,7 @@
       {% if category.url %}
         <li>{{ subject_name }}</li>
       {% else %}
-        <button type="button" class="collapse">
+        <button type="button" class="collapse category_button">
           {% if category.url %}
             <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
           {% else %}
@@ -39,7 +48,7 @@
     {% else %}
       {% assign subject_name = category[0] %}
       {% assign subject_contents = include.lists[subject_name] %}
-      <button type="button" class="collapse">{{ subject_name }}</button>
+      <button type="button" class="collapse category_button">{{ subject_name }}</button>
       {% for subject in subject_contents.contents %}
         <li class="collapse_content">
           {% include category.html lists=subject_contents.contents recursive=true %}
