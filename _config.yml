@@ -167,7 +167,7 @@ idx-Portfolio:
   #       img: "/Portfolio/Plugins/ptoTalkSystem/assets/images/icon.png"
   #       url: "/Portfolio/Plugins/ptoTalkSystem/index.html"
   - subject: "Java"
-    content:
+    contents:
       - title: "MusicPlayer for Windows"
         img: "/Portfolio/Java/Windows/MusicPlayer/images/icon.png"
         url: "/Portfolio/Java/Windows/MusicPlayer/MusicPlayer.html"
