@@ -14,7 +14,7 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
         {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
       </title>
     {% endif %}
-    
+
     <meta charset="{{ site.encoding }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="{{ page.author | default: site.author | escape }}">
@@ -38,6 +38,9 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
         width: 100%;
         align-items: center;
         text-align: center;
+      }
+      .menu_li {
+        margin-right: 5px;
       }
     </style>
   </head>
