@@ -9,7 +9,6 @@ new_title: true
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
   <head>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
     {% if page.new_title %}
       <title>
         ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
@@ -19,10 +18,13 @@ new_title: true
         {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
       </title>
     {% endif %}
+    
     <meta charset="{{ site.encoding }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="{{ page.author | default: site.author | escape }}">
     <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
@@ -34,30 +36,11 @@ new_title: true
     <link rel="stylesheet" href="{{ '/assets/css/scroll_animation.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/carousel_banner.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/category.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/Portfolio/assets/css/game_shared.css' | relative_url }}">
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="{{ '/assets/js/hatenablog.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/scroll_animation.js' | relative_url }}"></script>
-    <style>
-      .TokoPuyoBackground {
-        margin-right: 15px;
-        margin-left: 15px;
-      }
-      .TokoPuyoHead {
-        text-align: center;
-      }
-      .TokoPuyoImg {
-        width: 380px;
-        height: 410px;
-      }
-      .TokoPuyoBody {
-        display: flex;
-      }
-      .TokoPuyoDescription {
-        margin-left: 15px;
-        width: 100%;
-      }
-    </style>
   </head>
   <body>
     {% include header.html home=include.home %}
@@ -72,18 +55,18 @@ new_title: true
     {% if include.no-content %}
     {% else %}
       <!-- Begin MainContent -->
-      <div class="TokoPuyoBackground">
-        <h2 class="TokoPuyoHead">Tappy Cube</h2>
-        <div class="TokoPuyoBody">
+      <div class="GameShared_Background">
+        <h2 class="GameShared_Head">Tappy Cube</h2>
+        <div class="GameShared_Body">
           <div>
-            <iframe class="TokoPuyoImg" allowfullscreen src="https://drive.google.com/file/d/1J2N9I73UvJS4RzW4VIKTBewQkze1kV5y/preview">
+            <iframe class="GameShared_Img" allowfullscreen src="https://drive.google.com/file/d/1J2N9I73UvJS4RzW4VIKTBewQkze1kV5y/preview">
               プレイ動画
             </iframe>
-            <p class = TokoPuyoHead>
+            <p class = GameShared_Head>
               プレイ動画
             </p>
           </div>
-          <div class="TokoPuyoDescription">
+          <div class="GameShared_Description">
             <h3>概要</h3>
             <p>
               ジャンプして障害物を避けるゲーム<br>
