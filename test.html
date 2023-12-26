@@ -20,23 +20,18 @@ title: "ホーム"
     <meta name="author" content="{{ page.author | default: site.author | escape }}">
     <meta name="generator" content="Jekyll v{{ jekyll.version }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
-    {% if site.show_frame %}
-      <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
-    {% else %}
-      <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
-    {% endif %}
-
+    <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/collapse.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
-
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <link rel="stylesheet" href="{{ '/assets/css/automap.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/scroll_animation.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/carousel_banner.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/category.css' | relative_url }}">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="{{ '/assets/js/hatenablog.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/scroll_animation.js' | relative_url }}"></script>
     <style>
@@ -48,7 +43,6 @@ title: "ホーム"
       }
     </style>
   </head>
-  
   <body>
     {% include header.html home=include.home %}
     
@@ -63,7 +57,10 @@ title: "ホーム"
     {% else %}
       <!-- Begin MainContent -->
       <div>
+        <!-- Begin News -->
         {% include carousel-banner.html links=site.News title="新着" %}
+        <!-- End News -->
+        <!-- Begin Articles -->
         <div class="flex">
           <!-- Begin Main -->
           <div class="bg">
@@ -93,6 +90,7 @@ title: "ホーム"
           </div>
           <!-- End SideMenu -->
         </div>
+        <!-- End Articles -->
       </div>
       <!-- End MainContent -->
     {% endif %}
@@ -103,9 +101,9 @@ title: "ホーム"
       {% assign nav-footer = site.nav-footer %}
     {% endif %}
     {% include footer.html navigation=nav-footer %}
-  </body>
 
-  <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/collapse.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/carousel_banner.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/collapse.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/carousel_banner.js' | relative_url }}"></script>
+  </body>
 </html>

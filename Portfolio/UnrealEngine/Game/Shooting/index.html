@@ -1,5 +1,4 @@
 ---
-layout: default
 title: 
   - title: "ポートフォリオ"
   - title: "UnrealEngine"
@@ -7,90 +6,137 @@ title:
 new_title: true
 ---
 
-<head>
-  <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
-</head>
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
+    {% if page.new_title %}
+      <title>
+        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
+      </title>
+    {% else %}
+      <title>
+        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
+      </title>
+    {% endif %}
+    <meta charset="{{ site.encoding }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="{{ page.author | default: site.author | escape }}">
+    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
 
-<style>
-  .TokoPuyoBackground {
-    margin-right: 15px;
-    margin-left: 15px;
-  }
-  .TokoPuyoHead {
-    text-align: center;
-  }
-  .TokoPuyoImg {
-    width: 380px;
-    height: 410px;
-  }
-  .TokoPuyoBody {
-    display: flex;
-  }
-  .TokoPuyoDescription {
-    margin-left: 15px;
-    width: 100%;
-  }
-  .TokoPuyoPlayMovie {
-    width: 375px;
-    height: 250px;
-  }
-</style>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
-<div class="TokoPuyoBackground">
-  <h2 class="TokoPuyoHead">全方向シューティング</h2>
-  <div class="TokoPuyoBody">
-    <div>
-      <iframe class="TokoPuyoImg" allowfullscreen src="https://drive.google.com/file/d/1-SG2U4BuiMDSMR4GD3DpLX7VgAzgA5OS/preview">
-        プレイ動画
-      </iframe>
-      <p class = TokoPuyoHead>
-        プレイ動画
-      </p>
-      <div class="TokoPuyoHead">
-        <h3>制作日</h3>
-        <p class="TokoPuyoHead">2019/12/10</p>
-        <h3>制作期間</h3>
-        <p class="TokoPuyoHead">3週間</p>
+    <style>
+      .TokoPuyoBackground {
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+      .TokoPuyoHead {
+        text-align: center;
+      }
+      .TokoPuyoImg {
+        width: 380px;
+        height: 410px;
+      }
+      .TokoPuyoBody {
+        display: flex;
+      }
+      .TokoPuyoDescription {
+        margin-left: 15px;
+        width: 100%;
+      }
+      .TokoPuyoPlayMovie {
+        width: 375px;
+        height: 250px;
+      }
+    </style>
+  </head>
+
+  <body>
+    {% include header.html home=include.home %}
+    
+    {% if include.nav-header %}
+      {% assign nav-header = include.nav-header %}
+    {% else %}
+      {% assign nav-header = site.nav-header %}
+    {% endif %}
+    {% include menu.html navigation=nav-header %}
+
+    {% if include.no-content %}
+    {% else %}
+      <!-- Begin MainContent -->
+      <div class="TokoPuyoBackground">
+        <h2 class="TokoPuyoHead">全方向シューティング</h2>
+        <div class="TokoPuyoBody">
+          <div>
+            <iframe class="TokoPuyoImg" allowfullscreen src="https://drive.google.com/file/d/1-SG2U4BuiMDSMR4GD3DpLX7VgAzgA5OS/preview">
+              プレイ動画
+            </iframe>
+            <p class = TokoPuyoHead>
+              プレイ動画
+            </p>
+            <div class="TokoPuyoHead">
+              <h3>制作日</h3>
+              <p class="TokoPuyoHead">2019/12/10</p>
+              <h3>制作期間</h3>
+              <p class="TokoPuyoHead">3週間</p>
+            </div>
+          </div>
+          <div class="TokoPuyoDescription">
+            <h3>最終更新日</h3>
+            <p>2020/01/13</p>
+            <h3>概要</h3>
+            <p>
+              3D全方向のシューティングゲームを作りたかった。
+            </p>
+            <button type="button" class="collapse"><h3 class="collapse_title">操作方法</h3></button>
+            <div class="collapse_content">
+              <p>
+                W : 前進<br>
+                S : 後退<br>
+                A : 左移動<br>
+                D : 右移動<br>
+                Q : 下降<br>
+                E : 上昇<br>
+                Z : オプション<br>    
+                マウス左クリック : 攻撃<br>
+              </p>
+            </div>
+            <h3>ダウンロード</h3>
+            <a href="https://drive.google.com/u/4/uc?id=1Ml6y-uwbJ67hesHzwwR1PuwSjZCP2KDe&export=download">ゲーム(zip)</a><br>
+            <a href="https://drive.google.com/file/d/1Fl0hJe3xT_fe0WFoJddLKwKozKzdj73E/view?usp=drive_link">ソース(zip)</a><br>
+            <p>
+              ※ソースコードはUnrealEngine4.22.3で作られたゲームのためそれ以降での動作は確認されていません。<br>
+              .uprojectファイルなどを紛失してしまった。<br>
+              ゲームのプレイには問題ありません。<br>
+            </p>
+            <button type="button" class="collapse"><h3 class="collapse_title">使用アセット</h3></button>
+            <div class="collapse_content">
+              <p>
+                - <a href="https://www.unrealengine.com/marketplace/ja/product/a36bac8b05004e999dd4b1d332501f49">FX Variety Pack (敵攻撃エフェクト)</a><br>
+                - <a href="https://www.unrealengine.com/marketplace/ja/product/photoreal-background-mountains">Landscape Backgrounds (木を使用)</a><br>
+                - <a href="https://www.unrealengine.com/marketplace/en-US/product/paragon-muriel">Paragon: Muriel (敵キャラクター)</a><br>
+                - <a href="https://www.unrealengine.com/marketplace/ja/product/water-planes">水面の表現 (水の様子)</a><br>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="TokoPuyoDescription">
-      <h3>最終更新日</h3>
-      <p>2020/01/13</p>
-      <h3>概要</h3>
-      <p>
-        3D全方向のシューティングゲームを作りたかった。
-      </p>
-      <button type="button" class="collapse"><h3 class="collapse_title">操作方法</h3></button>
-      <div class="collapse_content">
-        <p>
-          W : 前進<br>
-          S : 後退<br>
-          A : 左移動<br>
-          D : 右移動<br>
-          Q : 下降<br>
-          E : 上昇<br>
-          Z : オプション<br>    
-          マウス左クリック : 攻撃<br>
-        </p>
-      </div>
-      <h3>ダウンロード</h3>
-      <a href="https://drive.google.com/u/4/uc?id=1Ml6y-uwbJ67hesHzwwR1PuwSjZCP2KDe&export=download">ゲーム(zip)</a><br>
-      <a href="https://drive.google.com/file/d/1Fl0hJe3xT_fe0WFoJddLKwKozKzdj73E/view?usp=drive_link">ソース(zip)</a><br>
-      <p>
-        ※ソースコードはUnrealEngine4.22.3で作られたゲームのためそれ以降での動作は確認されていません。<br>
-        .uprojectファイルなどを紛失してしまった。<br>
-        ゲームのプレイには問題ありません。<br>
-      </p>
-      <button type="button" class="collapse"><h3 class="collapse_title">使用アセット</h3></button>
-      <div class="collapse_content">
-        <p>
-          - <a href="https://www.unrealengine.com/marketplace/ja/product/a36bac8b05004e999dd4b1d332501f49">FX Variety Pack (敵攻撃エフェクト)</a><br>
-          - <a href="https://www.unrealengine.com/marketplace/ja/product/photoreal-background-mountains">Landscape Backgrounds (木を使用)</a><br>
-          - <a href="https://www.unrealengine.com/marketplace/en-US/product/paragon-muriel">Paragon: Muriel (敵キャラクター)</a><br>
-          - <a href="https://www.unrealengine.com/marketplace/ja/product/water-planes">水面の表現 (水の様子)</a><br>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+      <!-- End MainContent -->
+    {% endif %}
+    
+    {% if include.nav-footer %}
+      {% assign nav-footer = include.nav-footer %}
+    {% else %}
+      {% assign nav-footer = site.nav-footer %}
+    {% endif %}
+    {% include footer.html navigation=nav-footer %}
+
+    <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
+  </body>
+</html>

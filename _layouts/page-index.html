@@ -1,13 +1,64 @@
 ---
-layout: default
 title: 
   - title: "ホーム"
 new_title: true
 category: "UnrealEngine"
 ---
 
-<div>
-  {% assign cat = site.nav-categories[page.category] %}
-  <a href="{{ cat.url | relative_url }}">{{ page.category }}</a>
-  {% include index_list.html lists=cat.contents %}
-</div>
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
+    {% if page.new_title %}
+      <title>
+        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
+      </title>
+    {% else %}
+      <title>
+        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
+      </title>
+    {% endif %}
+    <meta charset="{{ site.encoding }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="{{ page.author | default: site.author | escape }}">
+    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  </head>
+
+  <body>
+    {% include header.html home=include.home %}
+    
+    {% if include.nav-header %}
+      {% assign nav-header = include.nav-header %}
+    {% else %}
+      {% assign nav-header = site.nav-header %}
+    {% endif %}
+    {% include menu.html navigation=nav-header %}
+
+    {% if include.no-content %}
+    {% else %}
+      <!-- Begin MainContent -->
+      <div>
+        {% assign cat = site.nav-categories[page.category] %}
+        <a href="{{ cat.url | relative_url }}">{{ page.category }}</a>
+        {% include index_list.html lists=cat.contents %}
+      </div>
+      <!-- End MainContent -->
+    {% endif %}
+    
+    {% if include.nav-footer %}
+      {% assign nav-footer = include.nav-footer %}
+    {% else %}
+      {% assign nav-footer = site.nav-footer %}
+    {% endif %}
+    {% include footer.html navigation=nav-footer %}
+
+    <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
+  </body>
+</html>

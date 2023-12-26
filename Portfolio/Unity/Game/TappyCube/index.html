@@ -1,5 +1,4 @@
 ---
-layout: default
 title: 
   - title: "ポートフォリオ"
   - title: "Unity"
@@ -7,67 +6,124 @@ title:
 new_title: true
 ---
 
-<head>
-  <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
-  <style>
-    .TokoPuyoBackground {
-      margin-right: 15px;
-      margin-left: 15px;
-    }
-    .TokoPuyoHead {
-      text-align: center;
-    }
-    .TokoPuyoImg {
-      width: 380px;
-      height: 410px;
-    }
-    .TokoPuyoBody {
-      display: flex;
-    }
-    .TokoPuyoDescription {
-      margin-left: 15px;
-      width: 100%;
-    }
-  </style>
-</head>
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
+    {% if page.new_title %}
+      <title>
+        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
+      </title>
+    {% else %}
+      <title>
+        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
+      </title>
+    {% endif %}
+    <meta charset="{{ site.encoding }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="{{ page.author | default: site.author | escape }}">
+    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/collapse.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/automap.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/scroll_animation.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/carousel_banner.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/category.css' | relative_url }}">
 
-<div class="TokoPuyoBackground">
-  <h2 class="TokoPuyoHead">Tappy Cube</h2>
-  <div class="TokoPuyoBody">
-    <div>
-      <iframe class="TokoPuyoImg" allowfullscreen src="https://drive.google.com/file/d/1J2N9I73UvJS4RzW4VIKTBewQkze1kV5y/preview">
-        プレイ動画
-      </iframe>
-      <p class = TokoPuyoHead>
-        プレイ動画
-      </p>
-    </div>
-    <div class="TokoPuyoDescription">
-      <h3>概要</h3>
-      <p>
-        ジャンプして障害物を避けるゲーム<br>
-      </p>
-      <button type="button" class="collapse"><h3 class="collapse_title">操作方法</h3></button>
-      <div class="collapse_content">
-        <p>
-          キーボード<br>
-          Spaceキー : ジャンプ<br>
-        </p>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="{{ '/assets/js/hatenablog.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/scroll_animation.js' | relative_url }}"></script>
+    <style>
+      .TokoPuyoBackground {
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+      .TokoPuyoHead {
+        text-align: center;
+      }
+      .TokoPuyoImg {
+        width: 380px;
+        height: 410px;
+      }
+      .TokoPuyoBody {
+        display: flex;
+      }
+      .TokoPuyoDescription {
+        margin-left: 15px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    {% include header.html home=include.home %}
+    
+    {% if include.nav-header %}
+      {% assign nav-header = include.nav-header %}
+    {% else %}
+      {% assign nav-header = site.nav-header %}
+    {% endif %}
+    {% include menu.html navigation=nav-header %}
+
+    {% if include.no-content %}
+    {% else %}
+      <!-- Begin MainContent -->
+      <div class="TokoPuyoBackground">
+        <h2 class="TokoPuyoHead">Tappy Cube</h2>
+        <div class="TokoPuyoBody">
+          <div>
+            <iframe class="TokoPuyoImg" allowfullscreen src="https://drive.google.com/file/d/1J2N9I73UvJS4RzW4VIKTBewQkze1kV5y/preview">
+              プレイ動画
+            </iframe>
+            <p class = TokoPuyoHead>
+              プレイ動画
+            </p>
+          </div>
+          <div class="TokoPuyoDescription">
+            <h3>概要</h3>
+            <p>
+              ジャンプして障害物を避けるゲーム<br>
+            </p>
+            <button type="button" class="collapse"><h3 class="collapse_title">操作方法</h3></button>
+            <div class="collapse_content">
+              <p>
+                キーボード<br>
+                Spaceキー : ジャンプ<br>
+              </p>
+            </div>
+            <h3>ダウンロード</h3>
+            <a href="https://github.com/pto8913/TappyCube/releases">https://github.com/pto8913/TappyCube/releases</a>
+            <button type="button" class="collapse"><h3 class="collapse_title">使用アセット</h3></button>
+            <div class="collapse_content">
+              <p>
+                SE<br>
+                  - <a href="https://soundeffect-lab.info/sound/anime/">https://soundeffect-lab.info/sound/anime/</a><br>
+                  - <a href="https://soundeffect-lab.info/sound/button/">https://soundeffect-lab.info/sound/button/</a><br>
+              
+                BGM<br>
+                  - <a href="https://www.springin.org/sound-stock/category/bgm/">https://www.springin.org/sound-stock/category/bgm/</a><br>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <h3>ダウンロード</h3>
-      <a href="https://github.com/pto8913/TappyCube/releases">https://github.com/pto8913/TappyCube/releases</a>
-      <button type="button" class="collapse"><h3 class="collapse_title">使用アセット</h3></button>
-      <div class="collapse_content">
-        <p>
-          SE<br>
-            - <a href="https://soundeffect-lab.info/sound/anime/">https://soundeffect-lab.info/sound/anime/</a><br>
-            - <a href="https://soundeffect-lab.info/sound/button/">https://soundeffect-lab.info/sound/button/</a><br>
-        
-          BGM<br>
-            - <a href="https://www.springin.org/sound-stock/category/bgm/">https://www.springin.org/sound-stock/category/bgm/</a><br>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+      
+      <!-- End MainContent -->
+    {% endif %}
+    
+    {% if include.nav-footer %}
+      {% assign nav-footer = include.nav-footer %}
+    {% else %}
+      {% assign nav-footer = site.nav-footer %}
+    {% endif %}
+    {% include footer.html navigation=nav-footer %}
+
+    <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/collapse.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/carousel_banner.js' | relative_url }}"></script>
+  </body>
+</html>
