@@ -1,4 +1,5 @@
 ---
+layout: Portfolio/game-simple
 title: 
   - title: "ポートフォリオ"
   - title: "Unity"
@@ -6,100 +7,42 @@ title:
 new_title: true
 ---
 
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
-  <head>
-    {% if page.new_title %}
-      <title>
-        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
-      </title>
-    {% else %}
-      <title>
-        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
-      </title>
-    {% endif %}
-    
-    <meta charset="{{ site.encoding }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="{{ page.author | default: site.author | escape }}">
-    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
-
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/collapse.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/Portfolio/assets/css/game_shared.css' | relative_url }}">
-
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  </head>
-  <body>
-    {% include header.html home=include.home %}
-    
-    {% if include.nav-header %}
-      {% assign nav-header = include.nav-header %}
-    {% else %}
-      {% assign nav-header = site.nav-header %}
-    {% endif %}
-    {% include menu.html navigation=nav-header %}
-
-    {% if include.no-content %}
-    {% else %}
-      <!-- Begin MainContent -->
-      <div class="GameShared_Background">
-        <h2 class="GameShared_Head">Tappy Cube</h2>
-        <div class="GameShared_Body">
-          <div>
-            <iframe class="GameShared_Img" allowfullscreen src="https://drive.google.com/file/d/1J2N9I73UvJS4RzW4VIKTBewQkze1kV5y/preview">
-              プレイ動画
-            </iframe>
-            <p class = GameShared_Head>
-              プレイ動画
-            </p>
-          </div>
-          <div class="GameShared_Description">
-            <h3>概要</h3>
-            <p>
-              ジャンプして障害物を避けるゲーム<br>
-            </p>
-            <button type="button" class="collapse"><h3 class="collapse_title">操作方法</h3></button>
-            <div class="collapse_content">
-              <p>
-                キーボード<br>
-                Spaceキー : ジャンプ<br>
-              </p>
-            </div>
-            <h3>ダウンロード</h3>
-            <a href="https://github.com/pto8913/TappyCube/releases">https://github.com/pto8913/TappyCube/releases</a>
-            <button type="button" class="collapse"><h3 class="collapse_title">使用アセット</h3></button>
-            <div class="collapse_content">
-              <p>
-                SE<br>
-                  - <a href="https://soundeffect-lab.info/sound/anime/">https://soundeffect-lab.info/sound/anime/</a><br>
-                  - <a href="https://soundeffect-lab.info/sound/button/">https://soundeffect-lab.info/sound/button/</a><br>
-              
-                BGM<br>
-                  - <a href="https://www.springin.org/sound-stock/category/bgm/">https://www.springin.org/sound-stock/category/bgm/</a><br>
-              </p>
-            </div>
-          </div>
-        </div>
+<div class="GameShared_Background">
+  <h2 class="GameShared_Head">Tappy Cube</h2>
+  <div class="GameShared_Body">
+    <div>
+      <iframe class="GameShared_Img" allowfullscreen src="https://drive.google.com/file/d/1J2N9I73UvJS4RzW4VIKTBewQkze1kV5y/preview">
+        プレイ動画
+      </iframe>
+      <p class = GameShared_Head>
+        プレイ動画
+      </p>
+    </div>
+    <div class="GameShared_Description">
+      <h3>概要</h3>
+      <p>
+        ジャンプして障害物を避けるゲーム<br>
+      </p>
+      <button type="button" class="collapse"><h3 class="collapse_title">操作方法</h3></button>
+      <div class="collapse_content">
+        <p>
+          キーボード<br>
+          Spaceキー : ジャンプ<br>
+        </p>
       </div>
-      
-      <!-- End MainContent -->
-    {% endif %}
-    
-    {% if include.nav-footer %}
-      {% assign nav-footer = include.nav-footer %}
-    {% else %}
-      {% assign nav-footer = site.nav-footer %}
-    {% endif %}
-    {% include footer.html navigation=nav-footer %}
-
-    <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/collapse.js' | relative_url }}"></script>
-  </body>
-</html>
+      <h3>ダウンロード</h3>
+      <a href="https://github.com/pto8913/TappyCube/releases">https://github.com/pto8913/TappyCube/releases</a>
+      <button type="button" class="collapse"><h3 class="collapse_title">使用アセット</h3></button>
+      <div class="collapse_content">
+        <p>
+          SE<br>
+            - <a href="https://soundeffect-lab.info/sound/anime/">https://soundeffect-lab.info/sound/anime/</a><br>
+            - <a href="https://soundeffect-lab.info/sound/button/">https://soundeffect-lab.info/sound/button/</a><br>
+        
+          BGM<br>
+            - <a href="https://www.springin.org/sound-stock/category/bgm/">https://www.springin.org/sound-stock/category/bgm/</a><br>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

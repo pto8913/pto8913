@@ -1,4 +1,5 @@
 ---
+layout: Portfolio/game-simple
 title: 
   - title: "ポートフォリオ"
   - title: "Java"
@@ -13,101 +14,46 @@ screenshots:
     url: "/Portfolio/Java/Windows/MusicPlayer/images/menu.png"
 ---
 
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
-  <head>
-    {% if page.new_title %}
-      <title>
-        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
-      </title>
-    {% else %}
-      <title>
-        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
-      </title>
-    {% endif %}
-    
-    <meta charset="{{ site.encoding }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="{{ page.author | default: site.author | escape }}">
-    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+<div class="GameShared_Background">
+  <h2 class="GameShared_Head">MusicPlayer For Windows</h2>
+  <div class="GameShared_Body">
+    <div>
+      <img class="GameShared_Img" src="https://raw.githubusercontent.com/pto8913/pto8913/master/Portfolio/Java/Windows/MusicPlayer/images/icon.png">
+      <div class="GameShared_Head">
+        <h3>制作日</h3>
+        <p class="GameShared_Head">2023/12/24</p>
+        <h3>制作期間</h3>
+        <p class="GameShared_Head">1週間</p>
+      </div>
+    </div>
+    <div class="GameShared_Description">
+      <h3>最終更新日</h3>
+      <p>2023/12/24</p>
+      <h3>概要</h3>
+      <p>
+        Javaで初めて作ったwindowsのアプリ<br>
+        ミュージックプレイヤー<br>
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/Portfolio/assets/css/game_shared.css' | relative_url }}">
+        `C:/User/username/music`ディレクトリ下にある`mp3`,`m4a`,`wav`を読み込みます。<br>
 
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  </head>
-  <body>
-    {% include header.html home=include.home %}
-    
-    {% if include.nav-header %}
-      {% assign nav-header = include.nav-header %}
-    {% else %}
-      {% assign nav-header = site.nav-header %}
-    {% endif %}
-    {% include menu.html navigation=nav-header %}
-
-    {% if include.no-content %}
-    {% else %}
-      <!-- Begin MainContent -->
-      <div class="GameShared_Background">
-        <h2 class="GameShared_Head">MusicPlayer For Windows</h2>
-        <div class="GameShared_Body">
-          <div>
-            <img class="GameShared_Img" src="https://raw.githubusercontent.com/pto8913/pto8913/master/Portfolio/Java/Windows/MusicPlayer/images/icon.png">
-            <div class="GameShared_Head">
-              <h3>制作日</h3>
-              <p class="GameShared_Head">2023/12/24</p>
-              <h3>制作期間</h3>
-              <p class="GameShared_Head">1週間</p>
-            </div>
-          </div>
-          <div class="GameShared_Description">
-            <h3>最終更新日</h3>
-            <p>2023/12/24</p>
-            <h3>概要</h3>
-            <p>
-              Javaで初めて作ったwindowsのアプリ<br>
-              ミュージックプレイヤー<br>
-      
-              `C:/User/username/music`ディレクトリ下にある`mp3`,`m4a`,`wav`を読み込みます。<br>
-      
-            </p>
-            <h3>ダウンロード</h3>
-            <a href="https://github.com/pto8913/MusicPlayerJava/releases">https://github.com/pto8913/MusicPlayerJava/releases</a>
-            <h3>スクリーンショット</h3>
-            <div class="bg">
-              <div class="Portfolio_grid_3x fade_box">
-                {% for row in page.screenshots %}
-                  {% if row.url %}
-                    <div class="img_card_container">
-                      <a href="{{ row.url | relative_url }}">
-                        <img src="{{ row.url | relative_url }}" class="img_card" alt="" />
-                        <p class="img_card_title">{{ row.title }}</p>
-                      </a>
-                    </div>
-                  {% endif %}
-                {% endfor %}
+      </p>
+      <h3>ダウンロード</h3>
+      <a href="https://github.com/pto8913/MusicPlayerJava/releases">https://github.com/pto8913/MusicPlayerJava/releases</a>
+      <h3>スクリーンショット</h3>
+      <div class="bg">
+        <div class="Portfolio_grid_3x fade_box">
+          {% for row in page.screenshots %}
+            {% if row.url %}
+              <div class="img_card_container">
+                <a href="{{ row.url | relative_url }}">
+                  <img src="{{ row.url | relative_url }}" class="img_card" alt="" />
+                  <p class="img_card_title">{{ row.title }}</p>
+                </a>
               </div>
-            </div>
-          </div>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
-      <!-- End MainContent -->
-    {% endif %}
-    
-    {% if include.nav-footer %}
-      {% assign nav-footer = include.nav-footer %}
-    {% else %}
-      {% assign nav-footer = site.nav-footer %}
-    {% endif %}
-    {% include footer.html navigation=nav-footer %}
-
-    <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
-  </body>
-</html>
+    </div>
+  </div>
+</div>
