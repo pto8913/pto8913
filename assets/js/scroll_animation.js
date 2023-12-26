@@ -13,7 +13,7 @@ $(window).on(
         var elem_pos = $(this).offset().top;
         $(this).find(".box_posspan").text(Math.floor(elem_pos));
 
-        if (scroll_top >= elem_pos - windowHeight + 400)
+        if (scroll_top >= elem_pos - windowHeight)
         {
           $(this).addClass("fadein");
         }
