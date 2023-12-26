@@ -48,32 +48,27 @@ title: "ホーム"
       }
     </style>
   </head>
-
-  {% if include.nav-header %}
-    {% assign nav-header = include.nav-header %}
-  {% else %}
-    {% assign nav-header = site.nav-header %}
-  {% endif %}
-
+  
   {% if include.home %}
-    {% assign home = include.home %}
+  {% assign home = include.home %}
   {% endif %}
-
-  {% if include.nav-footer %}
-    {% assign nav-footer = include.nav-footer %}
-  {% else %}
-    {% assign nav-footer = site.nav-footer %}
-  {% endif %}
-
   {% include header.html home=home %}
-
+  
+  <!-- Begin MainContent -->
   <div>
+    {% if include.nav-header %}
+      {% assign nav-header = include.nav-header %}
+    {% else %}
+      {% assign nav-header = site.nav-header %}
+    {% endif %}
     {% include menu.html navigation=nav-header %}
+
     {% if include.no-content %}
     {% else %}
       <div>
         {% include carousel-banner.html links=site.News title="新着" %}
         <div class="flex">
+          <!-- Begin Main -->
           <div class="bg">
             {% for data in site.idx-Portfolio %}
               <h2 class="Portfolio_subject">
@@ -93,15 +88,24 @@ title: "ホーム"
               </div>
             {% endfor %}
           </div>
+          <!-- End Main -->
+          <!-- Begin SideMenu -->
           <div>
             <div id="auto-site-map"></div>
             {% include category.html lists=site.nav-categories %}
           </div>
+          <!-- End SideMenu -->
         </div>
       </div>
     {% endif %}
   </div>
+  <!-- End MainContent -->
   
+  {% if include.nav-footer %}
+    {% assign nav-footer = include.nav-footer %}
+  {% else %}
+    {% assign nav-footer = site.nav-footer %}
+  {% endif %}
   {% include footer.html navigation=nav-footer %}
 
   <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
