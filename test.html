@@ -49,13 +49,9 @@ title: "ホーム"
     </style>
   </head>
   
-  {% if include.home %}
-  {% assign home = include.home %}
-  {% endif %}
-  {% include header.html home=home %}
-  
-  <!-- Begin MainContent -->
-  <div>
+  <body>
+    {% include header.html home=include.home %}
+    
     {% if include.nav-header %}
       {% assign nav-header = include.nav-header %}
     {% else %}
@@ -65,6 +61,7 @@ title: "ホーム"
 
     {% if include.no-content %}
     {% else %}
+      <!-- Begin MainContent -->
       <div>
         {% include carousel-banner.html links=site.News title="新着" %}
         <div class="flex">
@@ -97,16 +94,16 @@ title: "ホーム"
           <!-- End SideMenu -->
         </div>
       </div>
+      <!-- End MainContent -->
     {% endif %}
-  </div>
-  <!-- End MainContent -->
-  
-  {% if include.nav-footer %}
-    {% assign nav-footer = include.nav-footer %}
-  {% else %}
-    {% assign nav-footer = site.nav-footer %}
-  {% endif %}
-  {% include footer.html navigation=nav-footer %}
+    
+    {% if include.nav-footer %}
+      {% assign nav-footer = include.nav-footer %}
+    {% else %}
+      {% assign nav-footer = site.nav-footer %}
+    {% endif %}
+    {% include footer.html navigation=nav-footer %}
+  </body>
 
   <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/collapse.js' | relative_url }}"></script>
