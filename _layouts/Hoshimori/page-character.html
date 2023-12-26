@@ -3,69 +3,70 @@ background: Home
 home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
 ---
 
-<head>
-  <style>
-    .Hoshimori_bg_sec {
-      background-image: url('{{ site.img-hoshimori-character-bg[page.background] | relative_url }}');
-      width: 100%;
-      height: 600px;
-      background-color: rgba(172, 172, 172, 1);
-      background-repeat: no-repeat;
-      /* background-size: cover */
-      background-position: center;
-      align-items: center;
-      justify-content: center;
-    }
-  </style>
-  <link rel="stylesheet" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/css/Hoshimori.css' | relative_url }}">
-  <link rel="shortcut icon" type="image/x-icon" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/images/favicon.ico' | relative_url }}">
-</head>
-
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
-  {% if page.new_title %}
-    <title>
-      ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
-    </title>
-  {% else %}
-    <title>
-      {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
-    </title>
-  {% endif %}
-  <meta charset="{{ site.encoding }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="{{ page.author | default: site.author | escape }}">
-  <meta name="generator" content="Jekyll v{{ jekyll.version }}">
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
-  {% if site.show_frame %}
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/images/favicon.ico' | relative_url }}">
+    {% if page.new_title %}
+      <title>
+        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
+      </title>
+    {% else %}
+      <title>
+        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
+      </title>
+    {% endif %}
+    <meta charset="{{ site.encoding }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="{{ page.author | default: site.author | escape }}">
+    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
-  {% else %}
-  <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
-  {% endif %}
+    <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/category.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/css/Hoshimori.css' | relative_url }}">
 
-  {% if site.nav-header-Portfolio-Hoshimori %}
-    {% assign pages = site.nav-header-Portfolio-Hoshimori %}
-  {% else %}
-    {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
-  {% endif %}
-
-  {% include header.html home=page.home %}
-
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <style>
+      .Hoshimori_bg_sec {
+        background-image: url('{{ site.img-hoshimori-character-bg[page.background] | relative_url }}');
+        width: 100%;
+        height: 600px;
+        background-color: rgba(172, 172, 172, 1);
+        background-repeat: no-repeat;
+        /* background-size: cover */
+        background-position: center;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
   <body>
-    <div>
-      {% include menu.html navigation=pages %}
-      <div class="Hoshimori_bg_sec">
-        {% 
-          include Hoshimori/card.html 
-          name=page.background 
-          description=content 
-        %}
-        {% include carousel-character.html links=site.hoshimori-character current=page.background %}
-      </div>
-    </div>
-  </body>
+    {% if site.nav-header-Portfolio-Hoshimori %}
+      {% assign pages = site.nav-header-Portfolio-Hoshimori %}
+    {% else %}
+      {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
+    {% endif %}
 
-  {% if site.nav-footer %}
+    {% include header.html home=page.home %}
+
+    {% include menu.html navigation=pages %}
+    <!-- Begin MainContent -->
+    <div class="Hoshimori_bg_sec">
+      {% 
+        include Hoshimori/card.html 
+        name=page.background 
+        description=content 
+      %}
+      {% include carousel-character.html links=site.hoshimori-character current=page.background %}
+    </div>
+    <!-- End MainContent -->
+    
     {% include footer.html navigation=site.nav-footer %}
-  {% endif %}
+
+    <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
+  </body>
 </html>
