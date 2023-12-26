@@ -1,18 +1,10 @@
-<haed>
-  <style>
-    .header_container {
-      width: 100%
-    }
-  </style>
-</haed>
-
+<!-- Begin header -->
 <header>
   <div class="header_container">
     <div class="flex">
       <a href="{{ '/' | relative_url }}" class="title">
         <img class="logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
       </a>
-      <!-- <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a> -->
       {% if page.new_title %}
         <a href="{{ '/index.html' | relative_url }}">ホーム</a>
         {% for row in page.title %}
@@ -28,3 +20,4 @@
     </div>
   </div>
 </header>
+<!-- End header -->

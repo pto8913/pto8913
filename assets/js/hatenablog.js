@@ -53,6 +53,7 @@ function Init()
         page++;
     }
     var htmlstr = "";
+    htmlstr += '<!-- Begin hatenablog papers -->';
     htmlstr += '<div class="auto-map">';
     htmlstr += '<h2 class="auto-map-subject">最新の記事</h2>';
     for(var idx=0; idx < num_of_post; ++idx){
@@ -65,6 +66,7 @@ function Init()
     htmlstr += '<a href="https://pto8913.hatenablog.com/archive">もっと見る</h2>';
     htmlstr += '</div>';
     htmlstr += '</div>';
+    htmlstr += '<!-- End hatenablog papers -->';
     $("#auto-site-map").html( htmlstr ) ;
 }
 function getArchive(urlInfo){

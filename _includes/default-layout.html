@@ -1,9 +1,6 @@
-<head>
-  <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
-</head>
-
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
   {% if page.new_title %}
     <title>
       ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
@@ -24,7 +21,10 @@
     <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
   {% endif %}
 
+  <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/collapse.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
 
   {% if include.nav-header %}
     {% assign nav-header = include.nav-header %}
@@ -54,5 +54,6 @@
   
   {% include footer.html navigation=nav-footer %}
 
+  <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/collapse.js' | relative_url }}"></script>
 </html>

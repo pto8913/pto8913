@@ -1,54 +1,110 @@
 ---
-layout: default
 title: "ホーム"
 ---
 
-<head>
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  <link rel="stylesheet" href="{{ '/assets/css/automap.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/scroll_animation.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/carousel_banner.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/category.css' | relative_url }}">
-  <script src="{{ '/assets/js/hatenablog.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/scroll_animation.js' | relative_url }}"></script>
-  <style>
-    .bg {
-      min-height: 600px;
-      width: 100%;
-      align-items: center;
-      text-align: center;
-    }
-  </style>
-</head>
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
+    {% if page.new_title %}
+      <title>
+        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
+      </title>
+    {% else %}
+      <title>
+        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
+      </title>
+    {% endif %}
+    <meta charset="{{ site.encoding }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="{{ page.author | default: site.author | escape }}">
+    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    {% if site.show_frame %}
+      <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
+    {% else %}
+      <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
+    {% endif %}
 
-<div>
-  {% include carousel-banner.html links=site.News title="新着" %}
-  <div class="flex">
-    <div class="bg">
-      {% for data in site.idx-Portfolio %}
-        <h2 class="Portfolio_subject">
-          {{ data.subject }}
-        </h2>
-        <div class="Portfolio_grid_3x fade_box">
-          {% for row in data.contents %}
-            {% if row.img %}
-              <div class="img_card_container">
-                <a href="{{ row.url | relative_url }}">
-                  <img src="{{ row.img | relative_url }}" class="img_card" alt="" />
-                  <p class="img_card_title">{{ row.title }}</p>
-                </a>
+    <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/collapse.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="{{ '/assets/css/automap.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/scroll_animation.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/carousel_banner.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/category.css' | relative_url }}">
+    <script src="{{ '/assets/js/hatenablog.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/scroll_animation.js' | relative_url }}"></script>
+    <style>
+      .bg {
+        min-height: 600px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  {% if include.nav-header %}
+    {% assign nav-header = include.nav-header %}
+  {% else %}
+    {% assign nav-header = site.nav-header %}
+  {% endif %}
+
+  {% if include.home %}
+    {% assign home = include.home %}
+  {% endif %}
+
+  {% if include.nav-footer %}
+    {% assign nav-footer = include.nav-footer %}
+  {% else %}
+    {% assign nav-footer = site.nav-footer %}
+  {% endif %}
+
+  {% include header.html home=home %}
+
+  <div>
+    {% include menu.html navigation=nav-header %}
+    {% if include.no-content %}
+    {% else %}
+      <div>
+        {% include carousel-banner.html links=site.News title="新着" %}
+        <div class="flex">
+          <div class="bg">
+            {% for data in site.idx-Portfolio %}
+              <h2 class="Portfolio_subject">
+                {{ data.subject }}
+              </h2>
+              <div class="Portfolio_grid_3x fade_box">
+                {% for row in data.contents %}
+                  {% if row.img %}
+                    <div class="img_card_container">
+                      <a href="{{ row.url | relative_url }}">
+                        <img src="{{ row.img | relative_url }}" class="img_card" alt="" />
+                        <p class="img_card_title">{{ row.title }}</p>
+                      </a>
+                    </div>
+                  {% endif %}
+                {% endfor %}
               </div>
-            {% endif %}
-          {% endfor %}
+            {% endfor %}
+          </div>
+          <div>
+            <div id="auto-site-map"></div>
+            {% include category.html lists=site.nav-categories %}
+          </div>
         </div>
-      {% endfor %}
-    </div>
-    <div>
-      <div id="auto-site-map"></div>
-      {% include category.html lists=site.nav-categories %}
-    </div>
+      </div>
+    {% endif %}
   </div>
-</div>
+  
+  {% include footer.html navigation=nav-footer %}
 
-<script src="{{ '/assets/js/carousel_banner.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/collapse.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/carousel_banner.js' | relative_url }}"></script>
+</html>
