@@ -15,6 +15,7 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
         {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
       </title>
     {% endif %}
+    
     <meta charset="{{ site.encoding }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="{{ page.author | default: site.author | escape }}">
@@ -27,7 +28,6 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
     <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/css/portfolio-hoshimori.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/css/Hoshimori.css' | relative_url }}">
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>

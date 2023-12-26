@@ -1,0 +1,314 @@
+---
+layout: Portfolio/UnrealEngine/Game/Hoshimori/page
+background: ホーム
+home: '/Portfolio/index.html'
+title: 
+  - title: "ポートフォリオ"
+  - title: "UnrealEngine"
+  - title: "星の守り人"
+new_title: true
+---
+
+<head>
+  <style>
+    .Hoshimori_bg_sec {
+      background-image: url('{{ site.img-hoshimori-character-bg[page.background] | relative_url }}');
+      width: 100%;
+      height: 600px;
+      background-color: rgba(172, 172, 172, 1);
+      background-repeat: no-repeat;
+      /* background-size: cover */
+      background-position: center;
+      align-items: center;
+      justify-content: center;
+    }
+    .Hoshimori_bg_sec.title {
+      display: flex;
+      justify-content: right;
+    }
+    .Portfolio_Hoshimori_sub {
+      display: flex;
+      align-self: flex-end;
+      position: relative;
+      height: 50%;
+      width: 100%;
+    }
+    .Portfolio_Hoshimori_sub.link {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 5%;
+      font-size: 25px;
+    }
+
+    .Portfolio_Hoshimori_sub.download {
+      justify-content: left;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      color: rgba(0, 0, 0, 1);
+    }
+
+    .Hoshimori_img_card.teaser {
+      padding-right: 15px;
+      padding-left: 15px;
+      background-color: rgba(50, 50, 50, 0.5);
+      position: absolute;
+      right: 0.5%;
+    }
+    .Hoshimori_img.teaser {
+      width: 375px;
+      height: 250px;
+      margin-top: 10px;
+    }
+    .Hoshimori_img_card_name.title {
+      margin: 5px;
+      size: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<div class="Hoshimori_bg_sec title">
+  <div class="Portfolio_Hoshimori_sub">
+    <a class="Portfolio_Hoshimori_sub link" href="https://drive.google.com/u/4/uc?id=1yHBOxEOb17XQw9xNutKXJvb6AX5GmB1Q&export=download">
+      <p class="Portfolio_Hoshimori_sub download">ダウンロード</p>
+    </a>
+    <div class="Hoshimori_img_card teaser">
+      <iframe class="Hoshimori_img teaser" allowfullscreen src="{{ site.Hoshimori-teaser-url }}">
+        ティザー映像
+      </iframe>
+      <p class="Hoshimori_img_card_name title">
+        ティザー映像
+      </p>
+    </div>
+  </div>
+</div>
+
+<head>
+  <style>
+    .Hoshimori_fixed_bg.background {
+      background-image: url("{{ '/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_4.png' | relative_url }}");
+    }
+    .Hoshimori_fixed_bg.background.movie {
+      height: 400px;
+    }
+
+    .Hoshimori_fixed_bg.background.description {
+      height: auto;
+    }
+    .Hoshimori_character_card_container {
+      padding: 10px;
+      height: 300px;
+    }
+    .Hoshimori_character_card_container.inner {
+      align-items: center;
+      margin: 0;
+      justify-content: center
+    }
+    .Hoshimori_character_card_img {
+      width: 75%;
+      height: 100%;
+    }
+    .Hoshimori_character_card_name {
+      text-align: center;
+    }
+    .Hoshimori_character_card_detail_container {
+      width: auto;
+    }
+    .Hoshimori_description_movie_container {
+      height: 225px;
+      padding: 20px;
+    }
+    .Hoshimori_description_movie {
+      padding: 0px;
+      height: 100%;
+    }
+    .Hoshimori_img_card.teaser {
+      align-self: flex-end;
+    }
+    /* .Hoshimori_img.teaser {
+      width: 225px;
+      height: 150px;
+      margin: 0px;
+      padding: 0px;
+    } */
+    .Hoshimori_img_card_name.teaser {
+      padding: 0px;
+      text-align: center;
+    }
+  </style>  
+</head>
+<div>
+  <!-- <div class="Hoshimori_description_subject_container">
+    <h2 class="Hoshimori_description_subject_text">
+      ゲーム動画
+    </h2>
+  </div>
+  <div class="Hoshimori_fixed_bg background movie">
+    <div class="Hoshimori_description_movie_container">
+      <div class="Hoshimori_img_card teaser">
+        <iframe class="Hoshimori_img teaser" allowfullscreen src="{{ site.Hoshimori-teaser-url }}"">
+          ティザー映像
+        </iframe>
+        <p class="Hoshimori_img_card_name teaser">
+          ティザー映像
+        </p>
+      </div>
+    </div>
+  </div> -->
+  <div class="Hoshimori_description_subject_container">
+    <h2 class="Hoshimori_description_subject_text">
+      ゲームの特徴
+    </h2>
+  </div>
+  <div class="Hoshimori_fixed_bg background description">
+    <div class="Hoshimori_character_card_container inner">
+      {% 
+        include Hoshimori/card.html 
+        img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_1"
+        name="冒険の旅" 
+        description="失われた守護者の力を受け継ぐため、旅に出る。"
+      %}
+    </div>
+    <div class="Hoshimori_character_card_container inner">
+      {% 
+        include Hoshimori/card.html 
+        img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_2" 
+        img-R=true
+        name="守護者の力を受け継ぐ" 
+        description="守護者に自分の力を認めさせて、力を受け継ごう。"
+      %}
+    </div>
+    <div class="Hoshimori_character_card_container inner">
+      {% 
+        include Hoshimori/card.html 
+        img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_3" 
+        name="守護者の力を使う" 
+        description="守護者の力で謎を解き、魔王を倒す。"
+      %}
+    </div>
+  </div>
+</div>
+<!-- 
+<head>
+  <style>
+    .Portfolio_fixed_bg.home {
+      background-image: url("{{ '/Portfolio/UnrealEngine/Game/Hoshimori/story/Background_Star.png' | relative_url }}");
+      background-attachment: initial;
+      height: auto;
+    }
+    .Portfolio_detail_container {
+      margin: 25px;
+      padding: 0px;
+      /* background-color: rgba(0, 0, 0, 0.5); */
+    }
+    .Portfolio_detail {
+      background-color: rgba(0,0,0,0.75);
+      padding: 5px;
+    }
+    .Portfolio_logo {
+      align-self: flex-end;
+    }
+    .Hoshimori_img_card.teaser {
+      align-self: flex-end;
+    }
+    .Hoshimori_img.teaser {
+      width: 375px;
+      height: 250px;
+      margin-top: 50px;
+    }
+
+    .Hoshimori_img_card_name {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<div class="Portfolio_fixed_bg home">
+  <div class="Portfolio_detail_container">
+    <div class="Portfolio_detail">
+      <section>
+        <h3>
+          タイトル
+        </h3>
+        <li>
+          <a href="{{ '/Hoshimori/index.html' | relative_url }}">
+            星の守り人
+          </a>
+        </li>
+      </section>
+      <section>
+        <h3>
+          製作期間
+        </h3>
+        <ul>
+          <li>
+            2020年8月~2023年3月
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>
+          ジャンル
+        </h3>
+        <ul>
+          <li>
+            RPG<br>  
+            プラットフォーム Windows
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>
+          概要
+        </h3>
+        <ul>
+          <li>
+            魔物の星から攻めてくる魔王を倒す物語
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>使用ツール</h3>
+        <ul>
+          <li>UnrealEngine5.0.3</li>
+          <li>VisualStudio2022 C++</li>
+          <li>Blender3.4</li>
+          <li>Gimp3.10.34</li>
+          <li>QuixelMixer2022.1.1</li>
+        </ul>
+      </section>
+      <section>
+        <h3>関連ページ</h3>
+        <ul>
+          <li>
+            <a href="{{ '/Hoshimori/index.html' | relative_url }}">
+              星の守り人ホームページ
+            </a>
+          </li>
+          <li>
+            <a href="https://docs.google.com/spreadsheets/d/1NFVjT8n57PvUyzLD3UZI6w4Wuo5J12zI4NV50nQFz_0/edit?usp=share_link">
+              仕様書
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div>
+      <div class="Hoshimori_img_card teaser">
+        <iframe class="Hoshimori_img teaser" allowfullscreen src="{{ site.Hoshimori-teaser-url }}">
+          ティザー映像
+        </iframe>
+        <p class="Hoshimori_img_card_name">
+          ティザー映像
+        </p>
+      </div>
+      <div class="Portfolio_logo">
+        <a href="{{ '/Hoshimori/index.html' | relative_url }}">
+          <img src="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/images/T_TitleLogo.png' | relative_url }}" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div> -->
