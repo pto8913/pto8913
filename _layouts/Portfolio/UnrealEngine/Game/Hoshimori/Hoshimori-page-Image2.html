@@ -50,19 +50,23 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
             <div class="Hoshimori_character_card_container inner">
               {% 
                 include Hoshimori/Hoshimori-character-card.html 
-                img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_1"
-                name=row.title
-                descriptions=row.description
+                name = row.title
+                descriptions = row.description
+                url = row.url
+                img-type = row.img-type
+                extension = row.extension
               %}
             </div>
           {% else %}
             <div class="Hoshimori_character_card_container inner">
               {% 
                 include Hoshimori/Hoshimori-character-card.html 
-                img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_1"
-                img-R=true
-                name=row.title
-                descriptions=row.description
+                name = row.title
+                descriptions = row.description
+                url = row.url
+                img-type = row.img-type
+                extension = row.extension
+                img-R = true
               %}
             </div>
           {% endif %}

@@ -1,3 +1,22 @@
+{% comment %}
+<!--
+  ------- include parameters -------
+  @name: string : title of description
+  @description: string : simple text.
+  @descriptions: like these.
+    description:
+    - text: "hoge"
+      type: [default:li, p, h3, h4, h5]
+    - text: "huga"
+      type: h3
+    - text: "link example"
+      type: a
+      url: "https://~~~"
+  NOTE: If descriptions is exists, description is ignored.
+-->
+{% endcomment %}
+
+
 <div class="Hoshimori_character_card_detail_container">
   <h2 class="Hoshimori_character_card_name">{{ include.name }}</h2>
   <p class="Hoshimori_character_card_description_text">────────────────────────</p>
@@ -7,8 +26,8 @@
         {% if description.text %}
           {% if description.type %}
             {% if description.type == a %}
-              <a href="{{ description.text }}">
-                {{ description.title }}
+              <a href="{{ description.url }}">
+                {{ description.text }}
               </a>
             {% else %}
               <{{ description.type }}>
