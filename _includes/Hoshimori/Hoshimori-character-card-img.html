@@ -25,10 +25,13 @@
     {% endif %}
   {% elsif IMAGETYPE == "movie" or IMAGETYPE == "gd-movie" %}
     {% if IMAGETYPE == "movie" %}
-      <iframe class="Hoshimori_character_card_img" src="{{ URL }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+      <iframe class="Hoshimori_character_card_img" src="{{ URL | relative_url }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
       </iframe>
     {% elsif IMAGETYPE == "gd-movie" %}
       <iframe class="Hoshimori_character_card_img" src="{{ URL }}/preview" allowfullscreen>
+      </iframe>
+    {% elsif IMAGETYPE == "ytb-movie" %}
+      <iframe class="Hoshimori_character_card_img" src="{{ URL }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
       </iframe>
     {% endif %}
   {% else %}
