@@ -23,7 +23,7 @@
       <iframe class="Hoshimori_character_card_img" allowfullscreen src="{{ URL }}/preview">
       </iframe>
     {% endif %}
-  {% elsif IMAGETYPE == "movie" or IMAGETYPE == "gd-movie" %}
+  {% elsif IMAGETYPE == "movie" or IMAGETYPE == "gd-movie" or IMAGETYPE == "ytb-movie" %}
     {% if IMAGETYPE == "movie" %}
       <iframe class="Hoshimori_character_card_img" src="{{ URL | relative_url }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
       </iframe>
