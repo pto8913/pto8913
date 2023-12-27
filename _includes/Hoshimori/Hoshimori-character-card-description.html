@@ -16,10 +16,11 @@
 -->
 {% endcomment %}
 
-
 <div class="Hoshimori_character_card_detail_container">
-  <h2 class="Hoshimori_character_card_name">{{ include.name }}</h2>
-  <p class="Hoshimori_character_card_description_text">────────────────────────</p>
+  {% if include.name %}
+    <h2 class="Hoshimori_character_card_name">{{ include.name }}</h2>
+    <p class="Hoshimori_character_card_description_text">────────────────────────</p>
+  {% endif %}
   {% if include.descriptions %}
     <div class="Hoshimori_img_card_description_container">
       {% for description in include.descriptions %}
