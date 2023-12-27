@@ -6,24 +6,24 @@
   {% endif %}
   {% if include.img-R %}
     {%
-      include Hoshimori/Hoshimori-character-description
+      include Hoshimori/Hoshimori-character-description.html
         name=include.name
         description=include.description
         descriptions=include.descriptions
     %}
     {%
-      include Hoshimori/Hoshimori-character-card-img
+      include Hoshimori/Hoshimori-character-card-img.html
         url = include.img-index
         extension = extension
     %}
   {% else %}
     {%
-      include Hoshimori/Hoshimori-character-card-img
+      include Hoshimori/Hoshimori-character-card-img.html
         url = include.img-index
         extension = extension
     %}
     {%
-      include Hoshimori/Hoshimori-character-description
+      include Hoshimori/Hoshimori-character-description.html
         name=include.name
         description=include.description
         descriptions=include.descriptions
