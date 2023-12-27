@@ -46,41 +46,30 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
       <div class="Hoshimori_fixed_bg background description">
         {% assign index = 0 %}
         {% for row in data.contents %}
-          <div class="Hoshimori_character_card_container inner">
-            {% 
-              include Hoshimori/card.html 
-              img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_1"
-              name=row.title
-              description="失われた守護者の力を受け継ぐため、旅に出る。"
-            %}
-          </div>
+          {% if index % 2 == 0 %}
+            <div class="Hoshimori_character_card_container inner">
+              {% 
+                include Hoshimori/Hoshimori-character-card.html 
+                img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_1"
+                name=row.title
+                descriptions=row.description
+              %}
+            </div>
+          {% else %}
+            <div class="Hoshimori_character_card_container inner">
+              {% 
+                include Hoshimori/Hoshimori-character-card.html 
+                img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_1"
+                img-R=true
+                name=row.title
+                descriptions=row.description
+              %}
+            </div>
+          {% endif %}
           {% assign index = index | plus:1 %}
         {% endfor %}
-        <div class="Hoshimori_character_card_container inner">
-          {% 
-            include Hoshimori/card.html 
-            img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_2" 
-            img-R=true
-            name="守護者の力を受け継ぐ" 
-            description="守護者に自分の力を認めさせて、力を受け継ごう。"
-          %}
-        </div>
-        <div class="Hoshimori_character_card_container inner">
-          {% 
-            include Hoshimori/card.html 
-            img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_3" 
-            name="守護者の力を使う" 
-            description="守護者の力で謎を解き、魔王を倒す。"
-          %}
-        </div>
       </div>
     </div>
   {% endfor %}
   {{ content }}
 </div>
-<!-- 
-<img src="https://drive.google.com/uc?export=view&id={{ row.url }} alt="" />
-
-<iframe src="https://drive.google.com/file/d/{{ row.url }}/preview">
--->
-
