@@ -24,6 +24,14 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
 #         ~~~
 ---
 
+<style>
+  .fade_box {
+    display: none;
+  }
+  .fadein {
+    display: flex;
+  }
+</style>
 <div>
   {% for data in page.images %}
     <div class="Hoshimori_description_subject_container">
@@ -36,7 +44,7 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
       {% for row in data.contents %}
         {% assign index = index | modulo: 2 %}
         {% if index == 0 %}
-          <div class="Hoshimori_character_card_container inner">
+          <div class="Hoshimori_character_card_container_with_fade inner fade_box">
             {% 
               include Hoshimori/Hoshimori-character-card.html 
               name = row.title
@@ -47,7 +55,7 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
             %}
           </div>
         {% else %}
-          <div class="Hoshimori_character_card_container inner">
+          <div class="Hoshimori_character_card_container_with_fade inner fade_box">
             {% 
               include Hoshimori/Hoshimori-character-card.html 
               name = row.title
