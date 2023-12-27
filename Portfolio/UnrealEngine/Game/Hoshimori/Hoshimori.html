@@ -1,4 +1,5 @@
 ---
+layout: Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori-Base
 background: ホーム
 home: '/Portfolio/index.html'
 title: 
@@ -8,102 +9,52 @@ title:
 new_title: true
 ---
 
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
-  <head>
-    {% if page.new_title %}
-      <title>
-        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
-      </title>
-    {% else %}
-      <title>
-        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
-      </title>
-    {% endif %}
-
-    <meta charset="{{ site.encoding }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="{{ page.author | default: site.author | escape }}">
-    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
-    
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/images/favicon.ico' | relative_url }}">
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/css/Hoshimori.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/css/Hoshimori-Home.css' | relative_url }}">
-
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-
-    <style>
-      .Hoshimori_bg_sec
-      {
-        background-image: url('{{ site.img-hoshimori-character-bg[page.background] | relative_url }}');
-      }
-    </style>
-  </head>
-  <body>
-    {% include header.html home=page.home %}
-    
-    {% include menu.html navigation=site.nav-header-Portfolio-Hoshimori %}
-
-    <!-- Begin MainContent -->
-    <div class="Hoshimori_bg_sec title">
-      <div class="Portfolio_Hoshimori_sub">
-        <a class="Portfolio_Hoshimori_sub link" href="https://drive.google.com/u/4/uc?id=1yHBOxEOb17XQw9xNutKXJvb6AX5GmB1Q&export=download">
-          <p class="Portfolio_Hoshimori_sub download">ダウンロード</p>
-        </a>
-        <div class="Hoshimori_img_card teaser">
-          <iframe class="Hoshimori_img teaser" allowfullscreen src="{{ site.Hoshimori-teaser-url }}">
-            ティザー映像
-          </iframe>
-          <p class="Hoshimori_img_card_name title">
-            ティザー映像
-          </p>
-        </div>
-      </div>
+<div class="Hoshimori_bg_sec title">
+  <div class="Portfolio_Hoshimori_sub">
+    <a class="Portfolio_Hoshimori_sub link" href="https://drive.google.com/u/4/uc?id=1yHBOxEOb17XQw9xNutKXJvb6AX5GmB1Q&export=download">
+      <p class="Portfolio_Hoshimori_sub download">ダウンロード</p>
+    </a>
+    <div class="Hoshimori_img_card teaser">
+      <iframe class="Hoshimori_img teaser" allowfullscreen src="{{ site.Hoshimori-teaser-url }}">
+        ティザー映像
+      </iframe>
+      <p class="Hoshimori_img_card_name title">
+        ティザー映像
+      </p>
     </div>
-    <div>
-      <div class="Hoshimori_description_subject_container">
-        <h2 class="Hoshimori_description_subject_text">
-          ゲームの特徴
-        </h2>
-      </div>
-      <div class="Hoshimori_fixed_bg background description">
-        <div class="Hoshimori_character_card_container inner">
-          {% 
-            include Hoshimori/card.html 
-            img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_1"
-            name="冒険の旅" 
-            description="失われた守護者の力を受け継ぐため、旅に出る。"
-          %}
-        </div>
-        <div class="Hoshimori_character_card_container inner">
-          {% 
-            include Hoshimori/card.html 
-            img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_2" 
-            img-R=true
-            name="守護者の力を受け継ぐ" 
-            description="守護者に自分の力を認めさせて、力を受け継ごう。"
-          %}
-        </div>
-        <div class="Hoshimori_character_card_container inner">
-          {% 
-            include Hoshimori/card.html 
-            img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_3" 
-            name="守護者の力を使う" 
-            description="守護者の力で謎を解き、魔王を倒す。"
-          %}
-        </div>
-      </div>
+  </div>
+</div>
+<div>
+  <div class="Hoshimori_description_subject_container">
+    <h2 class="Hoshimori_description_subject_text">
+      ゲームの特徴
+    </h2>
+  </div>
+  <div class="Hoshimori_fixed_bg background description">
+    <div class="Hoshimori_character_card_container inner">
+      {% 
+        include Hoshimori/card.html 
+        img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_1"
+        name="冒険の旅" 
+        description="失われた守護者の力を受け継ぐため、旅に出る。"
+      %}
     </div>
-    <!-- End MainContent -->
-    
-    {% include footer.html navigation=site.nav-footer %}
-
-    <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
-  </body>
-</html>
+    <div class="Hoshimori_character_card_container inner">
+      {% 
+        include Hoshimori/card.html 
+        img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_2" 
+        img-R=true
+        name="守護者の力を受け継ぐ" 
+        description="守護者に自分の力を認めさせて、力を受け継ごう。"
+      %}
+    </div>
+    <div class="Hoshimori_character_card_container inner">
+      {% 
+        include Hoshimori/card.html 
+        img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_3" 
+        name="守護者の力を使う" 
+        description="守護者の力で謎を解き、魔王を倒す。"
+      %}
+    </div>
+  </div>
+</div>

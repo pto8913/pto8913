@@ -1,6 +1,11 @@
 ---
-background: Home
+background: ホーム
 home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
+title: 
+  - title: "ポートフォリオ"
+  - title: "UnrealEngine"
+  - title: "星の守り人"
+new_title: true
 ---
 
 <!DOCTYPE html>
@@ -29,11 +34,13 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
     <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/css/Hoshimori.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/Portfolio/UnrealEngine/Game/Hoshimori/assets/css/Hoshimori-Home.css' | relative_url }}">
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
     <style>
-      .Hoshimori_bg_sec {
+      .Hoshimori_bg_sec
+      {
         background-image: url('{{ site.img-hoshimori-character-bg[page.background] | relative_url }}');
       }
     </style>
@@ -44,22 +51,10 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
     {% include menu.html navigation=site.nav-header-Portfolio-Hoshimori %}
 
     <!-- Begin MainContent -->
-      <div class="Hoshimori_bg_sec">
-        {% 
-          include Hoshimori/card.html 
-          name=page.background 
-          description=content 
-        %}
-        {% include carousel-character.html links=site.hoshimori-character current=page.background %}
-      </div>
+    {{ content }}
     <!-- End MainContent -->
     
-    {% if include.nav-footer %}
-      {% assign nav-footer = include.nav-footer %}
-    {% else %}
-      {% assign nav-footer = site.nav-footer %}
-    {% endif %}
-    {% include footer.html navigation=nav-footer %}
+    {% include footer.html navigation=site.nav-footer %}
 
     <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
   </body>

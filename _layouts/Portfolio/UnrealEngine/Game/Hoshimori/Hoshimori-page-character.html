@@ -1,0 +1,14 @@
+---
+background: Home
+layout: Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori-Base
+home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
+---
+
+<div class="Hoshimori_bg_sec">
+  {% 
+    include Hoshimori/card.html 
+    name=page.background 
+    description=content 
+  %}
+  {% include carousel-character.html links=site.hoshimori-character current=page.background %}
+</div>

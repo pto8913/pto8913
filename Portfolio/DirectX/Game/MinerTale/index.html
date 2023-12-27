@@ -1,4 +1,5 @@
 ---
+layout: Portfolio/game-simple
 title: 
   - title: "ポートフォリオ"
   - title: "DirectX"
@@ -6,85 +7,32 @@ title:
 new_title: true
 ---
 
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
-  <head>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
-    {% if page.new_title %}
-      <title>
-        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
-      </title>
-    {% else %}
-      <title>
-        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
-      </title>
-    {% endif %}
-    <meta charset="{{ site.encoding }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="{{ page.author | default: site.author | escape }}">
-    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/Portfolio/assets/css/game_shared.css' | relative_url }}">
-
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  </head>
-
-  <body>
-    {% include header.html home=include.home %}
-    
-    {% if include.nav-header %}
-      {% assign nav-header = include.nav-header %}
-    {% else %}
-      {% assign nav-header = site.nav-header %}
-    {% endif %}
-    {% include menu.html navigation=nav-header %}
-
-    {% if include.no-content %}
-    {% else %}
-      <!-- Begin MainContent -->
-      <div class="GameShared_Background">
-        <h2 class="GameShared_Head">炭鉱夫物語</h2>
-        <div class="GameShared_Body">
-          <div>
-            <iframe class="GameShared_Img" allowfullscreen src="https://drive.google.com/file/d/1Tnepe-t1RIazvJKpoo_caWrtcqZmhILP/preview">
-              プレイ動画
-            </iframe>
-            <p class="GameShared_Head">
-              プレイ動画
-            </p>
-            <div class="GameShared_Head">
-              <h3>制作日</h3>
-              <p class="GameShared_Head">2023/08/25</p>
-              <h3>制作期間</h3>
-              <p class="GameShared_Head">製作中・・・！</p>
-            </div>
-          </div>
-          <div class="GameShared_Description">
-            <h3>最終更新日</h3>
-            <p>2023/09/25</p>
-            <h3>概要</h3>
-            <p>
-              ソノ鉱山で炭鉱夫をしていたピトオ。<br>
-              いつもどおり炭鉱で作業をしていると、炭鉱の壁が崩れ魔物が現れるようになってしまった！<br>
-              平和な炭鉱を取り戻すため炭鉱夫ピトオの戦いが始まる・・・！<br>
-            </p>
-          </div>
-        </div>
+<div class="GameShared_Background">
+  <h2 class="GameShared_Head">炭鉱夫物語</h2>
+  <div class="GameShared_Body">
+    <div>
+      <iframe class="GameShared_Img" allowfullscreen src="https://drive.google.com/file/d/1Tnepe-t1RIazvJKpoo_caWrtcqZmhILP/preview">
+        プレイ動画
+      </iframe>
+      <p class="GameShared_Head">
+        プレイ動画
+      </p>
+      <div class="GameShared_Head">
+        <h3>制作日</h3>
+        <p class="GameShared_Head">2023/08/25</p>
+        <h3>制作期間</h3>
+        <p class="GameShared_Head">製作中・・・！</p>
       </div>
-      <!-- End MainContent -->
-    {% endif %}
-    
-    {% if include.nav-footer %}
-      {% assign nav-footer = include.nav-footer %}
-    {% else %}
-      {% assign nav-footer = site.nav-footer %}
-    {% endif %}
-    {% include footer.html navigation=nav-footer %}
-
-    <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
-  </body>
-</html>
+    </div>
+    <div class="GameShared_Description">
+      <h3>最終更新日</h3>
+      <p>2023/09/25</p>
+      <h3>概要</h3>
+      <p>
+        ソノ鉱山で炭鉱夫をしていたピトオ。<br>
+        いつもどおり炭鉱で作業をしていると、炭鉱の壁が崩れ魔物が現れるようになってしまった！<br>
+        平和な炭鉱を取り戻すため炭鉱夫ピトオの戦いが始まる・・・！<br>
+      </p>
+    </div>
+  </div>
+</div>
