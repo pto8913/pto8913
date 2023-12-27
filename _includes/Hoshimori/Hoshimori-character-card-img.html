@@ -1,0 +1,30 @@
+{% assign URL = include.url %}
+{% assign ImageType = include.img-type %}
+{% if ImageType == "image" or ImageType == "gd-image" %}
+  <a href="{{ URL | relative_url }}" target="_blank" rel="noopener noreferrer">
+    <div class="Hoshimori_img_card">
+      {% if ImageType == "image" %}
+        <img class="Hoshimori_character_card_img" src="{{ URL | relative_url }}" alt="" />
+      {% elsif ImageType == "gd-image" %}
+        <iframe class="Hoshimori_character_card_img" allowfullscreen src="{{ URL }}/preview">
+        </iframe>
+      {% endif %}
+    </div>
+  </a>
+{% elsif ImageType == "movie" or ImageType == "gd-movie" %}
+  <div class="Hoshimori_img_card">
+    {% if ImageType == "movie" %}
+      <iframe class="Hoshimori_character_card_img" src="{{ URL }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+      </iframe>
+    {% elsif ImageType == "gd-movie" %}
+      <iframe class="Hoshimori_character_card_img" src="{{ URL }}/preview" allowfullscreen>
+      </iframe>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% if include.img-index %}
+  <img class="Hoshimori_character_card_img" src="{{ include.img-index | relative_url }}.{{ include.extension }}" alt="" />
+{% else %}
+  <img class="Hoshimori_character_card_img" src="{{ site.hoshimori-character[page.background] | relative_url }}.{{ include.extension }}" alt="" />
+{% endif %}

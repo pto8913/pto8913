@@ -1,0 +1,30 @@
+<div class="Hoshimori_character_card_container">
+  {% if include.img-extension %}
+    {% assign extension = include.img-extension %}
+  {% else %}
+    {% assign extension = "png" %}
+  {% endif %}
+  {% if include.img-R %}
+    {%
+      include Hoshimori/Hoshimori-character-description
+        name=include.name
+        description=include.description
+    %}
+    {%
+      include Hoshimori/Hoshimori-character-card-img
+        url = include.img-index
+        extension = extension
+    %}
+  {% else %}
+    {%
+      include Hoshimori/Hoshimori-character-card-img
+        url = include.img-index
+        extension = extension
+    %}
+    {%
+      include Hoshimori/Hoshimori-character-description
+        name=include.name
+        description=include.description
+    %}
+  {% endif %}
+</div>

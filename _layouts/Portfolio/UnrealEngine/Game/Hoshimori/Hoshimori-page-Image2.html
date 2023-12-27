@@ -1,0 +1,86 @@
+---
+layout: Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori-Base
+title: "ポートフォリオ | 星の守り人 | UI"
+subject: "タイトルUI"
+home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
+# images: # list
+# - subject: subject-title
+#   contents:
+#     - title: title
+#       url: "url"(relative)
+#       img-type: [default:"none", "movie", "gd-movie", "image", "gd-image"] #if none only description.
+#       description:
+#         - text: ""
+#           type: [default:"li", "p", "h3", "h4", "h5"]
+#         or
+#         [
+#           "hogehoge",
+#           "hugahuga"
+#         ]
+# - subject: subject-title
+#   contents:
+#     - title: title
+#         ~~~
+#         ~~~
+---
+
+<head>
+  <style>
+    .Hoshimori_img_cards_container {
+      display: block;
+    }
+    .Hoshimori_img_card_container {
+      height: auto;
+      margin: 5px 0px;
+    }
+  </style>
+</head>
+<div>
+  {% for data in page.images %}
+    <div>
+      <div class="Hoshimori_description_subject_container">
+        <h2 class="Hoshimori_description_subject_text">
+          {{ data.subject }}
+        </h2>
+      </div>
+      <div class="Hoshimori_fixed_bg background description">
+        {% assign index = 0 %}
+        {% for row in data.contents %}
+          <div class="Hoshimori_character_card_container inner">
+            {% 
+              include Hoshimori/card.html 
+              img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_1"
+              name=row.title
+              description="失われた守護者の力を受け継ぐため、旅に出る。"
+            %}
+          </div>
+          {% assign index = index | plus:1 %}
+        {% endfor %}
+        <div class="Hoshimori_character_card_container inner">
+          {% 
+            include Hoshimori/card.html 
+            img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_2" 
+            img-R=true
+            name="守護者の力を受け継ぐ" 
+            description="守護者に自分の力を認めさせて、力を受け継ごう。"
+          %}
+        </div>
+        <div class="Hoshimori_character_card_container inner">
+          {% 
+            include Hoshimori/card.html 
+            img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_3" 
+            name="守護者の力を使う" 
+            description="守護者の力で謎を解き、魔王を倒す。"
+          %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  {{ content }}
+</div>
+<!-- 
+<img src="https://drive.google.com/uc?export=view&id={{ row.url }} alt="" />
+
+<iframe src="https://drive.google.com/file/d/{{ row.url }}/preview">
+-->
+
