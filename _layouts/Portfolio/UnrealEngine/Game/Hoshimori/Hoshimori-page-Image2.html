@@ -26,44 +26,41 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
 
 <div>
   {% for data in page.images %}
-    <div>
-      <div class="Hoshimori_description_subject_container">
-        <h2 class="Hoshimori_description_subject_text">
-          {{ data.subject }}
-        </h2>
-      </div>
-      <div class="Hoshimori_fixed_bg background description">
-        {% assign index = 0 %}
-        {% for row in data.contents %}
-          {% assign index = index | modulo: 2 %}
-          {% if index == 0 %}
-            <div class="Hoshimori_character_card_container inner">
-              {% 
-                include Hoshimori/Hoshimori-character-card.html 
-                name = row.title
-                descriptions = row.description
-                url = row.url
-                img-type = row.img-type
-                extension = row.extension
-              %}
-            </div>
-          {% else %}
-            <div class="Hoshimori_character_card_container inner">
-              {% 
-                include Hoshimori/Hoshimori-character-card.html 
-                name = row.title
-                descriptions = row.description
-                url = row.url
-                img-type = row.img-type
-                extension = row.extension
-                img-R = true
-              %}
-            </div>
-          {% endif %}
-          {% assign index = index | plus:1 %}
-        {% endfor %}
-      </div>
+    <div class="Hoshimori_description_subject_container">
+      <h2 class="Hoshimori_description_subject_text">
+        {{ data.subject }}
+      </h2>
+    </div>
+    <div class="Hoshimori_fixed_bg background description">
+      {% assign index = 0 %}
+      {% for row in data.contents %}
+        {% assign index = index | modulo: 2 %}
+        {% if index == 0 %}
+          <div class="Hoshimori_character_card_container inner">
+            {% 
+              include Hoshimori/Hoshimori-character-card.html 
+              name = row.title
+              descriptions = row.description
+              url = row.url
+              img-type = row.img-type
+              extension = row.extension
+            %}
+          </div>
+        {% else %}
+          <div class="Hoshimori_character_card_container inner">
+            {% 
+              include Hoshimori/Hoshimori-character-card.html 
+              name = row.title
+              descriptions = row.description
+              url = row.url
+              img-type = row.img-type
+              extension = row.extension
+              img-R = true
+            %}
+          </div>
+        {% endif %}
+        {% assign index = index | plus:1 %}
+      {% endfor %}
     </div>
   {% endfor %}
-  {{ content }}
 </div>
