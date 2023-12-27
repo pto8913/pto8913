@@ -11,7 +11,7 @@
 {% assign IMAGETYPE = include.img-type %}
 {% assign EXTENSION = include.extension %}
 
-<div id="character_card_image">
+{% if URL %}
   {% if IMAGETYPE == "image" or IMAGETYPE == "gd-image" %}
     {% if IMAGETYPE == "image" %}
       {% if URL %}
@@ -38,4 +38,4 @@
       <img class="Hoshimori_character_card_img" src="{{ site.hoshimori-character[page.background] | relative_url }}.{{ EXTENSION }}" alt="" />
     {% endif %}
   {% endif %}
-</div>
+{% endif %}
