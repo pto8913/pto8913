@@ -16,43 +16,44 @@
 -->
 {% endcomment %}
 
-<div class="Hoshimori_character_card_detail_container" id="character_card_description">
-  {% if include.name %}
-    <h2 class="Hoshimori_character_card_name">{{ include.name }}</h2>
-    <p class="Hoshimori_character_card_description_text">────────────────────────</p>
-  {% endif %}
-  {% if include.descriptions %}
-    <div class="Hoshimori_img_card_description_container">
-      {% for description in include.descriptions %}
-        {% if description.text %}
-          {% if description.type %}
-            {% if description.type == a %}
-              <a href="{{ description.url }}">
-                {{ description.text }}
-              </a>
+{% if include.descriptions or include.description or include.name %}
+  <div class="Hoshimori_character_card_detail_container" id="character_card_description">
+    {% if include.name %}
+      <h2 class="Hoshimori_character_card_name">{{ include.name }}</h2>
+      <p class="Hoshimori_character_card_description_text">────────────────────────</p>
+    {% endif %}
+    {% if include.descriptions %}
+      <div class="Hoshimori_img_card_description_container">
+        {% for description in include.descriptions %}
+          {% if description.text %}
+            {% if description.type %}
+              {% if description.type == a %}
+                <a href="{{ description.url }}">
+                  {{ description.text }}
+                </a>
+              {% else %}
+                <{{ description.type }}>
+                  {{ description.text }}
+                </{{ description.type }}>
+              {% endif %}
             {% else %}
-              <{{ description.type }}>
+              <li>
                 {{ description.text }}
-              </{{ description.type }}>
+              </li>
             {% endif %}
           {% else %}
             <li>
-              {{ description.text }}
+              {{ description }}
             </li>
           {% endif %}
-        {% else %}
-          <li>
-            {{ description }}
-          </li>
-        {% endif %}
-      {% endfor %}
-    </div>
-  {% else %}
-    <div class="Hoshimori_character_card_description_text_container">
-      <p class="Hoshimori_character_card_description_text">
-        {{ include.description }}
-      </p>
-    </div>
-  {% endif %}
-</div>
-
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="Hoshimori_character_card_description_text_container">
+        <p class="Hoshimori_character_card_description_text">
+          {{ include.description }}
+        </p>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
