@@ -35,7 +35,7 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
       <div class="Hoshimori_fixed_bg background description">
         {% assign index = 0 %}
         {% for row in data.contents %}
-          {{ index | modulo: 2 }}
+          {% assign index = index | modulo: 2 %}
           {{ index }}
           {% if index == 0 %}
             <div class="Hoshimori_character_card_container inner">
