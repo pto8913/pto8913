@@ -24,17 +24,6 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
 #         ~~~
 ---
 
-<head>
-  <style>
-    .Hoshimori_img_cards_container {
-      display: block;
-    }
-    .Hoshimori_img_card_container {
-      height: auto;
-      margin: 5px 0px;
-    }
-  </style>
-</head>
 <div>
   {% for data in page.images %}
     <div>
@@ -46,7 +35,7 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
       <div class="Hoshimori_fixed_bg background description">
         {% assign index = 0 %}
         {% for row in data.contents %}
-          {% if index % 2 == 0 %}
+          {% if {{ index | modulo:2 }} == 0 %}
             <div class="Hoshimori_character_card_container inner">
               {% 
                 include Hoshimori/Hoshimori-character-card.html 

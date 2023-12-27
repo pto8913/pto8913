@@ -16,12 +16,12 @@
     <div class="Hoshimori_img_card">
       {% if IMAGETYPE == "image" %}
         {% if URL %}
-          <img class="Hoshimori_character_card_img" src="{{ URL | relative_url }}.{{ EXTENSION }}" alt="" />
+          <img class="Hoshimori_character_card_img" src="{{ include.url | relative_url }}.{{ EXTENSION }}" alt="" />
         {% else %}
           <img class="Hoshimori_character_card_img" src="{{ site.hoshimori-character[page.background] | relative_url }}.{{ EXTENSION }}" alt="" />
         {% endif %}
       {% elsif IMAGETYPE == "gd-image" %}
-        <iframe class="Hoshimori_character_card_img" allowfullscreen src="{{ URL }}/preview">
+        <iframe class="Hoshimori_character_card_img" allowfullscreen src="{{ include.url }}/preview">
         </iframe>
       {% endif %}
     </div>
@@ -29,16 +29,16 @@
 {% elsif IMAGETYPE == "movie" or IMAGETYPE == "gd-movie" %}
   <div class="Hoshimori_img_card">
     {% if IMAGETYPE == "movie" %}
-      <iframe class="Hoshimori_character_card_img" src="{{ URL }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+      <iframe class="Hoshimori_character_card_img" src="{{ include.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
       </iframe>
     {% elsif IMAGETYPE == "gd-movie" %}
-      <iframe class="Hoshimori_character_card_img" src="{{ URL }}/preview" allowfullscreen>
+      <iframe class="Hoshimori_character_card_img" src="{{ include.url }}/preview" allowfullscreen>
       </iframe>
     {% endif %}
   </div>
 {% else %}
-  {% if URL %}
-    <img class="Hoshimori_character_card_img" src="{{ URL | relative_url }}.{{ EXTENSION }}" alt="" />
+  {% if include.url %}
+    <img class="Hoshimori_character_card_img" src="{{ include.url | relative_url }}.{{ EXTENSION }}" alt="" />
   {% else %}
     <img class="Hoshimori_character_card_img" src="{{ site.hoshimori-character[page.background] | relative_url }}.{{ EXTENSION }}" alt="" />
   {% endif %}
