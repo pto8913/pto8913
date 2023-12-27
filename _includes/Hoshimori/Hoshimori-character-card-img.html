@@ -11,30 +11,31 @@
 {% assign IMAGETYPE = include.img-type %}
 {% assign EXTENSION = include.extension %}
 
-{% if IMAGETYPE == "image" or IMAGETYPE == "gd-image" %}
-  {% if IMAGETYPE == "image" %}
+<div id="character_card_image">
+  {% if IMAGETYPE == "image" or IMAGETYPE == "gd-image" %}
+    {% if IMAGETYPE == "image" %}
+      {% if URL %}
+        <img class="Hoshimori_character_card_img" src="{{ URL | relative_url }}.{{ EXTENSION }}" alt="" />
+      {% else %}
+        <img class="Hoshimori_character_card_img" src="{{ site.hoshimori-character[page.background] | relative_url }}.{{ EXTENSION }}" alt="" />
+      {% endif %}
+    {% elsif IMAGETYPE == "gd-image" %}
+      <iframe class="Hoshimori_character_card_img" allowfullscreen src="{{ URL }}/preview">
+      </iframe>
+    {% endif %}
+  {% elsif IMAGETYPE == "movie" or IMAGETYPE == "gd-movie" %}
+    {% if IMAGETYPE == "movie" %}
+      <iframe class="Hoshimori_character_card_img" src="{{ URL }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+      </iframe>
+    {% elsif IMAGETYPE == "gd-movie" %}
+      <iframe class="Hoshimori_character_card_img" src="{{ URL }}/preview" allowfullscreen>
+      </iframe>
+    {% endif %}
+  {% else %}
     {% if URL %}
       <img class="Hoshimori_character_card_img" src="{{ URL | relative_url }}.{{ EXTENSION }}" alt="" />
     {% else %}
       <img class="Hoshimori_character_card_img" src="{{ site.hoshimori-character[page.background] | relative_url }}.{{ EXTENSION }}" alt="" />
     {% endif %}
-  {% elsif IMAGETYPE == "gd-image" %}
-    <iframe class="Hoshimori_character_card_img" allowfullscreen src="{{ URL }}/preview">
-    </iframe>
   {% endif %}
-{% elsif IMAGETYPE == "movie" or IMAGETYPE == "gd-movie" %}
-  {% if IMAGETYPE == "movie" %}
-    <iframe class="Hoshimori_character_card_img" src="{{ URL }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-    </iframe>
-  {% elsif IMAGETYPE == "gd-movie" %}
-    <iframe class="Hoshimori_character_card_img" src="{{ URL }}/preview" allowfullscreen>
-    </iframe>
-  {% endif %}
-{% else %}
-  {% if URL %}
-    <img class="Hoshimori_character_card_img" src="{{ URL | relative_url }}.{{ EXTENSION }}" alt="" />
-  {% else %}
-    <img class="Hoshimori_character_card_img" src="{{ site.hoshimori-character[page.background] | relative_url }}.{{ EXTENSION }}" alt="" />
-  {% endif %}
-{% endif %}
-
+</div>
