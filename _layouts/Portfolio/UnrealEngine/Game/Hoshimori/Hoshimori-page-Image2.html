@@ -36,7 +36,6 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
         {% assign index = 0 %}
         {% for row in data.contents %}
           {% assign index = index | modulo: 2 %}
-          {{ index }}
           {% if index == 0 %}
             <div class="Hoshimori_character_card_container inner">
               {% 
