@@ -10,14 +10,15 @@ $(window).on(
     $(".fade_box").each(
       function()
       {
-        var elemOffset = $(this).offset().top;
+        var elemRect = $(this).getBoundingClientRect();
+        var elemOffset = elemRect.top;
         var elemHeight = $(this).height();
         $(this).find(".box_posspan").text(Math.floor(elemOffset));
 
         var visibleArea = documentPosition + viewportHeight;
         var elemArea = elemOffset + elemHeight;
         console.log(documentPosition, viewportHeight, elemOffset, elemHeight);
-        if (documentPosition <= elemOffset && visibleArea >= elemArea)
+        if (documentPosition <= elemOffset)// && visibleArea >= elemArea)
         {
           $(this).addClass("fadein");
         }
