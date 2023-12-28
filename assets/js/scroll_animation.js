@@ -11,7 +11,7 @@ $(window).on(
       function()
       {
         var elemOffset = $(this).offset().top;
-        var elemHeight = $(this).height;
+        var elemHeight = $(this).height();
         $(this).find(".box_posspan").text(Math.floor(elemOffset));
 
         var visibleArea = documentPosition + viewportHeight;
