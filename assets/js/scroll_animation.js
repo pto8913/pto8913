@@ -1,19 +1,23 @@
-var windowHeight = $(window).height();
-$("#wh span").text(windowHeight);
+var viewportHeight = $(window).height();
+$("#wh span").text(viewportHeight);
 $(window).on(
   "scroll", 
   function()
   {
-    var scroll_top = $(window).scrollTop();
-    $("#scroll span").text(scroll_top);
+    var documentPosition = $(window).scrollTop();
+    $("#scroll span").text(documentPosition);
 
     $(".fade_box").each(
       function()
       {
-        var elem_pos = $(this).offset().top;
-        $(this).find(".box_posspan").text(Math.floor(elem_pos));
+        var elemOffset = $(this).offset().top;
+        var elemHeight = $(this).height;
+        $(this).find(".box_posspan").text(Math.floor(elemOffset));
 
-        if (scroll_top >= elem_pos - windowHeight)
+        var visibleArea = documentPosition + viewportHeight;
+        var elemArea = elemOffset + elemHeight;
+
+        if (documentPosition <= elemOffset && visibleArea >= elemArea)
         {
           $(this).addClass("fadein");
         }
