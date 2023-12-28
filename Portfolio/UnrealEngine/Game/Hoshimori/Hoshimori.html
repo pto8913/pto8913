@@ -7,6 +7,24 @@ title:
   - title: "UnrealEngine"
   - title: "星の守り人"
 new_title: true
+images:
+  - subject: ゲームの特徴
+    contents: 
+      - title: "冒険の旅"
+        url: "/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_1"
+        img-type: "image"
+        description:
+          - text: "失われた守護者の力を受け継ぐため、旅に出る。"
+      - title: "守護者の力を受け継ぐ" 
+        url: "/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_2"
+        img-type: "image"
+        description:
+          - text: "守護者に自分の力を認めさせて、力を受け継ごう。"
+      - title: "守護者の力を使う" 
+        url: "/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_3"
+        img-type: "image"
+        description:
+          - text: "守護者の力で謎を解き、魔王を倒す。"
 ---
 
 <div class="Hoshimori_bg_sec title">
@@ -25,36 +43,11 @@ new_title: true
   </div>
 </div>
 <div>
-  <div class="Hoshimori_description_subject_container">
-    <h2 class="Hoshimori_description_subject_text">
-      ゲームの特徴
-    </h2>
-  </div>
-  <div class="Hoshimori_fixed_bg background description">
-    <div class="Hoshimori_character_card_container inner">
-      {% 
-        include Hoshimori/card.html 
-        img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_1"
-        name="冒険の旅" 
-        description="失われた守護者の力を受け継ぐため、旅に出る。"
-      %}
-    </div>
-    <div class="Hoshimori_character_card_container inner">
-      {% 
-        include Hoshimori/card.html 
-        img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_2" 
-        img-R=true
-        name="守護者の力を受け継ぐ" 
-        description="守護者に自分の力を認めさせて、力を受け継ごう。"
-      %}
-    </div>
-    <div class="Hoshimori_character_card_container inner">
-      {% 
-        include Hoshimori/card.html 
-        img-index="/Portfolio/UnrealEngine/Game/Hoshimori/Description/Background_3" 
-        name="守護者の力を使う" 
-        description="守護者の力で謎を解き、魔王を倒す。"
-      %}
-    </div>
-  </div>
+  {% for data in page.images %}
+    {%
+      include Hoshimori/Hoshimori-page-Image2
+      subject = data.subject
+      contents = data.contents
+    %}
+  {% endfor %}
 </div>

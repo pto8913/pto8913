@@ -31,43 +31,10 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
 </style> {% endcomment %}
 <div>
   {% for data in page.images %}
-    <div class="Hoshimori_description_subject_container">
-      <h2 class="Hoshimori_description_subject_text">
-        {{ data.subject }}
-      </h2>
-    </div>
-    <div class="Hoshimori_fixed_bg background description">
-      {% assign index = 0 %}
-      {% for row in data.contents %}
-        {% assign index-mod = index | modulo: 2 %}
-        {% if index > 2 %}
-          <div class="Hoshimori_character_card_container_with_fade inner fade_box">
-        {% else %}
-          <div class="Hoshimori_character_card_container inner">
-        {% endif %}
-        {% if index-mod == 0 %}
-          {% 
-            include Hoshimori/Hoshimori-character-card.html 
-            name = row.title
-            descriptions = row.description
-            url = row.url
-            img-type = row.img-type
-            extension = row.extension
-          %}
-        {% else %}
-          {% 
-            include Hoshimori/Hoshimori-character-card.html 
-            name = row.title
-            descriptions = row.description
-            url = row.url
-            img-type = row.img-type
-            extension = row.extension
-            img-R = true
-          %}
-        {% endif %}
-        </div>
-        {% assign index = index | plus:1 %}
-      {% endfor %}
-    </div>
+    {%
+      include Hoshimori/Hoshimori-page-Image2
+      subject = data.subject
+      contents = data.contents
+    %}
   {% endfor %}
 </div>

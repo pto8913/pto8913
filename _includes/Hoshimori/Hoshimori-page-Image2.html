@@ -1,0 +1,57 @@
+{% comment %}
+<!--
+  ------- include parameters -------
+  @subject: string : subject .
+  @contents: 
+    contents:
+      - title: title
+        url: "url"(relative)
+        img-type: [default:"none", "movie", "gd-movie", "image", "gd-image"] if none only description.
+        description:
+          - text: ""
+            type: [default:"li", "p", "h3", "h4", "h5"]
+          or
+          [
+            "hogehoge",
+            "hugahuga"
+          ]
+-->
+{% endcomment %}
+<div class="Hoshimori_description_subject_container">
+  <h2 class="Hoshimori_description_subject_text">
+    {{ include.subject }}
+  </h2>
+</div>
+<div class="Hoshimori_fixed_bg background description">
+  {% assign index = 0 %}
+  {% for row in include.contents %}
+    {% assign index-mod = index | modulo: 2 %}
+    {% if index > 2 %}
+      <div class="Hoshimori_character_card_container_with_fade inner fade_box">
+    {% else %}
+      <div class="Hoshimori_character_card_container inner">
+    {% endif %}
+    {% if index-mod == 0 %}
+      {% 
+        include Hoshimori/Hoshimori-character-card.html 
+        name = row.title
+        descriptions = row.description
+        url = row.url
+        img-type = row.img-type
+        extension = row.extension
+      %}
+    {% else %}
+      {% 
+        include Hoshimori/Hoshimori-character-card.html 
+        name = row.title
+        descriptions = row.description
+        url = row.url
+        img-type = row.img-type
+        extension = row.extension
+        img-R = true
+      %}
+    {% endif %}
+    </div>
+    {% assign index = index | plus:1 %}
+  {% endfor %}
+</div>
