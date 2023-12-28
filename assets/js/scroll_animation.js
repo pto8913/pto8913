@@ -18,10 +18,12 @@ $(window).on(
         if (scroll_top >= elem_pos - windowHeight)
         {
           $(this).addClass("fadein");
+          $(this).removeClass("fadeout");
         }
         else
         {
           $(this).removeClass("fadein");
+          $(this).addClass("fadeout");
         }
       }
     )
