@@ -48,27 +48,31 @@ images:
             type: h4
           - text: "敵キャラクターは武器のみ拾うことができる"
           - text: "敵キャラクターごとに設定されたPickupTraceTypeと一致するアイテムの元へAIによって移動し即座に装備する"
-          - text: "宝箱を開くアイテム"
-            type: h3
+      - title: "宝箱を開くアイテム"
+        description:
           - text: "プレイヤーのみ可能"
           - text: "BP_Chestに対してイベントを送り、BP_Chestの持つInventoryComponentのデータからアイテムをWBP_HUDのReceiveItemで取得する"
-          - text: "木からアイテムを取る"
-            type: h3
+      - title: "木からアイテムを取る"
+        description:
           - text: "プレイヤーのみ可能"
           - text: "BP_FruitTreeに対してイベントを送り、BP_FruitTreeに設定されたAssetIdをInventoryComponentに追加する"
           - text: "拾ったアイテムはWBP_HUDによって画面の右下に表示される"
   - subject: "ボタンを押す"
     contents:
       - url: 'https://www.youtube.com/embed/rUFkl8rrrPI?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
+        title: "一回だけ"
         img-type: "ytb-movie"
         description: 
-          - text: "Type: Interact"
-            type: h3
           - text: "BP_Buttonに対してイベントを送ることで動作する"
           - text: "一度だけ実行される"
           - text: "BP_ButtonAffectorまたはアクターに対して処理を行う"
           - text: "Type: Overlap"
             type: h3
+          - text: "BP_ButtonのCollisionにアクターがOverlapしている間処理が行われる"
+          - text: "一度だけ実行される"
+          - text: "BP_ButtonAffectorまたはアクターに対して処理を行う"
+      - title: "長押し"
+        description: 
           - text: "BP_ButtonのCollisionにアクターがOverlapしている間処理が行われる"
           - text: "一度だけ実行される"
           - text: "BP_ButtonAffectorまたはアクターに対して処理を行う"
@@ -83,7 +87,6 @@ images:
   - subject: "泳ぐ"
     contents:
       - url: 'https://www.youtube.com/embed/Tpp-FvoN97U?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
-        title: "泳ぐ"
         img-type: "ytb-movie"
         description:
           - text: "BP_ForceArea_Waterの中を泳いでいるように見せている"

@@ -211,17 +211,7 @@ nav-header-Portfolio-Hoshimori:
   登場人物: "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Tolemy.html"
   プレイ映像: "/Portfolio/UnrealEngine/Game/Hoshimori/capture/index.html"
   守護者の力: "/Portfolio/UnrealEngine/Game/Hoshimori/metamorphosis/index.html"
-  アクション:
-    index: "/Portfolio/UnrealEngine/Game/Hoshimori/action/index.html"
-    登る: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Climbing.html"
-    釣り: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Fishing.html"
-    アイテムを拾う: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Pickup.html"
-    ボタンを押す: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Press.html"
-    押す: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Push.html"
-    休む: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Rest.html"
-    泳ぐ: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Swimming.html"
-    会話: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Talk.html"
-    乗り物: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Vehicle.html"
+  アクション: "/Portfolio/UnrealEngine/Game/Hoshimori/action/index.html"
   敵キャラクター:
     マブリン系: "/Portfolio/UnrealEngine/Game/Hoshimori/enemy/Mablin.html"
     タロス系: "/Portfolio/UnrealEngine/Game/Hoshimori/enemy/Talos.html"
