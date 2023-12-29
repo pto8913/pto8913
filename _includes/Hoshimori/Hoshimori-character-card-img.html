@@ -27,10 +27,8 @@
       </iframe>
     {% endif %}
   {% else %}
-    {% if URL %}
-      <img class="Hoshimori_character_card_img" src="{{ URL | relative_url }}.{{ EXTENSION }}" alt="" />
-    {% else %}
-      <img class="Hoshimori_character_card_img" src="{{ site.hoshimori-character[page.background] | relative_url }}.{{ EXTENSION }}" alt="" />
-    {% endif %}
+    <img class="Hoshimori_character_card_img" src="{{ URL | relative_url }}.{{ EXTENSION }}" alt="" />
   {% endif %}
+{% else %}
+  <img class="Hoshimori_character_card_img" src="{{ site.hoshimori-character[page.background] | relative_url }}.{{ EXTENSION }}" alt="" />
 {% endif %}
