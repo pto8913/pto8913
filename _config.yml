@@ -235,6 +235,7 @@ nav-header-Portfolio-Hoshimori:
     ヴァルゴ: "/Portfolio/UnrealEngine/Game/Hoshimori/enemy/Virgo.html"
     魔王: "/Portfolio/UnrealEngine/Game/Hoshimori/enemy/Typhon.html"
   UI:
+    index: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/index.html"
     タイトルUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/title.html"
     チュートリアルUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/tutorial.html"
     HUD: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/hud.html"
