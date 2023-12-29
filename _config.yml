@@ -208,6 +208,8 @@ idx-Portfolio:
 nav-header-Portfolio-Hoshimori:
   ホーム: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html"
   物語 : "/Portfolio/UnrealEngine/Game/Hoshimori/story/index.html"
+  登場人物: "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Tolemy.html"
+  プレイ映像: "/Portfolio/UnrealEngine/Game/Hoshimori/capture/index.html"
   守護者の力: "/Portfolio/UnrealEngine/Game/Hoshimori/metamorphosis/index.html"
   アクション:
     登る: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Climbing.html"
@@ -219,7 +221,6 @@ nav-header-Portfolio-Hoshimori:
     泳ぐ: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Swimming.html"
     会話: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Talk.html"
     乗り物: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Vehicle.html"
-  登場人物: "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Tolemy.html"
   敵キャラクター:
     マブリン系: "/Portfolio/UnrealEngine/Game/Hoshimori/enemy/Mablin.html"
     タロス系: "/Portfolio/UnrealEngine/Game/Hoshimori/enemy/Talos.html"
@@ -245,6 +246,7 @@ nav-header-Portfolio-Hoshimori:
     休むUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/rest.html"
     ローディングUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/loading.html"
   レベルデザイン:
+    聖域: "/Portfolio/UnrealEngine/Game/Hoshimori/level/index.html"
     聖域: "/Portfolio/UnrealEngine/Game/Hoshimori/level/Sanctuary.html"
     天望島: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionTenbou.html"
     カトラス島: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionCatlas.html"
@@ -253,7 +255,6 @@ nav-header-Portfolio-Hoshimori:
     シラージェ火山: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionSillarje.html"
     グラム谷: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionGlam.html"
     アクア団基地: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionWasser.html"
-  プレイ映像: "/Portfolio/UnrealEngine/Game/Hoshimori/capture/index.html"
 
 # ------------------------------ Hoshimori ------------------------------
 # Images
