@@ -15,8 +15,15 @@
             "hogehoge",
             "hugahuga"
           ]
+  @fade-start-index: int : fade start index.
 -->
 {% endcomment %}
+
+{% if include.fade-start-index %}
+  {% assign fade-start-index = include.fade-start-index %}
+{% else %}
+  {% assign fade-start-index = 0 %}
+{% endif %}
 <div class="Hoshimori_description_subject_container">
   <h2 class="Hoshimori_description_subject_text">
     {{ include.subject }}
@@ -26,7 +33,7 @@
   {% assign index = 0 %}
   {% for row in include.contents %}
     {% assign index-mod = index | modulo: 2 %}
-    {% if index > 2 %}
+    {% if index > fade-start-index %}
       <div class="Hoshimori_character_card_container_with_fade inner fade_box">
     {% else %}
       <div class="Hoshimori_character_card_container inner">

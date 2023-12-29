@@ -45,9 +45,10 @@ images:
 <div>
   {% for data in page.images %}
     {%
-      include Hoshimori/Hoshimori-card
+      include Hoshimori/Hoshimori-card.html
       subject = data.subject
       contents = data.contents
+      fade-start-index = -1
     %}
   {% endfor %}
 </div>
