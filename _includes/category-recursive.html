@@ -5,7 +5,13 @@
       {% assign subject_contents = category.contents %}
 
       {% if category.url %}
-        <li><a href="{{ category.url | relative_url }}">{{ subject_name }}</a></li>
+        {% if category.type %}
+          {% if category.type == "absolute" %}
+            <li><a href="{{ category.url }}">{{ subject_name }}</a></li>
+          {% endif %}
+        {% else %}
+          <li><a href="{{ category.url | relative_url }}">{{ subject_name }}</a></li>
+        {% endif %}
       {% else %}
         <button type="button" class="collapse category_button">
           {% if category.url %}

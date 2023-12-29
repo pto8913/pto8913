@@ -102,27 +102,42 @@ nav-categories:
           - title: "Maze"
             url: "/Portfolio/UnrealEngine/Game/Maze/index.html"
       - title: "Plugin"
-        url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
+        contents:
+          - title: "SpreadSheetToUnreal"
+            url: "https://github.com/pto8913/SpreadSheetToUnreal"
+            type: "absolute"
+          - url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
       - title: Note
         url: ""
   DirectX11-C++:
     url: "/Portfolio/DirectX11-C++/DirectX11_Index.html"
     contents: 
       - title: "Game"
-        url : ""
+        contents:
+          - title: "とこぷよ"
+            url : "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo.html"
       - title: "Plugin"
         url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
       - title: Note
         url: ""
   Unity:
     url: "/Portfolio/Unity/Unity_Index.html"
-    contents :
+    contents:
       - title: "Game"
-        url: ""
+        contents:
+          - title: "TappyCube"
+            url: "/Portfolio/DirectX/Game/TappyCube/index.html"
       - title: "Plugin"
         url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
       - title: Note
         url: ""
+  Java:
+    url: "/Portfolio/Java/Java_Index.html"
+    contents:
+      - title: "Windows"
+        contents:
+          - title: "MusicPlayer for Windows"
+            url: "/Portfolio/Java/Windows/MusicPlayer/MusicPlayer.html"
 
 # ------------------------------ Portfolio ------------------------------
 # Navigations
@@ -247,7 +262,7 @@ hoshimori-character:
   アクア : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Aqua"
   ケス : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Ces"
   ステラ : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Stella"
-  
+
 img-hoshimori-character-bg:
   ホーム : "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.png"
   ベータ : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Background_Beta.png"

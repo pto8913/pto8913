@@ -33,13 +33,15 @@
         {% endif %}
       {% else %}
         {% assign subject_name = category[0] %}
-        {% assign subject_contents = include.lists[subject_name] %}
         <button type="button" class="collapse category_button">{{ subject_name }}</button>
-        {% for subject in subject_contents.contents %}
-          <li class="collapse_content">
-            {% include category-recursive.html lists=subject_contents.contents %}
-          </li>
-        {% endfor %}
+        {% assign subject_contents = include.lists[subject_name] %}
+        {% if subject_contents %}
+          {% for subject in subject_contents.contents %}
+            <li class="collapse_content">
+              {% include category-recursive.html lists=subject_contents.contents %}
+            </li>
+          {% endfor %}
+        {% endif %}
       {% endif %}
     {% endfor %}
   </ul>
