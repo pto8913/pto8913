@@ -95,10 +95,12 @@ nav-categories:
         contents:
           - title: "星の守り人"
             url: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html"
-          - title: "test"
-            contents:
-              - title: "test child 1"
-                contents: "test child 1's child"
+          - title: "Shooting"
+            url: "/Portfolio/UnrealEngine/Game/Shooting/index.html"
+          - title: "ぴの塔"
+            url: "/Portfolio/UnrealEngine/Game/Roguelike/index.html"
+          - title: "Maze"
+            url: "/Portfolio/UnrealEngine/Game/Maze/index.html"
       - title: "Plugin"
         url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
       - title: Note
@@ -245,6 +247,7 @@ hoshimori-character:
   アクア : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Aqua"
   ケス : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Ces"
   ステラ : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Stella"
+  
 img-hoshimori-character-bg:
   ホーム : "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.png"
   ベータ : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Background_Beta.png"
@@ -260,7 +263,6 @@ img-hoshimori-character-bg:
   アクア : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Background_Aqua.png"
   ケス : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Background_PisCes.png"
   ステラ : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Background_Aqua.png"
-
 
 # Exclude from processing.
 # The following items will not be processed, by default.
