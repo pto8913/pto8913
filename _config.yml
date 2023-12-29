@@ -212,6 +212,7 @@ nav-header-Portfolio-Hoshimori:
   プレイ映像: "/Portfolio/UnrealEngine/Game/Hoshimori/capture/index.html"
   守護者の力: "/Portfolio/UnrealEngine/Game/Hoshimori/metamorphosis/index.html"
   アクション:
+    index: "/Portfolio/UnrealEngine/Game/Hoshimori/action/index.html"
     登る: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Climbing.html"
     釣り: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Fishing.html"
     アイテムを拾う: "/Portfolio/UnrealEngine/Game/Hoshimori/action/Pickup.html"

@@ -1,0 +1,150 @@
+---
+layout: Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori-page-Image2
+title: 
+  - title: "ポートフォリオ"
+  - title: "UnrealEngine"
+  - title: "星の守り人"
+  - title: "アクション"
+new_title: true
+home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
+
+fade-start-index: -1
+images:
+  - subject: "クライミング"
+    contents:
+      - url: 'https://www.youtube.com/embed/v3hZ77Q7sY0?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
+        title: "壁や崖、岩を登る"
+        img-type: "ytb-movie"
+        description: 
+          - text: "CollisionChannelのClimbingがBlockなオブジェクトのみ可能"
+          - text: "MovementModeをFlyingにしてAddMovementInputしているだけ"
+      - url: 'https://www.youtube.com/embed/O4fGV8E8ZX0?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
+        title: "はしごを登る"
+        img-type: "ytb-movie"
+        description: 
+          - text: "CollisionChannelのLadderがBlockなオブジェクトのみ可能"
+          - text: "アクションキーを押したときにプレイヤーがはしごの目の前に来るように"
+          - text: "AxisInputがMoveForwardまたはMoveBackwardのときAddMovementInputしているだけ"
+  - subject: "釣り"
+    contents:
+      - url: 'https://www.youtube.com/embed/VOKom18neQY?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
+        img-type: "ytb-movie"
+        description: 
+          - text: "BP_Fishingable_Area内で釣り竿を持っている場合にのみ行える"
+          - text: "釣れる魚の種類はBP_Fishingable_Areaで決められる"
+          - text: "魚のステータスはDataTableから取得、プレイヤーのステータスは釣り竿とスタミナ"
+  - subject: "アイテムを拾う"
+    contents:
+      - url: 'https://www.youtube.com/embed/guR5J0zuQrQ?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
+        title: "落ちているアイテムを拾う"
+        img-type: "ytb-movie"
+        description: 
+          - text: "プレイヤーの場合"
+            type: h4
+          - text: "プレイヤーの前方にあるアイテムに対してイベントを送りアイテムを取得する"
+          - text: "アイテムのPrimaryAssetTypeに応じてInventoryComponentにデータを追加する"
+          - text: "拾ったアイテムはWBP_HUDによって画面の右下に表示される"
+          - text: "敵キャラクターの場合"
+            type: h4
+          - text: "敵キャラクターは武器のみ拾うことができる"
+          - text: "敵キャラクターごとに設定されたPickupTraceTypeと一致するアイテムの元へAIによって移動し即座に装備する"
+          - text: "宝箱を開くアイテム"
+            type: h3
+          - text: "プレイヤーのみ可能"
+          - text: "BP_Chestに対してイベントを送り、BP_Chestの持つInventoryComponentのデータからアイテムをWBP_HUDのReceiveItemで取得する"
+          - text: "木からアイテムを取る"
+            type: h3
+          - text: "プレイヤーのみ可能"
+          - text: "BP_FruitTreeに対してイベントを送り、BP_FruitTreeに設定されたAssetIdをInventoryComponentに追加する"
+          - text: "拾ったアイテムはWBP_HUDによって画面の右下に表示される"
+  - subject: "ボタンを押す"
+    contents:
+      - url: 'https://www.youtube.com/embed/rUFkl8rrrPI?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
+        img-type: "ytb-movie"
+        description: 
+          - text: "Type: Interact"
+            type: h3
+          - text: "BP_Buttonに対してイベントを送ることで動作する"
+          - text: "一度だけ実行される"
+          - text: "BP_ButtonAffectorまたはアクターに対して処理を行う"
+          - text: "Type: Overlap"
+            type: h3
+          - text: "BP_ButtonのCollisionにアクターがOverlapしている間処理が行われる"
+          - text: "一度だけ実行される"
+          - text: "BP_ButtonAffectorまたはアクターに対して処理を行う"
+  - subject: "物を押す"
+    contents:
+      - url: 'https://www.youtube.com/embed/EnT5wmlfsjk?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
+        img-type: "ytb-movie"
+        description: 
+          - text: "BP_PushableObjectをプレイヤーにAttachして押しているように見せている"
+          - text: "BP_PushableObjectの面にBoxCollisionを配置して、プレイヤーがどの方向に押すかを決めている"
+          - text: "押している最中に床がなくなった場合、押すのを強制的にやめさせてBP_PushableObjectが落下する"
+  - subject: "泳ぐ"
+    contents:
+      - url: 'https://www.youtube.com/embed/Tpp-FvoN97U?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
+        title: "泳ぐ"
+        img-type: "ytb-movie"
+        description:
+          - text: "BP_ForceArea_Waterの中を泳いでいるように見せている"
+          - text: "対象のアクターの半分以上がBP_ForceArea_Waterの中に入っていて、かつbEnableCustomForceがEnableなものだけ処理する"
+          - text: "移動速度は対象のアクター側で設定している"
+  - subject: "休む"
+    contents:
+      - url: 'https://www.youtube.com/embed/Q8rs9_eQHcw?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
+        img-type: "ytb-movie"
+        description: 
+          - text: "BP_PlayerRestPlaceに対してイベントを送って休む"
+          - text: "休むことで体力、マナ、スタミナが回復する"
+          - text: "回復の量はBP_PlayerRestPlaceで設定する"
+  - subject: "会話"
+    contents:
+      - title: "テキストデータについて"
+        description: 
+          - text: "テキストデータの仕様書"
+            type: a
+            url: 'https://docs.google.com/spreadsheets/d/1NFVjT8n57PvUyzLD3UZI6w4Wuo5J12zI4NV50nQFz_0/edit#gid=471579161'
+          - text: "テキストデータはGameStateが保持していて、テキストデータに対する処理はすべてGameState上で行う"
+          - text: "テキストデータの遷移は、クエストの進行度もしくはBP_NPCのBP上で行われている"
+          - text: "テキストデータの取得は会話を開始したBP_NPCに設定されたIDでGameStateから取得"
+          - text: "テキストデータにはETalkDisplayTypeがあり、ETalkDisplayTypeに応じてChoiceButtonのOnClickedイベントへのバインドを変更し処理を行う"
+      - url: 'https://www.youtube.com/embed/EwLy1oOQCBY?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
+        title: "会話(通常)"
+        img-type: "ytb-movie"
+        description: 
+          - text: "プレイヤーがBP_NPCに対してアクションキーを入力した場合に行える"
+          - text: "BP_NPC上で会話ができるかどうかを決められる"
+          - text: "会話ができない場合は頭の上にテキストを表示するなどができる"
+          - text: "テキストデータに含まれるEMessageEmotionで感情表現ができる"
+          - text: "感情表現はNPCキャラクターのABP_Emote_Layerで個別に設定できる"
+      - url: 'https://www.youtube.com/embed/e5lEe0T-h-I?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
+        title: "会話(クエスト)"
+        img-type: "ytb-movie"
+        description: 
+          - text: "テキストデータで選択肢の表示を制御できる"
+          - text: "選択肢にはChoiceTypeやChoiceButtonClassが設定されていて、ChoiceTypeによって処理を行う"
+          - text: "クエストではETalkDisplayTypeがQuestで、ChoiceButtonのChoiceTypeにはQuestAcceptもしくはQuestRefuseが設定されている"
+      - url: 'https://www.youtube.com/embed/mKlAVHkpAyw?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
+        title: "会話(アイテムの売買)"
+        img-type: "ytb-movie"
+        description: 
+          - text: "アイテムの売買ではETalkDisplayTypeがTradeで、ChoiceButtonのChoiceTypeにはWaitingBuyもしくはWaitingSell Cancelが設定されている"
+          - text: "テキストデータではアイテムの売買に関するChoiceが表示されるものにはすべてETalkDisplayType:Tradeを設定する必要がある"
+          - text: "購入アイテムはBP_NPCのInventoryComponentに個別に設定することができる"
+      - url: 'https://www.youtube.com/embed/rvBM57OtGXQ?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
+        title: "会話(アイテムを店頭から直接購入)"
+        img-type: "ytb-movie"
+        description: 
+          - text: "プレイヤーがBP_BuyableActorに対してアクションキーを入力した場合に行える"
+          - text: "BP_BuyableActorに設定されたBP_NPCに対してアクション:会話を呼び出し、テキストデータのChoiceResultTypeがHowManyやCheckOutに設定されたものが表示される"
+  - subject: "乗り物"
+    contents:
+      - url: 'https://www.youtube.com/embed/DNKje68XPTY?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo'
+        title: "クラブタクシー"
+        img-type: "ytb-movie"
+        description: 
+          - text: "BP_Vehicleに対してイベントを送って乗り込む"
+          - text: "プレイヤーのみ可能"
+          - text: "乗り降りするときはWBP_HUD上で画面がフェードイン/フェードアウトするアニメーションを再生"
+          - text: "PlayerControllerにBP_Vehicleを所有させて動かす"
+---
