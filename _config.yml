@@ -245,16 +245,7 @@ nav-header-Portfolio-Hoshimori:
     釣りUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/fishing.html"
     休むUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/rest.html"
     ローディングUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/loading.html"
-  レベルデザイン:
-    index: "/Portfolio/UnrealEngine/Game/Hoshimori/level/index.html"
-    聖域: "/Portfolio/UnrealEngine/Game/Hoshimori/level/Sanctuary.html"
-    天望島: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionTenbou.html"
-    カトラス島: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionCatlas.html"
-    ルコス地方: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionLkos.html"
-    ラーボ地方: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionLabo.html"
-    シラージェ火山: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionSillarje.html"
-    グラム谷: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionGlam.html"
-    アクア団基地: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionWasser.html"
+  レベルデザイン: "/Portfolio/UnrealEngine/Game/Hoshimori/level/index.html"
 
 # ------------------------------ Hoshimori ------------------------------
 # Images
