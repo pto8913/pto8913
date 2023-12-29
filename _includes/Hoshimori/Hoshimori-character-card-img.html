@@ -12,26 +12,18 @@
 {% assign EXTENSION = include.extension %}
 
 {% if URL %}
-  {% if IMAGETYPE == "image" or IMAGETYPE == "gd-image" %}
-    {% if IMAGETYPE == "image" %}
-      {% if URL %}
-        <img class="Hoshimori_character_card_img" src="{{ URL | relative_url }}.{{ EXTENSION }}" alt="" />
-      {% else %}
-        <img class="Hoshimori_character_card_img" src="{{ site.hoshimori-character[page.background] | relative_url }}.{{ EXTENSION }}" alt="" />
-      {% endif %}
-    {% elsif IMAGETYPE == "gd-image" %}
-      <iframe class="Hoshimori_character_card_img" allowfullscreen src="{{ URL }}/preview">
-      </iframe>
-    {% endif %}
+  {% if IMAGETYPE == "gd-image" %}
+    <iframe class="Hoshimori_character_card_img" allowfullscreen src="{{ URL }}/preview">
+    </iframe>
   {% elsif IMAGETYPE == "movie" or IMAGETYPE == "gd-movie" or IMAGETYPE == "ytb-movie" %}
     {% if IMAGETYPE == "movie" %}
-      <iframe class="Hoshimori_character_card_img" src="{{ URL | relative_url }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+      <iframe class="Hoshimori_character_card_movie" src="{{ URL | relative_url }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
       </iframe>
     {% elsif IMAGETYPE == "gd-movie" %}
-      <iframe class="Hoshimori_character_card_img" src="{{ URL }}/preview" allowfullscreen>
+      <iframe class="Hoshimori_character_card_movie" src="{{ URL }}/preview" allowfullscreen>
       </iframe>
     {% elsif IMAGETYPE == "ytb-movie" %}
-      <iframe class="Hoshimori_character_card_img" src="{{ URL }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+      <iframe class="Hoshimori_character_card_movie" src="{{ URL }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
       </iframe>
     {% endif %}
   {% else %}

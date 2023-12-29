@@ -16,37 +16,35 @@
 -->
 {% endcomment %}
 
-<div class="Hoshimori_character_card_container">
-  {% if include.img-extension %}
-    {% assign extension-type = include.extension %}
-  {% else %}
-    {% assign extension-type = "png" %}
-  {% endif %}
-  {% if include.img-R %}
-    {%
-      include Hoshimori/Hoshimori-character-card-description.html
-        name = include.name
-        description = include.description
-        descriptions = include.descriptions
-    %}
-    {%
-      include Hoshimori/Hoshimori-character-card-img.html
-        url = include.url
-        img-type = include.img-type
-        extension = extension-type
-    %}
-  {% else %}
-    {%
-      include Hoshimori/Hoshimori-character-card-img.html
-        url = include.url
-        img-type = include.img-type
-        extension = extension-type
-    %}
-    {%
-      include Hoshimori/Hoshimori-character-card-description.html
-        name = include.name
-        description = include.description
-        descriptions = include.descriptions
-    %}
-  {% endif %}
-</div>
+{% if include.img-extension %}
+  {% assign extension-type = include.extension %}
+{% else %}
+  {% assign extension-type = "png" %}
+{% endif %}
+{% if include.img-R %}
+  {%
+    include Hoshimori/Hoshimori-character-card-description.html
+      name = include.name
+      description = include.description
+      descriptions = include.descriptions
+  %}
+  {%
+    include Hoshimori/Hoshimori-character-card-img.html
+      url = include.url
+      img-type = include.img-type
+      extension = extension-type
+  %}
+{% else %}
+  {%
+    include Hoshimori/Hoshimori-character-card-img.html
+      url = include.url
+      img-type = include.img-type
+      extension = extension-type
+  %}
+  {%
+    include Hoshimori/Hoshimori-character-card-description.html
+      name = include.name
+      description = include.description
+      descriptions = include.descriptions
+  %}
+{% endif %}

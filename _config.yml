@@ -234,18 +234,7 @@ nav-header-Portfolio-Hoshimori:
     レオ: "/Portfolio/UnrealEngine/Game/Hoshimori/enemy/Leo.html"
     ヴァルゴ: "/Portfolio/UnrealEngine/Game/Hoshimori/enemy/Virgo.html"
     魔王: "/Portfolio/UnrealEngine/Game/Hoshimori/enemy/Typhon.html"
-  UI:
-    index: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/index.html"
-    タイトルUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/title.html"
-    チュートリアルUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/tutorial.html"
-    HUD: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/hud.html"
-    かばんUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/belongings.html"
-    戦闘UI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/battle.html"
-    NPCとの会話UI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/talk.html"
-    カメラUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/camera.html"
-    釣りUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/fishing.html"
-    休むUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/rest.html"
-    ローディングUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/loading.html"
+  UI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/index.html"
   レベルデザイン: "/Portfolio/UnrealEngine/Game/Hoshimori/level/index.html"
 
 # ------------------------------ Hoshimori ------------------------------
