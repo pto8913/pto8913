@@ -246,7 +246,7 @@ nav-header-Portfolio-Hoshimori:
     休むUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/rest.html"
     ローディングUI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/loading.html"
   レベルデザイン:
-    聖域: "/Portfolio/UnrealEngine/Game/Hoshimori/level/index.html"
+    index: "/Portfolio/UnrealEngine/Game/Hoshimori/level/index.html"
     聖域: "/Portfolio/UnrealEngine/Game/Hoshimori/level/Sanctuary.html"
     天望島: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionTenbou.html"
     カトラス島: "/Portfolio/UnrealEngine/Game/Hoshimori/level/RegionCatlas.html"
