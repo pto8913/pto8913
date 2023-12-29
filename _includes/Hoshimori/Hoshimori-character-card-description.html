@@ -20,11 +20,11 @@
   <div class="Hoshimori_character_card_description_container" id="character_card_description">
     {% if include.name %}
       <h2 class="Hoshimori_character_card_name">{{ include.name }}</h2>
-    {% endif %}
-    {% if include.descriptions or include.description and include.name %}
-      <p class="Hoshimori_character_card_description_text">
-        ────────────────────────
-      </p>
+      {% if include.descriptions or include.description %}
+        <p class="Hoshimori_character_card_description_text">
+          ────────────────────────
+        </p>
+      {% endif %}
     {% endif %}
     {% if include.descriptions %}
       <div class="Hoshimori_character_card_description_text_container">
