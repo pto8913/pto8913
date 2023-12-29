@@ -1,32 +1,30 @@
-// $(window).on("load", initialize())
-// $(window).on("resize", initialize())
-// function initialize()
-// {
-//   var windowHeight = $(window).height();
-//   $("#wh span").text(windowHeight);
+$(window).on("load", initialize())
+$(window).on("resize", initialize())
+function initialize()
+{
+  var windowHeight = $(window).height();
+  $("#wh span").text(windowHeight);
 
-//   $("#scroll span").text(viewportTop);
+  $(".fade_box").each(
+    function()
+    {
+      var elemTop = $(this).offset().top;
+      var elemBottom = $(this).offset().bottom;
+      $(this).find(".box_posspan").text(Math.floor(elemTop));
 
-//   $(".fade_box").each(
-//     function()
-//     {
-//       var elemTop = $(this).offset().top;
-//       var elemBottom = $(this).offset().bottom;
-//       $(this).find(".box_posspan").text(Math.floor(elemTop));
-
-//       if (0 <= elemTop && elemTop <= windowHeight || 0 <= elemBottom && elemBottom <= windowHeight)
-//       {
-//         $(this).addClass("fadein");
-//         $(this).removeClass("fadeout");
-//       }
-//       else
-//       {
-//         $(this).removeClass("fadein");
-//         $(this).addClass("fadeout");
-//       }
-//     }
-//   )
-// }
+      if (0 <= elemTop && elemTop <= windowHeight || 0 <= elemBottom && elemBottom <= windowHeight)
+      {
+        $(this).addClass("fadein");
+        $(this).removeClass("fadeout");
+      }
+      else
+      {
+        $(this).removeClass("fadein");
+        $(this).addClass("fadeout");
+      }
+    }
+  )
+}
 
 $(window).on(
   "scroll", 
