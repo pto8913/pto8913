@@ -12,15 +12,15 @@ home: '/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html'
 </style> {% endcomment %}
 <div class="Hoshimori_bg_sec">
   <div class="Hoshimori_character_card_container inner">
-      {%
-        include Hoshimori/Hoshimori-character-card-img.html
-          extension = "png"
-      %}
-      {%
-        include Hoshimori/Hoshimori-character-card-description.html
-          name = page.background 
-          description = content
-      %}
-    {% include carousel-character.html links=site.hoshimori-character current=page.background %}
+    {%
+      include Hoshimori/Hoshimori-character-card-img.html
+        extension = "png"
+    %}
+    {%
+      include Hoshimori/Hoshimori-character-card-description.html
+        name = page.background 
+        description = content
+    %}
   </div>
+  {% include carousel-character.html links=site.hoshimori-character current=page.background %}
 </div>
