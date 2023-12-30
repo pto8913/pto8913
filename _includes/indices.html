@@ -1,5 +1,7 @@
 {% comment %} 
   ------- include -------
+
+  @add-subject: String : additional subject.
   @collapse: bool : if true collapsable this element.
   @items:
     - subject: "game"
@@ -22,6 +24,11 @@
 {% else %}
   <div class="bg">
 {% endif %}
+  {% if include.add-subject %}
+    <h1 class="Portfolio_subject">
+      {{ include.add-subject }}
+    </h1>
+  {% endif %}
   {% for data in include.items %}
     <h2 class="Portfolio_subject">
       {{ data.subject }}

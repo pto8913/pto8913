@@ -36,15 +36,15 @@ title: "ホーム"
     <script src="{{ '/assets/js/scroll_animation.js' | relative_url }}"></script>
   </head>
   <body>
-    {% include header.html home=include.home %}
+    {% include header.html %}
     
-    {% include menu.html navigation=include.nav-header %}
+    {% include menu.html navigation=site.nav-header %}
 
     <!-- Begin MainContent -->
     {{ content }}
     <!-- End MainContent -->
     
-    {% include footer.html navigation=include.nav-footer %}
+    {% include footer.html navigation=site.nav-footer %}
 
     <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/collapse.js' | relative_url }}"></script>
