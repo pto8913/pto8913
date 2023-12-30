@@ -1,6 +1,6 @@
 ---
 title: "ホーム"
-layout: home
+layout: home-simple
 ---
 
 <div>
@@ -11,12 +11,12 @@ layout: home
   <div class="flex">
     <!-- Begin Main -->
     <div>
-      {% include indices.html indices = site.index-UnrealEngine %}
-      {% include indices.html indices = site.index-DirectX %}
-      {% include indices.html indices = site.index-Unity %}
-      {% include indices.html indices = site.index-Java %}
-      {% include indices.html indices = site.index-PyQt5 %}
-      {% include indices.html indices = site.index-KyoPro %}
+      {% include indices.html items = site.index-UnrealEngine %}
+      {% include indices.html items = site.index-DirectX %}
+      {% include indices.html items = site.index-Unity %}
+      {% include indices.html items = site.index-Java %}
+      {% include indices.html items = site.index-PyQt5 %}
+      {% include indices.html items = site.index-KyoPro %}
     </div>
     <!-- End Main -->
     <!-- Begin SideMenu -->

@@ -1,7 +1,7 @@
 {% comment %} 
   ------- include -------
   @collapse: bool : if true collapsable this element.
-  @indecies:
+  @items:
     - subject: "game"
       contents:
         - title: "hoshimori"
@@ -22,7 +22,7 @@
 {% else %}
   <div class="bg">
 {% endif %}
-  {% for data in include.indices %}
+  {% for data in include.items %}
     <h2 class="Portfolio_subject">
       {{ data.subject }}
     </h2>
