@@ -191,50 +191,6 @@ idx-Portfolio:
       - title: "MusicPlayer for Windows"
         img: "/Portfolio/Java/Windows/MusicPlayer/images/icon.png"
         url: "/Portfolio/Java/Windows/MusicPlayer/MusicPlayer.html"
-  - subject: "PyQt5"
-    contents:
-      - title: "画面のキャプチャ"
-        img: "/Portfolio/PyQt5/Tools/ScreenCapture/icon.png"
-        url: "/Portfolio/PyQt5/Tools/ScreenCapture/ScreenCapture.html"
-      - title: "時計"
-        img: "/Portfolio/PyQt5/Tools/Timer/icon.png"
-        url: "/Portfolio/PyQt5/Tools/Timer/Timer.html"
-      - title: "電卓"
-        img: "/Portfolio/PyQt5/Tools/Calculator/icon.png"
-        url: "/Portfolio/PyQt5/Tools/Calculator/Calculator.html"
-      - title: "Clipboard"
-        url: "/Portfolio/PyQt5/Tools/Clipboard/Clipboard.html"
-      - title: "DirViewr"
-        url: "/Portfolio/PyQt5/Tools/DirViewr/DirViewr.html"
-      - title: "img2pdf"
-        url: "/Portfolio/PyQt5/Tools/img2pdf/img2pdf.html"
-      - title: "SQLiteViewer"
-        url: "/Portfolio/PyQt5/Tools/SQLiteViewer/SQLiteViewer.html"
-      - title: "SQLiteViewerDetails"
-        url: "/Portfolio/PyQt5/Tools/SQLiteViewerDetails/SQLiteViewerDetails.html"
-      - title: "TerrainViewer"
-        url: "/Portfolio/PyQt5/Tools/TerrainViewer/TerrainViewer.html"
-  - subject: "PyQt5のテンプレート？"
-    contents:
-      - title: "コピー"
-        img: "/Portfolio/PyQt5/Template/Clipboard/icon.png"
-        url: "/Portfolio/PyQt5/Template/Clipboard/Clipboard.html"
-      - title: "ドラッグアンドドロップ"
-        img: "/Portfolio/PyQt5/Template/DnD/icon.png"
-        url: "/Portfolio/PyQt5/Template/DnD/DnD.html"
-      - title: "スレッド"
-        img: "/Portfolio/PyQt5/Template/Thread/icon.png"
-        url: "/Portfolio/PyQt5/Template/Thread/Thread.html"
-      - title: "ディレクトリツリー"
-        img: "/Portfolio/PyQt5/Template/DirViewer/icon.png"
-        url: "/Portfolio/PyQt5/Template/DirViewer/DirViewer.html"
-      # - title: "キーの同時入力"
-      #   img: "/Portfolio/PyQt5/Template/keyPressMulti/icon.png"
-      #   url: "/Portfolio/PyQt5/Template/keyPressMulti/keyPressMulti.html"
-  # - subject: "競プロ"
-  #   contents:
-  #     - title: "競プロ"
-  #       url: "/Portfolio/KyoPro/index.html"
 
 # ---------------- UnrealEngine Index ----------------
 news-UnrealEngine:
@@ -309,6 +265,7 @@ index-DirectX:
 # ---------------- Unity Index ----------------
 news-Unity:
   Tappy Cube: "/Portfolio/Unity/Game/TappyCube/index"
+
 index-Unity:
   - subject: "Game"
     contents:
@@ -328,9 +285,6 @@ index-Java:
         url: "/Portfolio/Java/Windows/MusicPlayer/MusicPlayer.html"
 
 # ---------------- PyQt5 Index ----------------
-news-PyQt5:
-  SQLiteViewer: "/Portfolio/PyQt5/Tools/SQLiteViewer/SQLiteViewer"
-
 index-PyQt5:
   - subject: "App"
     contents:
