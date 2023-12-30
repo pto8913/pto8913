@@ -193,7 +193,6 @@ idx-Portfolio:
         url: "/Portfolio/Java/Windows/MusicPlayer/MusicPlayer.html"
   - subject: "PyQt5"
     contents:
-      - title: ""
       - title: "画面のキャプチャ"
         img: "/Portfolio/PyQt5/Tools/ScreenCapture/icon.png"
         url: "/Portfolio/PyQt5/Tools/ScreenCapture/ScreenCapture.html"
@@ -298,6 +297,7 @@ nav-header-Portfolio-Hoshimori:
 
 # ---------------- DirectX Index ----------------
 news-DirectX:
+  とこぷよ: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo"
 
 index-DirectX:
   - subject: "Game"
@@ -308,7 +308,7 @@ index-DirectX:
 
 # ---------------- Unity Index ----------------
 news-Unity:
-
+  Tappy Cube: "/Portfolio/Unity/Game/TappyCube/index"
 index-Unity:
   - subject: "Game"
     contents:
@@ -318,6 +318,7 @@ index-Unity:
 
 # ---------------- Java Index ----------------
 news-Java:
+  MusicPlayer for Windows: "/Portfolio/Java/Windows/MusicPlayer/MusicPlayer"
 
 index-Java:
   - subject: "Windows"
@@ -328,6 +329,7 @@ index-Java:
 
 # ---------------- PyQt5 Index ----------------
 news-PyQt5:
+  SQLiteViewer: "/Portfolio/PyQt5/Tools/SQLiteViewer/SQLiteViewer"
 
 index-PyQt5:
   - subject: "App"
@@ -341,6 +343,18 @@ index-PyQt5:
       - title: "電卓"
         img: "/Portfolio/PyQt5/Tools/Calculator/icon.png"
         url: "/Portfolio/PyQt5/Tools/Calculator/Calculator.html"
+      - title: "Clipboard"
+        url: "/Portfolio/PyQt5/Tools/Clipboard/Clipboard.html"
+      - title: "DirViewr"
+        url: "/Portfolio/PyQt5/Tools/DirViewr/DirViewr.html"
+      - title: "img2pdf"
+        url: "/Portfolio/PyQt5/Tools/img2pdf/img2pdf.html"
+      - title: "SQLiteViewer"
+        url: "/Portfolio/PyQt5/Tools/SQLiteViewer/SQLiteViewer.html"
+      - title: "SQLiteViewerDetails"
+        url: "/Portfolio/PyQt5/Tools/SQLiteViewerDetails/SQLiteViewerDetails.html"
+      - title: "TerrainViewer"
+        url: "/Portfolio/PyQt5/Tools/TerrainViewer/TerrainViewer.html"
   - subject: "PyQt5のテンプレート？"
     contents:
       - title: "コピー"
@@ -360,8 +374,6 @@ index-PyQt5:
       #   url: "/Portfolio/PyQt5/Template/keyPressMulti/keyPressMulti.html"
 
 # ---------------- KyoPro Index ----------------
-news-KyoPro:
-
 index-KyoPro:
   - subject: "競プロのサイト"
     contents:
