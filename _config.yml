@@ -77,6 +77,12 @@ plugins:
 # Navigations
 nav-header:                # accepts {file, title, url, icon, sidebaricon}
   ホーム: "/"
+  カテゴリ:
+    UnrealEngine: "/Portfolio/UnrealEngine/index.html"
+    DirectX11C++: "/Portfolio/DirectX11C++/index.html"
+    Unity: "/Portfolio/Unity/index.html"
+    Java: "/Portfolio/Java/index.html"
+
   # ポートフォリオ: "/Portfolio/index.html"
 
 nav-footer:                  # shows a footer with social links - for available icons see fontawesome.com/icons
@@ -106,7 +112,6 @@ nav-categories:
           - title: "SpreadSheetToUnreal"
             url: "https://github.com/pto8913/SpreadSheetToUnreal"
             type: "absolute"
-          - url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
       - title: Note
         url: ""
   DirectX11-C++:
@@ -142,7 +147,6 @@ nav-categories:
 # ------------------------------ Portfolio ------------------------------
 # Navigations
 
-
 Hoshimori-teaser-url: "https://www.youtube.com/embed/m7YOHEtjhbc?list=PL3Z_2bfv7lRMZESwtishkG8TPBxRLmcsP"
 
 # ---------------- Portfolio Index ----------------
@@ -150,13 +154,43 @@ News:
   星の守り人: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori"
   とこぷよ: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo"
 
+index-UnrealEngine:
+  - subject: "Game"
+    contents:
+      - title: "星の守り人"
+        img: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.png"
+        url: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html"
+      - title: "Roguelike"
+        img: "/Portfolio/UnrealEngine/Game/Roguelike/assets/images/icon.png"
+        url: "/Portfolio/UnrealEngine/Game/Roguelike/index.html"
+      - title: "Shooting"
+        img: "/Portfolio/UnrealEngine/Game/Shooting/assets/images/icon.png"
+        url: "/Portfolio/UnrealEngine/Game/Shooting/index.html"
+      - title: "Maze"
+        img: "/Portfolio/UnrealEngine/Game/Maze/assets/images/icon.png"
+        url: "/Portfolio/UnrealEngine/Game/Maze/index.html"
+  - subject: "Plugin"
+    contents:
+      - title: "GoogleSpreadSheetToUnreal"
+        img: "/Portfolio/UnrealEngine/Plugins/SpreadSheetToUnreal/images/icon.png"
+        url: "https://github.com/pto8913/SpreadSheetToUnreal"
+      - title: インベントリシステム
+        img: "/Portfolio/Plugins/ptoInventorySystem/assets/images/icon.png"
+        url: "/Portfolio/Plugins/ptoInventorySystem/index.html"
+      - title: NPCとの会話システム
+        img: "/Portfolio/Plugins/ptoTalkSystem/assets/images/icon.png"
+        url: "/Portfolio/Plugins/ptoTalkSystem/index.html"
+  - subject: "Note"
+    contents:
+      - title: "GameplayAbilities"
+        url: "/"
+
 idx-Portfolio:
   - subject: "ゲーム"
     contents:
       - title: "星の守り人"
         img: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.png"
         url: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html"
-        isCarousel: "true"
       - title: "とこぷよ"
         img: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo.png"
         url: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo.html"

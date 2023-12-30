@@ -1,0 +1,26 @@
+---
+title: "ホーム"
+layout: home
+---
+
+<div>
+  <!-- Begin News -->
+  {% include carousel-banner.html links=site.News title="新着" %}
+  <!-- End News -->
+  <!-- Begin Articles -->
+  <div class="flex">
+    <!-- Begin Main -->
+    {%
+      include indices.html
+      indices = site.idx-Portfolio
+    %}
+    <!-- End Main -->
+    <!-- Begin SideMenu -->
+    <div>
+      <div id="auto-site-map"></div>
+      {% include category.html lists=site.nav-categories %}
+    </div>
+    <!-- End SideMenu -->
+  </div>
+  <!-- End Articles -->
+</div>

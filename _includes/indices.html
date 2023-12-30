@@ -1,0 +1,49 @@
+{% comment %} 
+  ------- include -------
+  @collapse: bool : if true collapsable this element.
+  @indecies:
+    - subject: "game"
+      contents:
+        - title: "hoshimori"
+          img: "icon.png"
+          url: "index.html"
+        ~~~~
+    - subject: "plugin"
+      contents:
+        - title: "inventorysystem"
+          img: "icon.png"
+          url: "index.html"
+        ~~~~
+{% endcomment %}
+
+<!-- Begin Articles -->
+{% if include.collapse %}
+  <div class="bg collapse">
+{% else %}
+  <div class="bg">
+{% endif %}
+  {% for data in include.indices %}
+    <h2 class="Portfolio_subject">
+      {{ data.subject }}
+    </h2>
+    <div class="Portfolio_grid_3x">
+      {% for row in data.contents %}
+        <div class="img_card_container fade_box">
+          {% if row.type %}
+            {% if row.type == "absolute" %}
+              <a href="{{ row.url }}">
+            {% endif %}
+          {% else %}
+            <a href="{{ row.url | relative_url }}">
+          {% endif %}
+            {% if row.img %}
+              <img src="{{ row.img | relative_url }}" class="img_card" alt="" />
+            {% endif %}
+            <p class="img_card_title">{{ row.title }}</p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+<!-- End Articles -->
