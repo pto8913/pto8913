@@ -1,9 +1,23 @@
 ---
-layout: page-index
+layout: home
 title: 
   - title: "ポートフォリオ"
   - title: "Unity"
-    url: '/Portfolio/Unity/Unity_Index.html'
+    url: '/Portfolio/Unity/index.html'
 new_title: true
 category: "Unity"
 ---
+
+<div>
+  <!-- Begin News -->
+  {% if site.news-Unity %}
+    {% include carousel-banner.html links=site.news-Unity title="新着" %}
+  {% endif %}
+  <!-- End News -->
+  <!-- Begin Main -->
+  {%
+    include indices.html
+    indices = site.index-Unity
+  %}
+  <!-- End Main -->
+</div>

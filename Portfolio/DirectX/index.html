@@ -1,9 +1,23 @@
 ---
-layout: page-index
+layout: home
 title: 
   - title: "ポートフォリオ"
-  - title: "DirectX11-C++"
-    url: '/Portfolio/DirectX11-C++/DirectX11_Index.html'
+  - title: "DirectX"
+    url: '/Portfolio/DirectX/index.html'
 new_title: true
-category: "DirectX11-C++"
+category: "DirectX"
 ---
+
+<div>
+  <!-- Begin News -->
+  {% if site.news-DirectX %}
+    {% include carousel-banner.html links=site.news-DirectX title="新着" %}
+  {% endif %}
+  <!-- End News -->
+  <!-- Begin Main -->
+  {%
+    include indices.html
+    indices = site.index-DirectX
+  %}
+  <!-- End Main -->
+</div>

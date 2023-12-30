@@ -1,106 +1,23 @@
 ---
-title: "競技プログラミング"
-toc:
-  - subject: "競プロのサイト"
-    contents:
-      - title: "AtCoder"
-        url: https://atcoder.jp/?lang=ja
-      - title: "CodeForce"
-  - subject: "動的計画法"
-    contents:
-      - title: "累積和"
-        url: "/KyoPro/DP/CumulativeSum.html"
-  - subject: "データ構造"
-    contents:
-      - title: "素集合データ構造(Union-Find)"
-        url: "/KyoPro/Structure/UnionFind.html"
-      - title: "BinaryIndexedTree(BIT)"
-        url: "/KyoPro/Structure/BIT.html"
-  - subject: "探索"
-    contents:
-      - title: "深さ優先探索(DFS)"
-        url: "/KyoPro/Search/DFS.html"
-      - title: "幅優先探索(BFS)"
-        url: "/KyoPro/Search/BFS.html"
-  - subject: "最短経路探索"
-    contents:
-      - title: "ダイクストラ法(Dijkstra)"
-        url: "/KyoPro/Search/Dijkstra.html"
-      - title: "ベルマンフォード法"
-        url: "/KyoPro/Search/BellmanFord.html"
-  - subject: "最短経路探索"
-    contents:
-      - title: "約数列挙(Divisor)"
-        url: "/KyoPro/Math/divisor.html"
-      - title: "素数判定(isprime)"
-        url: "/KyoPro/Math/isprime.html"
-      - title: "最大公約数(gcd)最小公倍数(lcm)"
-        url: "/KyoPro/Math/gcdlcm.html"
-home: "/Portfolio/index.html"
+layout: home
+title: 
+  - title: "ポートフォリオ"
+  - title: "KyoPro"
+    url: '/Portfolio/KyoPro/index.html'
+new_title: true
+category: "KyoPro"
 ---
 
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
-  <head>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
-    {% if page.new_title %}
-      <title>
-        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
-      </title>
-    {% else %}
-      <title>
-        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
-      </title>
-    {% endif %}
-    <meta charset="{{ site.encoding }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="{{ page.author | default: site.author | escape }}">
-    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
-
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  </head>
-  <body>
-    {% include header.html home=include.home %}
-    
-    {% if include.nav-header %}
-      {% assign nav-header = include.nav-header %}
-    {% else %}
-      {% assign nav-header = site.nav-header %}
-    {% endif %}
-    {% include menu.html navigation=nav-header %}
-
-    <!-- Begin MainContent -->
-    <div>
-      {% for data in page.toc %}
-        <h2 class="KyoPro_subject">
-          {{ data.subject }}
-        </h2>
-        <ul>
-          {% for row in data.contents %}
-            <li>
-              <a href="{{ row.url | relative_url }}">
-                {{ row.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endfor %}
-    </div>
-    <!-- End MainContent -->
-    
-    {% if include.nav-footer %}
-      {% assign nav-footer = include.nav-footer %}
-    {% else %}
-      {% assign nav-footer = site.nav-footer %}
-    {% endif %}
-    {% include footer.html navigation=nav-footer %}
-
-    <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
-  </body>
-</html>
+<div>
+  <!-- Begin News -->
+  {% if site.news-KyoPro %}
+    {% include carousel-banner.html links=site.news-KyoPro title="新着" %}
+  {% endif %}
+  <!-- End News -->
+  <!-- Begin Main -->
+  {%
+    include indices.html
+    indices = site.index-KyoPro
+  %}
+  <!-- End Main -->
+</div>

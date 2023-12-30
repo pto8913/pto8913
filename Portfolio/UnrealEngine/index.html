@@ -10,7 +10,9 @@ category: "UnrealEngine"
 
 <div>
   <!-- Begin News -->
-  {% include carousel-banner.html links=site.News title="新着" %}
+  {% if site.news-UnrealEngine %}
+    {% include carousel-banner.html links=site.news-UnrealEngine title="新着" %}
+  {% endif %}
   <!-- End News -->
   <!-- Begin Main -->
   {%

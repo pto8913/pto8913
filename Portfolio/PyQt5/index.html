@@ -1,103 +1,23 @@
 ---
-title: "PyQt5"
-home: "/Portfolio/index.html"
-toc:
-  - subject: "ツール"
-    contents:
-      - title: "Calculator"
-        url: "PyQt5/Tools/Calculator/Calculator.html"
-      - title: "Clipboard"
-        url: "PyQt5/Tools/Clipboard/Clipboard.html"
-      - title: "DirViewr"
-        url: "PyQt5/Tools/DirViewr/DirViewr.html"
-      - title: "img2pdf"
-        url: "PyQt5/Tools/img2pdf/img2pdf.html"
-      - title: "ScreenCapture"
-        url: "PyQt5/Tools/ScreenCapture/ScreenCapture.html"
-      - title: "SQLiteViewer"
-        url: "PyQt5/Tools/SQLiteViewer/SQLiteViewer.html"
-      - title: "SQLiteViewerDetails"
-        url: "PyQt5/Tools/SQLiteViewerDetails/SQLiteViewerDetails.html"
-      - title: "TerrainViewer"
-        url: "PyQt5/Tools/TerrainViewer/TerrainViewer.html"
-      - title: "Timer"
-        url: "PyQt5/Tools/Timer/Timer.html"
-
-  - subject: "テンプレート"
-    contents:
-      - title: "DnD"
-        url: "/PyQt5/Template/DnD/DnD.html"
-      - title: "keyPressMulti"
-        url: "/PyQt5/Template/keyPressMulti/keyPressMulti.html"
-      - title: "Thread"
-        url: "/PyQt5/Template/Thread/Thread.html"
+layout: home
+title: 
+  - title: "ポートフォリオ"
+  - title: "PyQt5"
+    url: '/Portfolio/PyQt5/index.html'
+new_title: true
+category: "PyQt5"
 ---
 
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
-  <head>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
-    {% if page.new_title %}
-      <title>
-        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
-      </title>
-    {% else %}
-      <title>
-        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
-      </title>
-    {% endif %}
-    <meta charset="{{ site.encoding }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="{{ page.author | default: site.author | escape }}">
-    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
-
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  </head>
-
-  <body>
-    {% include header.html home=include.home %}
-    
-    {% if include.nav-header %}
-      {% assign nav-header = include.nav-header %}
-    {% else %}
-      {% assign nav-header = site.nav-header %}
-    {% endif %}
-    {% include menu.html navigation=nav-header %}
-
-    {% if include.no-content %}
-    {% else %}
-      <!-- Begin MainContent -->
-      <div>
-        {% for data in page.toc %}
-          <h2 class="KyoPro_subject">
-            {{ data.subject }}
-          </h2>
-          <ul>
-            {% for row in data.contents %}
-              <li>
-                <a href="{{ row.url | relative_url }}">
-                  {{ row.title }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endfor %}
-      </div>
-      <!-- End MainContent -->
-    {% endif %}
-    
-    {% if include.nav-footer %}
-      {% assign nav-footer = include.nav-footer %}
-    {% else %}
-      {% assign nav-footer = site.nav-footer %}
-    {% endif %}
-    {% include footer.html navigation=nav-footer %}
-
-    <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
-  </body>
-</html>
+<div>
+  <!-- Begin News -->
+  {% if site.news-PyQt5 %}
+    {% include carousel-banner.html links=site.news-PyQt5 title="新着" %}
+  {% endif %}
+  <!-- End News -->
+  <!-- Begin Main -->
+  {%
+    include indices.html
+    indices = site.index-PyQt5
+  %}
+  <!-- End Main -->
+</div>

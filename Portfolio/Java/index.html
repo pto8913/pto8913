@@ -1,0 +1,23 @@
+---
+layout: home
+title: 
+  - title: "ポートフォリオ"
+  - title: "Java"
+    url: '/Portfolio/Java/index.html'
+new_title: true
+category: "Java"
+---
+
+<div>
+  <!-- Begin News -->
+  {% if site.news-Java %}
+    {% include carousel-banner.html links=site.news-Java title="新着" %}
+  {% endif %}
+  <!-- End News -->
+  <!-- Begin Main -->
+  {%
+    include indices.html
+    indices = site.index-Java
+  %}
+  <!-- End Main -->
+</div>

@@ -10,10 +10,14 @@ layout: home
   <!-- Begin Articles -->
   <div class="flex">
     <!-- Begin Main -->
-    {%
-      include indices.html
-      indices = site.idx-Portfolio
-    %}
+    <div>
+      {% include indices.html indices = site.index-UnrealEngine %}
+      {% include indices.html indices = site.index-DirectX %}
+      {% include indices.html indices = site.index-Unity %}
+      {% include indices.html indices = site.index-Java %}
+      {% include indices.html indices = site.index-PyQt5 %}
+      {% include indices.html indices = site.index-KyoPro %}
+    </div>
     <!-- End Main -->
     <!-- Begin SideMenu -->
     <div>
