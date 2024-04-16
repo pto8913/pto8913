@@ -219,9 +219,9 @@ index-UnrealEngine:
       - title: インベントリシステム
         img: "/Portfolio/Plugins/ptoInventorySystem/assets/images/icon.png"
         url: "/Portfolio/Plugins/ptoInventorySystem/index.html"
-      - title: NPCとの会話システム
+      - title: "PtoTalkSystem"
         img: "/Portfolio/Plugins/ptoTalkSystem/assets/images/icon.png"
-        url: "/Portfolio/Plugins/ptoTalkSystem/index.html"
+        url: "/Portfolio/Plugins/ptoTalkSystem/PtoTalkSystem.html"
   - subject: "Note"
     contents:
       - title: "GameplayAbilities"

@@ -1,0 +1,45 @@
+---
+title: 
+  - title: "ポートフォリオ"
+  - title: "UnrealEngine"
+  - title: "PtoTalkSystem"
+layout: 
+TalkDemoMovie1:
+  - url: "https://www.youtube.com/embed/EwLy1oOQCBY?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo"
+    title: "一般的な会話"
+  - url: "https://www.youtube.com/embed/mKlAVHkpAyw?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo"
+    title: "商人との取引"
+  - url: "https://www.youtube.com/embed/mKlAVHkpAyw?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo"
+    title: "クエスト"
+NavPtoTalkSystem:
+  Tutorial:
+    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/index.html"
+    contents:
+  API:
+    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/index.html"
+---
+
+<div>
+  <div class="flex">
+    <!-- Begin Main -->
+    <div>
+      <h2>概要</h2>
+      <p>
+        このプラグインを使うとNPCとの会話イベントを簡単に行えるようになります。<br>
+        一般的な会話はもちろん、商人との取引、クエスト<br>
+      </p>
+      <div class="Portfolio_grid_3x">
+        <div class="img_card_container fade_box">
+          {% for data in page.TalkDemoMovie1 %}
+            <iframe class="Hoshimori_img teaser" allowfullscreen src="{{ data.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+              data.title
+            </iframe>
+          {% endfor %}
+        </div>
+      </div>
+      <h2>はじめる</h2>
+      {% include category.html lists=page.NavPtoTalkSystem %}
+    </div>
+    <!-- End Main -->
+  </div>
+</div>
