@@ -10,7 +10,14 @@
 </style>
 
 <div class="category_container">
-  <h2 class="category_title">カテゴリ</h2>
+  {% if include.category %}
+    <h2 class="category_title">{% include.category %}</h2>
+  {% else %}
+    {% if include.remove_title %}
+    {% else %}
+      <h2 class="category_title">カテゴリ</h2>
+    {% endif %}
+  {% endif %}
   <ul class="category_ul_owner">
     {% for category in include.lists %}
       {% if category.title %}
