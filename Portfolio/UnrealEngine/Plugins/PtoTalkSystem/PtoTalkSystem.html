@@ -29,13 +29,13 @@ NavPtoTalkSystem:
         一般的な会話はもちろん、商人との取引、クエスト<br>
       </p>
       <div class="Portfolio_grid_3x">
-        <div class="img_card_container fade_box">
-          {% for data in page.TalkDemoMovie1 %}
+        {% for data in page.TalkDemoMovie1 %}
+          <div class="img_card_container fade_box">
             <iframe class="Hoshimori_img teaser" allowfullscreen src="{{ data.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
               data.title
             </iframe>
-          {% endfor %}
-        </div>
+          </div>
+        {% endfor %}
       </div>
       <h2>はじめる</h2>
       {% include category.html lists=page.NavPtoTalkSystem %}

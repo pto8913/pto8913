@@ -182,12 +182,12 @@ idx-Portfolio:
       - title: "GoogleSpreadSheetToUnreal"
         img: "/Portfolio/UnrealEngine/Plugins/SpreadSheetToUnreal/images/icon.png"
         url: "https://github.com/pto8913/SpreadSheetToUnreal"
+      - title: "PtoTalkSystem"
+        img: "/Portfolio/Plugins/ptoTalkSystem/assets/images/icon.png"
+        url: "/Portfolio/Plugins/ptoTalkSystem/PtoTalkSystem.html"
   #     - title: インベントリシステム
   #       img: "/Portfolio/Plugins/ptoInventorySystem/assets/images/icon.png"
   #       url: "/Portfolio/Plugins/ptoInventorySystem/index.html"
-  #     - title: NPCとの会話システム
-  #       img: "/Portfolio/Plugins/ptoTalkSystem/assets/images/icon.png"
-  #       url: "/Portfolio/Plugins/ptoTalkSystem/index.html"
   - subject: "Java"
     contents:
       - title: "MusicPlayer for Windows"
