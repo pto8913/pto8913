@@ -219,11 +219,11 @@ index-UnrealEngine:
         img: "/Portfolio/UnrealEngine/Plugins/SpreadSheetToUnreal/images/icon.png"
         url: "https://github.com/pto8913/SpreadSheetToUnreal"
       - title: "PtoTalkSystem"
-        img: "/Portfolio/Plugins/ptoTalkSystem/assets/images/icon.png"
-        url: "/Portfolio/Plugins/ptoTalkSystem/PtoTalkSystem.html"
+        img: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/PtoTalkSystem.png"
+        url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html"
       - title: インベントリシステム
-        img: "/Portfolio/Plugins/ptoInventorySystem/assets/images/icon.png"
-        url: "/Portfolio/Plugins/ptoInventorySystem/index.html"
+        img: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/icon.png"
+        url: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/index.html"
   - subject: "Note"
     contents:
       - title: "GameplayAbilities"
