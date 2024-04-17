@@ -76,7 +76,7 @@ plugins:
 
 # Navigations
 nav-header:                # accepts {file, title, url, icon, sidebaricon}
-  ホーム: "/"
+  ホーム: "/home.html"
   カテゴリ:
     UnrealEngine: "/Portfolio/UnrealEngine/index.html"
     DirectX: "/Portfolio/DirectX/index.html"
