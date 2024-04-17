@@ -47,7 +47,7 @@ published: true
 permalink: /:categories/:title.html
 permalink_pattern: /:dir/:categories/:title.html
 
-
+homeURL: "/home.html"
 baseURL: "https://pto8913.github.io/pto8913/home.html"
 KyoProURL: "https://pto8913.github.io/pto8913/KyoPro"
 PyQtURL: "https://pto8913.github.io/pto8913/PyQt5"

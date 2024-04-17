@@ -3,11 +3,11 @@
 <header>
   <div class="header_container">
     <div class="flex">
-      <a href="{{ '/' | relative_url }}" class="title">
+      <a href="{{ site.homeURL | relative_url }}" class="title">
         <img class="logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
       </a>
       {% if page.new_title %}
-        <a href="{{ '/home.html' | relative_url }}">ホーム</a>
+        <a href="{{ site.homeURL | relative_url }}">ホーム</a>
         {% for row in page.title %}
           <a href="{{ row.url | relative_url }}">| {{ row.title | escape }} </a>
         {% endfor %}
@@ -15,7 +15,7 @@
         {% if include.home %}
           <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a>
         {% else %}
-          <a href="{{ '/home.html' | relative_url }}" class="title">{{ page.title | escape }}</a>
+          <a href="{{ site.homeURL | relative_url }}" class="title">{{ page.title | escape }}</a>
         {% endif %}
       {% endif %}
     </div>
