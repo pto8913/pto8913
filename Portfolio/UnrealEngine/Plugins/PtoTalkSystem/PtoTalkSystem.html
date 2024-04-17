@@ -20,11 +20,11 @@ NavPtoTalkSystem:
     url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/index.html"
 ---
 
-<div>
+<div class="wiki_body">
   <!-- Begin Main -->
   <h1 class="wiki_subject_title h1">PtoTalkSystem</h1>
   <h2 class="wiki_subject_title h2">0. 概要</h2>
-  <p>
+  <p class="wiki_contents">
     このプラグインを使うとNPCとの会話イベントを簡単に行えるようになります。<br>
     一般的な会話はもちろん、商人との取引、クエスト<br>
   </p>
@@ -38,6 +38,8 @@ NavPtoTalkSystem:
     {% endfor %}
   </div>
   <h2 class="wiki_subject_title h2">1. はじめる</h2>
-  {% include category.html lists=page.NavPtoTalkSystem remove_title=true %}
+  <div class="wiki_contents">
+    {% include category.html lists=page.NavPtoTalkSystem remove_title=true %}
+  </div>
   <!-- End Main -->
 </div>
