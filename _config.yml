@@ -183,8 +183,8 @@ idx-Portfolio:
         img: "/Portfolio/UnrealEngine/Plugins/SpreadSheetToUnreal/images/icon.png"
         url: "https://github.com/pto8913/SpreadSheetToUnreal"
       - title: "PtoTalkSystem"
-        img: "/Portfolio/Plugins/ptoTalkSystem/assets/images/icon.png"
-        url: "/Portfolio/Plugins/ptoTalkSystem/PtoTalkSystem.html"
+        img: "/Portfolio/Plugins/PtoTalkSystem/assets/images/PtoTalkSystem.png"
+        url: "/Portfolio/Plugins/PtoTalkSystem/PtoTalkSystem.html"
   #     - title: インベントリシステム
   #       img: "/Portfolio/Plugins/ptoInventorySystem/assets/images/icon.png"
   #       url: "/Portfolio/Plugins/ptoInventorySystem/index.html"
