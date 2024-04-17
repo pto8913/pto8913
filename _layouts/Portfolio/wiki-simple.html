@@ -1,0 +1,54 @@
+---
+title: "ホーム"
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
+    {% if page.new_title %}
+      <title>
+        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
+      </title>
+    {% else %}
+      <title>
+        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
+      </title>
+    {% endif %}
+    <meta charset="{{ site.encoding }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="{{ page.author | default: site.author | escape }}">
+    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/collapse.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/automap.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/Portfolio/assets/css/portfolio.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/Portfolio/assets/css/plugin_wiki.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/scroll_animation.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/carousel_banner.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/category.css' | relative_url }}">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="{{ '/assets/js/hatenablog.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/scroll_animation.js' | relative_url }}"></script>
+  </head>
+  <body>
+    {% include header.html %}
+    
+    {% include menu.html navigation=site.nav-header %}
+
+    <!-- Begin MainContent -->
+    {{ content }}
+    <!-- End MainContent -->
+    
+    {% include footer.html navigation=site.nav-footer %}
+
+    <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/collapse.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/carousel_banner.js' | relative_url }}"></script>
+  </body>
+</html>
