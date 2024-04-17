@@ -22,7 +22,7 @@ NavPtoTalkSystem:
     <div class="category_container">
       {% comment %} <h2 class="category_title">カテゴリ</h2> {% endcomment %}
       <ul class="category_ul_owner">
-        {% for category in include.lists %}
+        {% for category in lists %}
           {% if category.title %}
             {% assign subject_name = category.title %}
             {% assign subject_contents = category.contents %}
@@ -44,7 +44,7 @@ NavPtoTalkSystem:
           {% else %}
             {% assign subject_name = category[0] %}
             <button type="button" class="collapse category_button">{{ subject_name }}</button>
-            {% assign subject_contents = include.lists[subject_name] %}
+            {% assign subject_contents = lists[subject_name] %}
             {% if subject_contents %}
               {% for subject in subject_contents.contents %}
                 <li class="collapse_content">
