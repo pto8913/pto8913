@@ -404,6 +404,16 @@ img-hoshimori-character-bg:
   ケス : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Background_PisCes.png"
   ステラ : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Background_Aqua.png"
 
+# ------------------------------ PtoTalkSystem ------------------------------
+NavPtoTalkSystem:
+  Tutorial:
+    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/index.html"
+    contents:
+      - title: "1. プラグインを追加する"
+        url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/1-AddPlugin.html"
+  API:
+    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/index.html"
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
