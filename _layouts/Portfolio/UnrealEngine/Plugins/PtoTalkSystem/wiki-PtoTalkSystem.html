@@ -5,13 +5,6 @@ title:
   - title: "ポートフォリオ"
   - title: "UnrealEngine"
   - title: "PtoTalkSystem"
-TalkDemoMovie1:
-  - url: "https://www.youtube.com/embed/EwLy1oOQCBY?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo"
-    title: "一般的な会話"
-  - url: "https://www.youtube.com/embed/mKlAVHkpAyw?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo"
-    title: "商人との取引"
-  - url: "https://www.youtube.com/embed/mKlAVHkpAyw?list=PL3Z_2bfv7lRPBw9hoeol6Ub7i5j7Pp6Mo"
-    title: "クエスト"
 NavPtoTalkSystem:
   Tutorial:
     url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/index.html"
@@ -22,4 +15,11 @@ NavPtoTalkSystem:
     url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/index.html"
 ---
 
-{{ content }}
+<div class="wiki_body">
+  <div class="wiki_flex">
+    {{ content }}
+    <div class="wiki_contents">
+      {% include category.html lists=page.NavPtoTalkSystem remove_title=true %}
+    </div>
+  </div>
+</div>
