@@ -18,6 +18,43 @@ NavPtoTalkSystem:
 <div class="wiki_body">
   <div class="wiki_flex">
     {{ content }}
-    {% include category.html lists=page.NavPtoTalkSystem remove_title=true %}
+    {% assign lists=page.NavPtoTalkSystem %}
+    <div class="category_container">
+      {% comment %} <h2 class="category_title">カテゴリ</h2> {% endcomment %}
+      <ul class="category_ul_owner">
+        {% for category in include.lists %}
+          {% if category.title %}
+            {% assign subject_name = category.title %}
+            {% assign subject_contents = category.contents %}
+
+            {% if category.url %}
+              <li>{{ subject_name }}</li>
+            {% else %}
+              <button type="button" class="collapse category_button">
+                {% if category.url %}
+                  <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
+                {% else %}
+                  {{ subject_name }}
+                {% endif %}
+              </button>
+              <li class="collapse_content">
+                {% include category-recursive.html lists=category.contents %}
+              </li>
+            {% endif %}
+          {% else %}
+            {% assign subject_name = category[0] %}
+            <button type="button" class="collapse category_button">{{ subject_name }}</button>
+            {% assign subject_contents = include.lists[subject_name] %}
+            {% if subject_contents %}
+              {% for subject in subject_contents.contents %}
+                <li class="collapse_content">
+                  {% include category-recursive.html lists=subject_contents.contents %}
+                </li>
+              {% endfor %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </div>
