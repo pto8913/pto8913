@@ -411,8 +411,14 @@ NavPtoTalkSystem:
     contents:
       - title: "1. プラグインを追加する"
         url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/1-AddPlugin.html"
+      - title: "2. アセットの作成"
+        url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/2-CreateAsset.html"
+      - title: "3. "
   API:
     url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/index.html"
+    contents:
+      - title: "PtoTalkGraph"
+      - title: "PtoTalkNode"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

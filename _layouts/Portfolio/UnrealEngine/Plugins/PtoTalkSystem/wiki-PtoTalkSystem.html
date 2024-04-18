@@ -7,9 +7,11 @@ title:
   - title: "PtoTalkSystem"
 ---
 
-<div class="wiki_body">
-  <div class="wiki_page_body">
+<div class="wiki_page_body">
+  <div>
     {{ content }}
-    {% include category.html lists=site.NavPtoTalkSystem remove_title=true %}
+    {% assign next_content = site.NavPtoTalkSystem["Tutorial"].contents[page.index] %}
+    <a href="{{ next_content.url | relative_url }}">次へ...{{ next_content.title }}</a>
   </div>
+  {% include category.html lists=site.NavPtoTalkSystem remove_title=true %}
 </div>
