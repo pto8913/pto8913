@@ -14,10 +14,10 @@ title:
     {% if page.index %}
       {% assign index = page.index | plus: 1 %}
       {% assign next_content = site.NavPtoTalkSystem["Tutorial"].contents[index] %}
-      <div>
-      <a href="{{ next_content.url | relative_url }}" class="wiki_next_page_link">次へ...{{ next_content.title }}</a>
-      <br>
-      <a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html' | relative_url }}" class="wiki_next_page_link">トップへ</a>
+      <div class="wiki_next_page_link_container">
+        <a href="{{ next_content.url | relative_url }}" class="wiki_next_page_link">次へ...{{ next_content.title }}</a>
+        <br>
+        <a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html' | relative_url }}" class="wiki_next_page_link">トップへ</a>
       </div>
     {% endif %}
   </div>
