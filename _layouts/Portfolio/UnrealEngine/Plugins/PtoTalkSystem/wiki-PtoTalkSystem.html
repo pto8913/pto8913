@@ -10,7 +10,7 @@ title:
 <div class="wiki_page_body">
   <div>
     {{ content }}
-    {% assign next_content = site.NavPtoTalkSystem["Tutorial"].contents[page.index] %}
+    {% assign next_content = site.NavPtoTalkSystem["Tutorial"].contents[{{ page.index | plus: 1 }}] %}
     <a href="{{ next_content.url | relative_url }}">次へ...{{ next_content.title }}</a>
   </div>
   {% include category.html lists=site.NavPtoTalkSystem remove_title=true %}
