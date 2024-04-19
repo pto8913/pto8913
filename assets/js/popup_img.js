@@ -15,6 +15,7 @@ function initialize()
 
     document.querySelectorAll('popup_img').forEach(
         i => {
+            console.log("add event listener img clicked");
             i.addEventListener(
                 'click',
                 () => {
