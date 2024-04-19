@@ -20,7 +20,8 @@ function initialize()
             {
                 console.log("popup_img clicked");
                 popup_img.src = elem.target.src;
-                popup_container.style.display = 'sticky';
+                popup_container.style.display = 'block';
+                popup_container.style.position = 'sticky';
             }
         }
     );
