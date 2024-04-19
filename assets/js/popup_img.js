@@ -1,20 +1,28 @@
-document.querySelectorAll('popup_img').forEach(
-    i => {
-        i.addEventListener(
-            'click',
-            () => {
-                console.log("popup_img clicked");
-                const popup_container = document.getElementById('popup_img_container');
-                const popup_img = popup_container.querySelector('img');
+$(window).on("load", initialize())
+function initialize()
+{
+    console.log("initialized");
+    const popup_container = document.getElementById('popup_img_container');
+    const popup_img = popup_container.querySelector('img');
 
-                popup_container.addEventListener(
-                    'click', 
-                    () => popup_container.style.display = 'none'
-                );
+    popup_container.addEventListener(
+        'click', 
+        () => {
+            console.log("popup_container clicked");
+            popup_container.style.display = 'none'
+        }
+    );
 
-                popup_img.src = i.src;
-                popup_container.style.display = 'block';
-            }
-        );
-    }
-);
+    document.querySelectorAll('popup_img').forEach(
+        i => {
+            i.addEventListener(
+                'click',
+                () => {
+                    console.log("popup_img clicked");
+                    popup_img.src = i.src;
+                    popup_container.style.display = 'block';
+                }
+            );
+        }
+    );
+}
