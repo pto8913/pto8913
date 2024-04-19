@@ -22,6 +22,7 @@ function initialize()
                 popup_img.src = elem.target.src;
                 popup_container.style.display = 'block';
                 popup_container.style.position = 'sticky';
+                popup_container.style.top = '65';
             }
         }
     );
