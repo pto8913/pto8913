@@ -1,9 +1,9 @@
-
 document.querySelectorAll('popup_img').forEach(
     i => {
         i.addEventListener(
             'click',
             () => {
+                console.log("popup_img clicked");
                 const popup_container = document.getElementById('popup_img_container');
                 const popup_img = popup_container.querySelector('img');
 
