@@ -13,17 +13,15 @@ function initialize()
         }
     );
 
-    document.querySelectorAll('popup_img').forEach(
-        i => {
-            console.log("add event listener img clicked");
-            i.addEventListener(
-                'click',
-                () => {
-                    console.log("popup_img clicked");
-                    popup_img.src = i.src;
-                    popup_container.style.display = 'block';
-                }
-            );
+    document.addEventListener(
+        'click',
+        elem => {
+            if (elem.target.classList.contains('popup_img'))
+            {
+                console.log("popup_img clicked");
+                popup_img.src = i.src;
+                popup_container.style.display = 'block';
+            }
         }
     );
 }
