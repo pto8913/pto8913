@@ -12,11 +12,18 @@ title:
 </div>
 <div class="wiki_page_body">
   <div>
+    {% assign title_raw_size = page.title.size %}
+    {% assign title_size = page.title.size | minus: 1 %}
+    <h1 class="wiki_subject_title h1">{{ page.title[title_size] }}</h1>
     {{ content }}
 
     {% if page.index %}
       {% assign index = page.index | plus: 1 %}
-      {% assign next_content = site.NavPtoTalkSystem["Tutorial"].contents[index] %}
+      {% if page.type == "Tutorial" or page.type == "API" %}
+        {% assign next_content = site.NavPtoTalkSystem[page.type].contents[index] %}
+      {% elsif page.type == "Node" %}
+        {% assign next_content = site.NavPtoTalkSystem["API"].contents["0. PtoTalkNode"].contents[index] %}
+      {% endif %}
       <div class="wiki_next_page_link_container">
         {% if next_content %}
           <a href="{{ next_content.url | relative_url }}" class="wiki_next_page_link">次へ...{{ next_content.title }}</a>
