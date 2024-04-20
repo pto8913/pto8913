@@ -24,9 +24,9 @@
         {% assign subject_name = category.title %}
         {% assign subject_contents = category.contents %}
 
-        {% if category.url %}
+        {% comment %} {% if category.url %}
           <li>{{ subject_name }}</li>
-        {% else %}
+        {% else %} {% endcomment %}
           <button type="button" class="collapse category_button">
             {% if category.url %}
               <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
@@ -34,10 +34,12 @@
               {{ subject_name }}
             {% endif %}
           </button>
-          <li class="collapse_content">
-            {% include category-recursive.html lists=category.contents %}
-          </li>
-        {% endif %}
+          {% if subject_contents %}
+            <li class="collapse_content">
+              {% include category-recursive.html lists=subject_contents %}
+            </li>
+          {% endif %}
+        {% comment %} {% endif %} {% endcomment %}
       {% else %}
         {% assign subject_name = category[0] %}
         <button type="button" class="collapse category_button">{{ subject_name }}</button>
