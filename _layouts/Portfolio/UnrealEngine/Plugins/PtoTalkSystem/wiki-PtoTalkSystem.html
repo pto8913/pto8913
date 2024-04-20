@@ -14,7 +14,7 @@ title:
   <div>
     {% assign title_raw_size = page.title.size %}
     {% assign title_size = page.title.size | minus: 1 %}
-    <h1 class="wiki_subject_title h1">{% page.title[title_size].title %}</h1>
+    <h1 class="wiki_subject_title h1">{{ page.title[title_size].title }}</h1>
     {{ content }}
 
     {% if page.index %}
