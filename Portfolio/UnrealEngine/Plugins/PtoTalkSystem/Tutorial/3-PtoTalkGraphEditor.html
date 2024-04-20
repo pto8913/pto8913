@@ -21,7 +21,7 @@ EditorDetails:
 <div class="wiki_contents">
   <h2 class="wiki_subject_title h2">エディターの見かた</h2>
   <div class="Portfolio_grid_3x">
-    {% for data in EditorDetails %}
+    {% for data in page.EditorDetails %}
       <div>
         <img src="{{ data.url | relative_url }}" class="wiki_img center popup_img" alt=""><br>
         <p class="img_card_title">{{ data.title }}</p>
@@ -37,8 +37,8 @@ EditorDetails:
     Blueprintノードが存在する場合は、`Blueprints`グループが追加されます。<br>
   </p>
   <div class="Portfolio_grid_3x">
-    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/Tutorial/PtoTalkGraphEditor/PtoTalkGraph_BPNode.png' | relative_url }}" class="wiki_img center popup_img" alt=""><br>
-    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/Tutorial/PtoTalkGraphEditor/PtoTalkGraph_AddNode_BP.png' | relative_url }}" class="wiki_img center popup_img" alt=""><br>
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/Tutorial/PtoTalkGraphEditor/PtoTalkGraph_BPNode.png' | relative_url }}" class="wiki_img popup_img" alt=""><br>
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/Tutorial/PtoTalkGraphEditor/PtoTalkGraph_AddNode_BP.png' | relative_url }}" class="wiki_img popup_img" alt=""><br>
   </div>
 
   <h2 class="wiki_subject_title h2">注意点</h2>
