@@ -24,34 +24,18 @@
         {% assign subject_name = category.title %}
         {% assign subject_contents = category.contents %}
 
-        <!-- {% if category.url %}
-          <li>{{ subject_name }}</li>
-        {% else %} -->
-          <button type="button" class="collapse category_button">
-            {% if category.url %}
-              <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
-            {% else %}
-              {{ subject_name }}
-            {% endif %}
-          </button>
-          {% if subject_contents %}
-            <li class="collapse_content">
-              {% include category-recursive.html lists=subject_contents %}
-            </li>
+        <button type="button" class="collapse category_button">
+          {% if category.url %}
+            <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
+          {% else %}
+            {{ subject_name }}
           {% endif %}
-        <!-- {% endif %} -->
-      {% else %}
-        {% assign subject_name = category[0] %}
-        <button type="button" class="collapse category_button">{{ subject_name }}</button>
-        {% assign subject_contents = include.lists[subject_name] %}
+        </button>
         {% if subject_contents %}
-          {% for subject in subject_contents.contents %}
-            <li class="collapse_content">
-              {% include category-recursive.html lists=subject_contents.contents %}
-            </li>
-          {% endfor %}
+          <li class="collapse_content">
+            {% include category-recursive.html lists=subject_contents %}
+          </li>
         {% endif %}
-      {% endif %}
     {% endfor %}
   </ul>
 </div>

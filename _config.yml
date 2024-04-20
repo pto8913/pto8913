@@ -94,7 +94,7 @@ nav-footer:                  # shows a footer with social links - for available 
 
 # NOTE: children allowed only url, contents, title.
 nav-categories:
-  UnrealEngine: 
+  - title: "UnrealEngine" 
     url: "/Portfolio/UnrealEngine/UnrealEngine_Index.html"
     contents:
       - title: "Game"
@@ -116,7 +116,7 @@ nav-categories:
             url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html"
       - title: Note
         url: ""
-  DirectX11-C++:
+  - title: "DirectX11-C++"
     url: "/Portfolio/DirectX11-C++/DirectX11_Index.html"
     contents: 
       - title: "Game"
@@ -127,7 +127,7 @@ nav-categories:
         url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
       - title: Note
         url: ""
-  Unity:
+  - title: "Unity"
     url: "/Portfolio/Unity/Unity_Index.html"
     contents:
       - title: "Game"
@@ -138,7 +138,7 @@ nav-categories:
         url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
       - title: Note
         url: ""
-  Java:
+  - title: "Java"
     url: "/Portfolio/Java/Java_Index.html"
     contents:
       - title: "Windows"
@@ -406,7 +406,7 @@ img-hoshimori-character-bg:
 
 # ------------------------------ PtoTalkSystem ------------------------------
 NavPtoTalkSystem:
-  Tutorial:
+  - title: "Tutorial"
     url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/index.html"
     contents:
       - title: "1. プラグインを追加する"
@@ -416,7 +416,7 @@ NavPtoTalkSystem:
       - title: "3. エディター"
         url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/3-PtoTalkGraphEditor.html"
 
-  API:
+  - title: "API"
     url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/index.html"
     contents:
       - title: "0. PtoTalkNode"
