@@ -10,10 +10,10 @@
       {% if category.type == "absolute" %}
         <li><a href="{{ category.url }}">{{ subject_name }}</a></li>
       {% else %}
-        <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
+      <li><a href="{{ category.url | relative_url }}">{{ subject_name }}</a></li>
       {% endif %}
     {% else %}
-      {{ subject_name }}
+      <li>{{ subject_name }}</li>
     {% endif %}
     {% if subject_contents %}
       </button>
