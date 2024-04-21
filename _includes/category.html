@@ -40,7 +40,7 @@
       {% else %}
         <li class="collapse_content" style="display: none">
       {% endif %}
-          {% include category-recursive.html type=include.type lists=subject_contents %}
+          {% include category-recursive.html type=include.type lists=subject_contents active=include.active %}
         </li>
       {% endif %}
     {% endfor %}
