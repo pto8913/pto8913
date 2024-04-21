@@ -5,8 +5,7 @@ title:
   - title: "ポートフォリオ"
   - title: "UnrealEngine"
   - title: "PtoTalkSystem"
-category_title: "PtoTalkSystem"
-category_type: ol
+
 ---
 
 <div id="popup_img_container">
@@ -35,5 +34,7 @@ category_type: ol
       </div>
     {% endif %}
   </div>
-  {% include category.html lists=site.NavPtoTalkSystem type=page.category_type category_title=page.category_title %}
+  {% assign category_title = "PtoTalkSystem" %}
+  {% assign category_type = ol %}
+  {% include category.html lists=site.NavPtoTalkSystem type=category_type category_title=category_title %}
 </div>
