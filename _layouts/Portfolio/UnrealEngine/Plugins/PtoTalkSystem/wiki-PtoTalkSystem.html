@@ -19,10 +19,15 @@ title:
 
     {% if page.index %}
       {% assign index = page.index | plus: 1 %}
-      {% if page.type == "Node" %}
-        {% assign next_content = site.NavPtoTalkSystem["API"].contents["0. PtoTalkNode"].contents[index] %}
+      {% if page.type == "Node" or page.type == "API" %}
+        {% assign subject_index = 1 %}
       {% else %}
-        {% assign next_content = site.NavPtoTalkSystem[page.type].contents[index] %}
+        {% assign subject_index = 0 %}
+      {% endif %}
+      {% if page.type == "Node" %}
+        {% assign next_content = site.NavPtoTalkSystem[subject_index].contents[0].contents[index] %}
+      {% else %}        
+        {% assign next_content = site.NavPtoTalkSystem[subject_index].contents[index] %}
       {% endif %}
       <div class="wiki_next_page_link_container">
         {% if next_content %}
