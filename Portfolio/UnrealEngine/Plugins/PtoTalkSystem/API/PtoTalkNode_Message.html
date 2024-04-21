@@ -20,15 +20,18 @@ type: "Node"
 <div class="wiki_contents">
   <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Message.png' | relative_url }}" class="wiki_img center popup_img" alt="">
   <h2 class="wiki_subject_title h2">特徴</h2>
-  <p>
-    ・`MessageRow`に設定された`DataTable`からテキストデータを読み取り、`TalkUI`上に表示します。<br>
-    ・`WaitPlayerInput`が有効になっていると`PressToNext`ボタンが表示されます。<br>
-    ・`MessageChoiceInfos`が有効になっている場合`WaitPlayerInput`は無視され、`ChoiceUI`が表示されます。<br>
-      ・`ButtonText` : ボタンに表示されるテキスト。<br>
-      ・`ChoiceType` : ボタンをクリックしたときにどのノードに遷移するかを選ぶためのデータ<br>
-      ・`ChoiceTypeName` : カスタムできる`ChoiceType`<br>
-      ・`OverrideButtonClass` : `ChoiceUI`に表示されるボタンのクラスを上書きします<br>
-  </p>
+  <ul>
+    <li>`MessageRow`に設定された`DataTable`からテキストデータを読み取り、`TalkUI`上に表示します。</li>
+    <li>`WaitPlayerInput`が有効になっていると`PressToNext`ボタンが表示されます。</li>
+    <li>
+      <ul>`MessageChoiceInfos`が有効になっている場合`WaitPlayerInput`は無視され、`ChoiceUI`が表示されます。
+        <li>`ButtonText` : ボタンに表示されるテキスト。</li>
+        <li>`ChoiceType` : ボタンをクリックしたときにどのノードに遷移するかを選ぶためのデータ</li>
+        <li>`ChoiceTypeName` : カスタムできる`ChoiceType`</li>
+        <li>`OverrideButtonClass` : `ChoiceUI`に表示されるボタンのクラスを上書きします</li>
+      </ul>
+    </li>
+  </ul>
   <div class="Portfolio_grid_3x">
     <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Message_ChoiceInfos.png' | relative_url }}" class="popup_img" alt="">
     <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Message_PressToNext.png' | relative_url }}" class="popup_img" alt="">
