@@ -19,10 +19,10 @@ title:
 
     {% if page.index %}
       {% assign index = page.index | plus: 1 %}
-      {% if page.type == "Tutorial" or page.type == "API" %}
-        {% assign next_content = site.NavPtoTalkSystem[page.type].contents[index] %}
-      {% elsif page.type == "Node" %}
+      {% if page.type == "Node" %}
         {% assign next_content = site.NavPtoTalkSystem["API"].contents["0. PtoTalkNode"].contents[index] %}
+      {% else %}
+        {% assign next_content = site.NavPtoTalkSystem[page.type].contents[index] %}
       {% endif %}
       <div class="wiki_next_page_link_container">
         {% if next_content %}
