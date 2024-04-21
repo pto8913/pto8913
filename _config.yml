@@ -328,7 +328,6 @@ NavPtoTalkSystem:
         url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/CreateAsset.html"
       - title: "エディター"
         url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/PtoTalkGraphEditor.html"
-
   - title: "API"
     url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/index.html"
     contents:
