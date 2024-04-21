@@ -336,8 +336,6 @@ NavPtoTalkSystem:
         contents:
           - title: "PtoTalkNode_Proxy"
             url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/PtoTalkNode_Proxy.html"
-          - title: "PtoTalkNode_Start"
-            url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/PtoTalkNode_Start.html"
           - title: "PtoTalkNode_Message"
             url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/PtoTalkNode_Message.html"
           - title: "PtoTalkNode_Condition"
