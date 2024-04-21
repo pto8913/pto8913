@@ -6,18 +6,7 @@
       <a href="{{ site.homeURL | relative_url }}" class="title">
         <img class="logo" src="{{ '/assets/images/pto8913.png' | relative_url }}" alt="" />
       </a>
-      {% if page.new_title %}
-        <a href="{{ site.homeURL | relative_url }}">ホーム</a>
-        {% for row in page.title %}
-          <a href="{{ row.url | relative_url }}">| {{ row.title | escape }} </a>
-        {% endfor %}
-      {% else %}
-        {% if include.home %}
-          <a href="{{ include.home | relative_url }}" class="title">{{ page.title | escape }}</a>
-        {% else %}
-          <a href="{{ site.homeURL | relative_url }}" class="title">{{ page.title | escape }}</a>
-        {% endif %}
-      {% endif %}
+      {% include title.html title=page.title %}
     </div>
   </div>
 </header>
