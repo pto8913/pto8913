@@ -15,6 +15,37 @@ type: "API"
 ---
 
 <div class="wiki_contents">
-  <h2 class="wiki_subject_title h2">共通の処理</h2>
-  
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/AllNodes.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+  <h2 class="wiki_subject_title h2">概要</h2>
+  <p>
+    大別すると`Proxy`,`CustomEvent`,`Condition`,`End`,`JumpToProxy`ノードがあります。<br>
+    もし独自のノードを追加したい場合はこれらのノードから派生してください。<br>
+  </p>
+
+  <h2 class="wiki_subject_title h2">ノードアクション</h2>
+  <p>
+    ノードによっては一部機能が制限されます、以下の画像のようなアクションが行えます。<br>
+  </p>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/NodeAction.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+
+  <h3 class="wiki_subject_title h3">PtoTalkNode固有のアクション</h3>
+  <h4 class="wiki_subject_title h4">SelectChildNodes</h4>
+  <p>
+    そのノードの子ノードを一括で選択できます。<br>
+    ノードがループする場合はノードのインデックスがそのノードより小さいノードを選択します。<br>
+  </p>
+  <div class="Portfolio_grid_2x">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/Action_SelectChildNodes.png' | relative_url }}" class="popup_img" alt="">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/Action_SelectChildNodes_Loop.png' | relative_url }}" class="popup_img" alt="">
+  </div>
+
+  <h4 class="wiki_subject_title h4">Add Transition EnterEvent</h4>
+  <p>
+    このノードが実行される前に呼び出されるイベントを追加します。<br>
+  </p>
+
+  <h4 class="wiki_subject_title h4">Add Transition LeaveEvent</h4>
+  <p>
+    このノードが実行された後に呼び出されるイベントを追加します。<br>
+  </p>
 </div>

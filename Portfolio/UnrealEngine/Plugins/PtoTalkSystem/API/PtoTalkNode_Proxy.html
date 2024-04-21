@@ -21,14 +21,29 @@ type: "Node"
   <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Proxy.png' | relative_url }}" class="wiki_img center popup_img" alt="">
   <h2 class="wiki_subject_title h2">特徴</h2>
   <p>
-    `ProxyTag`で`PtoTalkNode_Proxy`を判別します。<br>
-    基本的に`PtoTalkNode_JumpToProxy`からこのノードに遷移します。<br>
-    また、`TalkSystemComp`から`ExecuteFromProxy`関数を使って手動で呼び出すこともできます。<br>
+    ・`ProxyTag`で`PtoTalkNode_Proxy`を判別します。<br>
+    ・基本的に`PtoTalkNode_JumpToProxy`からこのノードに遷移します。<br>
+      また、`TalkSystemComp`から`ExecuteFromProxy`関数を使って手動で呼び出すこともできます。<br>
   </p>
   <div class="Portfolio_grid_2x">
     <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Proxy_1.png' | relative_url }}" class="popup_img" alt="">
     <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Proxy_FromBP.png' | relative_url }}" class="popup_img" alt="">
   </div>
+
+  <h2 class="wiki_subject_title h2">ノードアクション</h2>
+  <p>
+    `PtoTalkNode_Start`では機能が制限されますが、以下の画像のようなアクションが行えます。<br>
+  </p>
+  <div class="Portfolio_grid_2x">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Proxy_Actions.png' | relative_url }}" class="popup_img" alt="">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Proxy_Start_Actions.png' | relative_url }}" class="popup_img" alt="">
+  </div>
+
+  <h3 class="wiki_subject_title h3">PtoTalkNode_Proxy固有のアクション</h3>
+  <h4 class="wiki_subject_title h4">Jump To JumpToProxyNode</h4>
+  <p>
+    `ProxyTag`と一致する`JumpToProxyInfos.Name`を持った`PtoTalkNode_JumpToProxy`にジャンプします。<br>
+  </p>
 
   <h2 class="wiki_subject_title h2">簡単な使用例</h2>
   <p>
