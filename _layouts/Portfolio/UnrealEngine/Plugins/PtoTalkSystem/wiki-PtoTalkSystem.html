@@ -21,18 +21,33 @@ title:
     {{ content }}
 
     {% if page.index %}
-      {% assign index = page.index | plus: 1 %}
+      {% assign next_index = page.index | plus: 1 %}
+      {% assign prev_index = page.index | minus: 1 %}
       {% if page.type == "Node" or page.type == "API" %}
         {% assign subject_index = 1 %}
       {% else %}
         {% assign subject_index = 0 %}
       {% endif %}
+
       {% if page.type == "Node" %}
-        {% assign next_content = site.NavPtoTalkSystem[subject_index].contents[0].contents[index] %}
+        {% assign prev_content = site.NavPtoTalkSystem[subject_index].contents[0].contents[prev_index] %}
       {% else %}        
-        {% assign next_content = site.NavPtoTalkSystem[subject_index].contents[index] %}
+        {% assign prev_content = site.NavPtoTalkSystem[subject_index].contents[prev_index] %}
       {% endif %}
+
+      {% if page.type == "Node" %}
+        {% assign next_content = site.NavPtoTalkSystem[subject_index].contents[0].contents[next_index] %}
+      {% else %}        
+        {% assign next_content = site.NavPtoTalkSystem[subject_index].contents[next_index] %}
+      {% endif %}
+
       <div class="wiki_next_page_link_container">
+        {% if prev_content %}
+          <a href="{{ next_content.url | relative_url }}" class="wiki_next_page_link">{{ next_content.title }}...戻る</a>
+        {% endif %}
+        {% if prev_content and next_content %}
+          {{ | }} 
+        {% endif %}
         {% if next_content %}
           <a href="{{ next_content.url | relative_url }}" class="wiki_next_page_link">次へ...{{ next_content.title }}</a>
           <br>
