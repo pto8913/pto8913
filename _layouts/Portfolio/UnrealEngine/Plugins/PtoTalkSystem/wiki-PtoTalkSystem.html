@@ -5,7 +5,6 @@ title:
   - title: "ポートフォリオ"
   - title: "UnrealEngine"
   - title: "PtoTalkSystem"
-
 ---
 
 <div id="popup_img_container">
@@ -34,7 +33,7 @@ title:
       </div>
     {% endif %}
   </div>
-  {% assign category_title = "PtoTalkSystem" %}
-  {% assign category_type = ol %}
-  {% include category.html lists=site.NavPtoTalkSystem type=category_type category_title=category_title %}
+  {% assign __title = "PtoTalkSystem" %}
+  {% assign __type = ol %}
+  {% include category.html lists=site.NavPtoTalkSystem type=__type category_title=__title %}
 </div>
