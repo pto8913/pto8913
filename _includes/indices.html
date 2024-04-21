@@ -19,38 +19,40 @@
 {% endcomment %}
 
 <!-- Begin Articles -->
-{% if include.collapse %}
-  <div class="bg collapse">
-{% else %}
-  <div class="bg">
-{% endif %}
-  {% if include.add-subject %}
-    <h1 class="Portfolio_subject">
-      {{ include.add-subject }}
-    </h1>
+{% if include.items %}
+  {% if include.collapse %}
+    <div class="bg collapse">
+  {% else %}
+    <div class="bg">
   {% endif %}
-  {% for data in include.items %}
-    <h2 class="Portfolio_subject h2">
-      {{ data.title }}
-    </h2>
-    <div class="Portfolio_grid_3x">
-      {% for row in data.contents %}
-        <div class="img_card_container fade_box">
-          {% if row.type %}
-            {% if row.type == "absolute" %}
-              <a href="{{ row.url }}">
+    {% if include.add-subject %}
+      <h1 class="Portfolio_subject">
+        {{ include.add-subject }}
+      </h1>
+    {% endif %}
+    {% for data in include.items %}
+      <h2 class="Portfolio_subject h2">
+        {{ data.title }}
+      </h2>
+      <div class="Portfolio_grid_3x">
+        {% for row in data.contents %}
+          <div class="img_card_container fade_box">
+            {% if row.type %}
+              {% if row.type == "absolute" %}
+                <a href="{{ row.url }}">
+              {% endif %}
+            {% else %}
+              <a href="{{ row.url | relative_url }}">
             {% endif %}
-          {% else %}
-            <a href="{{ row.url | relative_url }}">
-          {% endif %}
-            {% if row.img %}
-              <img src="{{ row.img | relative_url }}" class="img_card" alt="" />
-            {% endif %}
-            <p class="img_card_title">{{ row.title }}</p>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-  {% endfor %}
-</div>
+              {% if row.img %}
+                <img src="{{ row.img | relative_url }}" class="img_card" alt="" />
+              {% endif %}
+              <p class="img_card_title">{{ row.title }}</p>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
 <!-- End Articles -->
