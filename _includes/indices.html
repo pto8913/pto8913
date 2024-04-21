@@ -19,18 +19,18 @@
 {% endcomment %}
 
 <!-- Begin Articles -->
-{% if include.items %}
-  {% if include.collapse %}
-    <div class="bg collapse">
-  {% else %}
-    <div class="bg">
+{% if include.collapse %}
+  <div class="bg collapse">
+{% else %}
+  <div class="bg">
+{% endif %}
+  {% if include.add-subject %}
+    <h1 class="Portfolio_subject">
+      {{ include.add-subject }}
+    </h1>
   {% endif %}
-    {% if include.add-subject %}
-      <h1 class="Portfolio_subject">
-        {{ include.add-subject }}
-      </h1>
-    {% endif %}
-    {% for data in include.items %}
+  {% for data in include.items %}
+    {% if data.contents %}
       <h2 class="Portfolio_subject h2">
         {{ data.title }}
       </h2>
@@ -52,7 +52,7 @@
           </div>
         {% endfor %}
       </div>
-    {% endfor %}
-  </div>
-{% endif %}
+    {% endif %}
+  {% endfor %}
+</div>
 <!-- End Articles -->
