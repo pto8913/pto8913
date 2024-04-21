@@ -93,143 +93,176 @@ nav-footer:                  # shows a footer with social links - for available 
   - {title: Discord, icon: '/assets/images/discord.png', url: "https://discord.gg/mXntvZdCFf"}
 
 # NOTE: children allowed only url, contents, title.
-nav-categories:
-  - title: "UnrealEngine" 
-    url: "/Portfolio/UnrealEngine/UnrealEngine_Index.html"
+NavCategories:
+  - title: "UnrealEngine"
+    url: "/Portfolio/UnrealEngine/index.html"
     contents:
       - title: "Game"
         contents:
           - title: "星の守り人"
+            img: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.png"
             url: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html"
           - title: "Shooting"
+            img: "/Portfolio/UnrealEngine/Game/Shooting/assets/images/icon.png"
             url: "/Portfolio/UnrealEngine/Game/Shooting/index.html"
           - title: "ぴの塔"
+            img: "/Portfolio/UnrealEngine/Game/Roguelike/assets/images/icon.png"
             url: "/Portfolio/UnrealEngine/Game/Roguelike/index.html"
           - title: "Maze"
+            img: "/Portfolio/UnrealEngine/Game/Maze/assets/images/icon.png"
             url: "/Portfolio/UnrealEngine/Game/Maze/index.html"
       - title: "Plugin"
         contents:
           - title: "SpreadSheetToUnreal"
+            img: "/Portfolio/UnrealEngine/Plugins/SpreadSheetToUnreal/images/icon.png"
             url: "https://github.com/pto8913/SpreadSheetToUnreal"
             type: "absolute"
           - title: "PtoTalkSystem"
+            img: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/PtoTalkSystem.png"
             url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html"
-      - title: Note
-        url: ""
+          - title: インベントリシステム
+            img: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/icon.png"
+            url: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/index.html"
+      - title: "Note"
+        contents:
+          - title: "GameplayAbilities"
+            url: "/"
   - title: "DirectX11-C++"
-    url: "/Portfolio/DirectX11-C++/DirectX11_Index.html"
+    url: "/Portfolio/DirectX11-C++/index.html"
     contents: 
       - title: "Game"
         contents:
           - title: "とこぷよ"
-            url : "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo.html"
+            img: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo.png"
+            url: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo.html"
       - title: "Plugin"
-        url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
+        url: "/Portfolio/DirectX/Plugins/index.html"
       - title: Note
         url: ""
   - title: "Unity"
-    url: "/Portfolio/Unity/Unity_Index.html"
+    url: "/Portfolio/Unity/index.html"
     contents:
       - title: "Game"
         contents:
           - title: "TappyCube"
-            url: "/Portfolio/DirectX/Game/TappyCube/index.html"
+            img: "/Portfolio/Unity/Game/TappyCube/assets/images/icon.png"
+            url: "/Portfolio/Unity/Game/TappyCube/index.html"
       - title: "Plugin"
-        url: "/Portfolio/UnrealEngine/Plugins/UnrealEngine_Plugin.html"
+        url: "/Portfolio/Unity/Plugins/index.html"
       - title: Note
         url: ""
   - title: "Java"
-    url: "/Portfolio/Java/Java_Index.html"
+    url: "/Portfolio/Java/index.html"
     contents:
       - title: "Windows"
         contents:
           - title: "MusicPlayer for Windows"
+            img: "/Portfolio/Java/Windows/MusicPlayer/images/icon.png"
             url: "/Portfolio/Java/Windows/MusicPlayer/MusicPlayer.html"
+  - title: "競プロ"
+    url: "/Portfilio/KyoPro/index.html"
+    contents:
+      - title: "競プロのサイト"
+        contents:
+          - title: "AtCoder"
+            url: https://atcoder.jp/?lang=ja
+            type: "absolute" 
+          - title: "CodeForces"
+            url: https://codeforces.com/
+            type: "absolute" 
+      - title: "動的計画法"
+        contents:
+          - title: "累積和"
+            url: "/Portfolio/KyoPro/DP/CumulativeSum.html"
+      - title: "データ構造"
+        contents:
+          - title: "素集合データ構造(Union-Find)"
+            url: "/Portfolio/KyoPro/Structure/UnionFind.html"
+          - title: "BinaryIndexedTree(BIT)"
+            url: "/Portfolio/KyoPro/Structure/BIT.html"
+      - title: "探索"
+        contents:
+          - title: "深さ優先探索(DFS)"
+            url: "/Portfolio/KyoPro/Search/DFS.html"
+          - title: "幅優先探索(BFS)"
+            url: "/Portfolio/KyoPro/Search/BFS.html"
+      - title: "最短経路探索"
+        contents:
+          - title: "ダイクストラ法(Dijkstra)"
+            url: "/Portfolio/KyoPro/Search/Dijkstra.html"
+          - title: "ベルマンフォード法"
+            url: "/Portfolio/KyoPro/Search/BellmanFord.html"
+      - title: "最短経路探索"
+        contents:
+          - title: "約数列挙(Divisor)"
+            url: "/Portfolio/KyoPro/Math/divisor.html"
+          - title: "素数判定(isprime)"
+            url: "/Portfolio/KyoPro/Math/isprime.html"
+          - title: "最大公約数(gcd)最小公倍数(lcm)"
+            url: "/Portfolio/KyoPro/Math/gcdlcm.html"
+  - title: "PyQt5"
+    url: "/Portfolio/PyQt5/index.html"
+    contents:
+      - title: "App"
+        contents:
+          - title: "画面のキャプチャ"
+            img: "/Portfolio/PyQt5/Tools/ScreenCapture/icon.png"
+            url: "/Portfolio/PyQt5/Tools/ScreenCapture/ScreenCapture.html"
+          - title: "時計"
+            img: "/Portfolio/PyQt5/Tools/Timer/icon.png"
+            url: "/Portfolio/PyQt5/Tools/Timer/Timer.html"
+          - title: "電卓"
+            img: "/Portfolio/PyQt5/Tools/Calculator/icon.png"
+            url: "/Portfolio/PyQt5/Tools/Calculator/Calculator.html"
+          - title: "Clipboard"
+            url: "/Portfolio/PyQt5/Tools/Clipboard/Clipboard.html"
+          - title: "DirViewr"
+            url: "/Portfolio/PyQt5/Tools/DirViewr/DirViewr.html"
+          - title: "img2pdf"
+            url: "/Portfolio/PyQt5/Tools/img2pdf/img2pdf.html"
+          - title: "SQLiteViewer"
+            url: "/Portfolio/PyQt5/Tools/SQLiteViewer/SQLiteViewer.html"
+          - title: "SQLiteViewerDetails"
+            url: "/Portfolio/PyQt5/Tools/SQLiteViewerDetails/SQLiteViewerDetails.html"
+          - title: "TerrainViewer"
+            url: "/Portfolio/PyQt5/Tools/TerrainViewer/TerrainViewer.html"
+      - title: "PyQt5のテンプレート？"
+        contents:
+          - title: "コピー"
+            img: "/Portfolio/PyQt5/Template/Clipboard/icon.png"
+            url: "/Portfolio/PyQt5/Template/Clipboard/Clipboard.html"
+          - title: "ドラッグアンドドロップ"
+            img: "/Portfolio/PyQt5/Template/DnD/icon.png"
+            url: "/Portfolio/PyQt5/Template/DnD/DnD.html"
+          - title: "スレッド"
+            img: "/Portfolio/PyQt5/Template/Thread/icon.png"
+            url: "/Portfolio/PyQt5/Template/Thread/Thread.html"
+          - title: "ディレクトリツリー"
+            img: "/Portfolio/PyQt5/Template/DirViewer/icon.png"
+            url: "/Portfolio/PyQt5/Template/DirViewer/DirViewer.html"
+          # - title: "キーの同時入力"
+          #   img: "/Portfolio/PyQt5/Template/keyPressMulti/icon.png"
+          #   url: "/Portfolio/PyQt5/Template/keyPressMulti/keyPressMulti.html"
 
 # ------------------------------ Portfolio ------------------------------
-# Navigations
-
-Hoshimori-teaser-url: "https://www.youtube.com/embed/m7YOHEtjhbc?list=PL3Z_2bfv7lRMZESwtishkG8TPBxRLmcsP"
-
 # ---------------- Portfolio Index ----------------
 News:
   星の守り人: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori"
   とこぷよ: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo"
 
-idx-Portfolio:
-  - subject: "ゲーム"
-    contents:
-      - title: "星の守り人"
-        img: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.png"
-        url: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html"
-      - title: "とこぷよ"
-        img: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo.png"
-        url: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo.html"
-      - title: "Tappy Cube"
-        img: "/Portfolio/Unity/Game/TappyCube/assets/images/icon.png"
-        url: "/Portfolio/Unity/Game/TappyCube/index.html"
-      - title: "Roguelike"
-        img: "/Portfolio/UnrealEngine/Game/Roguelike/assets/images/icon.png"
-        url: "/Portfolio/UnrealEngine/Game/Roguelike/index.html"
-      - title: "Shooting"
-        img: "/Portfolio/UnrealEngine/Game/Shooting/assets/images/icon.png"
-        url: "/Portfolio/UnrealEngine/Game/Shooting/index.html"
-      - title: "Maze"
-        img: "/Portfolio/UnrealEngine/Game/Maze/assets/images/icon.png"
-        url: "/Portfolio/UnrealEngine/Game/Maze/index.html"
-  - subject: "プラグイン(Unreal Engine)"
-    contents:
-      - title: "GoogleSpreadSheetToUnreal"
-        img: "/Portfolio/UnrealEngine/Plugins/SpreadSheetToUnreal/images/icon.png"
-        url: "https://github.com/pto8913/SpreadSheetToUnreal"
-      - title: "PtoTalkSystem"
-        img: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/PtoTalkSystem.png"
-        url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html"
-  #     - title: インベントリシステム
-  #       img: "/Portfolio/Plugins/ptoInventorySystem/assets/images/icon.png"
-  #       url: "/Portfolio/Plugins/ptoInventorySystem/index.html"
-  - subject: "Java"
-    contents:
-      - title: "MusicPlayer for Windows"
-        img: "/Portfolio/Java/Windows/MusicPlayer/images/icon.png"
-        url: "/Portfolio/Java/Windows/MusicPlayer/MusicPlayer.html"
-
-# ---------------- UnrealEngine Index ----------------
+# ---------------- News ----------------
 news-UnrealEngine:
   星の守り人: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori"
+news-DirectX:
+  とこぷよ: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo"
+news-Unity:
+  Tappy Cube: "/Portfolio/Unity/Game/TappyCube/index"
+news-Java:
+  MusicPlayer for Windows: "/Portfolio/Java/Windows/MusicPlayer/MusicPlayer"
 
-index-UnrealEngine:
-  - subject: "Game"
-    contents:
-      - title: "星の守り人"
-        img: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.png"
-        url: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html"
-      - title: "Roguelike"
-        img: "/Portfolio/UnrealEngine/Game/Roguelike/assets/images/icon.png"
-        url: "/Portfolio/UnrealEngine/Game/Roguelike/index.html"
-      - title: "Shooting"
-        img: "/Portfolio/UnrealEngine/Game/Shooting/assets/images/icon.png"
-        url: "/Portfolio/UnrealEngine/Game/Shooting/index.html"
-      - title: "Maze"
-        img: "/Portfolio/UnrealEngine/Game/Maze/assets/images/icon.png"
-        url: "/Portfolio/UnrealEngine/Game/Maze/index.html"
-  - subject: "Plugin"
-    contents:
-      - title: "GoogleSpreadSheetToUnreal"
-        img: "/Portfolio/UnrealEngine/Plugins/SpreadSheetToUnreal/images/icon.png"
-        url: "https://github.com/pto8913/SpreadSheetToUnreal"
-      - title: "PtoTalkSystem"
-        img: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/PtoTalkSystem.png"
-        url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html"
-      - title: インベントリシステム
-        img: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/icon.png"
-        url: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/index.html"
-  - subject: "Note"
-    contents:
-      - title: "GameplayAbilities"
-        url: "/"
+# ------------------------------ Hoshimori ------------------------------
+Hoshimori-teaser-url: "https://www.youtube.com/embed/m7YOHEtjhbc?list=PL3Z_2bfv7lRMZESwtishkG8TPBxRLmcsP"
 
-# ---------------- Portfolio Hoshimori ----------------
 nav-header-Portfolio-Hoshimori:
   ホーム: "/Portfolio/UnrealEngine/Game/Hoshimori/Hoshimori.html"
   物語 : "/Portfolio/UnrealEngine/Game/Hoshimori/story/index.html"
@@ -252,126 +285,6 @@ nav-header-Portfolio-Hoshimori:
     魔王: "/Portfolio/UnrealEngine/Game/Hoshimori/enemy/Typhon.html"
   UI: "/Portfolio/UnrealEngine/Game/Hoshimori/ui/index.html"
   レベルデザイン: "/Portfolio/UnrealEngine/Game/Hoshimori/level/index.html"
-
-# ---------------- DirectX Index ----------------
-news-DirectX:
-  とこぷよ: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo"
-
-index-DirectX:
-  - subject: "Game"
-    contents:
-      - title: "とこぷよ"
-        img: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo.png"
-        url: "/Portfolio/DirectX/Game/TokoPuyo/TokoPuyo.html"
-
-# ---------------- Unity Index ----------------
-news-Unity:
-  Tappy Cube: "/Portfolio/Unity/Game/TappyCube/index"
-
-index-Unity:
-  - subject: "Game"
-    contents:
-      - title: "Tappy Cube"
-        img: "/Portfolio/Unity/Game/TappyCube/assets/images/icon.png"
-        url: "/Portfolio/Unity/Game/TappyCube/index.html"
-
-# ---------------- Java Index ----------------
-news-Java:
-  MusicPlayer for Windows: "/Portfolio/Java/Windows/MusicPlayer/MusicPlayer"
-
-index-Java:
-  - subject: "Windows"
-    contents:
-      - title: "MusicPlayer for Windows"
-        img: "/Portfolio/Java/Windows/MusicPlayer/images/icon.png"
-        url: "/Portfolio/Java/Windows/MusicPlayer/MusicPlayer.html"
-
-# ---------------- PyQt5 Index ----------------
-index-PyQt5:
-  - subject: "App"
-    contents:
-      - title: "画面のキャプチャ"
-        img: "/Portfolio/PyQt5/Tools/ScreenCapture/icon.png"
-        url: "/Portfolio/PyQt5/Tools/ScreenCapture/ScreenCapture.html"
-      - title: "時計"
-        img: "/Portfolio/PyQt5/Tools/Timer/icon.png"
-        url: "/Portfolio/PyQt5/Tools/Timer/Timer.html"
-      - title: "電卓"
-        img: "/Portfolio/PyQt5/Tools/Calculator/icon.png"
-        url: "/Portfolio/PyQt5/Tools/Calculator/Calculator.html"
-      - title: "Clipboard"
-        url: "/Portfolio/PyQt5/Tools/Clipboard/Clipboard.html"
-      - title: "DirViewr"
-        url: "/Portfolio/PyQt5/Tools/DirViewr/DirViewr.html"
-      - title: "img2pdf"
-        url: "/Portfolio/PyQt5/Tools/img2pdf/img2pdf.html"
-      - title: "SQLiteViewer"
-        url: "/Portfolio/PyQt5/Tools/SQLiteViewer/SQLiteViewer.html"
-      - title: "SQLiteViewerDetails"
-        url: "/Portfolio/PyQt5/Tools/SQLiteViewerDetails/SQLiteViewerDetails.html"
-      - title: "TerrainViewer"
-        url: "/Portfolio/PyQt5/Tools/TerrainViewer/TerrainViewer.html"
-  - subject: "PyQt5のテンプレート？"
-    contents:
-      - title: "コピー"
-        img: "/Portfolio/PyQt5/Template/Clipboard/icon.png"
-        url: "/Portfolio/PyQt5/Template/Clipboard/Clipboard.html"
-      - title: "ドラッグアンドドロップ"
-        img: "/Portfolio/PyQt5/Template/DnD/icon.png"
-        url: "/Portfolio/PyQt5/Template/DnD/DnD.html"
-      - title: "スレッド"
-        img: "/Portfolio/PyQt5/Template/Thread/icon.png"
-        url: "/Portfolio/PyQt5/Template/Thread/Thread.html"
-      - title: "ディレクトリツリー"
-        img: "/Portfolio/PyQt5/Template/DirViewer/icon.png"
-        url: "/Portfolio/PyQt5/Template/DirViewer/DirViewer.html"
-      # - title: "キーの同時入力"
-      #   img: "/Portfolio/PyQt5/Template/keyPressMulti/icon.png"
-      #   url: "/Portfolio/PyQt5/Template/keyPressMulti/keyPressMulti.html"
-
-# ---------------- KyoPro Index ----------------
-index-KyoPro:
-  - subject: "競プロのサイト"
-    contents:
-      - title: "AtCoder"
-        url: https://atcoder.jp/?lang=ja
-        type: "absolute" 
-      - title: "CodeForces"
-        url: https://codeforces.com/
-        type: "absolute" 
-  - subject: "動的計画法"
-    contents:
-      - title: "累積和"
-        url: "/Portfolio/KyoPro/DP/CumulativeSum.html"
-  - subject: "データ構造"
-    contents:
-      - title: "素集合データ構造(Union-Find)"
-        url: "/Portfolio/KyoPro/Structure/UnionFind.html"
-      - title: "BinaryIndexedTree(BIT)"
-        url: "/Portfolio/KyoPro/Structure/BIT.html"
-  - subject: "探索"
-    contents:
-      - title: "深さ優先探索(DFS)"
-        url: "/Portfolio/KyoPro/Search/DFS.html"
-      - title: "幅優先探索(BFS)"
-        url: "/Portfolio/KyoPro/Search/BFS.html"
-  - subject: "最短経路探索"
-    contents:
-      - title: "ダイクストラ法(Dijkstra)"
-        url: "/Portfolio/KyoPro/Search/Dijkstra.html"
-      - title: "ベルマンフォード法"
-        url: "/Portfolio/KyoPro/Search/BellmanFord.html"
-  - subject: "最短経路探索"
-    contents:
-      - title: "約数列挙(Divisor)"
-        url: "/Portfolio/KyoPro/Math/divisor.html"
-      - title: "素数判定(isprime)"
-        url: "/Portfolio/KyoPro/Math/isprime.html"
-      - title: "最大公約数(gcd)最小公倍数(lcm)"
-        url: "/Portfolio/KyoPro/Math/gcdlcm.html"
-
-# ------------------------------ Hoshimori ------------------------------
-# Images
 
 hoshimori-character:
   ベータ : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Beta"

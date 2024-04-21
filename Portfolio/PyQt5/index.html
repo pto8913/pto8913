@@ -2,9 +2,10 @@
 layout: home-simple
 title: 
   - title: "ポートフォリオ"
+    url: "/Portfolio/index.html"
   - title: "PyQt5"
     url: '/Portfolio/PyQt5/index.html'
-new_title: true
+
 category: "PyQt5"
 ---
 
@@ -12,7 +13,7 @@ category: "PyQt5"
   <!-- Begin Main -->
   {%
     include indices.html
-    items = site.index-PyQt5
+    items = site.NavCategories[5].contents
   %}
   <!-- End Main -->
 </div>

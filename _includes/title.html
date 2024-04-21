@@ -1,11 +1,12 @@
 <!-- from title.html -->
 <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
-{% if include.new_title %}
-  <title>
-    ホーム{% for row in include.title %} | {{ row.title | escape }} {% endfor %}
-  </title>
-{% else %}
-  <title>
-    {% if include.title %}{{ include.title | escape }} | {% endif %}{{ site.title | escape }}
-  </title>
-{% endif %}
+<title>
+  ホーム
+  {% for row in include.title %}
+    {% if row.url %}
+      | <a href="{{ row.url  | relative_url }}">{{ row.title | escape }}</a>
+    {% else %}
+      | {{ row.title | escape }}
+    {% endif %}
+  {% endfor %}
+</title>

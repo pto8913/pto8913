@@ -2,7 +2,8 @@
 layout: Portfolio/default
 title:
   - title: "ポートフォリオ"
-new_title: true
+    url: "/Portfolio/index.html"
+
 items:
   - columnTitles:
     - title: UnrealEngine
@@ -30,30 +31,12 @@ items:
 {% include sortable.html items=page.items %}
 
 <div class="bg">
-  {% for data in site.idx-Portfolio %}
-    <h2 class="Portfolio_subject">
-      {{ data.subject }}
-    </h2>
-    <div class="Portfolio_grid_3x">
-      {% for row in data.contents %}
-        {% if row.img %}
-          <div class="img_card_container">
-            <a href="{{ row.url | relative_url }}">
-              <img src="{{ row.img | relative_url }}" class="img_card" alt="" />
-              <p class="img_card_title">{{ row.title }}</p>
-            </a>
-          </div>
-        {% endif %}
-      {% endfor %}
-      <!-- {% for row in data.contents %}
-        {% if !row.img %}
-          <li>
-            <a href="{{ row.url | relative_url }}">
-              <p class="img_card_title">{{ row.title }}</p>
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %} -->
-    </div>
-  {% endfor %}
+  <div style="margin-right: 10px">
+    {% include indices.html add-subject = "UnrealEngine" items = site.NavCategories[0].contents %}
+    {% include indices.html add-subject = "DirectX" items = site.NavCategories[1].contents %}
+    {% include indices.html add-subject = "Unity" items = site.NavCategories[2].contents %}
+    {% include indices.html add-subject = "Java" items = site.NavCategories[3].contents %}
+    {% include indices.html add-subject = "KyoPro" items = site.NavCategories[4].contents %}
+    {% include indices.html add-subject = "PyQt5" items = site.NavCategories[5].contents %}
+  </div>
 </div>

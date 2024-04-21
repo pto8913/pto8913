@@ -2,9 +2,10 @@
 layout: home-simple
 title: 
   - title: "ポートフォリオ"
+    url: "/Portfolio/index.html"
   - title: "UnrealEngine"
-    url: '/Portfolio/UnrealEngine/index.html'
-new_title: true
+    url: "/Portfolio/UnrealEngine/index.html"
+
 category: "UnrealEngine"
 ---
 
@@ -17,7 +18,7 @@ category: "UnrealEngine"
   <!-- Begin Main -->
   {%
     include indices.html
-    items = site.index-UnrealEngine
+    items = site.NavCategories[0].contents
   %}
   <!-- End Main -->
 </div>

@@ -2,9 +2,10 @@
 layout: home-simple
 title: 
   - title: "ポートフォリオ"
+    url: "/Portfolio/index.html"
   - title: "DirectX"
     url: '/Portfolio/DirectX/index.html'
-new_title: true
+
 category: "DirectX"
 ---
 
@@ -17,7 +18,7 @@ category: "DirectX"
   <!-- Begin Main -->
   {%
     include indices.html
-    items = site.index-DirectX
+    items = site.NavCategories[1].contents
   %}
   <!-- End Main -->
 </div>

@@ -2,9 +2,10 @@
 layout: home-simple
 title: 
   - title: "ポートフォリオ"
+    url: "/Portfolio/index.html"
   - title: "Java"
     url: '/Portfolio/Java/index.html'
-new_title: true
+
 category: "Java"
 ---
 
@@ -17,7 +18,7 @@ category: "Java"
   <!-- Begin Main -->
   {%
     include indices.html
-    items = site.index-Java
+    items = site.NavCategories[3].contents
   %}
   <!-- End Main -->
 </div>

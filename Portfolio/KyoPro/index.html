@@ -2,9 +2,10 @@
 layout: home-simple
 title: 
   - title: "ポートフォリオ"
+    url: "/Portfolio/index.html"
   - title: "KyoPro"
     url: '/Portfolio/KyoPro/index.html'
-new_title: true
+
 category: "KyoPro"
 ---
 
@@ -17,7 +18,7 @@ category: "KyoPro"
   <!-- Begin Main -->
   {%
     include indices.html
-    items = site.index-KyoPro
+    items = site.NavCategories[4].contents
   %}
   <!-- End Main -->
 </div>

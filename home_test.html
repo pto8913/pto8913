@@ -11,18 +11,18 @@ layout: home-simple
   <div class="flex">
     <!-- Begin Main -->
     <div style="margin-right: 10px">
-      {% include indices.html add-subject = "UnrealEngine" items = site.index-UnrealEngine %}
-      {% include indices.html add-subject = "DirectX" items = site.index-DirectX %}
-      {% include indices.html add-subject = "Unity" items = site.index-Unity %}
-      {% include indices.html add-subject = "Java" items = site.index-Java %}
-      {% include indices.html add-subject = "PyQt5" items = site.index-PyQt5 %}
-      {% include indices.html add-subject = "KyoPro" items = site.index-KyoPro %}
+      {% include indices.html add-subject = "UnrealEngine" items = site.NavCategories[0].contents %}
+      {% include indices.html add-subject = "DirectX" items = site.NavCategories[1].contents %}
+      {% include indices.html add-subject = "Unity" items = site.NavCategories[2].contents %}
+      {% include indices.html add-subject = "Java" items = site.NavCategories[3].contents %}
+      {% include indices.html add-subject = "KyoPro" items = site.NavCategories[4].contents %}
+      {% include indices.html add-subject = "PyQt5" items = site.NavCategories[5].contents %}
     </div>
     <!-- End Main -->
     <!-- Begin SideMenu -->
     <div>
       <div id="auto-site-map"></div>
-      {% include category.html lists=site.nav-categories %}
+      {% include category.html lists=site.NavCategories %}
     </div>
     <!-- End SideMenu -->
   </div>
