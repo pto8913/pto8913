@@ -16,9 +16,6 @@ category: "DirectX"
   {% endif %}
   <!-- End News -->
   <!-- Begin Main -->
-  {%
-    include indices.html
-    items = {{ site.NavCategories[1].contents }}
-  %}
+  {% include portfolio-index.html only_index=1 %}
   <!-- End Main -->
 </div>

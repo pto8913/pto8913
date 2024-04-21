@@ -16,9 +16,6 @@ category: "UnrealEngine"
   {% endif %}
   <!-- End News -->
   <!-- Begin Main -->
-  {%
-    include indices.html
-    items = {{ site.NavCategories[0].contents }}
-  %}
+  {% include portfolio-index.html only_index=0 %}
   <!-- End Main -->
 </div>

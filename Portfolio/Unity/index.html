@@ -16,9 +16,6 @@ category: "Unity"
   {% endif %}
   <!-- End News -->
   <!-- Begin Main -->
-  {%
-    include indices.html
-    items = {{ site.NavCategories[2].contents }}
-  %}
+  {% include portfolio-index.html only_index=2 %}
   <!-- End Main -->
 </div>

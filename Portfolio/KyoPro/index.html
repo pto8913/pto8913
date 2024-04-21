@@ -16,9 +16,6 @@ category: "KyoPro"
   {% endif %}
   <!-- End News -->
   <!-- Begin Main -->
-  {%
-    include indices.html
-    items = {{ site.NavCategories[4].contents }}
-  %}
+  {% include portfolio-index.html only_index=4 %}
   <!-- End Main -->
 </div>
