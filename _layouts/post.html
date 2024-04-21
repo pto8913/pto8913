@@ -5,16 +5,7 @@ title: "post"
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
   <head>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
-    {% if page.new_title %}
-      <title>
-        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
-      </title>
-    {% else %}
-      <title>
-        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
-      </title>
-    {% endif %}
+    {% include title.html title=page.title %}
     <meta charset="{{ site.encoding }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="{{ page.author | default: site.author | escape }}">

@@ -4,7 +4,7 @@
   ホーム
   {% for row in include.title %}
     {% if row.url %}
-      | <a href="{{ row.url  | relative_url }}">{{ row.title | escape }}</a>
+      | <a href="{{ row.url | relative_url }}">{{ row.title | escape }}</a>
     {% else %}
       | {{ row.title | escape }}
     {% endif %}

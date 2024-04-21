@@ -5,22 +5,12 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'jp' }}">
   <head>
-    {% if page.new_title %}
-      <title>
-        ホーム{% for row in page.title %} | {{ row.title | escape }}{% endfor %}
-      </title>
-    {% else %}
-      <title>
-        {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
-      </title>
-    {% endif %}
-    
+    {% include title.html title=page.title %}   
     <meta charset="{{ site.encoding }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="{{ page.author | default: site.author | escape }}">
     <meta name="generator" content="Jekyll v{{ jekyll.version }}">
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/pto8913.png' | relative_url }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/frame.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
