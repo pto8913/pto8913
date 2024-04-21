@@ -1,21 +1,21 @@
 {% assign only_index = include.only_index %}
 <div style="margin-right: 10px">
-  {% if only_index == 0 %}
+  {% if !only_index or only_index == 0 %}
     {% assign UnrealEngine_Contents = site.NavCategories[0].contents %}
     {% include indices.html add-subject = "UnrealEngine" items = UnrealEngine_Contents %}
-  {% elsif only_index == 1 %}
+  {% elsif !only_index or only_index == 1 %}
     {% assign DirectX_Contents = site.NavCategories[1].contents %}
     {% include indices.html add-subject = "DirectX" items = DirectX_Contents %}
-  {% elsif only_index == 2 %}
+  {% elsif !only_index or only_index == 2 %}
     {% assign Unity_Contents = site.NavCategories[2].contents %}
     {% include indices.html add-subject = "Unity" items = Unity_Contents %}
-  {% elsif only_index == 3 %}
+  {% elsif !only_index or only_index == 3 %}
     {% assign Java_Contents = site.NavCategories[3].contents %}
     {% include indices.html add-subject = "Java" items = Java_Contents %}
-  {% elsif only_index == 4 %}
+  {% elsif !only_index or only_index == 4 %}
     {% assign KyoPro_Contents = site.NavCategories[4].contents %}
     {% include indices.html add-subject = "KyoPro" items = KyoPro_Contents %}
-  {% elsif only_index == 5 %}
+  {% elsif !only_index or only_index == 5 %}
     {% assign PyQt5_Contents = site.NavCategories[5].contents %}
     {% include indices.html add-subject = "PyQt5" items = PyQt5_Contents %}
   {% endif %}
