@@ -20,22 +20,20 @@
   {% endif %}
   <ul class="category_ul_owner">
     {% for category in include.lists %}
-      {% if category.title %}
-        {% assign subject_name = category.title %}
-        {% assign subject_contents = category.contents %}
+      {% assign subject_name = category.title %}
+      {% assign subject_contents = category.contents %}
 
-        <button type="button" class="collapse category_button">
-          {% if category.url %}
-            <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
-          {% else %}
-            {{ subject_name }}
-          {% endif %}
-        </button>
-        {% if subject_contents %}
-          <li class="collapse_content">
-            {% include category-recursive.html lists=subject_contents %}
-          </li>
+      <button type="button" class="collapse category_button">
+        {% if category.url %}
+          <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
+        {% else %}
+          {{ subject_name }}
         {% endif %}
+      </button>
+      {% if subject_contents %}
+        <li class="collapse_content">
+          {% include category-recursive.html lists=subject_contents %}
+        </li>
       {% endif %}
     {% endfor %}
   </ul>

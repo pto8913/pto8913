@@ -1,38 +1,25 @@
 <ul class="category_ul">
   {% for category in include.lists %}
-    {% if category.title %}
-      {% assign subject_name = category.title %}
-      {% assign subject_contents = category.contents %}
+    {% assign subject_name = category.title %}
+    {% assign subject_contents = category.contents %}
 
-      {% if category.url %}
-        {% if category.type %}
-          {% if category.type == "absolute" %}
-            <li><a href="{{ category.url }}">{{ subject_name }}</a></li>
-          {% endif %}
-        {% else %}
-          <li><a href="{{ category.url | relative_url }}">{{ subject_name }}</a></li>
-        {% endif %}
-      {% else %}
-        <button type="button" class="collapse category_button">
-          {% if category.url %}
-            <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
-          {% else %}
-            {{ subject_name }}
-          {% endif %}
-        </button>
-        <li class="collapse_content">
-          {% include category-recursive.html lists=category.contents %}
-        </li>
+    {% if category.type %}
+      {% if category.type == "absolute" %}
+        <li><a href="{{ category.url }}">{{ subject_name }}</a></li>
       {% endif %}
     {% else %}
-      {% assign subject_name = category[0] %}
-      {% assign subject_contents = include.lists[subject_name] %}
-      <button type="button" class="collapse category_button">{{ subject_name }}</button>
-      {% for subject in subject_contents.contents %}
-        <li class="collapse_content">
-          {% include category-recursive.html lists=subject_contents.contents %}
-        </li>
-      {% endfor %}
+      <button type="button" class="collapse category_button">
+        {% if category.url %}
+          <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
+        {% else %}
+          {{ subject_name }}
+        {% endif %}
+      </button>
+    {% endif %}
+      {% if subject_contents %}
+      <li class="collapse_content">
+        {% include category-recursive.html lists=subject_contents %}
+      </li>
     {% endif %}
   {% endfor %}
 </ul>
