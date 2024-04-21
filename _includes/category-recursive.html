@@ -1,4 +1,8 @@
-<ul class="category_ul">
+{% if include.type %}
+  <{% include.type %} class="category_ul">
+{% else %}
+  <ul class="category_ul">
+{% endif %}
   {% for category in include.lists %}
     {% assign subject_name = category.title %}
     {% assign subject_contents = category.contents %}
@@ -22,4 +26,8 @@
       </li>
     {% endif %}
   {% endfor %}
-</ul>
+{% if include.type %}
+  </{% include.type %}>
+{% else %}
+  </ul>
+{% endif %}

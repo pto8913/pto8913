@@ -8,7 +8,11 @@
       <h2 class="category_title">カテゴリ</h2>
     {% endif %}
   {% endif %}
-  <ul class="category_ul_owner">
+  {% if include.type %}
+    <{% include.type %} class="category_ul_owner">
+  {% else %}
+    <ul class="category_ul_owner">
+  {% endif %}
     {% for category in include.lists %}
       {% assign subject_name = category.title %}
       {% assign subject_contents = category.contents %}
@@ -32,6 +36,10 @@
         </li>
       {% endif %}
     {% endfor %}
-  </ul>
+  {% if include.type %}
+    </{% include.type %}>
+  {% else %}
+    </ul>
+  {% endif %}
 </div>
 <!-- End Category.html -->
