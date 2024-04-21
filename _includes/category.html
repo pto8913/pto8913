@@ -32,7 +32,7 @@
       {% if subject_contents %}
         </button>
         <li class="collapse_content">
-          {% include category-recursive.html lists=subject_contents %}
+          {% include category-recursive.html type=include.type lists=subject_contents %}
         </li>
       {% endif %}
     {% endfor %}
