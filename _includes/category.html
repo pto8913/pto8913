@@ -13,14 +13,20 @@
       {% assign subject_name = category.title %}
       {% assign subject_contents = category.contents %}
 
-      <button type="button" class="collapse category_button">
-        {% if category.url %}
-          <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
-        {% else %}
-          {{ subject_name }}
-        {% endif %}
-      </button>
       {% if subject_contents %}
+        <button type="button" class="collapse category_button">
+      {% endif %}
+      {% if category.url %}
+        {% if category.type == "absolute" %}
+          <li><a href="{{ category.url }}">{{ subject_name }}</a></li>
+        {% else %}
+          <a href="{{ category.url | relative_url }}">{{ subject_name }}</a>
+        {% endif %}
+      {% else %}
+        {{ subject_name }}
+      {% endif %}
+      {% if subject_contents %}
+        </button>
         <li class="collapse_content">
           {% include category-recursive.html lists=subject_contents %}
         </li>
