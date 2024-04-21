@@ -1,7 +1,7 @@
 <!-- Begin Category.html -->
 <div class="category_container">
   {% if include.category_title %}
-    <h2 class="category_title">{% include.category_title %}</h2>
+    <h2 class="category_title">{{ include.title }}</h2>
   {% else %}
     {% if include.remove_title %}
     {% else %}
@@ -9,7 +9,7 @@
     {% endif %}
   {% endif %}
   {% if include.type %}
-    <{% include.type %} class="category_ul_owner">
+    <{{ include.type }} class="category_ul_owner">
   {% else %}
     <ul class="category_ul_owner">
   {% endif %}
@@ -37,7 +37,7 @@
       {% endif %}
     {% endfor %}
   {% if include.type %}
-    </{% include.type %}>
+    </{{ include.type }}>
   {% else %}
     </ul>
   {% endif %}

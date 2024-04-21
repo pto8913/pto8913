@@ -1,5 +1,5 @@
 {% if include.type %}
-  <{% include.type %} class="category_ul">
+  <{{ include.type }} class="category_ul">
 {% else %}
   <ul class="category_ul">
 {% endif %}
@@ -27,7 +27,7 @@
     {% endif %}
   {% endfor %}
 {% if include.type %}
-  </{% include.type %}>
+  </{{ include.type }}>
 {% else %}
   </ul>
 {% endif %}
