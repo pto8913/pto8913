@@ -46,6 +46,7 @@ type: "Node"
   <p>
     `MessageRow`を表示する前にテキストをフォーマットを行うことができます。<br>
     `MessageFormatEventInfos`に名前を設定する必要があります。<br>
+    ※`PtoTalkNode_Message`からのみ行えます。<br>
   </p>
   <div class="Portfolio_grid_3x">
     <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Message_Format_0.png' | relative_url }}" class="popup_img" alt="">
@@ -53,4 +54,26 @@ type: "Node"
     <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Message_Format_2.png' | relative_url }}" class="popup_img" alt="">
   </div>
   <iframe class="img_card" allowfullscreen src="https://www.youtube.com/embed/mWnRpiFrp1Y?list=PL3Z_2bfv7lRNDy6aTEp9d8CMtCBrK8fRz" title="PtoTalkNode_Message Example 0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>    </iframe>
+  
+  <p>
+    `PtoTalkNode_Message_Blueprint`の場合は`Add MessageFormatEvent`はできません。<br>
+    代わりに`OnMessageFormatEvent`を`Override`することができます。<br>
+  </p>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Message_Format_On_BP.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+
+  <h4 class="wiki_subject_title h4">Convert Native To BP</h4>
+  <p>
+    `PtoTalkNode_Message`から`PtoTalkNode_Message_Blueprint`に変換することができます。<br>
+    ※`PtoTalkNode_Message`からのみ行えます。<br>
+    <a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/CreateAsset.html'  | relative_url }}">`Blueprint`ノードの作成</a>
+  </p>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Message_To_BP.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+
+  <h4 class="wiki_subject_title h4">Convert BP To Native</h4>
+  <p>
+    `PtoTalkNode_Message_Blueprint`から`PtoTalkNode_Message`に変換することができます。<br>
+    ※`PtoTalkNode_Message_Blueprint`からのみ行えます。<br>
+    <a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/CreateAsset.html'  | relative_url }}">`Blueprint`ノードの作成</a>
+  </p>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Message_To_Native.png' | relative_url }}" class="wiki_img center popup_img" alt="">
 </div>

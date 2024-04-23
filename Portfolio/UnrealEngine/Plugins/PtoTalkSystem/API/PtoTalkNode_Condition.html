@@ -1,0 +1,62 @@
+---
+layout: Portfolio/UnrealEngine/Plugins/PtoTalkSystem/wiki-PtoTalkSystem
+
+title: 
+  - title: "ポートフォリオ"
+    url: "/Portfolio/index.html"
+  - title: "UnrealEngine"
+    url: "/Portfolio/UnrealEngine/index.html"
+  - title: "PtoTalkSystem"
+    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html"
+  - title: "API"
+    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/index.html"
+  - title: "PtoTalkNode"
+    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/PtoTalkNode.html"
+  - title: "PtoTalkNode_Condition"
+index: 2
+type: "Node"
+---
+
+<div class="wiki_contents">
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Condition.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+  <h2 class="wiki_subject_title h2">特徴</h2>
+  <ul>
+    <li>状態によって処理を切り替えたいときに使います。</li>
+  </ul>
+
+  <h2 class="wiki_subject_title h2">ノードアクション</h2>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Condition_Actions.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+
+  <h3 class="wiki_subject_title h3">PtoTalkNode_Condition固有のアクション</h3>
+  <p>
+    固有のアクションはありませんが、イベントをリンクすることができます。<br>
+  </p>
+  <div class="Portfolio_grid_2x">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Condition_LinkedFunction_0.png' | relative_url }}" class="popup_img" alt="">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Condition_LinkedFunction_1.png' | relative_url }}" class="popup_img" alt="">
+  </div>
+  <p>
+    また`PtoTalkNode_Condition_Blueprint`クラスを使うこともできます。<br>
+    `Blueprint`を使う場合は`ReceiveExecute`を`Override`して処理を行ってください<br>
+  </p>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Condition_BP_Event.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+
+  <h4 class="wiki_subject_title h4">Convert Native To BP</h4>
+  <p>
+    `PtoTalkNode_Condition`から`PtoTalkNode_Condition_Blueprint`に変換することができます。<br>
+    ※`PtoTalkNode_Condition`からのみ行えます。<br>
+    <a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/CreateAsset.html'  | relative_url }}">`Blueprint`ノードの作成</a>
+  </p>
+  <div class="Portfolio_grid_2x">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Condition_To_BP_0.png' | relative_url }}" class="popup_img" alt="">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Condition_To_BP_1.png' | relative_url }}" class="popup_img" alt="">
+  </div>
+
+  <h4 class="wiki_subject_title h4">Convert BP To Native</h4>
+  <p>
+    `PtoTalkNode_Condition_Blueprint`から`PtoTalkNode_Condition`に変換することができます。<br>
+    ※`PtoTalkNode_Condition_Blueprint`からのみ行えます。<br>
+    <a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/CreateAsset.html'  | relative_url }}">`Blueprint`ノードの作成</a>
+  </p>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Condition_To_Native.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+</div>
