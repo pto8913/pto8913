@@ -1,0 +1,72 @@
+---
+layout: Portfolio/UnrealEngine/Plugins/PtoTalkSystem/wiki-PtoTalkSystem
+
+title: 
+  - title: "ポートフォリオ"
+    url: "/Portfolio/index.html"
+  - title: "UnrealEngine"
+    url: "/Portfolio/UnrealEngine/index.html"
+  - title: "PtoTalkSystem"
+    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html"
+  - title: "API"
+    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/index.html"
+  - title: "PtoTalkNode"
+    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/PtoTalkNode.html"
+  - title: "PtoTalkNode_CustomEvent"
+index: 4
+type: "Node"
+---
+
+<div class="wiki_contents">
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_CustomEvent.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+  <h2 class="wiki_subject_title h2">特徴</h2>
+  <p>
+    `Add LinkedFunction`でリンクされたイベントを、実行するだけのノード<br>
+
+    `ExecuteNextNodeManually`が`false`の場合、リンクされたイベントが終了時、次のノードに遷移します。<br>
+  </p>
+  <div class="Portfolio_grid_2x">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_CustomEvent_0.png' | relative_url }}" class="popup_img" alt="">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_CustomEvent_1.png' | relative_url }}" class="popup_img" alt="">
+  </div>
+  <iframe class="img_card" allowfullscreen src="https://www.youtube.com/embed/QJqVPLJvP6E?list=PL3Z_2bfv7lRNDy6aTEp9d8CMtCBrK8fRz" title="PtoTalkNode_CustomEvent Example 0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>    </iframe>
+
+  <p>
+    `true`の場合、リンクされたイベントが終了後、`Blueprint`から次のノードを実行する必要があります。<br>
+  </p>
+  <div class="Portfolio_grid_3x">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_CustomEvent_Manual_0.png' | relative_url }}" class="popup_img" alt="">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_CustomEvent_Manual_1.png' | relative_url }}" class="popup_img" alt="">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_CustomEvent_Manual_2.png' | relative_url }}" class="popup_img" alt="">
+  </div>
+
+  <h2 class="wiki_subject_title h2">ノードアクション</h2>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_CustomEvent_Actions.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+
+  <h3 class="wiki_subject_title h3">PtoTalkNode_CustomEvent固有のアクション</h3>
+  <p>
+    固有のアクションはありませんが、イベントをリンクすることができます。<br>
+  </p>
+  
+  <p>
+    `PtoTalkNode_CustomEvent_Blueprint`の場合は`Add CustomEvent`はできません。<br>
+    代わりに`OnCustomEventFormatEvent`を`Override`することができます。<br>
+  </p>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_CustomEvent_Format_On_BP.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+
+  <h4 class="wiki_subject_title h4">Convert Native To BP</h4>
+  <p>
+    `PtoTalkNode_CustomEvent`から`PtoTalkNode_CustomEvent_Blueprint`に変換することができます。<br>
+    ※`PtoTalkNode_CustomEvent`からのみ行えます。<br>
+    <a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/CreateAsset.html'  | relative_url }}">`Blueprint`ノードの作成</a>
+  </p>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_CustomEvent_To_BP.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+
+  <h4 class="wiki_subject_title h4">Convert BP To Native</h4>
+  <p>
+    `PtoTalkNode_CustomEvent_Blueprint`から`PtoTalkNode_CustomEvent`に変換することができます。<br>
+    ※`PtoTalkNode_CustomEvent_Blueprint`からのみ行えます。<br>
+    <a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/CreateAsset.html'  | relative_url }}">`Blueprint`ノードの作成</a>
+  </p>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_CustomEvent_To_Native.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+</div>
