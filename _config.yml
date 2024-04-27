@@ -331,6 +331,8 @@ NavPtoTalkSystem:
   - title: "API"
     url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/index.html"
     contents:
+      - title: "PtoTalkGraph"
+        url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/PtoTalkGraph.html"
       - title: "PtoTalkNode"
         url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/PtoTalkNode.html"
         contents:
@@ -350,7 +352,6 @@ NavPtoTalkSystem:
             url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/PtoTalkNode_JumpToProxy.html"
           - title: "PtoTalkNode_End"
             url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/PtoTalkNode_End.html"
-    - title: "PtoTalkNode"
       
 
 
