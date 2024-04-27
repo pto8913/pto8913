@@ -350,6 +350,8 @@ NavPtoTalkSystem:
             url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/PtoTalkNode_JumpToProxy.html"
           - title: "PtoTalkNode_End"
             url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/PtoTalkNode_End.html"
+    - title: "PtoTalkNode"
+      
 
 
 # Exclude from processing.

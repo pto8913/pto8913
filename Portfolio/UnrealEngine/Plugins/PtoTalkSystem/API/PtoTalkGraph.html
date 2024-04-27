@@ -1,0 +1,48 @@
+---
+layout: Portfolio/UnrealEngine/Plugins/PtoTalkSystem/wiki-PtoTalkSystem
+
+title: 
+  - title: "ポートフォリオ"
+    url: "/Portfolio/index.html"
+  - title: "UnrealEngine"
+    url: "/Portfolio/UnrealEngine/index.html"
+  - title: "PtoTalkSystem"
+    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html"
+  - title: "API"
+  - title: "PtoTalkGraph"
+index: 0
+type: "API"
+---
+
+<div class="wiki_contents">
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/Tutorial/PtoTalkGraphEditor/Editor_Full.png' | relative_url }}" class="wiki_img center popup_img" alt=""><br>
+  <h2 class="wiki_subject_title h2">概要</h2>
+  <p>
+    次のページの`PtoTalkNode`を配置することができます。<br>
+  </p>
+
+  <h2 class="wiki_subject_title h2">アクション</h2>
+  <h3 class="wiki_subject_title h3">各種LinkedFunctionの追加</h3>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_AddLinkedFunction.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+
+  <h4 class="wiki_subject_title h4">Add LinkedFunction Default</h4>
+  <p>
+    `PtoTalkNode`の`Transient`や、`PtoTalkNode_CustomEvent`ノードの`LinkedFunction`にリンクすることができます。<br>
+    `LinkedFunction`や`Transient EnterEvent`、`Transient LeaveEvent`に使用できます。<br>
+  </p>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_AddLinkedFunction_Default.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+
+  <h4 class="wiki_subject_title h4">Add LinkedFunction Condition</h4>
+  <p>
+    `PtoTalkNode_Condition`や`PtoTalkNode_Choice`ノードの`LinkedFunction`にリンクすることができます。<br>
+    ※`Transient EnterEvent`や`Transient LeaveEvent`には使用できません。<br>
+  </p>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_AddLinkedFunction_Condition.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+
+  <h4 class="wiki_subject_title h4">Add LinkedFunction MessageFormatEvent</h4>
+  <p>
+    `PtoTalkNode_Message`ノードの`MessageFormatEvent`にリンクすることができます。<br>
+  </p>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_AddLinkedFunction_MessageFormatEvent_0.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_AddLinkedFunction_MessageFormatEvent_1.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+</div>

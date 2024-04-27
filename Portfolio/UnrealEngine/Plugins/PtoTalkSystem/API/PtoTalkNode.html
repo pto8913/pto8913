@@ -10,7 +10,7 @@ title:
     url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html"
   - title: "API"
   - title: "PtoTalkNode"
-index: 0
+index: 1
 type: "API"
 ---
 
@@ -18,7 +18,7 @@ type: "API"
   <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/AllNodes.png' | relative_url }}" class="wiki_img center popup_img" alt="">
   <h2 class="wiki_subject_title h2">概要</h2>
   <p>
-    大別すると`Proxy`,`CustomEvent`,`Condition`,`End`,`JumpToProxy`ノードがあります。<br>
+    大別すると`Proxy`、`CustomEvent`、`Condition`、`End`、`JumpToProxy`ノードがあります。<br>
     もし独自のノードを追加したい場合はこれらのノードから派生してください。<br>
   </p>
 
@@ -51,14 +51,17 @@ type: "API"
 
   <h3 class="wiki_subject_title h3">PtoTalkNode特有の変数</h3>
   <h4 class="wiki_subject_title h4">FPtoTalkNodeLinkedFunctionInfos</h4>
-  <ul>
-    <li>`Name` : 名前であり、タグでもあります</li>
-    <li>`Type` : 
-      <ul>
-        <li>`ThisGraph` : このノードが存在する`TalkGraph`内に処理を遷移します。</li>
-        <li>`ParentGraph` : このノードが`PtoTalkNode_RunSubTalkGraph`ノードから実行されている場合に、`PtoTalkNode_RunSubTalkGraph`ノードを実行中の`TalkGraph`に処理を遷移します。</li>
-      </ul>
-  </ul>
+  <p>
+    <ul>
+      <li>`Name` : 名前であり、タグでもあります</li>
+      <li>`Type` : 
+        <ul>
+          <li>`ThisGraph` : このノードが存在する`TalkGraph`内に処理を遷移します。</li>
+          <li>`ParentGraph` : このノードが`PtoTalkNode_RunSubTalkGraph`ノードから実行されている場合に、`PtoTalkNode_RunSubTalkGraph`ノードを実行中の`TalkGraph`に処理を遷移します。</li>
+        </ul>
+    </ul>
+    `ParentGraph`への`LinkedFunction`の追加方法は<a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/PtoTalkGraph.html' | relative_url }}">こちら</a>
+  </p>
   <div class="Portfolio_grid_2x">
     <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/Infos_0.png' | relative_url }}" class="popup_img" alt="">
     <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_JumpToProxy_Variables.png' | relative_url }}" class="popup_img" alt="">
