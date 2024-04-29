@@ -43,6 +43,39 @@ type: "API"
   <p>
     `PtoTalkNode_Message`ノードの`MessageFormatEvent`にリンクすることができます。<br>
   </p>
-  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_AddLinkedFunction_MessageFormatEvent_0.png' | relative_url }}" class="wiki_img center popup_img" alt="">
-  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_AddLinkedFunction_MessageFormatEvent_1.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+  <div class="Portfolio_grid_2x">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_AddLinkedFunction_MessageFormatEvent_0.png' | relative_url }}" class="popup_img" alt="">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_AddLinkedFunction_MessageFormatEvent_1.png' | relative_url }}" class="popup_img" alt="">
+  </div>
+
+  <h4 class="wiki_subject_title h4">Export To CSV</h4>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_ExportToCSV.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+  <p>
+    `DataTable`を経由して`CSV`ファイルにエクスポートします。
+    <ul>エクスポートされるデータ
+      <li>関数</li>
+      <li>変数</li>
+      <li>PtoTalkGraphのノード</li>
+    </ul>
+    `DataTable`は`PtoTalkSystem/Content/EditorOnly/`に作成されます。<br>
+    `CSV`ファイルは`PtoTalkSystem/Exports/`に作成されます。<br>
+    `DataTable`に`ExportTableRowName`で設定された名前の行を追加します。<br>
+    <strong>注意</strong>
+    ※`None`の場合は追加されません。<br>
+    ※すでに同じ名前の行がある場合はその行は削除されるので注意してください<br>
+    ※`CSV`ファイルは上書きされます。<br>
+  </p>
+  <div class="Portfolio_grid_2x">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_ExportToCSV_Location_DT.png' | relative_url }}" class="popup_img" alt="">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_ExportToCSV_Location_CSV.png' | relative_url }}" class="popup_img" alt="">
+  </div>
+
+  <h4 class="wiki_subject_title h4">Import From CSV</h4>
+  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_ImportFromCSV.png' | relative_url }}" class="wiki_img center popup_img" alt="">
+  <p>
+    `CSV`ファイルを`DataTable`を経由してインポートします。<br>
+    <strong>注意</strong>
+    ※`PtoTalkGraph`の内容はそのままに、ノードや関数、変数を作成するのでインポートする場合は空の`PtoTalkGraph`で行うことをおすすめします。<br>
+    ※`ReimportDataTable`が`true`の場合`DataTable`が`CSV`ファイルの内容で上書きされます。<br>
+  </p>
 </div>
