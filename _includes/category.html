@@ -1,5 +1,9 @@
 <!-- Begin Category.html -->
-<div class="category_container">
+{% if include.no_color %}
+  <div class="category_container_no_color">
+{% else %}
+  <div class="category_container">
+{% endif %}
   {% if include.title %}
     <h2 class="category_title">{{ include.title }}</h2>
   {% else %}
