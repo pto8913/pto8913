@@ -11,5 +11,5 @@ title:
   - title: "API"
 ---
 
-{% assign category = site.NavPtoTalkSystem[1] %}
-{% include category-recursive.html lists=category type='ol'active='true' %}
+{% assign category = site.NavPtoTalkSystem[1].contents %}
+{% include category.html lists=category title='API' type='ol'active='true' %}
