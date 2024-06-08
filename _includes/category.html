@@ -39,11 +39,19 @@
       {% endif %}
       {% if subject_contents %}
         </button>
-      {% if include.active %}
-        <li class="collapse_content" style="display: block">
-      {% else %}
-        <li class="collapse_content" style="display: none">
-      {% endif %}
+          {% if include.active %}
+            {% if include.no_color %}
+              <li class="collapse_content_no_color" style="display: block">
+            {% else %}
+              <li class="collapse_content" style="display: block">
+            {% endif %}
+          {% else %}
+            {% if include.no_color %}
+              <li class="collapse_content_no_color" style="display: none">
+            {% else %}
+              <li class="collapse_content" style="display: none">
+            {% endif %}
+          {% endif %}
           {% include category-recursive.html no_color=include.no_color type=include.type lists=subject_contents active=include.active %}
         </li>
       {% endif %}
