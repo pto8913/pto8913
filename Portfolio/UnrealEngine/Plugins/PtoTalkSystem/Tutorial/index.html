@@ -10,3 +10,6 @@ title:
     url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html"
   - title: "Tutorial"
 ---
+
+{% assign category = site.NavPtoTalkSystem[0].contents %}
+{% include category.html lists=category remove_title='true' no_color='true' type='ol' active='true' %}
