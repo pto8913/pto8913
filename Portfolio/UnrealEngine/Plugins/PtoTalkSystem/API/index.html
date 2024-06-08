@@ -11,4 +11,5 @@ title:
   - title: "API"
 ---
 
-{% include category.html lists=site.NavPtoTalkSystem[1] type='ol' title="PtoTalkSystem" active='true' %}
+{% assign category = site.NavPtoTalkSystem[1] %}
+{% include category.html lists=category type='ol' title="PtoTalkSystem" active='true' %}
