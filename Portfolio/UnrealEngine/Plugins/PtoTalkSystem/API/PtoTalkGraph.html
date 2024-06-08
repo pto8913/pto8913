@@ -18,7 +18,7 @@ type: "API"
   <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/Tutorial/PtoTalkGraphEditor/Editor_Full.png' | relative_url }}" class="wiki_img center popup_img" alt=""><br>
   <h2 class="wiki_subject_title h2">概要</h2>
   <p>
-    次のページの`PtoTalkNode`を配置することができます。<br>
+    次のページの<code>PtoTalkNode</code>を配置することができます。<br>
   </p>
 
   <h2 class="wiki_subject_title h2">アクション</h2>
@@ -27,21 +27,21 @@ type: "API"
 
   <h4 class="wiki_subject_title h4">Add LinkedFunction Default</h4>
   <p>
-    `PtoTalkNode`の`Transient`や、`PtoTalkNode_CustomEvent`ノードの`LinkedFunction`にリンクすることができます。<br>
-    `LinkedFunction`や`Transient EnterEvent`、`Transient LeaveEvent`に使用できます。<br>
+    <code>PtoTalkNode</code>の<code>Transient</code>や、<code>PtoTalkNode_CustomEvent</code>ノードの<code>LinkedFunction</code>にリンクすることができます。<br>
+    <code>LinkedFunction</code>や<code>Transient EnterEvent</code>、<code>Transient LeaveEvent</code>に使用できます。<br>
   </p>
   <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_AddLinkedFunction_Default.png' | relative_url }}" class="wiki_img center popup_img" alt="">
 
   <h4 class="wiki_subject_title h4">Add LinkedFunction Condition</h4>
   <p>
-    `PtoTalkNode_Condition`や`PtoTalkNode_Choice`ノードの`LinkedFunction`にリンクすることができます。<br>
-    ※`Transient EnterEvent`や`Transient LeaveEvent`には使用できません。<br>
+    <code>PtoTalkNode_Condition</code>や<code>PtoTalkNode_Choice</code>ノードの<code>LinkedFunction</code>にリンクすることができます。<br>
+    ※<code>Transient EnterEvent</code>や<code>Transient LeaveEvent</code>には使用できません。<br>
   </p>
   <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_AddLinkedFunction_Condition.png' | relative_url }}" class="wiki_img center popup_img" alt="">
 
   <h4 class="wiki_subject_title h4">Add LinkedFunction MessageFormatEvent</h4>
   <p>
-    `PtoTalkNode_Message`ノードの`MessageFormatEvent`にリンクすることができます。<br>
+    <code>PtoTalkNode_Message</code>ノードの<code>MessageFormatEvent</code>にリンクすることができます。<br>
   </p>
   <div class="Portfolio_grid_2x">
     <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_AddLinkedFunction_MessageFormatEvent_0.png' | relative_url }}" class="popup_img" alt="">
@@ -51,19 +51,19 @@ type: "API"
   <h4 class="wiki_subject_title h4">Export To CSV</h4>
   <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_ExportToCSV.png' | relative_url }}" class="wiki_img center popup_img" alt="">
   <p>
-    `DataTable`を経由して`CSV`ファイルにエクスポートします。
+    <code>DataTable</code>を経由して<code>CSV</code>ファイルにエクスポートします。
     <ul>エクスポートされるデータ
       <li>関数</li>
       <li>変数</li>
       <li>PtoTalkGraphのノード</li>
     </ul>
-    `DataTable`は`PtoTalkSystem/Content/EditorOnly/`に作成されます。<br>
-    `CSV`ファイルは`PtoTalkSystem/Exports/`に作成されます。<br>
-    `DataTable`に`ExportTableRowName`で設定された名前の行を追加します。<br>
+    <code>DataTable</code>は<code>PtoTalkSystem/Content/EditorOnly/</code>に作成されます。<br>
+    <code>CSV</code>ファイルは<code>PtoTalkSystem/Exports/</code>に作成されます。<br>
+    <code>DataTable</code>に<code>ExportTableRowName</code>で設定された名前の行を追加します。<br>
     <strong>注意</strong><br>
-    ※`None`の場合は追加されません。<br>
+    ※<code>None</code>の場合は追加されません。<br>
     ※すでに同じ名前の行がある場合はその行は削除されるので注意してください<br>
-    ※`CSV`ファイルは上書きされます。<br>
+    ※<code>CSV</code>ファイルは上書きされます。<br>
   </p>
   <div class="Portfolio_grid_2x">
     <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_ExportToCSV_Location_DT.png' | relative_url }}" class="popup_img" alt="">
@@ -73,9 +73,9 @@ type: "API"
   <h4 class="wiki_subject_title h4">Import From CSV</h4>
   <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkGraph_ImportFromCSV.png' | relative_url }}" class="wiki_img center popup_img" alt="">
   <p>
-    `CSV`ファイルを`DataTable`を経由してインポートします。<br>
+    <code>CSV</code>ファイルを<code>DataTable</code>を経由してインポートします。<br>
     <strong>注意</strong><br>
-    ※`PtoTalkGraph`の内容はそのままに、ノードや関数、変数を作成するので、インポートする場合は空の`PtoTalkGraph`で行うことをおすすめします。<br>
-    ※`ReimportDataTable`が`true`の場合`DataTable`が`CSV`ファイルの内容で上書きされます。<br>
+    ※<code>PtoTalkGraph</code>の内容はそのままに、ノードや関数、変数を作成するので、インポートする場合は空の<code>PtoTalkGraph</code>で行うことをおすすめします。<br>
+    ※<code>ReimportDataTable</code>が<code>true</code>の場合<code>DataTable</code>が<code>CSV</code>ファイルの内容で上書きされます。<br>
   </p>
 </div>

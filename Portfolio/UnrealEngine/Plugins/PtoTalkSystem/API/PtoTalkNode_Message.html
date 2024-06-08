@@ -21,14 +21,14 @@ type: "Node"
   <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Message.png' | relative_url }}" class="wiki_img center popup_img" alt="">
   <h2 class="wiki_subject_title h2">特徴</h2>
   <ul>
-    <li>`MessageRow`に設定された`DataTable`からテキストデータを読み取り、`TalkUI`上に表示します。</li>
-    <li>`WaitPlayerInput`が有効になっていると`PressToNext`ボタンが表示されます。</li>
-    <li>`MessageChoiceInfos`が有効になっている場合`WaitPlayerInput`は無視され、`ChoiceUI`が表示されます。
+    <li><code>MessageRow</code>に設定された<code>DataTable</code>からテキストデータを読み取り、<code>TalkUI</code>上に表示します。</li>
+    <li><code>WaitPlayerInput</code>が有効になっていると<code>PressToNext</code>ボタンが表示されます。</li>
+    <li><code>MessageChoiceInfos</code>が有効になっている場合<code>WaitPlayerInput</code>は無視され、<code>ChoiceUI</code>が表示されます。
       <ul>
-        <li>`ButtonText` : ボタンに表示されるテキスト。</li>
-        <li>`ChoiceType` : ボタンをクリックしたときにどのノードに遷移するかを選ぶためのデータ</li>
-        <li>`ChoiceTypeName` : カスタムできる`ChoiceType`</li>
-        <li>`OverrideButtonClass` : `ChoiceUI`に表示されるボタンのクラスを上書きします</li>
+        <li><code>ButtonText</code> : ボタンに表示されるテキスト。</li>
+        <li><code>ChoiceType</code> : ボタンをクリックしたときにどのノードに遷移するかを選ぶためのデータ</li>
+        <li><code>ChoiceTypeName</code> : カスタムできる<code>ChoiceType</code></li>
+        <li><code>OverrideButtonClass</code> : <code>ChoiceUI</code>に表示されるボタンのクラスを上書きします</li>
       </ul>
     </li>
   </ul>
@@ -44,9 +44,9 @@ type: "Node"
   <h3 class="wiki_subject_title h3">PtoTalkNode_Message固有のアクション</h3>
   <h4 class="wiki_subject_title h4">Add MessageFormatEvent</h4>
   <p>
-    `MessageRow`を表示する前にテキストをフォーマットを行うことができます。<br>
-    `MessageFormatEventInfos`に名前を設定する必要があります。<br>
-    ※`PtoTalkNode_Message`からのみ行えます。<br>
+    <code>MessageRow</code>を表示する前にテキストをフォーマットを行うことができます。<br>
+    <code>MessageFormatEventInfos</code>に名前を設定する必要があります。<br>
+    ※<code>PtoTalkNode_Message</code>からのみ行えます。<br>
   </p>
   <div class="Portfolio_grid_3x">
     <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Message_Format_0.png' | relative_url }}" class="popup_img" alt="">
@@ -56,24 +56,24 @@ type: "Node"
   <iframe class="img_card" allowfullscreen src="https://www.youtube.com/embed/mWnRpiFrp1Y?list=PL3Z_2bfv7lRNDy6aTEp9d8CMtCBrK8fRz" title="PtoTalkNode_Message Example 0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>    </iframe>
   
   <p>
-    `PtoTalkNode_Message_Blueprint`の場合は`Add MessageFormatEvent`はできません。<br>
-    代わりに`OnMessageFormatEvent`を`Override`することができます。<br>
+    <code>PtoTalkNode_Message_Blueprint</code>の場合は<code>Add MessageFormatEvent</code>はできません。<br>
+    代わりに<code>OnMessageFormatEvent</code>を<code>Override</code>することができます。<br>
   </p>
   <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Message_Format_On_BP.png' | relative_url }}" class="wiki_img center popup_img" alt="">
 
   <h4 class="wiki_subject_title h4">Convert Native To BP</h4>
   <p>
-    `PtoTalkNode_Message`から`PtoTalkNode_Message_Blueprint`に変換することができます。<br>
-    ※`PtoTalkNode_Message`からのみ行えます。<br>
-    <a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/CreateAsset.html'  | relative_url }}">`Blueprint`ノードの作成</a>
+    <code>PtoTalkNode_Message</code>から<code>PtoTalkNode_Message_Blueprint</code>に変換することができます。<br>
+    ※<code>PtoTalkNode_Message</code>からのみ行えます。<br>
+    <a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/CreateAsset.html'  | relative_url }}"><code>Blueprint</code>ノードの作成</a>
   </p>
   <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Message_To_BP.png' | relative_url }}" class="wiki_img center popup_img" alt="">
 
   <h4 class="wiki_subject_title h4">Convert BP To Native</h4>
   <p>
-    `PtoTalkNode_Message_Blueprint`から`PtoTalkNode_Message`に変換することができます。<br>
-    ※`PtoTalkNode_Message_Blueprint`からのみ行えます。<br>
-    <a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/CreateAsset.html'  | relative_url }}">`Blueprint`ノードの作成</a>
+    <code>PtoTalkNode_Message_Blueprint</code>から<code>PtoTalkNode_Message</code>に変換することができます。<br>
+    ※<code>PtoTalkNode_Message_Blueprint</code>からのみ行えます。<br>
+    <a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/CreateAsset.html'  | relative_url }}"><code>Blueprint</code>ノードの作成</a>
   </p>
   <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/PtoTalkNode_Message_To_Native.png' | relative_url }}" class="wiki_img center popup_img" alt="">
 </div>
