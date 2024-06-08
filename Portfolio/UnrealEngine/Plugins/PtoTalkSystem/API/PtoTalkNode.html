@@ -18,13 +18,14 @@ type: "API"
   <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/AllNodes.png' | relative_url }}" class="wiki_img center popup_img" alt="">
   <h2 class="wiki_subject_title h2">概要</h2>
   <p>
-    大別すると<code>Proxy</code>、<code>CustomEvent</code>、<code>Condition</code>、<code>End</code>、<code>JumpToProxy</code>ノードがあります。<br>
+    大別すると<code>Proxy</code>、<code>Message</code>、<code>CustomEvent</code>、<code>Condition</code>、<code>End</code>、<code>JumpToProxy</code>ノードがあります。<br>
     もし独自のノードを追加したい場合はこれらのノードから派生してください。<br>
   </p>
 
   <h2 class="wiki_subject_title h2">ノードアクション</h2>
   <p>
-    ノードによっては一部機能が制限されます、以下の画像のようなアクションが行えます。<br>
+    以下の画像のようなアクションが行えます。<br>
+    ※ノードによっては一部機能が制限されます<br>
   </p>
   <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/NodeAction.png' | relative_url }}" class="wiki_img center popup_img" alt="">
 
@@ -32,7 +33,7 @@ type: "API"
   <h4 class="wiki_subject_title h4">SelectChildNodes</h4>
   <p>
     そのノードの子ノードを一括で選択できます。<br>
-    ノードがループする場合はノードのインデックスがそのノードより小さいノードを選択します。<br>
+    ノードがループする場合はノードのインデックスがそのノードより大きいノードを選択します。<br>
   </p>
   <div class="Portfolio_grid_2x">
     <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/API/Action_SelectChildNodes.png' | relative_url }}" class="popup_img" alt="">
@@ -53,7 +54,7 @@ type: "API"
   <h4 class="wiki_subject_title h4">FPtoTalkNodeLinkedFunctionInfos</h4>
   <p>
     <ul>
-      <li><code>Name</code> : 名前であり、タグでもあります</li>
+      <li><code>Name</code> : タグ</li>
       <li><code>Type</code> : 
         <ul>
           <li><code>ThisGraph</code> : このノードが存在する<code>TalkGraph</code>内に処理を遷移します。</li>

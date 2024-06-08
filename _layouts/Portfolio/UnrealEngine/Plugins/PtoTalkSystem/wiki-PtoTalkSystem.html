@@ -29,13 +29,13 @@ title:
         {% assign subject_index = 0 %}
       {% endif %}
 
-      {% if page.type == "Node" %}
+      {% if page.type == "Node" or page.type == "API" %}
         {% assign prev_content = site.NavPtoTalkSystem[subject_index].contents[0].contents[prev_index] %}
       {% else %}        
         {% assign prev_content = site.NavPtoTalkSystem[subject_index].contents[prev_index] %}
       {% endif %}
 
-      {% if page.type == "Node" %}
+      {% if page.type == "Node" or page.type == "API" %}
         {% assign next_content = site.NavPtoTalkSystem[subject_index].contents[0].contents[next_index] %}
       {% else %}        
         {% assign next_content = site.NavPtoTalkSystem[subject_index].contents[next_index] %}
