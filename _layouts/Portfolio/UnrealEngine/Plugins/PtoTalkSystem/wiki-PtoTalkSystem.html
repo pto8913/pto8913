@@ -25,19 +25,23 @@ title:
       {% assign prev_index = page.index | minus: 1 %}
       {% if page.type == "Node" or page.type == "API" %}
         {% assign subject_index = 1 %}
-      {% else %}
+      {% elsif page.type == "Tutorial" %}
         {% assign subject_index = 0 %}
       {% endif %}
 
-      {% if page.type == "Node" or page.type == "API" %}
+      {% if page.type == "Node" %}
+        {% assign prev_content = site.NavPtoTalkSystem[subject_index].contents[1].contents[prev_index] %}
+      {% elsif page.type == "Tutorial" %}
         {% assign prev_content = site.NavPtoTalkSystem[subject_index].contents[0].contents[prev_index] %}
-      {% else %}        
+      {% else %}
         {% assign prev_content = site.NavPtoTalkSystem[subject_index].contents[prev_index] %}
       {% endif %}
 
-      {% if page.type == "Node" or page.type == "API" %}
-        {% assign next_content = site.NavPtoTalkSystem[subject_index].contents[0].contents[next_index] %}
-      {% else %}        
+      {% if page.type == "Node" %}
+        {% assign next_content = site.NavPtoTalkSystem[subject_index].contents[1].contents[next_index] %}
+      {% elsif page.type == "Tutorial" %}
+        {% assign prev_content = site.NavPtoTalkSystem[subject_index].contents[0].contents[next_index] %}
+      {% else %}
         {% assign next_content = site.NavPtoTalkSystem[subject_index].contents[next_index] %}
       {% endif %}
 
