@@ -120,9 +120,9 @@ NavCategories:
           - title: "PtoTalkSystem"
             img: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/assets/images/PtoTalkSystem.png"
             url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html"
-          - title: インベントリシステム
-            img: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/icon.png"
-            url: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/index.html"
+          - title: "PtoInventorySystem"
+            img: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/PtoInventorySystem.png"
+            url: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/PtoInventorySystem.html"
       - title: "Note"
         contents:
           - title: "GameplayAbilities"
@@ -316,6 +316,13 @@ img-hoshimori-character-bg:
   アクア : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Background_Aqua.png"
   ケス : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Background_PisCes.png"
   ステラ : "/Portfolio/UnrealEngine/Game/Hoshimori/Characters/Background_Aqua.png"
+
+# ------------------------------ PtoInventorySystem ------------------------------
+NavPtoInventorySystem:
+  - title: "Tutorial"
+    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/Tutorial/index.html"
+  - title: "API"
+    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/index.html"
 
 # ------------------------------ PtoTalkSystem ------------------------------
 NavPtoTalkSystem:
