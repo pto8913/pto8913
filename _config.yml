@@ -320,9 +320,9 @@ img-hoshimori-character-bg:
 # ------------------------------ PtoInventorySystem ------------------------------
 NavPtoInventorySystem:
   - title: "API"
-    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/API/index.html"
+    url: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/API/index.html"
     contents:
-      
+
 
 # ------------------------------ PtoTalkSystem ------------------------------
 NavPtoTalkSystem:
