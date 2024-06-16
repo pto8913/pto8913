@@ -322,7 +322,7 @@ NavPtoInventorySystem:
   - title: "API"
     url: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/API/index.html"
     contents:
-
+      - title: "PtoInventoryComopnentBase"
 
 # ------------------------------ PtoTalkSystem ------------------------------
 NavPtoTalkSystem:
