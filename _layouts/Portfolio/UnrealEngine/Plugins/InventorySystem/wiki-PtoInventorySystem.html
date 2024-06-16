@@ -5,8 +5,8 @@ title:
     url: "/Portfolio/index.html"
   - title: "UnrealEngine"
     url: "/Portfolio/UnrealEngine/index.html"
-  - title: "PtoTalkSystem"
-    url: "/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html"
+  - title: "PtoInventorySystem"
+    url: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/PtoInventorySystem.html"
 ---
 
 <div id="popup_img_container">
@@ -22,23 +22,9 @@ title:
     {% if page.index %}
       {% assign next_index = page.index | plus: 1 %}
       {% assign prev_index = page.index | minus: 1 %}
-      {% if page.type == "Node" or page.type == "API" %}
-        {% assign subject_index = 1 %}
-      {% elsif page.type == "Tutorial" %}
-        {% assign subject_index = 0 %}
-      {% endif %}
 
-      {% if page.type == "Node" %}
-        {% assign prev_content = site.NavPtoTalkSystem[subject_index].contents[1].contents[prev_index] %}
-      {% else %}
-        {% assign prev_content = site.NavPtoTalkSystem[subject_index].contents[prev_index] %}
-      {% endif %}
-
-      {% if page.type == "Node" %}
-        {% assign next_content = site.NavPtoTalkSystem[subject_index].contents[1].contents[next_index] %}
-      {% else %}
-        {% assign next_content = site.NavPtoTalkSystem[subject_index].contents[next_index] %}
-      {% endif %}
+      {% assign prev_content = site.NavPtoInventorySystem[0].contents[prev_index] %}
+      {% assign next_content = site.NavPtoInventorySystem[0].contents[next_index] %}
 
       <div class="wiki_next_page_link_container">
         {% if prev_content %}
@@ -51,9 +37,9 @@ title:
           <a href="{{ next_content.url | relative_url }}" class="wiki_next_page_link">次へ...{{ next_content.title }}</a>
           <br>
         {% endif %}
-        <a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoTalkSystem/PtoTalkSystem.html' | relative_url }}" class="wiki_next_page_link">トップへ</a>
+        <a href="{{ '/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/PtoInventorySystem.html' | relative_url }}" class="wiki_next_page_link">トップへ</a>
       </div>
     {% endif %}
   </div>
-  {% include category.html lists=site.NavPtoTalkSystem  type='ol' title="PtoTalkSystem" active='true' %}
+  {% include category.html lists=site.NavPtoInventorySystem  type='ol' title="PtoInventorySystem" active='true' %}
 </div>
