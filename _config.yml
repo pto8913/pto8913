@@ -323,6 +323,7 @@ NavPtoInventorySystem:
     url: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/PtoInventorySystem.html"
     contents:
       - title: "PtoInventoryComopnentBase"
+        url: "/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/API/PtoInventoryComponentBase.html"
 
 # ------------------------------ PtoTalkSystem ------------------------------
 NavPtoTalkSystem:
