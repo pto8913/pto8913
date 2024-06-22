@@ -19,24 +19,45 @@ type: "API"
   <h2 class="wiki_subject_title h2">概要</h2>
   <p>
     アイテムのデータを保持する<code>ActorComponent</code><br>
-    このコンポーネントを追加するアクターには、<code>PtoInventorySystemInterface</code>を実装して外部から<code>InventoryComponent</code>を取得できるようにする必要があります。<br>
+    <code>InventoryComponent</code>を持つアクターには、<code>PtoInventorySystemInterface</code>を追加して、
+    外部から<code>InventoryComponent</code>を取得できるようにする必要があります。<br>
   </p>
-  <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/InventoryComponentBase_1.png' | relative_url }}" class="wiki_img center popup_img" alt=""><br>
+  <div class="Portfolio_grid_2x">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/InventoryComponentBase_1.png' | relative_url }}" class="popup_img" alt="">
+    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/InventoryComponentBase_2.png' | relative_url }}" class="popup_img" alt="">
+  </div>
 
   <h2 class="wiki_subject_title h2">特徴</h2>
-  <p>
-    <code>Actor</code>に複数の<code>InventoryComponent</code>を持たせて、それぞれで違う<code>UI</code>を持たせたり、処理を行うことができます。<br>
-
-    例えば<code>PotionItem</code>という<code>PrimaryAssetType</code>を作った場合、<br>
-    <p>
-      プレイヤーが<code>PotionItem</code>を持ったアイテムを獲得した際に、<code>GetInventoryCompByAssetId</code>を用いて
-      <code>InventoryComponent</code>を取得し、それに<code>PotionItem</code>を追加する。<br>
-    </p>
-    この処理がフィルターとなり、<code>PotionItem</code>専用の<code>InventoryComponent</code>とみなすことができます。<br>
+  <ul>
+    <li>
+      <div>
+        <p>
+          <code>Actor</code>に複数の<code>InventoryComponent</code>を持たせて、
+          それぞれで違う<code>UI</code>を持たせたり、処理を行うことができます。<br>
+        </p>
+        <div class="Portfolio_grid_2x">
+          <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/InventoryComponentBase_5.png' | relative_url }}" class="popup_img" alt="">
+          <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/InventoryComponentBase_6.png' | relative_url }}" class="popup_img" alt="">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <ul><code>InventoryComponent</code>を特定の<code>PrimaryAssetType</code>専用にすることができます。
+          <li>
+            例えば<code>PotionItem</code>という<code>PrimaryAssetType</code>を作った場合、
+            <p>
+              プレイヤーが<code>PotionItem</code>を持ったアイテムを獲得した際に、<code>GetInventoryCompByAssetId</code>を用いて
+              <code>InventoryComponent</code>を取得し、それに<code>PotionItem</code>を追加する。
+            </p>
+            この処理をフィルターとして、<code>PotionItem</code>専用の<code>InventoryComponent</code>とみなすことができます。
+          </li>
+        </ul>
+        <div class="Portfolio_grid_2x">
+          <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/InventoryComponentBase_3.png' | relative_url }}" class="popup_img" alt="">
+          <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/InventoryComponentBase_4.png' | relative_url }}" class="popup_img" alt="">
+        </div>
+      </div>
+    </li>
   </p>
-  <div class="Portfolio_grid_3x">
-    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/InventoryComponentBase_2.png' | relative_url }}" class="popup_img" alt="">
-    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/InventoryComponentBase_3.png' | relative_url }}" class="popup_img" alt="">
-    <img src="{{ '/Portfolio/UnrealEngine/Plugins/PtoInventorySystem/assets/images/InventoryComponentBase_4.png' | relative_url }}" class="popup_img" alt="">
-  </div>
 </div>
