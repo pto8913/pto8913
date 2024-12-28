@@ -44,11 +44,13 @@ type: "API"
     <li>
       <div>
         <code>InventoryComponent</code>を特定の<code>PrimaryAssetType</code>専用にすることができます。
-        <ul>例えば<code>PotionItem</code>という<code>PrimaryAssetType</code>を作った場合、
+        <ul>
           <li>
-            プレイヤーが<code>PotionItem</code>を持ったアイテムを獲得した際に、<code>GetInventoryCompByAssetId</code>を用いて
-            <code>InventoryComponent</code>を取得し、それに<code>PotionItem</code>を追加する。
-            <br>
+            例えば<code>PotionItem</code>という<code>PrimaryAssetType</code>を作った場合、
+            <br><br>
+              プレイヤーが<code>PotionItem</code>を持ったアイテムを獲得した際に、<code>GetInventoryCompByAssetId</code>を用いて
+              <code>InventoryComponent</code>を取得し、それに<code>PotionItem</code>を追加する。
+            <br><br>
             この処理をフィルターとして、<code>PotionItem</code>専用の<code>InventoryComponent</code>とみなすことができます。
           </li>
         </ul>
